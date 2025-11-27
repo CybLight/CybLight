@@ -25,7 +25,7 @@ html, body {
 
 /* Тёмная тема */
 body.dark {
-  background: #141414;
+  background: #1a1a1a;
   color: #f5f5f5;
 }
 

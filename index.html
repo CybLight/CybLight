@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>CybLight</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Скрипт для кнопки подписки YouTube -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script> <!-- :contentReference[oaicite:2]{index=2} -->
+</head>
+
+<body>
+  <header>
+    <nav>
+       <img
+          src="media/images/Logo.svg"
+          alt="CybLight Logo"
+          class="logo"
+        />
+        <ul class="buttons">
+          <li><a class="button" href="./">Главная</a></li>
+          <li><a class="button" href="#projects">Проекты</a></li> <!-- add Smart Home Hub and Fish Finder PRO -->
+          <li><a class="button" href="#">Форум</a></li> <!-- Add Forum -->
+          <li><a class="button" href="./pages/games.html">Игры</a></li>
+          <li><a class="button" role="button" href="#">Контакты</a></li>
+        </ul>
+        <!-- Выбор языка и Поиск-->
+    </nav>
+  </header>
+
+  <main>
+    <section class="youtube-block">
+      <h2>Мой YouTube-канал</h2>
+
+      <div class="yt-row">
+        <div class="yt-counter">
+          <span class="yt-label">Подписчиков:</span>
+          <span id="yt-subs" class="yt-value">—</span>
+        </div>
+
+        <!-- Официальная кнопка подписки -->
+        <div class="yt-subscribe">
+          <div class="g-ytsubscribe"
+               data-channelid="UCdOzygYudpflH7DgfK7XalQ"
+               data-layout="full"
+               data-theme="dark"
+               data-count="default">
+          </div>
+        </div>
+      </div>
+
+      <p class="yt-note">Подпишись на мой YouTube-канал и посмотри эпичные моменты с игр 😉</p>
+    </section>
+
+    <section id="projects" class="blog-list">
+      <h2>Последние посты</h2>
+      <article class="post">
+        <h3>Как я делаю свой эхолот на Arduino</h3>
+        <p>Немного о том, как родилась идея Fish Finder PRO и что внутри...</p>
+        <a href="#">Читать далее →</a>
+      </article>
+      <!-- добавить другие статьи -->
+    </section>
+  </main>
+
+<footer>
+      <div class="footer">
+        <button id="themeToggle" class="theme-toggle">
+         Тёмная тема
+        </button>
+        <div>
+          <div>
+            <div>
+              <div>
+                <div class="footer-copyright">
+                  <p>Copyright &copy; 2025 CybLight</p>
+                </div>
+                <div class="footer-made-with-love">
+                  <a href="https://mynickname.com/CybLight"><img src="https://mynickname.com/img.php?nick=CybLight&sert=24&text=t4" alt="Nickname CybLight registred!" /></a>
+                <div>
+                  <p>Сайт на 100% сделан из вторично переработанного кода</p>
+                </div>
+                <a href="#">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a>
+                &nbsp;|&nbsp;
+                <a href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+                &nbsp;|&nbsp;
+                <a href="#" class="jsPrivacySettings noJSHide"
+                  >НАСТРОЙКИ КОНФИДЕНЦИАЛЬНОСТИ</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  <script src="js/main.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>

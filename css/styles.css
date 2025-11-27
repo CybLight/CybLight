@@ -219,6 +219,50 @@ footer .footer {
   background: rgba(255, 255, 255, 0.15);
 }
 
+/* Тёмный подвал со звёздами */
+body.dark footer {
+  background: #050814;      /* темнее, чем сейчас */
+  position: relative;
+  overflow: hidden;         /* чтобы звёзды не вылезали за границы */
+}
+
+/* Первый слой звёзд */
+body.dark footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.9) 0, transparent 40%),
+    radial-gradient(1.5px 1.5px at 70% 20%, rgba(255, 255, 255, 0.8) 0, transparent 40%),
+    radial-gradient(1.5px 1.5px at 40% 80%, rgba(255, 255, 255, 0.7) 0, transparent 40%),
+    radial-gradient(2px 2px at 85% 60%, rgba(255, 255, 255, 0.9) 0, transparent 40%);
+  opacity: 0.3;
+  animation: twinkle 5s infinite alternate ease-in-out;
+  pointer-events: none;
+}
+
+/* Второй слой звёзд (другой рисунок и скорость) */
+body.dark footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 15% 70%, rgba(255, 255, 255, 0.7) 0, transparent 40%),
+    radial-gradient(1px 1px at 55% 40%, rgba(255, 255, 255, 0.8) 0, transparent 40%),
+    radial-gradient(2px 2px at 90% 25%, rgba(255, 255, 255, 0.9) 0, transparent 40%),
+    radial-gradient(1px 1px at 35% 15%, rgba(255, 255, 255, 0.6) 0, transparent 40%);
+  opacity: 0.2;
+  animation: twinkle 7s infinite alternate ease-in-out;
+  pointer-events: none;
+}
+
+/* Анимация мерцания */
+@keyframes twinkle {
+  0%   { opacity: 0.1; }
+  50%  { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
 /* Адаптивные стили для мобильных устройств */
 
 @media only screen and (max-width: 600px) {

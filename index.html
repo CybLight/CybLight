@@ -1,98 +1,149 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <title>CybLight</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <!-- Скрипт для кнопки подписки YouTube -->
-  <script src="https://apis.google.com/js/platform.js" async defer></script> <!-- :contentReference[oaicite:2]{index=2} -->
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CybLight</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="media/images/favicon.svg" />
 
-<body>
-  <header>
-    <nav>
-       <img
-          src="media/images/logo.svg"
-          alt="CybLight Logo"
-          class="logo"
-        />
+    <!-- Скрипт для кнопки подписки YouTube -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img src="media/images/logo.svg" alt="CybLight Logo" class="logo" />
+
+        <!-- Бургер-кнопка для мобильной версии -->
+        <button class="burger" id="menu-toggle" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         <ul class="buttons">
           <li><a class="button" href="./">Главная</a></li>
-          <li><a class="button" href="#projects">Проекты</a></li> <!-- add Smart Home Hub and Fish Finder PRO -->
-          <li><a class="button" href="#">Форум</a></li> <!-- Add Forum -->
+          <li><a class="button" href="#projects">Проекты</a></li>
+          <!-- add Smart Home Hub and Fish Finder PRO -->
+          <li><a class="button" href="#">Форум</a></li>
+          <!-- Add Forum -->
           <li><a class="button" href="./pages/games.html">Игры</a></li>
           <li><a class="button" role="button" href="#">Контакты</a></li>
         </ul>
         <!-- Выбор языка и Поиск-->
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <main>
-    <section class="youtube-block">
-      <h2>Мой YouTube-канал</h2>
+    <main id="content" class="layout-landing hasContentBottomImage" role="main">
+      <section class="youtube-block">
+        <h2>Мой YouTube-канал</h2>
 
-      <div class="yt-row">
-        <div class="yt-counter">
-          <span class="yt-label">Подписчиков:</span>
-          <span id="yt-subs" class="yt-value">—</span>
-        </div>
+        <div class="yt-row">
+          <div class="yt-counter">
+            <span class="yt-label">Подписчиков:</span>
+            <span id="yt-subs" class="yt-value">—</span>
+          </div>
 
-        <!-- Официальная кнопка подписки -->
-        <div class="yt-subscribe">
-          <div class="g-ytsubscribe"
-               data-channelid="UCdOzygYudpflH7DgfK7XalQ"
-               data-layout="full"
-               data-theme="dark"
-               data-count="default">
+          <!-- Официальная кнопка подписки -->
+          <div class="yt-subscribe">
+            <div
+              class="g-ytsubscribe"
+              data-channelid="UCdOzygYudpflH7DgfK7XalQ"
+              data-layout="full"
+              data-theme="dark"
+              data-count="default"
+            ></div>
           </div>
         </div>
+
+        <p class="yt-note">
+          Подпишись на мой YouTube-канал и посмотри эпичные моменты с игр 😉
+        </p>
+      </section>
+
+      <section id="projects" class="blog-list">
+        <div class="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/8BkjWWV1MwU?si=GhmFZ4cFSW00f8ta"
+            title="Бильярдный удар в Rocket League"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/v2I5J9P7aVc?si=JtUeQtCtvQU3st-0"
+            title="FlatOut 2-Ностальгия..."
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section id="projects" class="blog-list">
+        <h2>Последние посты</h2>
+        <article class="post">
+          <h3>Как я делаю свой эхолот на Arduino</h3>
+          <p>
+            Немного о том, как родилась идея Fish Finder PRO и что внутри...
+          </p>
+          <a href="#">Читать далее →</a>
+        </article>
+        <!-- добавить другие статьи -->
+      </section>
+    </main>
+
+    <footer>
+      <!-- Верхняя светлая часть футера -->
+      <div class="footer-top">
+        <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
       </div>
 
-      <p class="yt-note">Подпишись на мой YouTube-канал и посмотри эпичные моменты с игр 😉</p>
-    </section>
+      <!-- Нижняя тёмная часть футера со звёздами -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <div class="footer-copyright">
+            <p>Copyright &copy; 2025 CybLight</p>
+          </div>
 
-    <section id="projects" class="blog-list">
-      <h2>Последние посты</h2>
-      <article class="post">
-        <h3>Как я делаю свой эхолот на Arduino</h3>
-        <p>Немного о том, как родилась идея Fish Finder PRO и что внутри...</p>
-        <a href="#">Читать далее →</a>
-      </article>
-      <!-- добавить другие статьи -->
-    </section>
-  </main>
+          <div class="footer-made-with-love">
+            <a href="https://mynickname.com/CybLight">
+              <img
+                src="https://mynickname.com/img.php?nick=CybLight&sert=24&text=t4"
+                alt="Nickname CybLight registred!"
+              />
+            </a>
+          </div>
 
-<footer>
-      <div class="footer">
-        <button id="themeToggle" class="theme-toggle">
-         Тёмная тема
-        </button>
-        <div>
-          <div>
-            <div>
-              <div>
-                <div class="footer-copyright">
-                  <p>Copyright &copy; 2025 CybLight</p>
-                </div>
-                <div class="footer-made-with-love">
-                  <a href="https://mynickname.com/CybLight"><img src="https://mynickname.com/img.php?nick=CybLight&sert=24&text=t4" alt="Nickname CybLight registred!" /></a>
-                <div>
-                  <p>Сайт на 100% сделан из вторично переработанного кода</p>
-                </div>
-                <a href="#">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a>
-                &nbsp;|&nbsp;
-                <a href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
-                &nbsp;|&nbsp;
-                <a href="#" class="jsPrivacySettings noJSHide"
-                  >НАСТРОЙКИ КОНФИДЕНЦИАЛЬНОСТИ</a
-                >
-              </div>
-            </div>
+          <div class="footer-text">
+            <p>Сайт на 100% сделан из вторично переработанного кода</p>
+          </div>
+
+          <div class="footer-links">
+            <a href="#">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a>
+            &nbsp;|&nbsp;
+            <a href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+            &nbsp;|&nbsp;
+            <a href="#" class="jsPrivacySettings noJSHide">
+              НАСТРОЙКИ КОНФИДЕНЦИАЛЬНОСТИ
+            </a>
           </div>
         </div>
       </div>
     </footer>
-  <script src="js/main.js"></script>
-  <script src="js/theme.js"></script>
-</body>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+  </body>
 </html>

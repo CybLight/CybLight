@@ -12,21 +12,21 @@
 
 /* Основные стили для тела документа */
 
-html, body {
-  font-family: 'Open Sans', sans-serif;
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
   background: #ffffff;
   color: #111827;
-}
-
-/* Dark theme styles */
-
-/* Тёмная тема */
-body.dark {
-  background: #1a1a1a;
-  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Хедер в светлой теме */
@@ -46,6 +46,7 @@ body.dark header {
 }
 
 /* Стили для заголовка и навигации */
+
 header {
   position: sticky;
   top: 0;
@@ -62,7 +63,7 @@ nav {
   align-items: center;
   justify-content: flex-start; /* кнопки идут сразу после логотипа */
   padding: 0 20px;
-  gap: 40px;                      /* расстояние между логотипом и меню */
+  gap: 40px; /* расстояние между логотипом и меню */
 }
 
 .logo {
@@ -94,10 +95,30 @@ nav {
 }
 
 main {
+  flex: 1 0 auto;
   max-width: 900px;
   margin: 20px auto;
   padding: 0 15px;
 }
+
+.layout-landing {
+  --layout-padding-inline: 16px;
+  padding: 0 16px 0;
+}
+
+/* Dark theme styles */
+
+body.dark {
+  background: #292929 !important;
+  color: #f5f5f5;
+}
+
+/* Контентный блок тоже тёмный, чтобы не было серой «простыни» */
+body.dark main {
+  background: #292929 !important;
+}
+
+/* Стили для блока YouTube */
 
 .youtube-block {
   margin-top: 30px;
@@ -109,12 +130,107 @@ main {
 }
 
 .youtube-widget a {
-    background: rgba(255, 255, 255, 0.12);
-    padding: 3px 8px;
-    border-radius: 6px;
-    color: #fff !important;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 3px 8px;
+  border-radius: 6px;
+  color: #fff !important;
 }
 
+/* Бургер по умолчанию скрыт (виден только на мобилках) */
+.burger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* Три полоски */
+.burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px 0;
+  border-radius: 999px;
+  background: #111827;
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+/* В тёмной теме полоски – светлые */
+body.dark .burger span {
+  background: #f5f5f5;
+}
+
+/* --- Адаптив --- */
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  /* Логотип чуть меньше, чтобы было больше места */
+  .logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  /* Показываем бургер */
+  .burger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Меню по умолчанию спрятано */
+  .buttons {
+    position: absolute;
+    top: 80px; /* чуть ниже хедера */
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 12px 20px 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    display: none;
+  }
+
+  body.dark .buttons {
+    background: #101322;
+    border-bottom: 1px solid #1f2840;
+  }
+
+  .buttons li {
+    width: 100%;
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  /* Когда меню открыто (класс на body) – показываем */
+  body.nav-open .buttons {
+    display: flex;
+  }
+
+  /* Анимация бургера в крестик */
+  body.nav-open .burger span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  body.nav-open .burger span:nth-child(2) {
+    opacity: 0;
+  }
+  body.nav-open .burger span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+}
+
+/* Стили для счётчиков YouTube */
 
 .yt-row {
   display: flex;
@@ -182,7 +298,7 @@ main {
   white-space: pre-wrap;
 }
 
-/* Стили для футера */
+/* Стили для футера 
 
 footer {
   bottom: 0;
@@ -194,17 +310,33 @@ footer {
   color: #ffffff;
   text-align: center;
 }
+*/
+
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-top {
+  padding: 12px 16px 16px;
+  background: #f3f4f6;
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
 /* Тёмный подвал со звёздами */
 body.dark footer {
-  background: #050814; !important;
+  background: #050814 !important;
   position: relative;
   overflow: hidden;
 }
 
 /* ГРУППА звёзд — много и разных */
-body.dark footer::before,
-body.dark footer::after {
+body.dark .footer-bottom::before,
+body.dark .footer-bottom::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -213,40 +345,123 @@ body.dark footer::after {
 }
 
 /* Первый слой — крупные яркие звёзды */
-body.dark footer::before {
-  background-image:
-    radial-gradient(6px 6px at 10% 15%, rgba(255,255,255,0.9) 0, transparent 55%),
-    radial-gradient(5px 5px at 20% 60%, rgba(255,255,255,0.8) 0, transparent 55%),
-    radial-gradient(4px 4px at 40% 35%, rgba(255,255,255,0.8) 0, transparent 55%),
-    radial-gradient(6px 6px at 70% 25%, rgba(255,255,255,1) 0, transparent 55%),
-    radial-gradient(5px 5px at 85% 70%, rgba(255,255,255,0.9) 0, transparent 55%),
-
-    /* добавление ещё крупных */
-    radial-gradient(6px 6px at 15% 80%, rgba(255,255,255,0.9) 0, transparent 55%),
-    radial-gradient(4px 4px at 55% 90%, rgba(255,255,255,0.8) 0, transparent 55%),
-    radial-gradient(5px 5px at 95% 40%, rgba(255,255,255,0.9) 0, transparent 55%);
+body.dark .footer-bottom::before {
+  background-image: radial-gradient(
+      6px 6px at 10% 15%,
+      rgba(255, 255, 255, 0.9) 0,
+      transparent 55%
+    ),
+    radial-gradient(
+      5px 5px at 20% 60%,
+      rgba(255, 255, 255, 0.8) 0,
+      transparent 55%
+    ),
+    radial-gradient(
+      4px 4px at 40% 35%,
+      rgba(255, 255, 255, 0.8) 0,
+      transparent 55%
+    ),
+    radial-gradient(
+      6px 6px at 70% 25%,
+      rgba(255, 255, 255, 1) 0,
+      transparent 55%
+    ),
+    radial-gradient(
+      5px 5px at 85% 70%,
+      rgba(255, 255, 255, 0.9) 0,
+      transparent 55%
+    ),
+    radial-gradient(
+      6px 6px at 15% 80%,
+      rgba(255, 255, 255, 0.9) 0,
+      transparent 55%
+    ),
+    radial-gradient(
+      4px 4px at 55% 90%,
+      rgba(255, 255, 255, 0.8) 0,
+      transparent 55%
+    ),
+    radial-gradient(
+      5px 5px at 95% 40%,
+      rgba(255, 255, 255, 0.9) 0,
+      transparent 55%
+    );
   opacity: 0.9;
   animation: twinkle-big 4s infinite alternate ease-in-out;
 }
 
-
 /* Второй слой — МНОГО мелких звёзд */
-body.dark footer::after {
-  background-image:
-    radial-gradient(3px 3px at 5% 20%, rgba(255,255,255,0.8) 0, transparent 50%),
-    radial-gradient(2px 2px at 12% 80%, rgba(255,255,255,0.7) 0, transparent 50%),
-    radial-gradient(2px 2px at 25% 50%, rgba(255,255,255,0.7) 0, transparent 50%),
-    radial-gradient(3px 3px at 30% 10%, rgba(255,255,255,0.8) 0, transparent 50%),
-    radial-gradient(2px 2px at 35% 75%, rgba(255,255,255,0.6) 0, transparent 50%),
-    radial-gradient(2px 2px at 45% 20%, rgba(255,255,255,0.7) 0, transparent 50%),
-    radial-gradient(3px 3px at 50% 50%, rgba(255,255,255,0.8) 0, transparent 50%),
-    radial-gradient(2px 2px at 55% 30%, rgba(255,255,255,0.6) 0, transparent 50%),
-    radial-gradient(2px 2px at 60% 85%, rgba(255,255,255,0.7) 0, transparent 50%),
-    radial-gradient(3px 3px at 70% 40%, rgba(255,255,255,0.8) 0, transparent 50%),
-    radial-gradient(2px 2px at 75% 90%, rgba(255,255,255,0.6) 0, transparent 50%),
-    radial-gradient(2px 2px at 80% 55%, rgba(255,255,255,0.7) 0, transparent 50%),
-    radial-gradient(3px 3px at 90% 25%, rgba(255,255,255,0.8) 0, transparent 50%),
-    radial-gradient(2px 2px at 95% 70%, rgba(255,255,255,0.6) 0, transparent 50%);
+body.dark .footer-bottom::after {
+  background-image: radial-gradient(
+      3px 3px at 5% 20%,
+      rgba(255, 255, 255, 0.8) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      2px 2px at 12% 80%,
+      rgba(255, 255, 255, 0.7) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      2px 2px at 25% 50%,
+      rgba(255, 255, 255, 0.7) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      3px 3px at 30% 10%,
+      rgba(255, 255, 255, 0.8) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      2px 2px at 35% 75%,
+      rgba(255, 255, 255, 0.6) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      2px 2px at 45% 20%,
+      rgba(255, 255, 255, 0.7) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      3px 3px at 50% 50%,
+      rgba(255, 255, 255, 0.8) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      2px 2px at 55% 30%,
+      rgba(255, 255, 255, 0.6) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      2px 2px at 60% 85%,
+      rgba(255, 255, 255, 0.7) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      3px 3px at 70% 40%,
+      rgba(255, 255, 255, 0.8) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      2px 2px at 75% 90%,
+      rgba(255, 255, 255, 0.6) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      2px 2px at 80% 55%,
+      rgba(255, 255, 255, 0.7) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      3px 3px at 90% 25%,
+      rgba(255, 255, 255, 0.8) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      2px 2px at 95% 70%,
+      rgba(255, 255, 255, 0.6) 0,
+      transparent 50%
+    );
 
   opacity: 0.8;
   animation: twinkle-small 7s infinite alternate ease-in-out;
@@ -254,15 +469,27 @@ body.dark footer::after {
 
 /* Анимации */
 @keyframes twinkle-big {
-  0% { opacity: 0.5; }
-  50% { opacity: 1; }
-  100% { opacity: 0.4; }
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
 }
 
 @keyframes twinkle-small {
-  0% { opacity: 0.3; }
-  50% { opacity: 0.9; }
-  100% { opacity: 0.3; }
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.3;
+  }
 }
 
 footer .footer {
@@ -272,6 +499,125 @@ footer .footer {
   position: relative;
 }
 
+.theme-toggle {
+  align-self: flex-end;
+  padding: 6px 14px 6px 36px; /* слева больше, под иконку */
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: transparent;
+  color: #111827;
+  cursor: pointer;
+  font-size: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  position: relative; /* нужно, чтобы иконки позиционировать */
+  overflow: hidden;
+}
+
+/* Две иконки: 🌙 и ☀, наложенные друг на друга */
+.theme-toggle::before,
+.theme-toggle::after {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 17px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Луна по умолчанию (светлая тема) */
+.theme-toggle::before {
+  content: "🌙";
+  opacity: 1;
+  transform: translateY(-50%) scale(1) rotate(0deg);
+}
+
+/* Солнце спрятано */
+.theme-toggle::after {
+  content: "☀";
+  opacity: 0;
+  transform: translateY(-50%) scale(0.5) rotate(-90deg);
+}
+
+/* В тёмной теме — наоборот: солнце появляется, луна исчезает */
+body.dark .theme-toggle::before {
+  opacity: 0;
+  transform: translateY(-50%) scale(0.5) rotate(90deg);
+}
+
+body.dark .theme-toggle::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1) rotate(0deg);
+}
+
+.theme-toggle::before {
+  content: "🌙";
+  font-size: 16px;
+}
+body.dark .theme-toggle::before {
+  content: "☀";
+}
+
+.theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.footer-links {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Нижняя тёмная часть футера */
+.footer-bottom {
+  margin: 0;
+  padding: 10px 0 16px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Контент внутри нижней части */
+.footer-bottom-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ТЁМНАЯ ТЕМА */
+
+body.dark .footer-top {
+  background: #1b1f33; /* тёмный, но светлее нижнего */
+  color: #e5e7eb;
+}
+
+body.dark .theme-toggle {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #f5f5f5;
+}
+
+body.dark .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Нижняя часть футера со звёздами в тёмной теме */
+body.dark .footer-bottom {
+  background: #050814 !important;
+}
+
+/* 
 .theme-toggle {
   position: absolute;
   right: 20px;
@@ -283,10 +629,29 @@ footer .footer {
   color: #ffffff;
   cursor: pointer;
   font-size: 14px;
+  
+} 
+  .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+*/
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
-.theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.15);
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
 }
 
 /* Адаптивные стили для мобильных устройств */
@@ -294,21 +659,13 @@ footer .footer {
 @media only screen and (max-width: 600px) {
   body {
     margin: 0;
-    padding-bottom: 60px;
+    padding: 0;
   }
 }
 
 @media only screen and (max-width: 480px) {
   body {
     margin: 0;
-    padding-bottom: 60px;
-  }
-}
-
-@media only screen and (min-width: 760px) {
-  .body {
-    display: flex;
-    margin: 0;
-    padding-bottom: 60px;
+    padding: 0;
   }
 }

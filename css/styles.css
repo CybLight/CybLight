@@ -182,9 +182,10 @@ body.dark .burger span {
   }
 
   /* Меню по умолчанию спрятано */
+
   .buttons {
     position: absolute;
-    top: 80px; /* чуть ниже хедера */
+    top: 80px;
     left: 0;
     right: 0;
     margin: 0;
@@ -213,12 +214,14 @@ body.dark .burger span {
     margin-left: 0;
   }
 
-  /* Когда меню открыто (класс на body) – показываем */
+  /* Когда меню открыто показываем */
+
   body.nav-open .buttons {
     display: flex;
   }
 
   /* Анимация бургера в крестик */
+
   body.nav-open .burger span:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
   }
@@ -228,6 +231,53 @@ body.dark .burger span {
   body.nav-open .burger span:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
   }
+}
+
+/* Светлая тема — бирюзовый неон */
+
+.button:hover {
+  border-color: rgba(0, 255, 240, 0.6);
+  box-shadow: 0 0 6px rgba(0, 255, 240, 0.4), 0 0 12px rgba(0, 255, 240, 0.3),
+    inset 0 0 4px rgba(0, 255, 240, 0.2);
+  color: #0efff3;
+}
+
+body.dark .button:hover {
+  border-color: rgba(255, 240, 120, 0.6);
+  box-shadow: 0 0 6px rgba(255, 240, 120, 0.5),
+    0 0 14px rgba(255, 240, 120, 0.4), inset 0 0 4px rgba(255, 240, 120, 0.3);
+  color: #f1c40f;
+}
+
+/* НЕОНОВАЯ ОБВОДКА */
+.theme-toggle {
+  position: relative;
+  border-radius: 999px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Светлая тема — бирюзовый неон */
+.theme-toggle {
+  border: 1px solid rgba(0, 255, 240, 0.5);
+  box-shadow: 0 0 6px rgba(0, 255, 240, 0.3);
+}
+
+.theme-toggle:hover {
+  box-shadow: 0 0 12px rgba(0, 255, 240, 0.6), 0 0 20px rgba(0, 255, 240, 0.4);
+  border-color: rgba(0, 255, 240, 0.9);
+}
+
+/* Тёмная тема — неоново-жёлтый */
+body.dark .theme-toggle {
+  border: 1px solid rgba(255, 240, 120, 0.5);
+  box-shadow: 0 0 6px rgba(255, 240, 120, 0.3);
+  color: #fff; /* чтобы текст был виден */
+}
+
+body.dark .theme-toggle:hover {
+  box-shadow: 0 0 12px rgba(255, 240, 120, 0.7),
+    0 0 20px rgba(255, 240, 120, 0.5);
+  border-color: rgba(255, 240, 120, 1);
 }
 
 /* Стили для счётчиков YouTube */
@@ -298,19 +348,7 @@ body.dark .burger span {
   white-space: pre-wrap;
 }
 
-/* Стили для футера 
-
-footer {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  padding: 10px 0 16px;
-  background-color: var(--primary-color);
-  color: #ffffff;
-  text-align: center;
-}
-*/
+/* Стили для футера */
 
 footer {
   width: 100%;
@@ -335,6 +373,7 @@ body.dark footer {
 }
 
 /* ГРУППА звёзд — много и разных */
+
 body.dark .footer-bottom::before,
 body.dark .footer-bottom::after {
   content: "";
@@ -345,6 +384,7 @@ body.dark .footer-bottom::after {
 }
 
 /* Первый слой — крупные яркие звёзды */
+
 body.dark .footer-bottom::before {
   background-image: radial-gradient(
       6px 6px at 10% 15%,
@@ -391,6 +431,7 @@ body.dark .footer-bottom::before {
 }
 
 /* Второй слой — МНОГО мелких звёзд */
+
 body.dark .footer-bottom::after {
   background-image: radial-gradient(
       3px 3px at 5% 20%,
@@ -468,6 +509,7 @@ body.dark .footer-bottom::after {
 }
 
 /* Анимации */
+
 @keyframes twinkle-big {
   0% {
     opacity: 0.5;
@@ -516,6 +558,7 @@ footer .footer {
 }
 
 /* Две иконки: 🌙 и ☀, наложенные друг на друга */
+
 .theme-toggle::before,
 .theme-toggle::after {
   position: absolute;
@@ -527,6 +570,7 @@ footer .footer {
 }
 
 /* Луна по умолчанию (светлая тема) */
+
 .theme-toggle::before {
   content: "🌙";
   opacity: 1;
@@ -534,6 +578,7 @@ footer .footer {
 }
 
 /* Солнце спрятано */
+
 .theme-toggle::after {
   content: "☀";
   opacity: 0;
@@ -541,6 +586,7 @@ footer .footer {
 }
 
 /* В тёмной теме — наоборот: солнце появляется, луна исчезает */
+
 body.dark .theme-toggle::before {
   opacity: 0;
   transform: translateY(-50%) scale(0.5) rotate(90deg);
@@ -555,6 +601,7 @@ body.dark .theme-toggle::after {
   content: "🌙";
   font-size: 16px;
 }
+
 body.dark .theme-toggle::before {
   content: "☀";
 }
@@ -578,6 +625,7 @@ body.dark .theme-toggle::before {
 }
 
 /* Нижняя тёмная часть футера */
+
 .footer-bottom {
   margin: 0;
   padding: 10px 0 16px;
@@ -589,6 +637,7 @@ body.dark .theme-toggle::before {
 }
 
 /* Контент внутри нижней части */
+
 .footer-bottom-inner {
   display: flex;
   flex-direction: column;
@@ -599,7 +648,7 @@ body.dark .theme-toggle::before {
 /* ТЁМНАЯ ТЕМА */
 
 body.dark .footer-top {
-  background: #1b1f33; /* тёмный, но светлее нижнего */
+  background: #1b1f33;
   color: #e5e7eb;
 }
 
@@ -613,28 +662,10 @@ body.dark .theme-toggle:hover {
 }
 
 /* Нижняя часть футера со звёздами в тёмной теме */
+
 body.dark .footer-bottom {
   background: #050814 !important;
 }
-
-/* 
-.theme-toggle {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: transparent;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 14px;
-  
-} 
-  .theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.15);
-}
-*/
 
 .video-container {
   position: relative;

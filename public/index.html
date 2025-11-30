@@ -2,10 +2,69 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>CybLight</title>
-    <link rel="stylesheet" href="css/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="media/images/favicon.svg" />
+    <title>CybLight - программирование, умный дом, электроника</title>
+    <meta
+      name="description"
+      content="CybLight — мои проекты по электронике, Arduino, умному дому, эхолоту для рыбалки, блог о технологиях, программировании и интерактивные игры."
+    />
+    <meta
+      name="keywords"
+      content="CybLight, Arduino, электроника, умный дом, Rocket League, games, DIY, программирование"
+    />
+    <meta name="author" content="CybLight" />
+    <meta name="theme-color" content="#FF7F27" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta
+      property="og:title"
+      content="CybLight — Arduino, электроника и умный дом"
+    />
+    <meta
+      property="og:description"
+      content="Проекты по электронике, Arduino, умному дому и эхолоту для рыбалки, блог о технологиях и играх."
+    />
+    <meta property="og:url" content="https://cyblight.org/" />
+    <meta
+      property="og:image"
+      content="https://cyblight.org/images/og-image.png"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="CybLight — Arduino, электроника и умный дом"
+    />
+    <meta
+      name="twitter:description"
+      content="Проекты, блог и игровые моменты."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cyblight.org/images/og-image.png"
+    />
+
+    <!-- Manifest and Favicon -->
+    <link rel="canonical" href="https://cyblight.org/" />
+    <link rel="manifest" href="manifest.json" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link
+      rel="icon"
+      href="images/favicon_32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="images/favicon_16.png"
+      sizes="16x16"
+      type="image/png"
+    />
 
     <!-- Скрипт для кнопки подписки YouTube -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -14,7 +73,9 @@
   <body>
     <header>
       <nav>
-        <img src="media/images/logo.svg" alt="CybLight Logo" class="logo" />
+        <a href="./">
+          <img src="images/logo.svg" alt="CybLight Logo" class="logo" />
+        </a>
 
         <!-- Бургер-кнопка для мобильной версии -->
         <button class="burger" id="menu-toggle" aria-label="Открыть меню">
@@ -26,18 +87,45 @@
         <ul class="buttons">
           <li><a class="button" href="./">Главная</a></li>
           <li><a class="button" href="#projects">Проекты</a></li>
+          <li><a class="button" href="#videos">Видео</a></li>
           <!-- add Smart Home Hub and Fish Finder PRO -->
           <li><a class="button" href="#">Форум</a></li>
           <!-- Add Forum -->
-          <li><a class="button" href="./pages/games.html">Игры</a></li>
-          <li><a class="button" role="button" href="#">Контакты</a></li>
-          <li><a class="button" role="button" href="#">Войти</a></li>
+          <li><a class="button" href="pages/games.html">Игры</a></li>
+          <li><a class="button" href="#">Контакты</a></li>
+          <li><a class="button" href="#">Войти</a></li>
         </ul>
         <!-- Выбор языка и Поиск-->
       </nav>
     </header>
 
     <main id="content" class="layout-landing hasContentBottomImage" role="main">
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="neon-text">
+            <span class="accent">Привет,</span> я разработчик
+            <span class="accent-2">CybLight!</span>
+          </h1>
+          <p class="hero-content-one">
+            Добро пожаловать на мой сайт! Здесь я делюсь своими проектами по
+            электронике (Arduino, STM32), умному дому, программированию и
+            разработкой собственного эхолота для рыбалки. Также публикую блог о
+            технологиях и создаю интерактивные игры по программированию.
+          </p>
+          <p class="hero-content-two">
+            На данный момент сайт в активной разработке, поэтому не все функции
+            доступны. <br />
+            Спасибо за понимание!
+          </p>
+        </div>
+        <div class="hero-image">
+          <img
+            src="images/hero.png"
+            alt="CybLight — проекты по электронике, умному дому и эхолоту"
+          />
+        </div>
+      </section>
+
       <section class="youtube-block">
         <h2>Мой YouTube-канал</h2>
 
@@ -64,13 +152,14 @@
         </p>
       </section>
 
-      <section id="projects" class="blog-list">
+      <section id="videos" class="blog-list">
         <div class="video-container">
           <iframe
             width="560"
             height="315"
             src="https://www.youtube.com/embed/8BkjWWV1MwU?si=GhmFZ4cFSW00f8ta"
             title="Бильярдный удар в Rocket League"
+            loading="lazy"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
@@ -84,6 +173,7 @@
             height="315"
             src="https://www.youtube.com/embed/v2I5J9P7aVc?si=JtUeQtCtvQU3st-0"
             title="FlatOut 2-Ностальгия..."
+            loading="lazy"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
@@ -119,7 +209,11 @@
           </div>
 
           <div class="footer-made-with-love">
-            <a href="https://mynickname.com/CybLight">
+            <a
+              href="https://mynickname.com/CybLight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="https://mynickname.com/img.php?nick=CybLight&sert=24&text=t4"
                 alt="Nickname CybLight registred!"

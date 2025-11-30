@@ -1,7 +1,8 @@
 /* Определение цветовых переменных */
 :root {
   --primary-dark: #333333;
-  --primary-color: #1e905d;
+  --primary-green: #1e905d;
+  --primary-orange: #ff7f27;
   --secondary-color: #0efff3;
   --accent-color: #f1c40f;
   --button-background: #333;
@@ -99,6 +100,78 @@ main {
   max-width: 900px;
   margin: 20px auto;
   padding: 0 15px;
+}
+
+.hero-content h1.neon-text {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1.neon-text {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.neon-text {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-align: center;
+
+  /* Неоновая окантовка текста */
+  text-shadow: 0 0 4px #ff4444, 0 0 8px #ff4444, 0 0 12px #ff4444,
+    0 0 18px #ff4444, 0 0 24px #ff4444;
+
+  animation: neonPulse 2s infinite alternate ease-in-out;
+}
+
+.neon-text .accent {
+  color: var(--primary-green);
+}
+
+.neon-text .accent-2 {
+  color: var(--primary-orange);
+}
+
+/* Анимация пульсации неона */
+@keyframes neonPulse {
+  0% {
+    text-shadow: 0 0 4px #ff4444, 0 0 8px #ff4444, 0 0 12px #ff4444,
+      0 0 18px #ff4444, 0 0 24px #ff4444;
+  }
+  100% {
+    text-shadow: 0 0 8px #ff0000, 0 0 16px #ff0000, 0 0 24px #ff0000,
+      0 0 32px #ff0000, 0 0 48px #ff0000;
+  }
+}
+
+.hero-content-one {
+  text-align: justify;
+  text-align-last: center; /* последняя строка по центру */
+  line-height: 1.25;
+}
+
+.hero-content-two {
+  text-align: center;
+  line-height: 1.25;
+  color: #ff0000;
+  font-weight: 600;
+  font-size: 18px;
+  text-shadow: 0 0 3px #f1c40f, 0 0 6px #f1c40f, 0 0 9px #f1c40f;
 }
 
 .layout-landing {
@@ -250,6 +323,7 @@ body.dark .button:hover {
 }
 
 /* НЕОНОВАЯ ОБВОДКА */
+
 .theme-toggle {
   position: relative;
   border-radius: 999px;
@@ -311,12 +385,22 @@ body.dark .theme-toggle:hover {
 
 /* Styles for the games page */
 
+..games-page,
+.games-page * {
+  color: #f5f5f5 !important;
+}
+
 .game-card {
   margin-top: 20px;
   padding: 20px;
   border-radius: 12px;
-  background: #151b30;
+  background: #0c1220;
   border: 1px solid #222c4a;
+  color: #f5f5f5;
+}
+
+.game-card-disabled {
+  opacity: 0.6;
 }
 
 #quiz-code {
@@ -629,7 +713,7 @@ body.dark .theme-toggle::before {
 .footer-bottom {
   margin: 0;
   padding: 10px 0 16px;
-  background-color: var(--primary-color);
+  background-color: var(--primary-green);
   color: #ffffff;
   text-align: center;
   position: relative;

@@ -3,6 +3,7 @@
   --primary-dark: #333333;
   --primary-green: #1e905d;
   --primary-orange: #ff7f27;
+  --burger-color: #ff7f27;
   --secondary-color: #0efff3;
   --accent-color: #f1c40f;
   --button-background: #333;
@@ -30,6 +31,8 @@ body {
   flex-direction: column;
 }
 
+/* Стили для заголовка и навигации */
+
 /* Хедер в светлой теме */
 header {
   position: sticky;
@@ -44,17 +47,6 @@ header {
 body.dark header {
   background: #12182a;
   border-bottom: 1px solid #1f2840;
-}
-
-/* Стили для заголовка и навигации */
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #fff;
-  padding: 15px 0;
-  border-bottom: 1px solid #e5e5e5;
 }
 
 nav {
@@ -108,13 +100,6 @@ main {
   line-height: 1.2;
   margin-bottom: 20px;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .hero-content h1.neon-text {
-    font-size: 22px;
-    line-height: 1.2;
-  }
 }
 
 .hero-image img {
@@ -191,6 +176,61 @@ body.dark main {
   background: #292929 !important;
 }
 
+/* Общий стиль селекта сложности */
+#quiz-difficulty {
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+/* Светлая тема */
+body:not(.dark) #quiz-difficulty {
+  background: #ffffff;
+  color: #111827;
+  border-color: #cbd5e1;
+}
+
+/* Тёмная тема */
+body.dark #quiz-difficulty {
+  background: #151b30; /* тёмный фон под общий стиль */
+  color: #f5f5f5; /* светлый текст */
+  border-color: #3b4670;
+}
+
+/* Варианты в выпадающем списке в тёмной теме */
+body.dark #quiz-difficulty option {
+  background: #151b30;
+  color: #f5f5f5;
+}
+
+body.dark #quiz-difficulty:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.6);
+  border-color: #38bdf8;
+}
+
+/* Светлая тема: цвета для "в разработке" */
+body:not(.dark) .game-card-disabled {
+  background: #d4d7de;
+  color: #1f2933;
+}
+
+/* Лента под светлую тему — чуть темнее текста */
+body:not(.dark) .game-card-disabled::before {
+  color: #1b1e26;
+}
+
+body:not(.dark) .game-card-disabled::after {
+  color: #1b1e26;
+}
+
+/* Тёмная тема для disabled-карточек */
+body.dark .game-card-disabled {
+  background: #6c7079;
+  color: #dfe1e5;
+}
+
 /* Стили для блока YouTube */
 
 .youtube-block {
@@ -215,95 +255,40 @@ body.dark main {
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 6px;
+  width: 36px;
+  height: 28px;
+
+  padding: 0;
+  position: relative;
 }
 
 /* Три полоски */
 .burger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  margin: 4px 0;
+  position: absolute;
+  left: 4px;
+  right: 4px;
+
+  height: 3px;
   border-radius: 999px;
-  background: #111827;
-  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+  background: var(--burger-color);
+
+  transform-origin: center;
+  transition: transform 0.25s ease, opacity 0.2s ease, top 0.25s ease;
+}
+
+.burger span:nth-child(1) {
+  top: 5px;
+}
+.burger span:nth-child(2) {
+  top: 12px;
+}
+.burger span:nth-child(3) {
+  top: 19px;
 }
 
 /* В тёмной теме полоски – светлые */
 body.dark .burger span {
   background: #f5f5f5;
-}
-
-/* --- Адаптив --- */
-@media (max-width: 768px) {
-  nav {
-    justify-content: space-between;
-  }
-
-  /* Логотип чуть меньше, чтобы было больше места */
-  .logo {
-    width: 72px;
-    height: 72px;
-  }
-
-  /* Показываем бургер */
-  .burger {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Меню по умолчанию спрятано */
-
-  .buttons {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 12px 20px 16px;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-    background: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
-    display: none;
-  }
-
-  body.dark .buttons {
-    background: #101322;
-    border-bottom: 1px solid #1f2840;
-  }
-
-  .buttons li {
-    width: 100%;
-  }
-
-  .button {
-    display: block;
-    width: 100%;
-    text-align: left;
-    margin-left: 0;
-  }
-
-  /* Когда меню открыто показываем */
-
-  body.nav-open .buttons {
-    display: flex;
-  }
-
-  /* Анимация бургера в крестик */
-
-  body.nav-open .burger span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
-  body.nav-open .burger span:nth-child(2) {
-    opacity: 0;
-  }
-  body.nav-open .burger span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-  }
 }
 
 /* Светлая тема — бирюзовый неон */
@@ -385,34 +370,131 @@ body.dark .theme-toggle:hover {
 
 /* Styles for the games page */
 
-..games-page,
-.games-page * {
-  color: #f5f5f5 !important;
+/* Общий текст страницы игр */
+.games-page {
+  color: #111827; /* нормальный тёмный для светлой темы */
 }
 
+body.dark .games-page {
+  color: #f5f5f5; /* светлый текст в тёмной теме */
+}
+
+/* Обычная карточка доступной игры */
 .game-card {
-  margin-top: 20px;
+  margin: 20px auto;
   padding: 20px;
   border-radius: 12px;
   background: #0c1220;
   border: 1px solid #222c4a;
   color: #f5f5f5;
+  max-width: 900px;
+  width: 100%;
 }
 
-.game-card-disabled {
-  opacity: 0.6;
+#quiz-result {
+  display: block; /* делает p блочным */
+  width: fit-content; /* чтобы ширина была только по тексту */
+  margin: 0 auto 8px; /* выравнивает по центру */
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
+#quiz-result.correct {
+  background: rgba(50, 205, 50, 0.15);
+  color: #10b981;
+}
+
+#quiz-result.wrong {
+  background: rgba(255, 0, 0, 0.15);
+  color: #ef4444;
+}
+
+/* Бейдж "Скоро" */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #ff6f00;
+  color: #fff;
+  border-radius: 4px;
+  margin-left: 6px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 8px rgba(255, 111, 0, 0.7);
+}
+
+/* Карточка с игрой "Угадай вывод кода" — чуть уютнее */
+#code-quiz.game-card {
+  padding: 24px 20px 28px;
+  text-align: left;
+}
+
+/* Красивый блок с кодом */
 #quiz-code {
-  background: #0a0f1f;
-  padding: 10px;
-  border-radius: 8px;
+  position: relative;
+
+  max-width: 700px;
+  margin: 0 auto 20px;
+
+  padding: 18px 18px 16px; /* сверху чуть больше под индикаторы */
+  border-radius: 12px;
+
+  background: radial-gradient(circle at 0 0, #151b30 0, #050814 55%);
+  border: 1px solid #273b5f;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(15, 23, 42, 0.9);
+
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #e5e7eb;
+
+  white-space: pre-wrap;
   overflow-x: auto;
+}
+
+/* Три “макаОС-лампочки” слева сверху */
+#quiz-code::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff5f57;
+  box-shadow: 14px 0 0 #febc2e, 28px 0 0 #28c840;
+  opacity: 0.95;
+}
+
+/* Небольшой подписи “Код” справа */
+#quiz-code::after {
+  content: "код";
+  position: absolute;
+  top: 6px;
+  right: 14px;
+
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  opacity: 0.9;
+}
+
+#quiz-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ← центрирует кнопки */
+  gap: 10px; /* расстояние между кнопками */
 }
 
 #quiz-options button {
   display: block;
-  margin: 8px 0;
+  width: auto;
+  text-align: center;
+  margin: 0;
   padding: 8px 12px;
   background: #1f2740;
   color: #f5f5f5;
@@ -430,6 +512,103 @@ body.dark .theme-toggle:hover {
   font-family: "Fira Code", monospace;
   font-size: 17px;
   white-space: pre-wrap;
+}
+
+/* Контейнер с кнопками игры */
+.game-buttons {
+  display: flex;
+  justify-content: center; /* выравниваем по центру */
+  gap: 16px; /* расстояние между кнопками */
+  margin-top: 20px;
+}
+
+/* Убираем левый отступ, который нужен только в навигации */
+.game-buttons .button {
+  margin-left: 0;
+}
+
+/* 🔒 Недоступные игры (в разработке)*/
+
+.game-card-disabled {
+  position: relative;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+
+  opacity: 0.95;
+  cursor: not-allowed;
+  overflow: hidden;
+}
+
+/* Лента "В разработке" */
+
+.game-card-disabled::before {
+  content: "В разработке";
+  position: absolute;
+
+  top: 14px;
+  right: -30px;
+
+  padding: 6px 40px 6px 90px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  background: linear-gradient(135deg, #ffa726, #fb8c00);
+  color: #1b1e26;
+
+  transform: rotate(12deg);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 166, 0, 0.7);
+  pointer-events: none;
+  z-index: 5;
+  text-align: left;
+}
+
+/* Неоновое </> + маленькое dev */
+
+.game-card-disabled::after {
+  content: "</>\A dev";
+  white-space: pre;
+
+  position: absolute;
+
+  top: 1px; /* вертикальное положение внутри ленты */
+  right: 125px; /* правый отступ */
+
+  font-family: "Consolas", "Fira Code", monospace;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1;
+
+  color: #1b1e26;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.5), 0 0 8px rgba(0, 255, 200, 0.8),
+    0 0 14px rgba(0, 255, 200, 0.6);
+
+  transform: rotate(12deg);
+  z-index: 6;
+  pointer-events: none;
+
+  animation: codePulse 1.5s ease-in-out infinite;
+}
+
+/* Анимация пульса */
+@keyframes codePulse {
+  0% {
+    transform: rotate(12deg) scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: rotate(12deg) scale(1.12);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(12deg) scale(1);
+    opacity: 0.85;
+  }
 }
 
 /* Стили для футера */
@@ -771,16 +950,186 @@ body.dark .footer-bottom {
 
 /* Адаптивные стили для мобильных устройств */
 
-@media only screen and (max-width: 600px) {
-  body {
-    margin: 0;
-    padding: 0;
+@media (max-width: 768px) {
+  .hero-content h1.neon-text {
+    font-size: 22px;
+    line-height: 1.2;
   }
 }
 
-@media only screen and (max-width: 480px) {
-  body {
-    margin: 0;
+/* --- Адаптив --- */
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
+  /* Логотип чуть меньше, чтобы было больше места */
+  .logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  /* Показываем бургер */
+  .burger {
+    display: inline-flex;
+    margin-left: auto;
+
+    width: 40px;
+    height: 40px;
     padding: 0;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Меню по умолчанию спрятано */
+
+  .buttons {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 12px 20px 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    display: none;
+  }
+
+  body.dark .buttons {
+    background: #101322;
+    border-bottom: 1px solid #1f2840;
+  }
+
+  .buttons li {
+    width: 100%;
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  /* Когда меню открыто показываем */
+
+  body.nav-open .buttons {
+    display: flex;
+  }
+
+  /* Центрируем анимацию бургера */
+  .burger span {
+    transform-origin: center;
+  }
+
+  /* Анимация бургера в крестик */
+
+  /* когда меню открыто — превращаем в крестик */
+  body.nav-open .burger span:nth-child(1) {
+    top: 12px; /* двигаем в центр */
+    transform: rotate(45deg);
+  }
+
+  body.nav-open .burger span:nth-child(2) {
+    opacity: 0; /* скрываем середину */
+  }
+
+  body.nav-open .burger span:nth-child(3) {
+    top: 12px; /* тоже в центр */
+    transform: rotate(-45deg);
+  }
+}
+
+/* 📱 МОБИЛЬНАЯ ВЕРСИЯ СТРАНИЦЫ ИГР */
+
+@media (max-width: 600px) {
+  /* контент ближе к краям, но не впритык */
+  main {
+    max-width: 100%;
+    margin: 12px auto;
+    padding: 0 10px;
+  }
+
+  /* карточки игр чуть компактнее и на всю ширину контейнера */
+  .game-card,
+  .game-card-disabled {
+    margin: 12px 0;
+    padding: 16px 14px;
+    border-radius: 10px;
+  }
+
+  .game-card h2,
+  .game-card h3 {
+    font-size: 16px;
+  }
+
+  /* лента "В разработке" – аккуратнее на узком экране */
+  .game-card-disabled::before {
+    top: 10px;
+    right: -30px;
+    padding: 4px 26px 4px 80px;
+    font-size: 10px;
+  }
+
+  .game-card-disabled::after {
+    top: 3px;
+    right: 92px;
+    font-size: 12px;
+  }
+
+  /* блок с кодом – меньше шрифт и отступы */
+  #quiz-code {
+    margin: 0 2px 14px;
+    font-size: 14px;
+    padding: 14px 10px 12px;
+  }
+
+  #quiz-code::before {
+    top: 7px;
+    left: 10px;
+  }
+
+  #quiz-code::after {
+    top: 5px;
+    right: 10px;
+    font-size: 10px;
+  }
+
+  /* варианты ответа – шире и удобнее нажимать */
+  #quiz-options {
+    gap: 8px;
+  }
+
+  #quiz-options button {
+    width: 80%;
+    max-width: 260px;
+    padding: 8px 10px;
+  }
+
+  /* кнопки "Следующий / Начать заново" – в колонку, по центру */
+  .game-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .game-buttons .button {
+    width: 80%;
+    max-width: 260px;
+    text-align: center;
+    margin-left: 0; /* на всякий случай */
+  }
+
+  /* кнопки навигации в хедере чутка компактнее */
+  .button {
+    font-size: 14px;
+    padding: 6px 8px;
   }
 }

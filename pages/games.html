@@ -64,7 +64,7 @@
             <li>Условные операторы</li>
             <li>Циклы</li>
           </ul>
-          <button type="button" class="button" id="start-quiz">
+          <button type="button" id="start-quiz" class="button">
             Начать игру
           </button>
         </article>
@@ -97,12 +97,15 @@
             >
           </div>
           <div>Счёт: <span id="quiz-score">0</span></div>
+          <br />
+          Рекорд: <span id="quiz-best">0</span>
           <div>
             Сложность:
             <select id="quiz-difficulty">
               <option value="easy">Лёгкая</option>
               <option value="medium" selected>Средняя</option>
               <option value="hard">Сложная</option>
+              <option value="all">Все</option>
             </select>
           </div>
         </div>
@@ -192,6 +195,7 @@
     </footer>
 
     <script src="../js/games.js"></script>
+    <script src="../js/theme.js"></script>
     <script>
       // небольшой скрипт для года в подвале
       document.getElementById("current-year").textContent =

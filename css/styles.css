@@ -43,6 +43,18 @@ header {
   border-bottom: 1px solid #e5e5e5;
 }
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+body.dark .site-header {
+  background: #12182a;
+  border-bottom: 1px solid #1f2840;
+}
+
 /* Хедер в тёмной теме */
 body.dark header {
   background: #12182a;
@@ -1049,6 +1061,20 @@ body.dark .footer-bottom {
 /* 📱 МОБИЛЬНАЯ ВЕРСИЯ СТРАНИЦЫ ИГР */
 
 @media (max-width: 600px) {
+  /* хедер компактнее */
+  .site-title {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* ← бургер справа */
+  }
+
   /* контент ближе к краям, но не впритык */
   main {
     max-width: 100%;

@@ -46,202 +46,282 @@
     />
   </head>
   <body>
-    <header class="site-header">
-      <div class="header-inner">
-        <h1 class="site-title">CybLight — Игры по программированию</h1>
+    <div class="page-frame">
+      <header class="top-header">
+        <div class="header-top">
+          <div class="container">
+            <div class="site-logo-global">
+              <a
+                href="/"
+                aria-label="СайбЛайт Главная страница"
+                title="Открыть главную страницу сайта СайбЛайт"
+              >
+                <img
+                  src="/images/logo.svg"
+                  class="logo-global"
+                  alt="CybLight Logo"
+                />
+              </a>
+            </div>
 
-        <nav class="main-nav">
-          <ul class="buttons">
-            <li><a class="button" href="../">Главная</a></li>
-            <li><a class="button disabled" href="#">Форум</a></li>
-            <li><a class="button" href="/pages/games.html">Игры</a></li>
-            <li><a class="button" href="#info_game">Как играть?</a></li>
-            <li><a class="button disabled" href="#">Войти</a></li>
-          </ul>
+            <h2 class="siteName">CybLight - Игры</h2>
 
-          <!-- Бургер-кнопка для мобильной версии -->
-          <button
-            class="burger"
-            id="menu-toggle"
-            type="button"
-            aria-expanded="false"
-            aria-label="Открыть меню"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+            <div class="header-top-right">
+              <a href="#" class="header-link header-lang">
+                <span class="icon-24">
+                  <svg
+                    class="cl-language"
+                    aria-hidden="true"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M3.814 16.464a.501.501 0 00.65-.278L5.54 13.5h2.923l1.074 2.686a.5.5 0 00.928-.372l-3-7.5a.52.52 0 00-.928 0l-3 7.5a.5.5 0 00.278.65zM7 9.846L8.061 12.5H5.94zM6 7.5a.5.5 0 00.224-.053l2-1a.5.5 0 10-.448-.894l-2 1A.5.5 0 006 7.5zM11.75 14.25a2.025 2.025 0 001.75 2.25 2.584 2.584 0 001.482-.431c.039.088.07.152.075.162a.5.5 0 00.887-.461 4.654 4.654 0 01-.15-.368c.176-.168.359-.348.56-.548a11.374 11.374 0 001.92-2.652A1.55 1.55 0 0119 13.5a2.082 2.082 0 01-1.607 2.012.5.5 0 00.107.988.506.506 0 00.107-.012A3.055 3.055 0 0020 13.5a2.542 2.542 0 00-1.283-2.205c.16-.364.244-.6.255-.63a.5.5 0 10-.944-.33 7.97 7.97 0 01-.225.552 5.11 5.11 0 00-2.482-.21c.04-.428.091-.845.153-1.229 1.427-.123 3.04-.44 3.124-.458a.5.5 0 00-.196-.98c-.019.003-1.43.283-2.736.418.162-.761.31-1.273.313-1.284a.5.5 0 10-.958-.288c-.016.053-.206.695-.393 1.64-.041 0-.088.004-.128.004h-2a.5.5 0 000 1h1.955c-.072.476-.134.985-.17 1.517a4.001 4.001 0 00-2.535 3.233zm1.75 1.25c-.362 0-.75-.502-.75-1.25a2.82 2.82 0 011.506-2.094 11.674 11.674 0 00.384 2.927 1.684 1.684 0 01-1.14.417zm2.604-3.897a4.4 4.4 0 011.251.193 10.325 10.325 0 01-1.708 2.35l-.163.162A11.04 11.04 0 0115.25 12c0-.093.008-.185.01-.278a3.318 3.318 0 01.844-.12z M22.5 3h-21a.5.5 0 00-.5.5v16a.5.5 0 00.5.5H10v3.5a.5.5 0 00.854.354L14.707 20H22.5a.5.5 0 00.5-.5v-16a.5.5 0 00-.5-.5zM22 19h-7.5a.5.5 0 00-.354.146L11 22.293V19.5a.5.5 0 00-.5-.5H2V4h20z"
+                    ></path>
+                  </svg>
+                </span>
+                <span class="header-label">русский</span>
+              </a>
+
+              <a href="#" class="header-link header-login">
+                <span class="icon-24">
+                  <svg
+                    class="cl-login"
+                    aria-hidden="true"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m0 4a3 3 0 1 1-3 3a3 3 0 0 1 3-3m0 14.2a8.21 8.21 0 0 1-5.79-2.38a4.25 4.25 0 0 1 5.79-3.82a4.25 4.25 0 0 1 5.79 3.82A8.21 8.21 0 0 1 12 20.2"
+                    ></path>
+                  </svg>
+                </span>
+                <span class="header-label">Войти</span>
+              </a>
+
+              <div class="search-box">
+                <input type="text" placeholder="Найди что надо" />
+                <button type="button" aria-label="Поиск">
+                  <svg
+                    class="jwi-search-icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M23.354 22.646l-5-5-.012-.007a8.532 8.532 0 10-.703.703l.007.012 5 5a.5.5 0 00.707-.707zM12 19.5a7.5 7.5 0 117.5-7.5 7.508 7.508 0 01-7.5 7.5z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              <button
+                class="burger"
+                id="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-label="Открыть меню"
+              >
+                <span></span><span></span><span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <nav class="header-nav">
+          <div class="container">
+            <ul class="buttons">
+              <li><a class="button" href="../">Главная</a></li>
+              <li><a class="button disabled" href="#">Проекты</a></li>
+              <li><a class="button disabled" href="#">Видео</a></li>
+              <li><a class="button disabled" href="#">Форум</a></li>
+              <li><a class="button" href="/pages/games.html">Игры</a></li>
+              <li>
+                <a class="button" href="/pages/contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </nav>
-      </div>
-    </header>
+      </header>
 
-    <main class="games-page">
-      <!-- Верхний блок с описанием -->
-      <section class="games-intro">
-        <h2>Прокачай навыки кода в формате мини-игр</h2>
-        <p>
-          Здесь будут собраны небольшие интерактивные задания по
-          программированию: угадай вывод кода, работа с циклами, условиями,
-          массивами, а позже — алгоритмы, Big-O и перевод в двоичный вид.
-        </p>
-
-        <div class="games-actions">
-          <a href="../" class="button">← Назад в блог</a>
-          <button
-            type="button"
-            class="button button-secondary"
-            id="games-refresh"
-          >
-            Обновить список игр
-          </button>
-        </div>
-      </section>
-
-      <!-- Блок с выбором игр (каталог) -->
-      <section class="games-list">
-        <h2>Доступные игры</h2>
-
-        <article class="game-card">
-          <h3>1. Угадай вывод кода</h3>
+      <main class="games-page">
+        <section class="games-intro">
+          <h2>Прокачай навыки кода в формате мини-игр</h2>
           <p>
-            Смотри на код и выбирай, что он выведет. Отлично тренирует внимание
-            к деталям.
+            Здесь будут собраны небольшие интерактивные задания по
+            программированию: угадай вывод кода, работа с циклами, условиями,
+            массивами, а позже — алгоритмы, Big-O и перевод в двоичный вид.
           </p>
-          <ul class="game-tags">
-            <li>Python / JS / C-подобные</li>
-            <li>Условные операторы</li>
-            <li>Циклы</li>
-          </ul>
-          <button type="button" id="start-quiz" class="button">
-            Начать игру
-          </button>
-        </article>
 
-        <article class="game-card game-card-disabled">
-          <h3>2. Бинарный перевод <span class="badge">Скоро</span></h3>
-          <p>
-            Числа в десятичной системе, а тебе нужно быстро перевести их в
-            двоичную.
-          </p>
-        </article>
-
-        <article class="game-card game-card-disabled">
-          <h3>3. Угадай Big-O <span class="badge">Скоро</span></h3>
-          <p>
-            Смотри на код и отвечай, какая у него асимптотическая сложность.
-          </p>
-        </article>
-      </section>
-
-      <!-- Основная зона активной игры -->
-      <section class="game-play">
-        <h2>Игровое поле</h2>
-
-        <!-- Панель состояния игры -->
-        <div class="game-status-bar">
-          <div>
-            Вопрос: <span id="quiz-number">1</span>/<span id="quiz-total"
-              >?</span
+          <div class="games-actions">
+            <a href="../" class="button back-btn">← Назад в блог</a>
+            <button
+              type="button"
+              class="button button-secondary"
+              id="games-refresh"
             >
-          </div>
-          <div>Счёт: <span id="quiz-score">0</span></div>
-          <br />
-          Рекорд: <span id="quiz-best">0</span>
-          <div>
-            Сложность:
-            <select id="quiz-difficulty">
-              <option value="easy">Лёгкая</option>
-              <option value="medium" selected>Средняя</option>
-              <option value="hard">Сложная</option>
-              <option value="all">Все</option>
-            </select>
-          </div>
-        </div>
-
-        <div id="code-quiz" class="game-card">
-          <pre id="quiz-code" aria-live="polite"></pre>
-
-          <div id="quiz-options" class="quiz-options">
-            <!-- Кнопки вариантов ответа создаются скриптом -->
-          </div>
-
-          <p id="quiz-result" class="quiz-result"></p>
-          <p id="quiz-explanation" class="quiz-explanation"></p>
-
-          <div class="game-buttons">
-            <button id="quiz-next" class="button">Следующий вопрос</button>
-            <button id="quiz-restart" class="button button-secondary">
-              Начать заново
+              Обновить список игр
             </button>
           </div>
+        </section>
+
+        <!-- Блок с выбором игр (каталог) -->
+        <section class="games-list">
+          <h2>Доступные игры</h2>
+
+          <article class="game-card">
+            <h3>1. Угадай вывод кода</h3>
+            <p>
+              Смотри на код и выбирай, что он выведет. Отлично тренирует
+              внимание к деталям.
+            </p>
+            <ul class="game-tags">
+              <li>Python / JS / C-подобные</li>
+              <li>Условные операторы</li>
+              <li>Циклы</li>
+            </ul>
+            <button type="button" id="start-quiz" class="button">
+              Начать игру
+            </button>
+          </article>
+
+          <article class="game-card game-card-disabled">
+            <h3>2. Бинарный перевод <span class="badge">Скоро</span></h3>
+            <p>
+              Числа в десятичной системе, а тебе нужно быстро перевести их в
+              двоичную.
+            </p>
+          </article>
+
+          <article class="game-card game-card-disabled">
+            <h3>3. Угадай Big-O <span class="badge">Скоро</span></h3>
+            <p>
+              Смотри на код и отвечай, какая у него асимптотическая сложность.
+            </p>
+          </article>
+        </section>
+
+        <!-- Основная зона активной игры -->
+        <section class="game-play">
+          <h2>Игровое поле</h2>
+
+          <!-- Панель состояния игры -->
+          <div class="game-status-bar">
+            <div>
+              Вопрос: <span id="quiz-number">1</span>/<span id="quiz-total"
+                >?</span
+              >
+            </div>
+            <div>Счёт: <span id="quiz-score">0</span></div>
+            <br />
+            Рекорд: <span id="quiz-best">0</span>
+            <div>
+              Сложность:
+              <select id="quiz-difficulty">
+                <option value="easy">Лёгкая</option>
+                <option value="medium" selected>Средняя</option>
+                <option value="hard">Сложная</option>
+                <option value="all">Все</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="code-quiz" class="game-card">
+            <pre id="quiz-code" aria-live="polite"></pre>
+
+            <div id="quiz-options" class="quiz-options">
+              <!-- Кнопки вариантов ответа создаются скриптом -->
+            </div>
+
+            <p id="quiz-result" class="quiz-result"></p>
+            <p id="quiz-explanation" class="quiz-explanation"></p>
+
+            <div class="game-buttons">
+              <button id="quiz-next" class="button">Следующий вопрос</button>
+              <button id="quiz-restart" class="button button-secondary">
+                Начать заново
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Блок с подсказками и правилами -->
+        <aside id="info_game" class="game-help">
+          <h2>Как играть</h2>
+          <ol>
+            <li>
+              Нажми <strong>«Начать игру»</strong> в карточке нужной игры.
+            </li>
+            <li>
+              Внимательно прочитай код в блоке <strong>«Игровое поле»</strong>.
+            </li>
+            <li>
+              Выбери один из вариантов ответа. Я сразу скажу, верно это или нет.
+            </li>
+            <li>
+              Нажимай <strong>«Следующий вопрос»</strong>, чтобы продолжить.
+            </li>
+            <li>
+              Если хочешь начать всё сначала — жми
+              <strong>«Начать заново»</strong>.
+            </li>
+          </ol>
+        </aside>
+      </main>
+
+      <footer>
+        <!-- Верхняя светлая часть футера -->
+        <div class="footer-top">
+          <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
         </div>
-      </section>
 
-      <!-- Блок с подсказками и правилами -->
-      <aside id="info_game" class="game-help">
-        <h2>Как играть</h2>
-        <ol>
-          <li>Нажми <strong>«Начать игру»</strong> в карточке нужной игры.</li>
-          <li>
-            Внимательно прочитай код в блоке <strong>«Игровое поле»</strong>.
-          </li>
-          <li>
-            Выбери один из вариантов ответа. Я сразу скажу, верно это или нет.
-          </li>
-          <li>
-            Нажимай <strong>«Следующий вопрос»</strong>, чтобы продолжить.
-          </li>
-          <li>
-            Если хочешь начать всё сначала — жми
-            <strong>«Начать заново»</strong>.
-          </li>
-        </ol>
-      </aside>
-    </main>
+        <!-- Нижняя тёмная часть футера со звёздами -->
+        <div class="footer-bottom">
+          <div class="footer-bottom-inner">
+            <div class="footer-copyright">
+              <p>Copyright &copy; <span id="current-year"></span> CybLight</p>
+            </div>
 
-    <footer>
-      <!-- Верхняя светлая часть футера -->
-      <div class="footer-top">
-        <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
-      </div>
+            <div class="footer-made-with-love">
+              <a
+                href="https://mynickname.com/CybLight"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://mynickname.com/img.php?nick=CybLight&sert=24&text=t4"
+                  alt="Nickname CybLight registred!"
+                />
+              </a>
+            </div>
 
-      <!-- Нижняя тёмная часть футера со звёздами -->
-      <div class="footer-bottom">
-        <div class="footer-bottom-inner">
-          <div class="footer-copyright">
-            <p>Copyright &copy; <span id="current-year"></span> CybLight</p>
-          </div>
+            <div class="footer-text">
+              <p>Сайт на 100% сделан из вторично переработанного кода</p>
+            </div>
 
-          <div class="footer-made-with-love">
-            <a
-              href="https://mynickname.com/CybLight"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://mynickname.com/img.php?nick=CybLight&sert=24&text=t4"
-                alt="Nickname CybLight registred!"
-              />
-            </a>
-          </div>
-
-          <div class="footer-text">
-            <p>Сайт на 100% сделан из вторично переработанного кода</p>
-          </div>
-
-          <div class="footer-links">
-            <a href="#">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a>
-            &nbsp;|&nbsp;
-            <a href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
-            &nbsp;|&nbsp;
-            <a href="#" class="jsPrivacySettings noJSHide">
-              НАСТРОЙКИ КОНФИДЕНЦИАЛЬНОСТИ
-            </a>
+            <div class="footer-links">
+              <a href="#">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a>
+              &nbsp;|&nbsp;
+              <a href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+              &nbsp;|&nbsp;
+              <a href="#" class="jsPrivacySettings noJSHide">
+                НАСТРОЙКИ КОНФИДЕНЦИАЛЬНОСТИ
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
 
+      <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
+
+      <div class="nav-overlay"></div>
+    </div>
     <script src="../js/games.js"></script>
     <script src="../js/theme.js"></script>
     <script>

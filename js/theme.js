@@ -42,3 +42,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// === КНОПКА НАВЕРХ ===
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+document.querySelector(".nav-overlay").addEventListener("click", () => {
+  document.body.classList.remove("nav-open");
+});

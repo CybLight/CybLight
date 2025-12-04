@@ -187,8 +187,19 @@ function finishGame() {
 }
 
 function restartGame() {
-  if (startBtn) startBtn.style.display = "none";
-  if (gameBlock) gameBlock.style.display = "block";
+  // красиво прячем кнопку старта
+  if (startBtn) {
+    startBtn.classList.add("hidden");
+    // через 300мс можно вообще убрать из потока, если хочешь
+    setTimeout(() => {
+      startBtn.style.display = "none";
+    }, 300);
+  }
+
+  // показываем игровое поле с анимацией
+  if (gameBlock) {
+    gameBlock.classList.add("quiz-visible");
+  }
 
   score = 0;
   currentIndex = 0;
@@ -238,7 +249,9 @@ document.addEventListener("DOMContentLoaded", () => {
   questionTotalEl = document.getElementById("quiz-total");
   difficultyEl = document.getElementById("quiz-difficulty");
 
-  if (gameBlock) gameBlock.style.display = "none";
+  if (gameBlock) {
+    gameBlock.classList.remove("quiz-visible");
+  }
 
   loadBestScore();
   updateStatusBar();
@@ -247,6 +260,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (startBtn) {
     startBtn.addEventListener("click", () => {
       restartGame();
+
+      // плавно прокручиваем к игровому полю
+      if (gameBlock) {
+        gameBlock.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
     });
   }
 

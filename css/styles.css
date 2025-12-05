@@ -72,6 +72,99 @@ body.dark .page-frame {
   border-radius: 0;
 }
 
+.breadcrumbs {
+  font-size: 14px;
+  color: #c8d0e0;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumbs a {
+  color: #4aa3ff; /* голубой как у ссылок JW */
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  color: #8090b0;
+}
+
+body.dark .breadcrumbs a {
+  color: #4ecbff;
+}
+
+body.dark .breadcrumbs span {
+  color: #6e7fa5;
+}
+
+/* Полоса под хедером для хлебных крошек */
+.breadcrumbs-bar {
+  background: #f5f5f7;
+  border-bottom: 1px solid #e0e3ec;
+}
+
+/* Тёмная тема */
+body.dark .breadcrumbs-bar {
+  background: #111624;
+  border-bottom: 1px solid #222b3f;
+}
+
+.breadcrumbs-bar .container {
+  padding-left: 20px;
+}
+
+/* Сами хлебные крошки */
+.breadcrumbs {
+  font-size: 14px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #6b7280; /* серый, как на jw */
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+/* Ссылки */
+.breadcrumbs a {
+  color: #2563eb; /* синий как ссылка */
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* Разделитель */
+.bc-sep {
+  color: #9ca3af;
+  font-size: 22px;
+}
+
+/* Текущая страница */
+.bc-current {
+  color: #111827;
+  font-weight: 500;
+}
+
+/* тёмная тема */
+body.dark .breadcrumbs {
+  color: #36d0ff;
+}
+
+body.dark .breadcrumbs .bc-sep {
+  color: var(--primary-orange);
+}
+
+body.dark .breadcrumbs .bc-current {
+  color: #d5dcff;
+}
+
 /* ---------- HEADER STYLES ---------- */
 
 .top-header {
@@ -1297,6 +1390,10 @@ body.dark .scroll-top-btn:hover {
 
 .breadcrumbs a {
   color: #9aa4c6;
+}
+
+.breadcrumbs a:visited {
+  color: #2563eb;
 }
 
 .accent {

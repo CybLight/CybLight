@@ -10,6 +10,27 @@
       content="Контакты CybLight: почта, Telegram, YouTube, GitHub и другие способы связи по проектам электроники, Arduino, умному дому и играм."
     />
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://cyblight.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Контакты",
+            "item": "https://cyblight.org/contacts/"
+          }
+        ]
+      }
+    </script>
+
     <link rel="stylesheet" href="../css/styles.css" />
 
     <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
@@ -140,18 +161,28 @@
         <nav class="header-nav">
           <div class="container">
             <ul class="buttons">
-              <li><a class="button" href="../">Главная</a></li>
+              <li><a class="button" href="/">Главная</a></li>
               <li><a class="button disabled" href="#">Проекты</a></li>
               <li><a class="button disabled" href="#">Видео</a></li>
               <li><a class="button disabled" href="#">Форум</a></li>
-              <li><a class="button" href="/pages/games.html">Игры</a></li>
+              <li><a class="button" href="/games/">Игры</a></li>
               <li>
-                <a class="button" href="/pages/contacts.html">Контакты</a>
+                <a class="button" href="/contacts/">Контакты</a>
               </li>
             </ul>
           </div>
         </nav>
       </header>
+
+      <div class="breadcrumbs-bar">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Навигация по разделам">
+            <a href="/">Главная</a>
+            <span class="bc-sep">›</span>
+            <span class="bc-current">Контакты</span>
+          </nav>
+        </div>
+      </div>
 
       <main>
         <section class="contacts-page">
@@ -359,7 +390,7 @@
               </p>
               <a
                 class="contact-link contact-link--soft"
-                href="https://t.me/your_channel_here"
+                href="https://t.me/CybLight_org"
                 target="_blank"
                 rel="noopener noreferrer"
               >

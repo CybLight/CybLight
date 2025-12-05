@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Главная страница -->
   <url>
     <loc>https://cyblight.org/</loc>
     <lastmod>2025-12-04</lastmod>
@@ -9,17 +8,15 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Игры -->
   <url>
-    <loc>https://cyblight.org/pages/games.html</loc>
+    <loc>https://cyblight.org/games/</loc>
     <lastmod>2025-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Контакты -->
   <url>
-    <loc>https://cyblight.org/pages/contacts.html</loc>
+    <loc>https://cyblight.org/contacts/</loc>
     <lastmod>2025-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

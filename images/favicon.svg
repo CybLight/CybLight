@@ -1,46 +1,33 @@
-<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-  <!-- фильтр для неонового свечения -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="6" result="blur"></feGaussianBlur>
+    <!-- Неоновое свечение -->
+    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <!-- Размытие для ореола -->
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
+      <!-- Подкрашиваем свечение в оранжевый -->
+      <feColorMatrix in="blur" type="matrix" values="
+          1 0 0 0 0
+          0.6 0 0 0 0
+          0 0 0 0 0
+          0 0 0 0.9 0" result="glow"></feColorMatrix>
       <feMerge>
-        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="glow"></feMergeNode>
         <feMergeNode in="SourceGraphic"></feMergeNode>
       </feMerge>
     </filter>
   </defs>
 
-  <!-- группа микросхемы, фон ПРОЗРАЧНЫЙ -->
-  <g fill="none" stroke="#ff7a1a" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+  <!-- Группа с неоновым эффектом -->
+  <g filter="url(#neon-glow)" text-anchor="middle" dominant-baseline="middle" transform="translate(0,12)">
 
-    <!-- внешний скруглённый квадрат -->
-    <rect x="120" y="120" width="272" height="272" rx="80" ry="80"></rect>
+    <!-- Внешний толстый контур -->
+    <text x="50%" y="50%" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="260" fill="none" stroke="#ff8a2a" stroke-width="34" stroke-linejoin="round" stroke-linecap="round">
+      CL
+    </text>
 
-    <!-- внутренний квадрат -->
-    <rect x="196" y="196" width="120" height="120" rx="28" ry="28"></rect>
-
-    <!-- верхние ножки -->
-    <line x1="196" y1="96" x2="196" y2="56"></line>
-    <line x1="236" y1="96" x2="236" y2="56"></line>
-    <line x1="276" y1="96" x2="276" y2="56"></line>
-    <line x1="316" y1="96" x2="316" y2="56"></line>
-
-    <!-- нижние ножки -->
-    <line x1="196" y1="456" x2="196" y2="416"></line>
-    <line x1="236" y1="456" x2="236" y2="416"></line>
-    <line x1="276" y1="456" x2="276" y2="416"></line>
-    <line x1="316" y1="456" x2="316" y2="416"></line>
-
-    <!-- левые ножки -->
-    <line x1="96" y1="196" x2="56" y2="196"></line>
-    <line x1="96" y1="236" x2="56" y2="236"></line>
-    <line x1="96" y1="276" x2="56" y2="276"></line>
-    <line x1="96" y1="316" x2="56" y2="316"></line>
-
-    <!-- правые ножки -->
-    <line x1="456" y1="196" x2="416" y2="196"></line>
-    <line x1="456" y1="236" x2="416" y2="236"></line>
-    <line x1="456" y1="276" x2="416" y2="276"></line>
-    <line x1="456" y1="316" x2="416" y2="316"></line>
+    <!-- Внутренний более светлый контур -->
+    <text x="50%" y="50%" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="260" fill="none" stroke="#ffd49a" stroke-width="18" stroke-linejoin="round" stroke-linecap="round">
+      CL
+    </text>
   </g>
 </svg>

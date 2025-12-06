@@ -24,7 +24,6 @@ body {
   position: relative;
 }
 
-/* 🔮 АНИМИРОВАННЫЙ ФОН */
 body::before {
   content: "";
   position: fixed;
@@ -112,7 +111,6 @@ body::before {
   box-shadow: 0 0 22px rgba(255, 127, 39, 0.8);
 }
 
-/* 🥚 СЕКРЕТНОЕ СООБЩЕНИЕ (изначально скрыто) */
 .secret-message {
   margin-top: 26px;
   font-size: 13px;
@@ -131,7 +129,6 @@ body::before {
   color: #ffd0a4;
 }
 
-/* 🟠 ПАДАЮЩИЙ ШАРИК */
 .falling-orb {
   position: fixed;
   top: -40px;

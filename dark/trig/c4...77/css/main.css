@@ -163,7 +163,7 @@ body::before {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .error-card {
     padding: 26px 16px 20px;
     border-radius: 16px;
@@ -171,4 +171,10 @@ body::before {
   .error-code {
     font-size: 64px;
   }
+}
+
+@media (max-width: 600px) {
+.falling-orb {
+  width: 150px;
+  height: 150px;
 }

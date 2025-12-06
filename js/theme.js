@@ -23,6 +23,31 @@
   });
 })();
 
+(function () {
+  const trigger = document.querySelector(".dark-card .dark-trigger");
+  if (!trigger) return;
+
+  let clicks = 0;
+  const REQUIRED = 77;
+  const target = "/dark/trig/c4...77/";
+
+  trigger.addEventListener("click", function (e) {
+    e.stopPropagation();
+    clicks++;
+
+    if (clicks < REQUIRED) {
+      trigger.textContent = `(${REQUIRED - clicks})`;
+    }
+
+    if (clicks >= REQUIRED) {
+      trigger.textContent = "Открываю...";
+      setTimeout(() => {
+        window.location.href = target;
+      }, 500);
+    }
+  });
+})();
+
 // Скрипт для бургер-меню
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menu-toggle");

@@ -1,32 +1,38 @@
 {
   "short_name": "CybLight",
   "name": "CybLight Projects",
-  "description": "Проекты CybLight: электроника, Arduino, умный дом, эхолот, блог о технологиях и интерактивные игры.",
+  "lang": "ru",
+  "description": "CybLight: создание сайтов, проекты умного дома, интерактивные игры, блог о технологиях и электронике.",
   "start_url": "/",
   "scope": "/",
+  "id": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "theme_color": "#0a0f1f",
   "background_color": "#0a0f1f",
   "icons": [
     {
       "src": "/favicon.ico",
-      "sizes": "16x16 24x24 32x32 48x48 64x64",
+      "sizes": "16x16 32x32 48x48 64x64",
       "type": "image/x-icon"
     },
     {
       "src": "/images/logo_180.png",
       "sizes": "180x180",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/images/logo_192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/images/logo_384.png",
       "sizes": "384x384",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/images/logo_512.png",

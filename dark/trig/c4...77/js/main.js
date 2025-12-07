@@ -39,7 +39,7 @@ function customPrompt(title, subtitle) {
   });
 }
 
-function sendEggLog(extra = {}) {
+function sendWorkLog(extra = {}) {
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const payload = {
     type: "nice_click",
@@ -92,19 +92,26 @@ function spawnOrb() {
 
   orb.addEventListener("click", async () => {
     if (Unlocked) return;
+
+    let storedName = (localStorage.getItem("itemUserName") || "").trim();
+
+    while (!storedName) {
+      const input = await customPrompt(__x0f, "Введите ваше имя пользователя:");
+
+      if (!input || !input.trim()) {
+        // чтобы шарик мог снова сработать позже
+        Unlocked = false;
+        return;
+      }
+
+      storedName = input.trim();
+      localStorage.setItem("itemUserName", storedName);
+    }
+
     Unlocked = true;
     orb.remove();
 
-    let storedName = localStorage.getItem("itemUserName");
-    if (!storedName) {
-      storedName =
-        (await customPrompt(__x0f, "Введите ваше имя пользователя:")) || "";
-      if (storedName.trim()) {
-        localStorage.setItem("itemUserName", storedName.trim());
-      }
-    }
-
-    sendEggLog({
+    sendWorkLog({
       userName: storedName || null,
     });
 
@@ -114,7 +121,10 @@ function spawnOrb() {
       msg.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
-    document.querySelector(".msg-text").textContent = __sv;
+    const msgText = document.querySelector(".msg-text");
+    if (msgText) {
+      msgText.textContent = __sv;
+    }
 
     window.open(BUS_IMAGE_URL, "_blank", "noopener");
   });

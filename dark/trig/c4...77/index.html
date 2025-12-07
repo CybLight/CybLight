@@ -20,12 +20,33 @@
         <span>↩</span>
       </a>
 
-      <p id="secretMessage" class="secret-message">
-        Неплохо для реакции! Пасхалка открыта —
-        <a href="media/dark-trigger.jpg" target="_blank" rel="noopener">
+      <p id="serviceMessage" class="service-message">
+        <span class="msg-text"></span>
+        <a
+          id="msgLink"
+          href="media/dark-trigger.jpg"
+          target="_blank"
+          rel="noopener"
+        >
           заглянуть сюда.
         </a>
       </p>
+    </div>
+
+    <div id="customPrompt" class="modal">
+      <div class="modal-content">
+        <div class="convariant">
+          <div class="circle"></div>
+          <div class="emoji">🎉</div>
+        </div>
+        <h2 class="title"></h2>
+        <p class="subtitle"></p>
+        <input type="text" id="promptInput" placeholder="Ваш Nickname" />
+        <div class="buttons">
+          <button id="confirmBtn">OK</button>
+          <button id="cancelBtn" class="cancel">Отмена</button>
+        </div>
+      </div>
     </div>
     <script src="js/main.js"></script>
   </body>

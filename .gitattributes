@@ -1,0 +1,48 @@
+# === BASE SETTINGS ДЛЯ ВСЕГО РЕПО ===
+# Все текстовые файлы считаем текстом и храним в репо с LF
+* text=auto eol=lf
+
+# === ВЕБ-ФАЙЛЫ (явно как текст, LF) ===
+*.html   text eol=lf
+*.htm    text eol=lf
+*.css    text eol=lf
+*.js     text eol=lf
+*.mjs    text eol=lf
+*.json   text eol=lf
+*.jsonc  text eol=lf
+*.xml    text eol=lf
+*.svg    text eol=lf
+*.txt    text eol=lf
+*.md     text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+
+# Congif and Date
+*.ini    text eol=lf
+*.cfg    text eol=lf
+*.env    text eol=lf
+
+# === BINARY (Git НЕ меняет переносы строк) ===
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.webp   binary
+*.ico    binary
+*.bmp    binary
+
+*.mp3    binary
+*.wav    binary
+*.ogg    binary
+
+*.mp4    binary
+*.mov    binary
+*.avi    binary
+*.webm   binary
+
+*.pdf    binary
+*.zip    binary
+*.rar    binary
+*.7z     binary
+*.exe    binary
+*.dll    binary

@@ -304,14 +304,44 @@ body.dark .top-header .siteName {
 .top-header .header-link {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
+
+  padding: 6px 10px;
+  border-radius: 6px;
+
   font-size: 14px;
   text-decoration: none;
+
   color: var(--text-muted, #555);
+
+  transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Тёмная тема для ссылок в шапке */
 body.dark .header-link {
   color: #e7ecff !important;
+}
+
+/* Hover-эффект для ссылок в шапке */
+.top-header .header-link:hover {
+  color: var(--accent, #ff7f27);
+  background-color: rgba(255, 127, 39, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 127, 39, 0.45);
+}
+
+/* Тёмная тема — hover-эффект для ссылок в шапке */
+body.dark .top-header .header-link:hover {
+  color: var(--accent, #ff7f27) !important;
+  background-color: rgba(255, 127, 39, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(255, 127, 39, 0.55);
+}
+
+.top-header .header-link svg {
+  transition: color 0.2s ease;
+}
+
+body.dark .top-header .header-link:hover svg {
+  color: var(--accent, #ff7f27);
 }
 
 /* Размер иконок */

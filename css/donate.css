@@ -876,6 +876,33 @@ body {
   }
 }
 
+/* ===== MOBILE FIX ===== */
+
+@media (max-width: 520px) {
+  .card-flip {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .card-inner {
+    width: 100% !important;
+  }
+
+  .card-face {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* на всякий случай — убрать любые min-width, которые ломают мобилку */
+.card-flip,
+.card-inner,
+.card-face {
+  min-width: 0 !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .donate-actions .donate-btn::before,
   .donate-actions .donate-btn::after {

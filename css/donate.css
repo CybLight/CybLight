@@ -646,20 +646,6 @@ body {
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
 }
 
-/* мягкий пульс */
-.donate-actions .donate-btn::before {
-  content: '';
-  position: absolute;
-  inset: -8px;
-  border-radius: inherit;
-  background: radial-gradient(60% 120% at 25% 50%, rgba(255, 127, 39, 0.35), transparent 70%),
-    radial-gradient(60% 120% at 75% 50%, rgba(165, 107, 255, 0.35), transparent 70%);
-  filter: blur(12px);
-  opacity: 0.65;
-  z-index: -1;
-  animation: neonPulse 3.2s ease-in-out infinite;
-}
-
 /* БАНКА С МОНЕТАМИ */
 
 /* ===== Layout рядом с кнопкой ===== */
@@ -816,11 +802,33 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .donate-actions .donate-btn::before,
-  .donate-actions .donate-btn::after {
-    animation: none;
+/* ===== MOBILE FIX: карта не вылезает за контейнер ===== */
+@media (max-width: 520px) {
+  .card-flip {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
+
+  .card-inner {
+    width: 100% !important;
+  }
+
+  .card-face {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* на всякий случай — убрать любые min-width, которые ломают мобилку */
+.card-flip,
+.card-inner,
+.card-face {
+  min-width: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
   .jar-fill {
     transition: none;
   }

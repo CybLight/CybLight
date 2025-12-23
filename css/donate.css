@@ -856,29 +856,6 @@ body {
   isolation: isolate;
 }
 
-/* анимированная рамка */
-.donate-actions .donate-btn::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  background: linear-gradient(120deg, #ff7f27, #a56bff, #ff7f27);
-  background-size: 300% 300%;
-  animation: borderFlow 3.5s linear infinite;
-  z-index: -1;
-  filter: blur(1px);
-}
-
-/* маска, чтобы осталась только окантовка */
-.donate-actions .donate-btn::after {
-  content: '';
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  background: rgba(255, 255, 255, 0.08);
-  z-index: -1;
-}
-
 @keyframes borderFlow {
   0% {
     background-position: 0% 50%;

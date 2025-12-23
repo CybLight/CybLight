@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CybLight Projects — Поддержать проекты</title>
+    <meta
+      name="description"
+      content="Поддержите проекты CybLight — донат через Monobank банку или по номеру карты."
+    />
+    <link rel="stylesheet" href="../css/donate.css" />
+  </head>
+
+  <body>
+    <main class="wrap">
+      <div class="top">
+        <h1>
+          <span class="icon fx-stars" aria-hidden="true">✨</span>
+          Поддержите мои проекты
+          <span class="icon fx-stars" aria-hidden="true">✨</span>
+        </h1>
+        <div class="brand">CybLight Projects</div>
+        <div class="divider"></div>
+      </div>
+
+      <section class="card" aria-label="Текст поддержки">
+        <h2>Ваши пожертвования помогут мне:</h2>
+        <ul class="list">
+          <li class="item">
+            <span class="icon fx-bulb" aria-hidden="true">💡</span>
+            <div class="txt">
+              Реализовать новые проекты <span class="icon fx-sat" aria-hidden="true">🛰️</span>
+            </div>
+          </li>
+          <li class="item">
+            <span class="icon fx-money" aria-hidden="true">💲</span>
+            <div class="txt">
+              Закупить компоненты для разработок
+              <span class="icon fx-tools" aria-hidden="true">🛠️</span>
+            </div>
+          </li>
+          <li class="item">
+            <span class="icon fx-straw" aria-hidden="true">🍓</span>
+            <div class="txt">
+              И купить вкусняшки для вдохновения <span aria-hidden="true">🍪</span>
+            </div>
+          </li>
+        </ul>
+
+        <p>
+          Каждая копеечка приближает меня к новым свершениям!<br />
+          Спасибо за вашу поддержку <span class="icon fx-heart">❤️</span>
+        </p>
+
+        <div class="donate-actions">
+          <a
+            class="btn primary donate-btn"
+            href="https://send.monobank.ua/jar/juPUWwZV8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="icon" aria-hidden="true">🫙</span>
+            Пополнить банку Monobank
+          </a>
+          <!-- ВИДЖЕТ БАНКИ РЯДОМ -->
+          <div class="jar-widget" aria-hidden="true">
+            <div class="jar-jar">
+              <div class="jar-liquid"></div>
+              <div class="jar-mouth"></div>
+              <div class="jar-coins"></div>
+              <div class="jar-glass"></div>
+            </div>
+            <div class="jar-label"></div>
+          </div>
+        </div>
+
+        <div class="card-flip" id="cardFlip" aria-label="Карта">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <span class="card-ico" aria-hidden="true">💳</span>
+              <div class="card-title">Карта Monobank</div>
+              <div class="card-hint">Наведи — чтобы посмотреть номер</div>
+            </div>
+            <div class="card-face card-back">
+              <div class="card-back-title">Номер карты</div>
+              <div class="card-number" id="cardNumberText">4874 1000 2227 5468</div>
+              <button
+                class="btn ghost copy-btn"
+                data-tooltip="Скопировать"
+                onclick="copyText('4874100022275468', this)"
+                aria-label="Скопировать номер карты"
+              >
+                <span class="icon" aria-hidden="true">📋</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mono" aria-label="Monobank">
+          monobank
+          <small>Universal Bank</small>
+        </div>
+      </section>
+      <div class="top">
+        <h2>QR-код для пополнения банки</h2>
+        <div class="divider"></div>
+      </div>
+
+      <!-- decorative bubbles -->
+      <div class="bubble b1">🛠️</div>
+      <div class="bubble b2">💲</div>
+      <div class="bubble b3">🧑‍💻</div>
+      <div class="bubble b4">🤗</div>
+
+      <section class="qr-stage" aria-label="QR-код для доната">
+        <div class="qr-plate">
+          <img
+            class="qr"
+            src="/images/qr_monobank_border.png"
+            alt="QR-код Monobank: https://send.monobank.ua/jar/juPUWwZV8"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../js/donate.js"></script>
+  </body>
+</html>

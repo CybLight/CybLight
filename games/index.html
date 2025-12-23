@@ -36,36 +36,11 @@
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
 
-    <link
-      rel="icon"
-      href="../images/favicon_16.png"
-      sizes="16x16"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="../images/favicon_32.png"
-      sizes="32x32"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="../images/favicon_48.png"
-      sizes="48x48"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="../images/favicon_64.png"
-      sizes="64x64"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="../images/favicon_192.png"
-      sizes="192x192"
-      type="image/png"
-    />
+    <link rel="icon" href="../images/favicon_16.png" sizes="16x16" type="image/png" />
+    <link rel="icon" href="../images/favicon_32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="../images/favicon_48.png" sizes="48x48" type="image/png" />
+    <link rel="icon" href="../images/favicon_64.png" sizes="64x64" type="image/png" />
+    <link rel="icon" href="../images/favicon_192.png" sizes="192x192" type="image/png" />
   </head>
   <body>
     <div class="page-frame">
@@ -78,11 +53,7 @@
                 aria-label="СайбЛайт Главная страница"
                 title="Открыть главную страницу сайта СайбЛайт"
               >
-                <img
-                  src="/images/logo.svg"
-                  class="logo-global"
-                  alt="CybLight Logo"
-                />
+                <img src="/images/logo.svg" class="logo-global" alt="CybLight Logo" />
               </a>
             </div>
 
@@ -171,6 +142,11 @@
               <li>
                 <a class="button" href="/contacts/">Контакты</a>
               </li>
+              <li>
+                <a class="button" href="/donate/" target="_blank" rel="noopener noreferrer"
+                  >Пожертвовать</a
+                >
+              </li>
             </ul>
           </div>
         </nav>
@@ -190,18 +166,14 @@
         <section class="games-intro">
           <h2>Прокачай навыки кода в формате мини-игр</h2>
           <p>
-            Здесь будут собраны небольшие интерактивные задания по
-            программированию: угадай вывод кода, работа с циклами, условиями,
-            массивами, а позже — алгоритмы, Big-O и перевод в двоичный вид.
+            Здесь будут собраны небольшие интерактивные задания по программированию: угадай вывод
+            кода, работа с циклами, условиями, массивами, а позже — алгоритмы, Big-O и перевод в
+            двоичный вид.
           </p>
 
           <div class="games-actions">
             <a href="/" class="button back-btn">← Назад в блог</a>
-            <button
-              type="button"
-              class="button button-secondary"
-              id="games-refresh"
-            >
+            <button type="button" class="button button-secondary" id="games-refresh">
               Обновить список игр
             </button>
           </div>
@@ -213,33 +185,23 @@
 
           <article class="game-card">
             <h3>1. Угадай вывод кода</h3>
-            <p>
-              Смотри на код и выбирай, что он выведет. Отлично тренирует
-              внимание к деталям.
-            </p>
+            <p>Смотри на код и выбирай, что он выведет. Отлично тренирует внимание к деталям.</p>
             <ul class="game-tags">
               <li>Python / JS / C-подобные</li>
               <li>Условные операторы</li>
               <li>Циклы</li>
             </ul>
-            <button type="button" id="start-quiz" class="button">
-              Начать игру
-            </button>
+            <button type="button" id="start-quiz" class="button">Начать игру</button>
           </article>
 
           <article class="game-card game-card-disabled">
             <h3>2. Бинарный перевод <span class="badge">Скоро</span></h3>
-            <p>
-              Числа в десятичной системе, а тебе нужно быстро перевести их в
-              двоичную.
-            </p>
+            <p>Числа в десятичной системе, а тебе нужно быстро перевести их в двоичную.</p>
           </article>
 
           <article class="game-card game-card-disabled">
             <h3>3. Угадай Big-O <span class="badge">Скоро</span></h3>
-            <p>
-              Смотри на код и отвечай, какая у него асимптотическая сложность.
-            </p>
+            <p>Смотри на код и отвечай, какая у него асимптотическая сложность.</p>
           </article>
         </section>
 
@@ -249,11 +211,7 @@
 
           <!-- Панель состояния игры -->
           <div class="game-status-bar">
-            <div>
-              Вопрос: <span id="quiz-number">1</span>/<span id="quiz-total"
-                >?</span
-              >
-            </div>
+            <div>Вопрос: <span id="quiz-number">1</span>/<span id="quiz-total">?</span></div>
             <div>Счёт: <span id="quiz-score">0</span></div>
             <br />
             Рекорд: <span id="quiz-best">0</span>
@@ -280,9 +238,7 @@
 
             <div class="game-buttons">
               <button id="quiz-next" class="button">Следующий вопрос</button>
-              <button id="quiz-restart" class="button button-secondary">
-                Начать заново
-              </button>
+              <button id="quiz-restart" class="button button-secondary">Начать заново</button>
             </div>
           </div>
         </section>
@@ -291,18 +247,10 @@
         <aside id="info_game" class="game-help">
           <h2>Как играть</h2>
           <ol>
-            <li>
-              Нажми <strong>«Начать игру»</strong> в карточке нужной игры.
-            </li>
-            <li>
-              Внимательно прочитай код в блоке <strong>«Игровое поле»</strong>.
-            </li>
-            <li>
-              Выбери один из вариантов ответа. Я сразу скажу, верно это или нет.
-            </li>
-            <li>
-              Нажимай <strong>«Следующий вопрос»</strong>, чтобы продолжить.
-            </li>
+            <li>Нажми <strong>«Начать игру»</strong> в карточке нужной игры.</li>
+            <li>Внимательно прочитай код в блоке <strong>«Игровое поле»</strong>.</li>
+            <li>Выбери один из вариантов ответа. Я сразу скажу, верно это или нет.</li>
+            <li>Нажимай <strong>«Следующий вопрос»</strong>, чтобы продолжить.</li>
             <li>
               Если хочешь начать всё сначала — жми
               <strong>«Начать заново»</strong>.
@@ -325,11 +273,7 @@
             </div>
 
             <div class="footer-made-with-love">
-              <a
-                href="https://mynickname.com/CybLight"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://mynickname.com/CybLight" target="_blank" rel="noopener noreferrer">
                 <img
                   src="https://mynickname.com/img.php?nick=CybLight&sert=24&text=t4"
                   alt="Nickname CybLight registred!"
@@ -346,9 +290,7 @@
               &nbsp;|&nbsp;
               <a href="/privacy/">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
               &nbsp;|&nbsp;
-              <a href="#" class="jsPrivacySettings noJSHide">
-                НАСТРОЙКИ КОНФИДЕНЦИАЛЬНОСТИ
-              </a>
+              <a href="#" class="jsPrivacySettings noJSHide"> НАСТРОЙКИ КОНФИДЕНЦИАЛЬНОСТИ </a>
             </div>
           </div>
         </div>
@@ -362,8 +304,7 @@
     <script src="../js/theme.js"></script>
     <script>
       // небольшой скрипт для года в подвале
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
+      document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
   </body>
 </html>

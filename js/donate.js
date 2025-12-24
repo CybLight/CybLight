@@ -82,75 +82,18 @@ async function copyText(text, btn = null) {
   }
 }
 
-(function initJarCoinsJS() {
-  const btn = document.querySelector('.donate-btn');
-  const jar = btn?.querySelector('.jar-wrap');
-  if (!btn || !jar) return;
-
-  let timer = null;
-
-  function spawnCoin(burst = false) {
-    const btnRect = btn.getBoundingClientRect();
-    const jarRect = jar.getBoundingClientRect();
-
-    // точка “выпуска” монет — над банкой
-    const originX = jarRect.left - btnRect.left + jarRect.width * 0.55;
-    const originY = jarRect.top - btnRect.top + jarRect.height * 0.1;
-
-    const coin = document.createElement('span');
-    coin.className = 'coin';
-    coin.textContent = '🪙';
-
-    // небольшой разброс по X
-    const spread = burst ? 18 : 10;
-    const x = originX + (Math.random() * spread * 2 - spread);
-    const y = originY - (burst ? 10 : 6);
-
-    // глубина падения внутрь (подгони под высоту кнопки)
-    const drop = burst ? 60 : 46;
-
-    coin.style.setProperty('--x', `${x}px`);
-    coin.style.setProperty('--y', `${y}px`);
-    coin.style.setProperty('--drop', `${drop}px`);
-    coin.style.setProperty('--dur', `${burst ? 520 : 720}ms`);
-
-    btn.appendChild(coin);
-
-    coin.addEventListener('animationend', () => coin.remove(), { once: true });
-  }
-
-  function startRain() {
-    if (timer) return;
-    // “дождик” монет
-    timer = setInterval(() => spawnCoin(false), 140);
-  }
-
-  function stopRain() {
-    if (!timer) return;
-    clearInterval(timer);
-    timer = null;
-  }
-
-  // ПК: hover
-  btn.addEventListener('pointerenter', startRain);
-  btn.addEventListener('pointerleave', stopRain);
-
-  // Мобилка/клик: короткий “всплеск”
-  btn.addEventListener('click', () => {
-    for (let i = 0; i < 7; i++) setTimeout(() => spawnCoin(true), i * 55);
-  });
-})();
-
 (function jarWidgetFX() {
-  const btn = document.querySelector('.donate-btn');
-  const widget = document.querySelector('.jar-widget');
-  const jar = widget?.querySelector('.jar-jar');
-  const coinsLayer = widget?.querySelector('.jar-coins');
-  const liquid = widget?.querySelector('.jar-liquid');
-  if (!btn || !widget || !jar || !coinsLayer || !liquid) return;
+  const btn = document.querySelector('.donate-btn');      // ссылка на монобанк
+  const widget = document.querySelector('.jar-widget');   // виджет банки
+  const jar = widget?.querySelector('.jar-jar');          // кликабельная банка
+  const coinsLayer = widget?.querySelector('.jar-coins'); // слой монет
+  const liquid = widget?.querySelector('.jar-liquid');    // заливка (может не использоваться напрямую)
+  if (!widget || !jar || !coinsLayer || !liquid) return;
 
-  // ===== Fill 0..1 =====
-  let fill = 0.1;
+  // =========================
+  // Fill 0..1
+  // =========================
+  let fill = 0.12;
   function setFill(v) {
     fill = Math.max(0.08, Math.min(1, v));
     jar.style.setProperty('--fill', fill.toFixed(3));
@@ -170,7 +113,9 @@ async function copyText(text, btn = null) {
     }, 250);
   }
 
-  // ===== Sound “дзынь” =====
+  // =========================
+  // Sound “дзынь”
+  // =========================
   let audioCtx = null;
   let lastDingAt = 0;
 
@@ -216,18 +161,19 @@ async function copyText(text, btn = null) {
     } catch (e) {}
   }
 
-  // ===== Spawn coin inside jar widget =====
+  // =========================
+  // Spawn coin inside jar widget
+  // =========================
   function spawnCoin({ burst = false } = {}) {
     const coin = document.createElement('span');
     coin.className = 'coin';
     coin.textContent = '🪙';
 
-    // Внутри банки: центр по X, чтобы “в горлышко”
+    // Внутри банки: целимся в горлышко
     const x = 48 + (Math.random() * 16 - 8); // 40..56%
     const y = -10;
 
-    // глубина: почти до “жидкости”
-    const drop = 40 + Math.random() * 10; // 40..50
+    const drop = 40 + Math.random() * 10;   // 40..50px
     const dur = burst ? 520 + Math.random() * 120 : 680 + Math.random() * 160;
 
     coin.style.setProperty('--x', `${x}%`);
@@ -245,24 +191,67 @@ async function copyText(text, btn = null) {
     coin.addEventListener('animationend', () => coin.remove(), { once: true });
   }
 
-  // ===== Run modes =====
+  // =========================
+  // Modes: hold / tap on JAR (mobile friendly)
+  // =========================
   let rain = null;
-  function startRain() {
+
+  function startRain(e) {
+    // чтобы долгий тап не лез в “системные” действия
+    if (e && e.cancelable) e.preventDefault();
+
     if (rain) return;
-    rain = setInterval(() => spawnCoin({ burst: false }), 150);
+    spawnCoin({ burst: false });
+    rain = setInterval(() => spawnCoin({ burst: false }), 120);
   }
+
   function stopRain() {
     if (!rain) return;
     clearInterval(rain);
     rain = null;
   }
 
-  // Hover по кнопке запускает банку (виджет рядом)
-  btn.addEventListener('pointerenter', startRain);
-  btn.addEventListener('pointerleave', stopRain);
+  // ВАЖНО: блокируем контекст-меню на банке (Android long-press)
+  jar.addEventListener('contextmenu', (e) => e.preventDefault());
 
-  // Клик = всплеск
-  btn.addEventListener('click', () => {
-    for (let i = 0; i < 8; i++) setTimeout(() => spawnCoin({ burst: true }), i * 55);
+  // Pointer (универсально)
+  jar.addEventListener('pointerdown', startRain, { passive: false });
+  window.addEventListener('pointerup', stopRain);
+  window.addEventListener('pointercancel', stopRain);
+  window.addEventListener('blur', stopRain);
+
+  // Touch fallback
+  jar.addEventListener('touchstart', startRain, { passive: false });
+  jar.addEventListener('touchend', stopRain);
+  jar.addEventListener('touchcancel', stopRain);
+
+  // Короткий тап по банке = “всплеск”
+  jar.addEventListener('click', (e) => {
+    // на всякий: чтобы не было “двойного” эффекта после удержания
+    if (rain) return;
+    if (e && e.cancelable) e.preventDefault();
+    for (let i = 0; i < 7; i++) setTimeout(() => spawnCoin({ burst: true }), i * 55);
   });
+
+  // =========================
+  // ПК: можно запускать дождь от hover по кнопке (но сама кнопка не трогается на мобилке)
+  // =========================
+  if (btn) {
+    // hover только если есть “мышь”
+    const canHover = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+
+    if (canHover) {
+      btn.addEventListener('pointerenter', () => startRain());
+      btn.addEventListener('pointerleave', stopRain);
+    }
+
+    // Клик по кнопке оставляем как переход по ссылке.
+    // Если хочешь, чтобы при клике по кнопке был "всплеск" (и всё равно переход),
+    // можно раскомментировать ниже:
+    /*
+    btn.addEventListener('click', () => {
+      for (let i = 0; i < 6; i++) setTimeout(() => spawnCoin({ burst: true }), i * 45);
+    });
+    */
+  }
 })();

@@ -764,25 +764,83 @@ body {
   letter-spacing: 0.2px;
 }
 
+/* ЖИВАЯ АНИМАЦИЯ ВСЕЙ КНОПКИ */
 .donate-actions .donate-btn {
-  position: relative;
-  background: rgba(255, 255, 255, 0.08);
+  /* размеры оставляем твои */
+  width: fit-content;
+  max-width: 100%;
+  padding: 10px 14px;
+  min-height: 40px;
+  font-size: 13px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
-  isolation: isolate;
+  line-height: 1;
+  gap: 10px;
+  white-space: nowrap;
+
+  /* основа */
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.96);
+  text-decoration: none;
+
+  /* анимируем САМ фон */
+  background: linear-gradient(
+    120deg,
+    rgba(165, 107, 255, 0.35),
+    rgba(255, 159, 67, 0.28),
+    rgba(165, 107, 255, 0.35)
+  );
+  background-size: 220% 220%;
+
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.26),
+    0 0 0 rgba(165, 107, 255, 0);
+
+  animation: donateGradient 4.2s ease-in-out infinite, donateGlow 2.4s ease-in-out infinite;
+  transition: transform 0.12s ease, filter 0.12s ease;
 }
 
-@keyframes borderFlow {
-  0% {
-    background-position: 0% 50%;
+.donate-actions .donate-btn:hover {
+  transform: translateY(-1px) scale(1.01);
+  filter: brightness(1.06);
+}
+
+.donate-actions .donate-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* перелив */
+@keyframes donateGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* “дыхание” свечения */
+@keyframes donateGlow {
+  0%, 100% {
+    box-shadow:
+      0 12px 26px rgba(0, 0, 0, 0.26),
+      0 0 12px rgba(165, 107, 255, 0.22),
+      0 0 0 rgba(255, 159, 67, 0);
   }
-  100% {
-    background-position: 300% 50%;
+  50% {
+    box-shadow:
+      0 16px 36px rgba(0, 0, 0, 0.32),
+      0 0 20px rgba(255, 159, 67, 0.32),
+      0 0 14px rgba(165, 107, 255, 0.25);
   }
 }
 
-/* На мобилке банку вниз */
+
+/* MOBILE ADAPTIVE */
+
+/* Банку снизу */
+
 @media (max-width: 640px) {
   .donate-actions {
     flex-direction: column;
@@ -813,7 +871,8 @@ body {
   }
 }
 
-/* на всякий случай — убрать любые min-width, которые ломают мобилку */
+/* на всякий случай — убрать любые min-width */
+
 .card-flip,
 .card-inner,
 .card-face {
@@ -821,10 +880,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .donate-actions .donate-btn::before,
-  .donate-actions .donate-btn::after {
-    animation: none;
-  }
   .jar-fill {
     transition: none;
   }
@@ -835,6 +890,7 @@ body {
 }
 
 /* mobile spacing tweaks */
+
 @media (max-width: 420px) {
   .qr-plate {
     padding: 14px;

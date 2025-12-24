@@ -836,6 +836,26 @@ body {
   }
 }
 
+/* Банка: на мобилке не показывать контекст-меню, не выделять */
+
+.jar-widget,
+.jar-jar,
+.jar-coins,
+.jar-mouth,
+.jar-glass {
+  -webkit-touch-callout: none; /* iOS/Chrome sometimes */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.jar-jar {
+  cursor: pointer;
+  touch-action: manipulation; /* чтобы тап был тапом */
+}
+
+/* на всякий случай — убираем меню по долгому тапу именно на банке */
+.jar-jar { -webkit-tap-highlight-color: transparent; }
+
 
 /* MOBILE ADAPTIVE */
 

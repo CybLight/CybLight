@@ -859,6 +859,26 @@ body {
 
 /* MOBILE ADAPTIVE */
 
+/* По умолчанию (ПК): "Наведи — ..." */
+.card-flip .card-hint::before {
+  content: "Наведи — чтобы посмотреть номер";
+}
+
+/* Мобилка/тач: "Нажми — ..." */
+@media (hover: none), (pointer: coarse), (max-width: 640px) {
+  .card-flip .card-hint::before {
+    content: "Нажми — чтобы посмотреть номер";
+  }
+}
+
+/* Скрываем исходный текст внутри элемента, чтобы не было дубля */
+.card-flip .card-hint {
+  font-size: 0;
+}
+.card-flip .card-hint::before {
+  font-size: 13px; /* верни размер, какой тебе нужен */
+}
+
 /* Банку снизу */
 
 @media (max-width: 640px) {

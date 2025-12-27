@@ -637,89 +637,6 @@ body {
   transform: translateY(1px);
 }
 
-/* Неоновый контур вокруг donate-кнопки */
-.donate-actions .donate-btn {
-  position: relative;
-  overflow: visible; /* свечение выходит за края */
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
-}
-
-/* мягкий пульс */
-.donate-actions .donate-btn::before {
-  content: '';
-  position: absolute;
-  inset: -8px;
-  border-radius: inherit;
-  background: radial-gradient(60% 120% at 25% 50%, rgba(255, 127, 39, 0.35), transparent 70%),
-    radial-gradient(60% 120% at 75% 50%, rgba(165, 107, 255, 0.35), transparent 70%);
-  filter: blur(12px);
-  opacity: 0.65;
-  z-index: -1;
-  animation: neonPulse 3.2s ease-in-out infinite;
-}
-
-/* крутящаяся полоска */
-.donate-actions .donate-btn::after {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  padding: 2px;
-
-  background: conic-gradient(
-    rgba(255, 127, 39, 0) 0deg,
-    rgba(255, 127, 39, 0.95) 70deg,
-    rgba(165, 107, 255, 0.95) 160deg,
-    rgba(255, 127, 39, 0) 260deg,
-    rgba(255, 127, 39, 0) 360deg
-  );
-
-  /* оставляем только “ободок” */
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-
-  opacity: 0.9;
-  z-index: 0;
-  pointer-events: none;
-
-  /* ВАЖНО: вращаем transform (надёжно) */
-  transform-origin: center;
-  animation: neonSpin 7.5s linear infinite, neonBreathe 2.4s ease-in-out infinite;
-}
-
-@keyframes neonSpin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes neonBreathe {
-  0%,
-  100% {
-    opacity: 0.7;
-    filter: blur(0px);
-  }
-  50% {
-    opacity: 0.95;
-    filter: blur(0.2px);
-  }
-}
-
-@keyframes neonPulse {
-  0%,
-  100% {
-    opacity: 0.45;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.9;
-    transform: scale(1.02);
-  }
-}
-
 /* БАНКА С МОНЕТАМИ */
 
 /* ===== Layout рядом с кнопкой ===== */
@@ -847,48 +764,123 @@ body {
   letter-spacing: 0.2px;
 }
 
+/* ЖИВАЯ АНИМАЦИЯ ВСЕЙ КНОПКИ */
 .donate-actions .donate-btn {
-  position: relative;
-  background: rgba(255, 255, 255, 0.08);
+  /* размеры оставляем твои */
+  width: fit-content;
+  max-width: 100%;
+  padding: 10px 14px;
+  min-height: 40px;
+  font-size: 13px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
-  isolation: isolate;
+  line-height: 1;
+  gap: 10px;
+  white-space: nowrap;
+
+  /* основа */
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.96);
+  text-decoration: none;
+
+  /* анимируем САМ фон */
+  background: linear-gradient(
+    120deg,
+    rgba(165, 107, 255, 0.35),
+    rgba(255, 159, 67, 0.28),
+    rgba(165, 107, 255, 0.35)
+  );
+  background-size: 220% 220%;
+
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.26),
+    0 0 0 rgba(165, 107, 255, 0);
+
+  animation: donateGradient 4.2s ease-in-out infinite, donateGlow 2.4s ease-in-out infinite;
+  transition: transform 0.12s ease, filter 0.12s ease;
 }
 
-/* анимированная рамка */
-.donate-actions .donate-btn::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  background: linear-gradient(120deg, #ff7f27, #a56bff, #ff7f27);
-  background-size: 300% 300%;
-  animation: borderFlow 3.5s linear infinite;
-  z-index: -1;
-  filter: blur(1px);
+.donate-actions .donate-btn:hover {
+  transform: translateY(-1px) scale(1.01);
+  filter: brightness(1.06);
 }
 
-/* маска, чтобы осталась только окантовка */
-.donate-actions .donate-btn::after {
-  content: '';
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  background: rgba(255, 255, 255, 0.08);
-  z-index: -1;
+.donate-actions .donate-btn:active {
+  transform: translateY(0) scale(0.98);
 }
 
-@keyframes borderFlow {
-  0% {
-    background-position: 0% 50%;
+/* перелив */
+@keyframes donateGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* “дыхание” свечения */
+@keyframes donateGlow {
+  0%, 100% {
+    box-shadow:
+      0 12px 26px rgba(0, 0, 0, 0.26),
+      0 0 12px rgba(165, 107, 255, 0.22),
+      0 0 0 rgba(255, 159, 67, 0);
   }
-  100% {
-    background-position: 300% 50%;
+  50% {
+    box-shadow:
+      0 16px 36px rgba(0, 0, 0, 0.32),
+      0 0 20px rgba(255, 159, 67, 0.32),
+      0 0 14px rgba(165, 107, 255, 0.25);
   }
 }
 
-/* На мобилке банку вниз */
+/* Банка: на мобилке не показывать контекст-меню, не выделять */
+
+.jar-widget,
+.jar-jar,
+.jar-coins,
+.jar-mouth,
+.jar-glass {
+  -webkit-touch-callout: none; /* iOS/Chrome sometimes */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.jar-jar {
+  cursor: pointer;
+  touch-action: manipulation; /* чтобы тап был тапом */
+}
+
+/* на всякий случай — убираем меню по долгому тапу именно на банке */
+.jar-jar { -webkit-tap-highlight-color: transparent; }
+
+
+/* MOBILE ADAPTIVE */
+
+/* По умолчанию (ПК): "Наведи — ..." */
+.card-flip .card-hint::before {
+  content: "Наведи — чтобы посмотреть номер";
+}
+
+/* Мобилка/тач: "Нажми — ..." */
+@media (hover: none), (pointer: coarse), (max-width: 640px) {
+  .card-flip .card-hint::before {
+    content: "Нажми — чтобы посмотреть номер";
+  }
+}
+
+/* Скрываем исходный текст внутри элемента, чтобы не было дубля */
+.card-flip .card-hint {
+  font-size: 0;
+}
+.card-flip .card-hint::before {
+  font-size: 13px; /* верни размер, какой тебе нужен */
+}
+
+/* Банку снизу */
+
 @media (max-width: 640px) {
   .donate-actions {
     flex-direction: column;
@@ -899,11 +891,35 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .donate-actions .donate-btn::before,
-  .donate-actions .donate-btn::after {
-    animation: none;
+/* ===== MOBILE FIX ===== */
+
+@media (max-width: 520px) {
+  .card-flip {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
+
+  .card-inner {
+    width: 100% !important;
+  }
+
+  .card-face {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* на всякий случай — убрать любые min-width */
+
+.card-flip,
+.card-inner,
+.card-face {
+  min-width: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
   .jar-fill {
     transition: none;
   }
@@ -914,6 +930,7 @@ body {
 }
 
 /* mobile spacing tweaks */
+
 @media (max-width: 420px) {
   .qr-plate {
     padding: 14px;

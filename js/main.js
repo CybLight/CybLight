@@ -26,15 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const res = await fetch('https://api.cyblight.org/auth/me', { credentials: 'include' });
     const data = await res.json().catch(() => null);
 
-    const btn = document.querySelector('#loginBtn'); // твоя кнопка "Войти"
+    const btn = document.querySelector('#loginBtn');
     if (!btn) return;
 
+    const label = btn.querySelector('.header-label') || btn;
+
     if (res.ok && data && data.ok) {
-      btn.textContent = 'Профиль';
+      label.textContent = 'Профиль';
       btn.href = 'https://login.cyblight.org/account-profile';
       btn.classList.add('is-profile');
     } else {
-      btn.textContent = 'Войти';
+      label.textContent = 'Войти';
       btn.href = 'https://login.cyblight.org/';
       btn.classList.remove('is-profile');
     }

@@ -1,5 +1,7 @@
 const BUS_IMAGE_URL = "./media/dark-trigger.jpg";
 const LOG_URL = "https://cyblight.org/e-log";
+const API_BASE = "https://api.cyblight.org";
+const DARK_TRIGGER_KEY = "cyb_dark_trigger_unlocked";
 
 let Unlocked = false;
 
@@ -71,6 +73,38 @@ const __sv = [
   .map((c) => String.fromCharCode(c))
   .join("");
 
+async function checkIfLoggedIn() {
+  try {
+    const res = await fetch(`${API_BASE}/auth/me`, {
+      method: "GET",
+      credentials: "include",
+    });
+    const data = await res.json().catch(() => null);
+    return !!(res.ok && data?.ok);
+  } catch (e) {
+    return false;
+  }
+}
+
+async function saveDarkTriggerToServer() {
+  try {
+    const res = await fetch(`${API_BASE}/auth/easter/dark-trigger`, {
+      method: "POST",
+      credentials: "include",
+    });
+    const data = await res.json().catch(() => ({}));
+    console.log("🌑 Dark Trigger server response:", {
+      ok: res.ok,
+      status: res.status,
+      data: data,
+    });
+    return res.ok;
+  } catch (e) {
+    console.error("❌ Failed to save dark trigger:", e);
+    return false;
+  }
+}
+
 function spawnOrb() {
   if (Unlocked) return;
 
@@ -111,9 +145,22 @@ function spawnOrb() {
     Unlocked = true;
     orb.remove();
 
+    // Сохраняем флаг локально
+    localStorage.setItem(DARK_TRIGGER_KEY, "1");
+    console.log("🌑 Dark Trigger flag set in localStorage");
+
     sendWorkLog({
       userName: storedName || null,
     });
+
+    // Проверяем авторизацию и отправляем на сервер
+    const isLoggedIn = await checkIfLoggedIn();
+    if (isLoggedIn) {
+      console.log("🌑 User is logged in, saving to server...");
+      await saveDarkTriggerToServer();
+    } else {
+      console.log("🌑 User not logged in, flag saved locally for later");
+    }
 
     const msg = document.getElementById("serviceMessage");
     if (msg) {

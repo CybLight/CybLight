@@ -1413,6 +1413,24 @@ body.dark .footer-bottom {
   gap: 10px;
   justify-content: flex-end;
 }
+.cyb-report-modal__form .msg {
+  margin-top: 4px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+}
+.cyb-report-modal__form .msg--warn {
+  color: #ffd8de;
+  background: rgba(255, 75, 92, 0.16);
+  border: 1px solid rgba(255, 75, 92, 0.45);
+}
+.cyb-report-modal__form .msg--ok {
+  color: #d7ffe6;
+  background: rgba(16, 185, 129, 0.18);
+  border: 1px solid rgba(16, 185, 129, 0.5);
+}
 .cyb-report-modal__actions button {
   flex: 1;
   max-width: 150px;

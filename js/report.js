@@ -42,11 +42,27 @@ function parseUA(ua = '') {
   return { browser, version, os };
 }
 
-// helper to post to backend
-function reportApiCall(path, options) {
-  // use same backend as main.js
-  const BASE = 'https://cyblight-backend.onrender.com';
-  return fetch(BASE + path, options);
+// try current API domain first, then legacy backend paths
+async function reportApiCall(options) {
+  const endpoints = [
+    'https://api.cyblight.org/api/error/report',
+    'https://cyblight-backend.onrender.com/api/error/report',
+    'https://cyblight-backend.onrender.com/error/report',
+  ];
+
+  let lastNetworkError = null;
+  for (const endpoint of endpoints) {
+    try {
+      const response = await fetch(endpoint, options);
+      if (response.status === 404) continue;
+      return response;
+    } catch (err) {
+      lastNetworkError = err;
+    }
+  }
+
+  if (lastNetworkError) throw lastNetworkError;
+  throw new Error('Не найден рабочий endpoint для отправки отчёта');
 }
 
 (function () {
@@ -124,6 +140,7 @@ function reportApiCall(path, options) {
     e.preventDefault();
     const modal = document.getElementById('cybReportModal');
     if (!modal) return;
+    const form = modal.querySelector('#reportForm');
     const emailInput = modal.querySelector('#reportEmail');
     const categorySelect = modal.querySelector('#reportCategory');
     const messageInput = modal.querySelector('#reportMessage');
@@ -150,9 +167,12 @@ function reportApiCall(path, options) {
 
     try {
       const ua = parseUA(navigator.userAgent);
-      const response = await reportApiCall('/error/report', {
+      const response = await reportApiCall({
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
         body: JSON.stringify({
           type: category || 'unknown',
           email: email || null,

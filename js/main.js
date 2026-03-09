@@ -1,8 +1,9 @@
 const API_BASE = 'https://cyblight-backend.onrender.com';
 
 async function loadYoutubeStats() {
+  // Основной канал
   try {
-    const res = await fetch(`${API_BASE}/api/youtube/stats`);
+    const res = await fetch(`${API_BASE}/api/youtube/stats?channel=main`);
     if (!res.ok) throw new Error('Failed to fetch');
     const data = await res.json();
 
@@ -14,6 +15,22 @@ async function loadYoutubeStats() {
     console.error(e);
     const subsEl = document.getElementById('yt-subs');
     if (subsEl) subsEl.textContent = 'недоступно';
+  }
+
+  // Техно канал
+  try {
+    const res = await fetch(`${API_BASE}/api/youtube/stats?channel=tech`);
+    if (!res.ok) throw new Error('Failed to fetch');
+    const data = await res.json();
+
+    const techEl = document.getElementById('yt-tech-subs');
+    if (techEl && data.subscriberCount) {
+      techEl.textContent = Number(data.subscriberCount).toLocaleString('ru-RU');
+    }
+  } catch (e) {
+    console.error(e);
+    const techEl = document.getElementById('yt-tech-subs');
+    if (techEl) techEl.textContent = 'недоступно';
   }
 }
 

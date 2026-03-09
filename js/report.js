@@ -45,9 +45,7 @@ function parseUA(ua = '') {
 // try current API domain first, then legacy backend paths
 async function reportApiCall(options) {
   const endpoints = [
-    'https://api.cyblight.org/api/error/report',
-    'https://cyblight-backend.onrender.com/api/error/report',
-    'https://cyblight-backend.onrender.com/error/report',
+    'https://api.cyblight.org/error/report',
   ];
 
   let lastNetworkError = null;

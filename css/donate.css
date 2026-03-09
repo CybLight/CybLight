@@ -10,28 +10,91 @@
 * {
   box-sizing: border-box;
 }
-body {
+
+html.donate,
+body.donate {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.donate {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
   color: var(--text);
-  background: radial-gradient(1200px 800px at 70% 15%, rgba(255, 255, 255, 0.1), transparent 55%),
-    radial-gradient(900px 700px at 15% 60%, rgba(0, 0, 0, 0.18), transparent 50%),
-    linear-gradient(180deg, var(--bg1), var(--bg2));
+  background: #fff; /* white page background */
   min-height: 100svh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 28px 14px 40px;
+  padding: 0; /* remove all default padding */
+}
+
+/* dark mode for donate page */
+body.donate.dark {
+  background: #18181b; /* dark background instead of purple */
+}
+body.donate.dark .page-frame {
+  background:
+    radial-gradient(1200px 800px at 70% 15%, rgba(0, 0, 0, 0.2), transparent 55%),
+    radial-gradient(900px 700px at 15% 60%, rgba(0, 0, 0, 0.3), transparent 50%),
+    linear-gradient(180deg, #1f1f1f, #111);
+}
+body.donate.dark .top-header .header-top-right .header-link {
+  color: #e7ecff !important; /* make icons light */
+}
+body.donate.dark .top-header .header-top-right .header-link:hover {
+  color: var(--accent, #ff7f27) !important;
+}
+
+body.donate main {
+  padding-top: 0; /* remove extra space under header */
+}
+
+body.donate {
+  padding-bottom: 0; /* remove space below footer */
+}
+
+/* make the white page-frame transparent on donate page so cards sit on purple background
+   and keep it centered with a reasonable max width */
+body.donate .page-frame {
+  /* purple gradient container background, with glow shadow like homepage */
+  background:
+    radial-gradient(1200px 800px at 70% 15%, rgba(255, 255, 255, 0.1), transparent 55%),
+    radial-gradient(900px 700px at 15% 60%, rgba(0, 0, 0, 0.18), transparent 50%),
+    linear-gradient(180deg, var(--bg1), var(--bg2));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+  margin: 0 auto !important;
+  max-width: 1200px; /* same as .container on homepage */
+  width: 100%;
+  padding: 0; /* remove default page-frame padding if any */
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+}
+
+/* dark variant similar to global page-frame dark style */
+body.donate.dark .page-frame {
+  background: var(--primary-gray);
+  box-shadow: 0 0 2.5em 0.5em rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
 }
 
 .wrap {
   width: min(760px, 100%);
   position: relative;
+  margin: 0 auto; /* center horizontally */
+  background: inherit; /* match body color */
 }
 
 .top {
   text-align: center;
-  margin-bottom: 16px;
+  margin: 60px auto 16px; /* push section farther down from header */
 }
 .top h1 {
   font-size: clamp(22px, 3.3vw, 30px);
@@ -54,6 +117,22 @@ body {
 }
 
 /* floating emoji bubbles */
+/* keep site header/nav legible when donate theme is active */
+/* only darken the small header icons (language/login) on donate page */
+body.donate .top-header .header-top-right .header-link {
+  color: #111 !important;
+}
+body.donate .top-header .header-top-right .header-link:hover {
+  color: var(--accent, #ff7f27) !important;
+}
+/* keep nav buttons readable (light text) */
+body.donate .top-header .header-nav .button {
+  color: #f9fafb !important;
+}
+body.donate .top-header .header-nav .button:hover {
+  color: var(--accent, #ff7f27) !important;
+}
+
 .bubble {
   position: absolute;
   width: 54px;
@@ -198,7 +277,9 @@ body {
   text-decoration: none;
   font-weight: 700;
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
-  transition: transform 0.12s ease, background 0.12s ease;
+  transition:
+    transform 0.12s ease,
+    background 0.12s ease;
   cursor: pointer;
 }
 .btn:hover {
@@ -800,8 +881,12 @@ body {
     0 12px 26px rgba(0, 0, 0, 0.26),
     0 0 0 rgba(165, 107, 255, 0);
 
-  animation: donateGradient 4.2s ease-in-out infinite, donateGlow 2.4s ease-in-out infinite;
-  transition: transform 0.12s ease, filter 0.12s ease;
+  animation:
+    donateGradient 4.2s ease-in-out infinite,
+    donateGlow 2.4s ease-in-out infinite;
+  transition:
+    transform 0.12s ease,
+    filter 0.12s ease;
 }
 
 .donate-actions .donate-btn:hover {
@@ -815,14 +900,21 @@ body {
 
 /* перелив */
 @keyframes donateGradient {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* “дыхание” свечения */
 @keyframes donateGlow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow:
       0 12px 26px rgba(0, 0, 0, 0.26),
       0 0 12px rgba(165, 107, 255, 0.22),
@@ -854,20 +946,21 @@ body {
 }
 
 /* на всякий случай — убираем меню по долгому тапу именно на банке */
-.jar-jar { -webkit-tap-highlight-color: transparent; }
-
+.jar-jar {
+  -webkit-tap-highlight-color: transparent;
+}
 
 /* MOBILE ADAPTIVE */
 
 /* По умолчанию (ПК): "Наведи — ..." */
 .card-flip .card-hint::before {
-  content: "Наведи — чтобы посмотреть номер";
+  content: 'Наведи — чтобы посмотреть номер';
 }
 
 /* Мобилка/тач: "Нажми — ..." */
 @media (hover: none), (pointer: coarse), (max-width: 640px) {
   .card-flip .card-hint::before {
-    content: "Нажми — чтобы посмотреть номер";
+    content: 'Нажми — чтобы посмотреть номер';
   }
 }
 

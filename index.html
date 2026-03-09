@@ -49,6 +49,9 @@
     <link rel="canonical" href="https://cyblight.org/" />
     <link rel="manifest" href="/manifest.json" />
 
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://apis.google.com" />
+    <link rel="preload" href="css/styles.css" as="style" />
     <link rel="stylesheet" href="css/styles.css" />
 
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
@@ -65,7 +68,7 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
 
-  <body>
+  <body class="no-strawberries">
     <div class="page-frame">
       <header class="top-header">
         <div class="header-top">
@@ -174,7 +177,7 @@
           <div class="container">
             <ul class="buttons">
               <li><a class="button" href="/">Главная</a></li>
-              <li><a class="button" href="#projects">Проекты</a></li>
+              <li><a class="button" href="/projects/">Проекты</a></li>
               <li><a class="button" href="#videos">Видео</a></li>
               <li>
                 <a class="button disabled" href="/dark/trig/c4...77/">Форум</a>
@@ -210,11 +213,171 @@
               Спасибо за понимание!
             </p>
           </div>
-          <div class="hero-image">
+          <!-- <div class="hero-image">
             <img
               src="/images/hero.png"
               alt="CybLight — проекты по электронике, умному дому и эхолоту"
             />
+          </div>
+          -->
+        </section>
+
+        <section id="projects" class="projects-carousel">
+          <h2>Мои проекты</h2>
+          <div class="carousel-wrapper">
+            <button class="carousel-nav prev" aria-label="Предыдущий проект">‹</button>
+            <div class="carousel">
+              <!-- 1. основной сайт -->
+              <article class="project-card">
+                <div class="project-langs">
+                  <div class="lang">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/typescript.svg?color=3178c6"
+                      alt="TypeScript"
+                    /><span>TypeScript</span>
+                  </div>
+                  <div class="lang">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg?color=f7df1e"
+                      alt="JavaScript"
+                    /><span>JavaScript</span>
+                  </div>
+                  <div class="lang">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg?color=e34f26"
+                      alt="HTML"
+                    /><span>HTML</span>
+                  </div>
+                  <div class="lang">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg?color=1572b6"
+                      alt="CSS"
+                    /><span>CSS</span>
+                  </div>
+                </div>
+                <img
+                  src="/images/hero.png"
+                  alt="CybLight main site"
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                />
+                <div class="project-info">
+                  <h3>Сайт CybLight</h3>
+                  <p>Мой основной сайт, на котором вы сейчас находитесь.</p>
+                  <a class="button" href="/projects/">Узнать больше</a>
+                </div>
+              </article>
+
+              <!-- 2. Python бот -->
+              <article class="project-card">
+                <div class="project-langs">
+                  <div class="lang">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg?color=3776ab"
+                      alt="Python"
+                    /><span>Python</span>
+                  </div>
+                </div>
+                <img
+                  src="/images/project/Guardian_BOT.jpg"
+                  alt="CybLight Guardian Bot"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                />
+                <div class="project-info">
+                  <h3>Telegram-бот Guardian</h3>
+                  <p>Бот для поддержания порядка в группах.</p>
+                  <a class="button" href="/projects/">Узнать больше</a>
+                </div>
+              </article>
+
+              <!-- 3. Priority Manager X -->
+              <article class="project-card">
+                <div class="project-langs">
+                  <div class="lang">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/csharp.svg?color=239120"
+                      alt="C#"
+                    /><span>C Sharp</span>
+                  </div>
+                </div>
+                <img
+                  src="/images/project/PmX-background.png"
+                  alt="Priority Manager X"
+                  width="1024"
+                  height="1024"
+                  loading="lazy"
+                />
+                <div class="project-info">
+                  <h3>Priority Manager X</h3>
+                  <p>Управление приоритетами процессов и правила для Windows.</p>
+                  <a class="button" href="/projects/">Узнать больше</a>
+                </div>
+              </article>
+
+              <!-- 4. Smart Home Hub -->
+              <article class="project-card">
+                <div class="project-langs">
+                  <div class="lang">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/arduino.svg?color=00979d"
+                      alt="Arduino"
+                    /><span>Arduino</span>
+                  </div>
+                  <div class="lang">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cplusplus.svg?color=00599c"
+                      alt="C++"
+                    /><span>C++</span>
+                  </div>
+                </div>
+                <img
+                  src="/images/project/Smart Home Hub (640 x 360).png"
+                  alt="Smart Home Hub"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                />
+                <div class="project-info">
+                  <h3>Smart Home Hub</h3>
+                  <p>Оптимизация и уют для дома через умные технологии.</p>
+                  <a class="button" href="/projects/">Узнать больше</a>
+                </div>
+              </article>
+
+              <!-- 5. Fish Finder PRO -->
+              <article class="project-card">
+                <div class="project-langs">
+                  <div class="lang">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/arduino.svg?color=00979d"
+                      alt="Arduino"
+                    /><span>Arduino</span>
+                  </div>
+                  <div class="lang">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cplusplus.svg?color=00599c"
+                      alt="C++"
+                    /><span>C++</span>
+                  </div>
+                </div>
+                <img
+                  src="/images/project/Fish Finder PRO.jpg"
+                  alt="Fish Finder PRO"
+                  width="1024"
+                  height="1024"
+                  loading="lazy"
+                />
+                <div class="project-info">
+                  <h3>Fish Finder PRO</h3>
+                  <p>Эхолот для рыбалки на базе Arduino.</p>
+                  <a class="button" href="/projects/">Узнать больше</a>
+                </div>
+              </article>
+            </div>
+            <button class="carousel-nav next" aria-label="Следующий проект">›</button>
           </div>
         </section>
 
@@ -287,21 +450,12 @@
             ></iframe>
           </div>
         </section>
-
-        <section id="projects" class="blog-list">
-          <h2>Последние посты</h2>
-          <article class="post">
-            <h3>Как я делаю свой эхолот на Arduino</h3>
-            <p>Немного о том, как родилась идея Fish Finder PRO и что внутри...</p>
-            <a href="">Читать далее →</a>
-          </article>
-          <!-- добавить другие статьи -->
-        </section>
       </main>
 
       <footer>
         <!-- Верхняя светлая часть футера -->
         <div class="footer-top">
+          <button class="footer-report" data-report-modal-open>Сообщить о проблеме</button>
           <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
         </div>
 
@@ -342,8 +496,9 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/main.js"></script>
-    <script src="/js/theme.js"></script>
+    <script src="/js/report.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <script src="/js/theme.js" defer></script>
     <script>
       document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -31,6 +31,9 @@
       }
     </script>
 
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://apis.google.com" />
+    <link rel="preload" href="../css/styles.css" as="style" />
     <link rel="stylesheet" href="../css/styles.css" />
 
     <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
@@ -44,7 +47,7 @@
     <link rel="icon" href="../images/favicon_192.png" sizes="192x192" type="image/png" />
   </head>
 
-  <body>
+  <body class="no-strawberries">
     <div class="page-frame">
       <header class="top-header">
         <div class="header-top">
@@ -81,6 +84,7 @@
               </a>
 
               <a
+                id="loginBtn"
                 href="https://login.cyblight.org/username"
                 class="header-link header-login"
                 title="Войти в учётную запись CybLight"
@@ -137,7 +141,7 @@
           <div class="container">
             <ul class="buttons">
               <li><a class="button" href="/">Главная</a></li>
-              <li><a class="button disabled" href="#">Проекты</a></li>
+              <li><a class="button" href="/projects/">Проекты</a></li>
               <li><a class="button disabled" href="#">Видео</a></li>
               <li><a class="button disabled" href="#">Форум</a></li>
               <li><a class="button" href="/games/">Игры</a></li>
@@ -439,6 +443,7 @@
       <footer>
         <!-- Верхняя светлая часть футера -->
         <div class="footer-top">
+          <button class="footer-report" data-report-modal-open>Сообщить о проблеме</button>
           <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
         </div>
 
@@ -477,7 +482,9 @@
 
       <div class="nav-overlay"></div>
     </div>
-    <script src="../js/theme.js"></script>
+    <script src="/js/report.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <script src="../js/theme.js" defer></script>
 
     <script>
       document.getElementById('current-year').textContent = new Date().getFullYear();

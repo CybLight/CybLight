@@ -25,8 +25,7 @@
   --text-muted: #9aa4c6;
   --border-soft: #1b243c;
   --error: #ff4b5c;
-  --shadow-neon: 0 0 12px rgba(255, 127, 39, 0.6),
-    0 0 32px rgba(255, 127, 39, 0.35);
+  --shadow-neon: 0 0 12px rgba(255, 127, 39, 0.6), 0 0 32px rgba(255, 127, 39, 0.35);
   --text-description: #6b7280;
   --text-description-dark: #c7cbd4;
   --cyb-header-dark-1: #050816;
@@ -47,7 +46,7 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -176,21 +175,10 @@ body.dark .breadcrumbs .bc-current {
 
 /* Тёмная тема для шапки */
 body.dark .top-header {
-  background: radial-gradient(
-      120% 220% at 0% 0%,
-      rgba(255, 127, 39, 0.3) 0%,
-      transparent 45%
-    ),
-    radial-gradient(
-      120% 220% at 100% 0%,
-      rgba(96, 165, 250, 0.2) 0%,
-      transparent 45%
-    ),
-    linear-gradient(
-      to right,
-      var(--cyb-header-dark-1),
-      var(--cyb-header-dark-2)
-    );
+  background:
+    radial-gradient(120% 220% at 0% 0%, rgba(255, 127, 39, 0.3) 0%, transparent 45%),
+    radial-gradient(120% 220% at 100% 0%, rgba(96, 165, 250, 0.2) 0%, transparent 45%),
+    linear-gradient(to right, var(--cyb-header-dark-1), var(--cyb-header-dark-2));
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
 }
 
@@ -203,7 +191,7 @@ body.dark .header-nav {
 
 /* НЕОНОВАЯ ЛИНИЯ СНИЗУ ХЕДЕРА */
 body.dark .top-header::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
@@ -314,7 +302,10 @@ body.dark .top-header .siteName {
 
   color: var(--text-muted, #555);
 
-  transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 /* Тёмная тема для ссылок в шапке */
@@ -455,7 +446,10 @@ body.dark .top-header .header-nav {
 /* Цвет текста в меню */
 body.dark .header-nav .button {
   color: #e5ecff;
-  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    text-shadow 0.2s ease;
 }
 
 /* Hover — лёгкий неон и подчёркивание */
@@ -533,8 +527,12 @@ main {
   text-align: center;
 
   /* Неоновая окантовка текста */
-  text-shadow: 0 0 4px #ff4444, 0 0 8px #ff4444, 0 0 12px #ff4444,
-    0 0 18px #ff4444, 0 0 24px #ff4444;
+  text-shadow:
+    0 0 4px #ff4444,
+    0 0 8px #ff4444,
+    0 0 12px #ff4444,
+    0 0 18px #ff4444,
+    0 0 24px #ff4444;
 
   animation: neonPulse 2s infinite alternate ease-in-out;
 }
@@ -550,12 +548,20 @@ main {
 /* Анимация пульсации неона */
 @keyframes neonPulse {
   0% {
-    text-shadow: 0 0 4px #ff4444, 0 0 8px #ff4444, 0 0 12px #ff4444,
-      0 0 18px #ff4444, 0 0 24px #ff4444;
+    text-shadow:
+      0 0 4px #ff4444,
+      0 0 8px #ff4444,
+      0 0 12px #ff4444,
+      0 0 18px #ff4444,
+      0 0 24px #ff4444;
   }
   100% {
-    text-shadow: 0 0 8px #ff0000, 0 0 16px #ff0000, 0 0 24px #ff0000,
-      0 0 32px #ff0000, 0 0 48px #ff0000;
+    text-shadow:
+      0 0 8px #ff0000,
+      0 0 16px #ff0000,
+      0 0 24px #ff0000,
+      0 0 32px #ff0000,
+      0 0 48px #ff0000;
   }
 }
 
@@ -571,7 +577,10 @@ main {
   color: #ff0000;
   font-weight: 600;
   font-size: 18px;
-  text-shadow: 0 0 3px #f1c40f, 0 0 6px #f1c40f, 0 0 9px #f1c40f;
+  text-shadow:
+    0 0 3px #f1c40f,
+    0 0 6px #f1c40f,
+    0 0 9px #f1c40f;
 }
 
 .layout-landing {
@@ -668,15 +677,19 @@ body.dark .game-card-disabled {
 
 .button:hover {
   border-color: rgba(0, 255, 240, 0.6);
-  box-shadow: 0 0 6px rgba(0, 255, 240, 0.4), 0 0 12px rgba(0, 255, 240, 0.3),
+  box-shadow:
+    0 0 6px rgba(0, 255, 240, 0.4),
+    0 0 12px rgba(0, 255, 240, 0.3),
     inset 0 0 4px rgba(0, 255, 240, 0.2);
   color: #0efff3;
 }
 
 body.dark .button:hover {
   border-color: rgba(255, 240, 120, 0.6);
-  box-shadow: 0 0 6px rgba(255, 240, 120, 0.5),
-    0 0 14px rgba(255, 240, 120, 0.4), inset 0 0 4px rgba(255, 240, 120, 0.3);
+  box-shadow:
+    0 0 6px rgba(255, 240, 120, 0.5),
+    0 0 14px rgba(255, 240, 120, 0.4),
+    inset 0 0 4px rgba(255, 240, 120, 0.3);
   color: #f1c40f;
 }
 
@@ -685,7 +698,9 @@ body.dark .button:hover {
 .theme-toggle {
   position: relative;
   border-radius: 999px;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* Светлая тема — бирюзовый неон */
@@ -695,7 +710,9 @@ body.dark .button:hover {
 }
 
 .theme-toggle:hover {
-  box-shadow: 0 0 12px rgba(0, 255, 240, 0.6), 0 0 20px rgba(0, 255, 240, 0.4);
+  box-shadow:
+    0 0 12px rgba(0, 255, 240, 0.6),
+    0 0 20px rgba(0, 255, 240, 0.4);
   border-color: rgba(0, 255, 240, 0.9);
 }
 
@@ -707,7 +724,8 @@ body.dark .theme-toggle {
 }
 
 body.dark .theme-toggle:hover {
-  box-shadow: 0 0 12px rgba(255, 240, 120, 0.7),
+  box-shadow:
+    0 0 12px rgba(255, 240, 120, 0.7),
     0 0 20px rgba(255, 240, 120, 0.5);
   border-color: rgba(255, 240, 120, 1);
 }
@@ -836,7 +854,10 @@ body.dark .games-page {
   opacity: 0;
   transform: translateY(16px);
   overflow: hidden;
-  transition: max-height 0.45s ease, opacity 0.35s ease, transform 0.35s ease;
+  transition:
+    max-height 0.45s ease,
+    opacity 0.35s ease,
+    transform 0.35s ease;
 }
 
 /* Когда игра запущена — плавно раскрываем блок */
@@ -848,7 +869,9 @@ body.dark .games-page {
 
 /* Кнопка "Начать игру" — лёгкое растворение */
 #start-quiz {
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 #start-quiz.hidden {
@@ -870,9 +893,11 @@ body.dark .games-page {
   background: radial-gradient(circle at 0 0, #151b30 0, #050814 55%);
   border: 1px solid #273b5f;
 
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(15, 23, 42, 0.9);
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
 
-  font-family: "Fira Code", monospace;
+  font-family: 'Fira Code', monospace;
   font-size: 16px;
   line-height: 1.5;
   color: #e5e7eb;
@@ -883,7 +908,7 @@ body.dark .games-page {
 
 /* Три “макаОС-лампочки” слева сверху */
 #quiz-code::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 8px;
   left: 12px;
@@ -891,13 +916,15 @@ body.dark .games-page {
   height: 8px;
   border-radius: 50%;
   background: #ff5f57;
-  box-shadow: 14px 0 0 #febc2e, 28px 0 0 #28c840;
+  box-shadow:
+    14px 0 0 #febc2e,
+    28px 0 0 #28c840;
   opacity: 0.95;
 }
 
 /* Небольшой подписи “Код” справа */
 #quiz-code::after {
-  content: "код";
+  content: 'код';
   position: absolute;
   top: 6px;
   right: 14px;
@@ -935,7 +962,7 @@ body.dark .games-page {
 
 #quiz-code {
   color: #f5f5f5 !important;
-  font-family: "Fira Code", monospace;
+  font-family: 'Fira Code', monospace;
   font-size: 17px;
   white-space: pre-wrap;
 }
@@ -971,7 +998,7 @@ body.dark .games-page {
 /* Лента "В разработке" */
 
 .game-card-disabled::before {
-  content: "В разработке";
+  content: 'В разработке';
   position: absolute;
 
   top: 14px;
@@ -997,7 +1024,7 @@ body.dark .games-page {
 /* Неоновое </> + маленькое dev */
 
 .game-card-disabled::after {
-  content: "</>\A dev";
+  content: '</>\A dev';
   white-space: pre;
 
   position: absolute;
@@ -1005,13 +1032,15 @@ body.dark .games-page {
   top: 1px; /* вертикальное положение внутри ленты */
   right: 125px; /* правый отступ */
 
-  font-family: "Consolas", "Fira Code", monospace;
+  font-family: 'Consolas', 'Fira Code', monospace;
   text-align: center;
   font-size: 16px;
   line-height: 1;
 
   color: #1b1e26;
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.5), 0 0 8px rgba(0, 255, 200, 0.8),
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.5),
+    0 0 8px rgba(0, 255, 200, 0.8),
     0 0 14px rgba(0, 255, 200, 0.6);
 
   transform: rotate(12deg);
@@ -1050,8 +1079,22 @@ footer {
   background: #f3f4f6;
   color: #111827;
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* place items side by side */
+  justify-content: space-between; /* report left, toggle right */
+  align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
+}
+
+/* report button in footer */
+.footer-report {
+  background: none;
+  color: inherit;
+  border: 1px solid currentColor;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
 }
 
 /* Тёмный подвал со звёздами */
@@ -1065,7 +1108,7 @@ body.dark footer {
 
 body.dark .footer-bottom::before,
 body.dark .footer-bottom::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background-repeat: repeat;
@@ -1075,46 +1118,15 @@ body.dark .footer-bottom::after {
 /* Первый слой — крупные яркие звёзды */
 
 body.dark .footer-bottom::before {
-  background-image: radial-gradient(
-      6px 6px at 10% 15%,
-      rgba(255, 255, 255, 0.9) 0,
-      transparent 55%
-    ),
-    radial-gradient(
-      5px 5px at 20% 60%,
-      rgba(255, 255, 255, 0.8) 0,
-      transparent 55%
-    ),
-    radial-gradient(
-      4px 4px at 40% 35%,
-      rgba(255, 255, 255, 0.8) 0,
-      transparent 55%
-    ),
-    radial-gradient(
-      6px 6px at 70% 25%,
-      rgba(255, 255, 255, 1) 0,
-      transparent 55%
-    ),
-    radial-gradient(
-      5px 5px at 85% 70%,
-      rgba(255, 255, 255, 0.9) 0,
-      transparent 55%
-    ),
-    radial-gradient(
-      6px 6px at 15% 80%,
-      rgba(255, 255, 255, 0.9) 0,
-      transparent 55%
-    ),
-    radial-gradient(
-      4px 4px at 55% 90%,
-      rgba(255, 255, 255, 0.8) 0,
-      transparent 55%
-    ),
-    radial-gradient(
-      5px 5px at 95% 40%,
-      rgba(255, 255, 255, 0.9) 0,
-      transparent 55%
-    );
+  background-image:
+    radial-gradient(6px 6px at 10% 15%, rgba(255, 255, 255, 0.9) 0, transparent 55%),
+    radial-gradient(5px 5px at 20% 60%, rgba(255, 255, 255, 0.8) 0, transparent 55%),
+    radial-gradient(4px 4px at 40% 35%, rgba(255, 255, 255, 0.8) 0, transparent 55%),
+    radial-gradient(6px 6px at 70% 25%, rgba(255, 255, 255, 1) 0, transparent 55%),
+    radial-gradient(5px 5px at 85% 70%, rgba(255, 255, 255, 0.9) 0, transparent 55%),
+    radial-gradient(6px 6px at 15% 80%, rgba(255, 255, 255, 0.9) 0, transparent 55%),
+    radial-gradient(4px 4px at 55% 90%, rgba(255, 255, 255, 0.8) 0, transparent 55%),
+    radial-gradient(5px 5px at 95% 40%, rgba(255, 255, 255, 0.9) 0, transparent 55%);
   opacity: 0.9;
   animation: twinkle-big 4s infinite alternate ease-in-out;
 }
@@ -1122,76 +1134,21 @@ body.dark .footer-bottom::before {
 /* Второй слой — МНОГО мелких звёзд */
 
 body.dark .footer-bottom::after {
-  background-image: radial-gradient(
-      3px 3px at 5% 20%,
-      rgba(255, 255, 255, 0.8) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      2px 2px at 12% 80%,
-      rgba(255, 255, 255, 0.7) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      2px 2px at 25% 50%,
-      rgba(255, 255, 255, 0.7) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      3px 3px at 30% 10%,
-      rgba(255, 255, 255, 0.8) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      2px 2px at 35% 75%,
-      rgba(255, 255, 255, 0.6) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      2px 2px at 45% 20%,
-      rgba(255, 255, 255, 0.7) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      3px 3px at 50% 50%,
-      rgba(255, 255, 255, 0.8) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      2px 2px at 55% 30%,
-      rgba(255, 255, 255, 0.6) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      2px 2px at 60% 85%,
-      rgba(255, 255, 255, 0.7) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      3px 3px at 70% 40%,
-      rgba(255, 255, 255, 0.8) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      2px 2px at 75% 90%,
-      rgba(255, 255, 255, 0.6) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      2px 2px at 80% 55%,
-      rgba(255, 255, 255, 0.7) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      3px 3px at 90% 25%,
-      rgba(255, 255, 255, 0.8) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      2px 2px at 95% 70%,
-      rgba(255, 255, 255, 0.6) 0,
-      transparent 50%
-    );
+  background-image:
+    radial-gradient(3px 3px at 5% 20%, rgba(255, 255, 255, 0.8) 0, transparent 50%),
+    radial-gradient(2px 2px at 12% 80%, rgba(255, 255, 255, 0.7) 0, transparent 50%),
+    radial-gradient(2px 2px at 25% 50%, rgba(255, 255, 255, 0.7) 0, transparent 50%),
+    radial-gradient(3px 3px at 30% 10%, rgba(255, 255, 255, 0.8) 0, transparent 50%),
+    radial-gradient(2px 2px at 35% 75%, rgba(255, 255, 255, 0.6) 0, transparent 50%),
+    radial-gradient(2px 2px at 45% 20%, rgba(255, 255, 255, 0.7) 0, transparent 50%),
+    radial-gradient(3px 3px at 50% 50%, rgba(255, 255, 255, 0.8) 0, transparent 50%),
+    radial-gradient(2px 2px at 55% 30%, rgba(255, 255, 255, 0.6) 0, transparent 50%),
+    radial-gradient(2px 2px at 60% 85%, rgba(255, 255, 255, 0.7) 0, transparent 50%),
+    radial-gradient(3px 3px at 70% 40%, rgba(255, 255, 255, 0.8) 0, transparent 50%),
+    radial-gradient(2px 2px at 75% 90%, rgba(255, 255, 255, 0.6) 0, transparent 50%),
+    radial-gradient(2px 2px at 80% 55%, rgba(255, 255, 255, 0.7) 0, transparent 50%),
+    radial-gradient(3px 3px at 90% 25%, rgba(255, 255, 255, 0.8) 0, transparent 50%),
+    radial-gradient(2px 2px at 95% 70%, rgba(255, 255, 255, 0.6) 0, transparent 50%);
 
   opacity: 0.8;
   animation: twinkle-small 7s infinite alternate ease-in-out;
@@ -1255,13 +1212,15 @@ footer .footer {
   top: 50%;
   transform: translateY(-50%);
   font-size: 17px;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
 /* Луна по умолчанию (светлая тема) */
 
 .theme-toggle::before {
-  content: "🌙";
+  content: '🌙';
   opacity: 1;
   transform: translateY(-50%) scale(1) rotate(0deg);
 }
@@ -1269,7 +1228,7 @@ footer .footer {
 /* Солнце спрятано */
 
 .theme-toggle::after {
-  content: "☀";
+  content: '☀';
   opacity: 0;
   transform: translateY(-50%) scale(0.5) rotate(-90deg);
 }
@@ -1287,12 +1246,12 @@ body.dark .theme-toggle::after {
 }
 
 .theme-toggle::before {
-  content: "🌙";
+  content: '🌙';
   font-size: 16px;
 }
 
 body.dark .theme-toggle::before {
-  content: "☀";
+  content: '☀';
 }
 
 .theme-toggle:hover {
@@ -1356,6 +1315,126 @@ body.dark .footer-bottom {
   background: #050814 !important;
 }
 
+/* report modal from login repo, copied for standalone use */
+.cyb-report-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 9999;
+}
+.cyb-report-modal.is-open {
+  display: block;
+}
+.cyb-report-modal__backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #0000008c;
+}
+.cyb-report-modal__card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(600px, calc(100vw - 28px));
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #0b0f1c;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 18px 60px #0000008c;
+}
+.cyb-report-modal__title {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  color: #e7ecfff2;
+}
+.cyb-report-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cyb-report-modal__form .field {
+  display: flex;
+  flex-direction: column;
+}
+.cyb-report-modal__form .label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #e7ecffe0;
+}
+.cyb-report-modal__form .input,
+.cyb-report-modal__form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #ffffff0d;
+  border: 1px solid rgba(255, 255, 255, .1);
+  color: #e7ecffe6;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.cyb-report-modal__form .input:focus,
+.cyb-report-modal__form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: #ffffff14;
+  box-shadow: 0 0 0 2px #46c8ff26;
+}
+.cyb-report-modal__form textarea {
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+}
+.cyb-report-modal__form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2346c8ff' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 32px;
+  cursor: pointer;
+}
+.cyb-report-modal__form select option {
+  background-color: #0b0f1c;
+  color: #e7ecffe6;
+}
+.cyb-report-modal__actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.cyb-report-modal__actions button {
+  flex: 1;
+  max-width: 150px;
+}
+@media (max-width: 520px) {
+  .cyb-report-modal__card {
+    width: calc(100vw - 20px);
+    max-height: calc(100vh - 40px);
+    padding: 16px;
+  }
+  .cyb-report-modal__title {
+    font-size: 18px;
+  }
+  .cyb-report-modal__actions {
+    flex-direction: column;
+  }
+  .cyb-report-modal__actions button {
+    max-width: none;
+  }
+}
+
+
 .video-container {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
@@ -1372,6 +1451,246 @@ body.dark .footer-bottom {
   height: 100%;
   border: 0;
   border-radius: 12px;
+}
+
+/* projects carousel */
+.projects-carousel {
+  padding: 2rem 0;
+}
+.projects-carousel .carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  /* hide native scrollbar */
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.projects-carousel .carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* wrapper around carousel for nav buttons */
+.projects-carousel .carousel-wrapper {
+  position: relative;
+  overflow: visible; /* allow nav buttons to extend outside */
+  max-width: 1200px; /* constrain width on large screens */
+  margin: 0 auto; /* center the carousel */
+}
+
+/* navigation buttons */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.carousel-nav:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.carousel-nav:focus {
+  outline: 2px solid #fff;
+}
+.carousel-nav.prev {
+  left: -40px;
+}
+.carousel-nav.next {
+  right: -40px;
+}
+
+/* mobile adjustments */
+@media (max-width: 768px) {
+  .projects-carousel .carousel {
+    gap: 0.5rem;
+  }
+  .projects-carousel .project-card {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+  .carousel-nav {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+  .carousel-nav.prev {
+    left: 4px;
+  }
+  .carousel-nav.next {
+    right: 4px;
+  }
+}
+
+/* individual project slide styling */
+.project-card {
+  flex: 0 0 300px; /* fixed width on desktop */
+  max-width: 400px;
+  background: var(--card-bg, #fff);
+  border-radius: 8px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0; /* no gap under image */
+  max-height: 200px; /* limit tall logos */
+  object-fit: contain;
+}
+
+/* highlight Smart Home Hub picture with matching accent color */
+.project-card img[alt='Smart Home Hub'] {
+  border: 2px solid #00979d;
+  border-radius: 6px;
+  box-sizing: border-box; /* keep border inside image's width */
+}
+.project-info {
+  padding: 0 1rem 0.5rem; /* no top padding at all */
+}
+.project-info h3 {
+  margin: 0; /* completely flush against image */
+}
+.project-info p {
+  margin-top: 0.25rem; /* small space before description */
+}
+.project-info {
+  padding: 0.25rem 1rem 0.5rem; /* smaller top padding so text hugs image */
+}
+
+/* project listing page layout and spacing */
+.projects-page {
+  padding: 2rem 0;
+}
+.projects-page .project-detail {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #fff; /* white background */
+  border: 1px solid #ccc; /* stronger border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.projects-page .project-detail:first-child {
+  margin-top: 3rem;
+}
+.projects-page .project-detail:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.projects-page .project-detail img {
+  display: block;
+  margin: 0.5rem auto; /* centered horizontally */
+  max-width: 100%;
+  max-height: 300px; /* keep images from becoming too tall */
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* special adjustments for very wide images */
+.projects-page #guardian img,
+.projects-page #smarthome img {
+  max-height: 240px;
+}
+
+/* Guardian bot image is wide; constrain height so it doesn't overflow the card */
+.projects-page #guardian img {
+  max-height: 300px;
+  object-fit: contain;
+}
+.projects-page .project-detail h2 {
+  margin-top: 0;
+}
+.projects-page .project-detail p a {
+  color: #007acc;
+}
+/* dark theme adjustments for listing page */
+body.dark .projects-page .project-detail {
+  background: #1f1f1f;
+  color: #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+body.dark .projects-page .project-detail p a {
+  color: #66aaff;
+}
+
+/* copyable username style */
+.copy-name {
+  cursor: pointer;
+  text-decoration: underline dotted;
+  color: #007acc;
+}
+.copy-name:active {
+  opacity: 0.7;
+}
+.project-langs {
+  margin: 0.25rem 0;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* constrain carousel images to avoid huge empty borders */
+.carousel .project-card img {
+  max-height: 240px;
+  object-fit: contain;
+}
+.project-langs .lang {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.65rem;
+}
+.project-langs .lang img {
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 4px;
+  border-radius: 6px;
+}
+
+/* make icons readable on dark backgrounds */
+body.dark .project-langs .lang img {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #444;
+  filter: brightness(1.4) drop-shadow(0 0 4px rgba(255, 255, 255, 0.25));
+  transition: transform 0.2s;
+}
+body.dark .project-langs .lang img:hover {
+  transform: scale(1.1);
+}
+.project-langs .lang span {
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+/* dark theme adjustments for projects */
+body.dark .project-card {
+  background: #1e1e1e;
+  color: #ddd;
+}
+body.dark .project-card a.button {
+  background: #2a2a2a;
+  color: #fff;
+}
+body.dark .project-langs .lang span {
+  color: #ccc;
 }
 
 /* Кнопка "Наверх" */
@@ -1397,7 +1716,10 @@ body.dark .footer-bottom {
 
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
   transform: translateY(20px);
 
   z-index: 9999;
@@ -1412,7 +1734,9 @@ body.dark .footer-bottom {
 
 /* Ховер эффект */
 .scroll-top-btn:hover {
-  box-shadow: 0 0 14px rgba(0, 255, 240, 0.9), 0 0 18px rgba(0, 255, 240, 0.7);
+  box-shadow:
+    0 0 14px rgba(0, 255, 240, 0.9),
+    0 0 18px rgba(0, 255, 240, 0.7);
   background: rgba(0, 0, 0, 0.8);
 }
 
@@ -1424,7 +1748,8 @@ body.dark .scroll-top-btn {
 }
 
 body.dark .scroll-top-btn:hover {
-  box-shadow: 0 0 14px rgba(255, 240, 120, 0.9),
+  box-shadow:
+    0 0 14px rgba(255, 240, 120, 0.9),
     0 0 18px rgba(255, 240, 120, 0.7);
   background: rgba(255, 255, 255, 0.25);
 }
@@ -1525,7 +1850,7 @@ body.dark .contacts-panel-list li {
 }
 
 .contacts-panel-list li::before {
-  content: "•";
+  content: '•';
   color: var(--accent, #ff7f27);
   font-size: 22px;
   margin-right: 12px;
@@ -1677,7 +2002,7 @@ body.dark .legal-page {
 }
 
 .legal-page h2::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -1708,8 +2033,9 @@ body.dark .legal-page h2::before {
 
 /* Выделение кода/терминов */
 .legal-page code {
-  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family:
+    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
   font-size: 0.9em;
   padding: 2px 4px;
   border-radius: 4px;
@@ -1794,9 +2120,12 @@ body.dark .legal-page code {
     display: none;
   }
 
-  /* прячем подписи, оставляем только иконки */
+  /* show labels by default and make them more legible */
   .top-header .header-top-right .header-label {
-    display: none;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 4px;
   }
 
   /* Навигационная тёмная полоса убирается — меню выпадает ниже */
@@ -1866,7 +2195,9 @@ body.dark .legal-page code {
     height: 3px;
     border-radius: 2px;
     background: #fff;
-    transition: transform 0.25s ease, opacity 0.25s ease;
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease;
   }
 
   body.dark .top-header .burger span {

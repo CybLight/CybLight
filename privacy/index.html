@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -43,7 +43,7 @@
     <link rel="icon" href="../images/favicon_192.png" sizes="192x192" type="image/png" />
   </head>
 
-  <body>
+  <body class="no-strawberries">
     <div class="page-frame">
       <div class="page">
         <header class="top-header">
@@ -316,7 +316,7 @@
         <footer>
           <!-- Верхняя светлая часть футера -->
           <div class="footer-top">
-            <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
+            <button class="footer-report" data-report-modal-open>Сообщить о проблеме</button>
           </div>
 
           <!-- Нижняя тёмная часть футера со звёздами -->
@@ -354,6 +354,7 @@
 
       <div class="nav-overlay"></div>
     </div>
+    <script src="/js/report.js" defer></script>
     <script src="../js/theme.js"></script>
   </body>
 </html>

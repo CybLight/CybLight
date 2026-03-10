@@ -143,8 +143,13 @@
               </a>
 
               <div class="search-box">
-                <input type="text" placeholder="Найди пасхалку..." />
-                <button type="button" aria-label="Поиск">
+                <input
+                  id="site-search"
+                  type="text"
+                  placeholder="Найди пасхалку..."
+                  autocomplete="off"
+                />
+                <button id="search-btn" type="button" aria-label="Поиск">
                   <svg
                     class="jwi-search-icon"
                     aria-hidden="true"
@@ -158,6 +163,37 @@
                     ></path>
                   </svg>
                 </button>
+              </div>
+
+              <!-- Полноэкранный оверлей поиска -->
+              <div class="search-overlay" id="search-overlay">
+                <div class="search-overlay-header">
+                  <div class="search-overlay-input-wrap">
+                    <svg
+                      class="search-overlay-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="22"
+                      height="22"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M23.354 22.646l-5-5-.012-.007a8.532 8.532 0 10-.703.703l.007.012 5 5a.5.5 0 00.707-.707zM12 19.5a7.5 7.5 0 117.5-7.5 7.508 7.508 0 01-7.5 7.5z"
+                      ></path>
+                    </svg>
+                    <input
+                      id="search-overlay-input"
+                      type="text"
+                      placeholder="Введите запрос..."
+                      autocomplete="off"
+                    />
+                    <button id="search-overlay-close" type="button" aria-label="Закрыть поиск">
+                      ✕
+                    </button>
+                  </div>
+                  <div class="search-overlay-meta" id="search-meta"></div>
+                </div>
+                <div class="search-overlay-results" id="search-overlay-results"></div>
               </div>
 
               <button

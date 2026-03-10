@@ -11,10 +11,16 @@ async function loadYoutubeStats() {
     if (subsEl && data.subscriberCount) {
       subsEl.textContent = Number(data.subscriberCount).toLocaleString('ru-RU');
     }
+    const videosEl = document.getElementById('yt-videos');
+    if (videosEl && data.videoCount) {
+      videosEl.textContent = Number(data.videoCount).toLocaleString('ru-RU');
+    }
   } catch (e) {
     console.error(e);
     const subsEl = document.getElementById('yt-subs');
     if (subsEl) subsEl.textContent = 'недоступно';
+    const videosEl = document.getElementById('yt-videos');
+    if (videosEl) videosEl.textContent = 'недоступно';
   }
 
   // Техно канал
@@ -27,10 +33,16 @@ async function loadYoutubeStats() {
     if (techEl && data.subscriberCount) {
       techEl.textContent = Number(data.subscriberCount).toLocaleString('ru-RU');
     }
+    const techVideosEl = document.getElementById('yt-tech-videos');
+    if (techVideosEl && data.videoCount) {
+      techVideosEl.textContent = Number(data.videoCount).toLocaleString('ru-RU');
+    }
   } catch (e) {
     console.error(e);
     const techEl = document.getElementById('yt-tech-subs');
     if (techEl) techEl.textContent = 'недоступно';
+    const techVideosEl = document.getElementById('yt-tech-videos');
+    if (techVideosEl) techVideosEl.textContent = 'недоступно';
   }
 }
 

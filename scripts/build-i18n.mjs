@@ -228,10 +228,12 @@ function writeIndexNowKey() {
 }
 
 function writeCloudflareRedirectRules() {
+  const mainSiteHosts =
+    '(http.host eq "cyblight.org" or http.host eq "www.cyblight.org")';
   const rules = [
     {
       description: 'Root to default locale',
-      expression: '(http.request.uri.path eq "/")',
+      expression: `${mainSiteHosts} and http.request.uri.path eq "/"`,
       status_code: 301,
       target_url: `${SITE_ORIGIN}/ru/`,
     },
@@ -239,7 +241,7 @@ function writeCloudflareRedirectRules() {
   for (const segment of LEGACY_PATHS) {
     rules.push({
       description: `Legacy /${segment} to /ru/${segment}/`,
-      expression: `(http.request.uri.path eq "/${segment}" or http.request.uri.path eq "/${segment}/")`,
+      expression: `${mainSiteHosts} and (http.request.uri.path eq "/${segment}" or http.request.uri.path eq "/${segment}/")`,
       status_code: 301,
       target_url: `${SITE_ORIGIN}/ru/${segment}/`,
     });

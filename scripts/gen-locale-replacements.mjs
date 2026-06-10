@@ -170,14 +170,14 @@ const triples = [
   ],
   ['Спасибо за понимание!', 'Дякую за розуміння!', 'Thanks for understanding!'],
   [
-    'CybLight — создание сайтов, проекты для умного дома, уроки и интерактивные \n      игры по программированию, блог о технологиях, электронике, IoT и инженерных решениях.',
-    'CybLight — створення сайтів, проєкти для розумного дому, уроки та інтерактивні \n      ігри з програмування, блог про технології, електроніку, IoT та інженерні рішення.',
-    'CybLight — website development, smart home projects, programming lessons and interactive \n      games, a blog about technology, electronics, IoT, and engineering solutions.',
+    'CybLight — создание сайтов, проекты умного дома, интерактивные игры по программированию, блог о технологиях, электронике и IoT.',
+    'CybLight — створення сайтів, проєкти розумного дому, інтерактивні ігри з програмування, блог про технології, електроніку та IoT.',
+    'CybLight — website development, smart home projects, interactive programming games, and a blog about technology, electronics, and IoT.',
   ],
   [
-    'Cоздание сайтов, проекты для умного дома, уроки и интерактивные игры по программированию, \n      блог о технологиях, электронике, IoT и инженерных решениях.',
-    'Створення сайтів, проєкти для розумного дому, уроки та інтерактивні ігри з програмування, \n      блог про технології, електроніку, IoT та інженерні рішення.',
-    'Website development, smart home projects, programming lessons and interactive games, \n      a blog about technology, electronics, IoT, and engineering solutions.',
+    'Создание сайтов, умный дом, игры по программированию, проекты по электронике, IoT и инженерии.',
+    'Створення сайтів, розумний дім, ігри з програмування, проєкти з електроніки, IoT та інженерії.',
+    'Website development, smart home, programming games, electronics, IoT, and engineering projects.',
   ],
   [
     'CybLight, создание сайтов, веб-разработка, умный дом, Arduino, электроника, Rocket League, games, DIY, IT, программирование',
@@ -320,9 +320,9 @@ const triples = [
     'The site is under active development, so not all features are available yet. <br />\n              Thanks for understanding!',
   ],
   [
-    'CybLight — создание сайтов, проекты для умного дома, уроки и интерактивные \n      игры по программированию, блог о технологиях, электронике, IoT и инженерных решениях.',
-    'CybLight — створення сайтів, проєкти для розумного дому, уроки та інтерактивні \n      ігри з програмування, блог про технології, електроніку, IoT та інженерні рішення.',
-    'CybLight — website development, smart home projects, programming lessons and interactive \n      games, a blog about technology, electronics, IoT, and engineering solutions.',
+    'CybLight — создание сайтов, проекты умного дома, интерактивные игры по программированию, блог о технологиях, электронике и IoT.',
+    'CybLight — створення сайтів, проєкти розумного дому, інтерактивні ігри з програмування, блог про технології, електроніку та IoT.',
+    'CybLight — website development, smart home projects, interactive programming games, and a blog about technology, electronics, and IoT.',
   ],
   [
     'CybLight - создание сайтов, умный дом, электроника',
@@ -457,6 +457,11 @@ const triples = [
   ['онлайн', 'онлайн', 'online'],
   ['Тёмная тема', 'Темна тема', 'Dark theme'],
   ['Сообщить о проблеме', 'Повідомити про проблему', 'Report a problem'],
+  [
+    'alt="Сообщить о проблеме"',
+    'alt="Повідомити про проблему"',
+    'alt="Report a problem"',
+  ],
   ['CybLight — Контакты', 'CybLight — Контакти', 'CybLight — Contacts'],
   ['CybLight — Проекты', 'CybLight — Проєкти', 'CybLight — Projects'],
   ['CybLight - Игры', 'CybLight — Ігри', 'CybLight — Games'],

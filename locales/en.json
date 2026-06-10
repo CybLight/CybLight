@@ -214,18 +214,6 @@
       "The <strong>CybLight</strong> website (the \"Site\") is a personal non-commercial project dedicated to electronics, programming, games, and web technology experiments."
     ],
     [
-      "CybLight — создание сайтов, проекты для умного дома, уроки и интерактивные \n      игры по программированию, блог о технологиях, электронике, IoT и инженерных решениях.",
-      "CybLight — website development, smart home projects, programming lessons and interactive \n      games, a blog about technology, electronics, IoT, and engineering solutions."
-    ],
-    [
-      "CybLight — создание сайтов, проекты для умного дома, уроки и интерактивные \n      игры по программированию, блог о технологиях, электронике, IoT и инженерных решениях.",
-      "CybLight — website development, smart home projects, programming lessons and interactive \n      games, a blog about technology, electronics, IoT, and engineering solutions."
-    ],
-    [
-      "Cоздание сайтов, проекты для умного дома, уроки и интерактивные игры по программированию, \n      блог о технологиях, электронике, IoT и инженерных решениях.",
-      "Website development, smart home projects, programming lessons and interactive games, \n      a blog about technology, electronics, IoT, and engineering solutions."
-    ],
-    [
       "Если вы считаете, что какие-то данные собираются некорректно или хотите задать вопрос о конфиденциальности, вы можете связаться со мной через страницу",
       "If you believe any data is collected incorrectly or want to ask a privacy question, you can contact me via the"
     ],
@@ -256,6 +244,14 @@
     [
       "Контакты CybLight: почта, Telegram, YouTube, GitHub и другие способы связи по проектам электроники, Arduino, умному дому и играм.",
       "CybLight contacts: email, Telegram, YouTube, GitHub, and more for electronics, Arduino, smart home, and games."
+    ],
+    [
+      "CybLight — создание сайтов, проекты умного дома, интерактивные игры по программированию, блог о технологиях, электронике и IoT.",
+      "CybLight — website development, smart home projects, interactive programming games, and a blog about technology, electronics, and IoT."
+    ],
+    [
+      "CybLight — создание сайтов, проекты умного дома, интерактивные игры по программированию, блог о технологиях, электронике и IoT.",
+      "CybLight — website development, smart home projects, interactive programming games, and a blog about technology, electronics, and IoT."
     ],
     [
       "Сайт может использовать <strong>localStorage</strong> или другие механизмы браузера для хранения локальных настроек, например:",
@@ -328,6 +324,10 @@
     [
       "Каждая копеечка приближает меня к новым свершениям!<br />\n            Спасибо за вашу поддержку",
       "Every bit brings me closer to new achievements!<br />\n            Thank you for your support"
+    ],
+    [
+      "Создание сайтов, умный дом, игры по программированию, проекты по электронике, IoT и инженерии.",
+      "Website development, smart home, programming games, electronics, IoT, and engineering projects."
     ],
     [
       "Здесь выходят ролики связанные с электроникой и моими проектами, а также обзоры разной техники",
@@ -716,6 +716,10 @@
     [
       "СайбЛайт Главная страница",
       "CybLight Home page"
+    ],
+    [
+      "alt=\"Сообщить о проблеме\"",
+      "alt=\"Report a problem\""
     ],
     [
       "Реализовать новые проекты",

@@ -2573,6 +2573,33 @@ body.dark .legal-page code {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
   }
 
+  /* Светлая тема: разделитель как в тёмной (оранжевая линия + неон снизу) */
+  body:not(.dark) .top-header .header-top {
+    border-bottom: 1px solid rgba(255, 127, 39, 0.35);
+    box-shadow:
+      0 3px 12px rgba(0, 0, 0, 0.6),
+      0 3px 12px rgba(255, 127, 39, 0.08);
+  }
+
+  body:not(.dark) .top-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 127, 39, 0) 0%,
+      rgba(255, 127, 39, 0.9) 25%,
+      rgba(255, 200, 120, 1) 50%,
+      rgba(255, 127, 39, 0.9) 75%,
+      rgba(255, 127, 39, 0) 100%
+    );
+    box-shadow: 0 0 14px rgba(255, 127, 39, 0.8);
+    pointer-events: none;
+  }
+
   /* SVG иконки (язык, профиль, поиск) — белые */
   .top-header svg {
     color: #ffffff;

@@ -1,0 +1,9 @@
+{
+  "name": "cyblight-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-i18n.mjs",
+    "build:i18n": "node scripts/build-i18n.mjs"
+  }
+}

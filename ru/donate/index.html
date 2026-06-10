@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CybLight Projects — Поддержать проекты</title>
+    <meta
+      name="description"
+      content="Поддержите проекты CybLight — донат через Monobank банку или по номеру карты."
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://cyblight.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Пожертвовать",
+            "item": "https://cyblight.org/donate/"
+          }
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://apis.google.com" />
+    <link rel="preload" href="/css/styles.css" as="style" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/donate.css" />
+  </head>
+
+  <body class="donate no-strawberries">
+    <div class="page-frame">
+      <header class="top-header">
+        <div class="header-top">
+          <div class="container">
+            <div class="site-logo-global">
+              <a
+                href="/ru/"
+                aria-label="СайбЛайт Главная страница"
+                title="Открыть главную страницу сайта СайбЛайт"
+              >
+                <img src="/images/logo.svg" class="logo-global" alt="CybLight Logo" />
+              </a>
+            </div>
+
+            <h2 class="siteName">CybLight</h2>
+
+            <div class="header-top-right">
+              <div class="header-lang-wrap">
+              <button type="button" class="header-link header-lang" aria-haspopup="listbox" aria-expanded="false">
+                <span class="icon-24">
+                  <svg class="cl-language" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M3.814 16.464a.501.501 0 00.65-.278L5.54 13.5h2.923l1.074 2.686a.5.5 0 00.928-.372l-3-7.5a.52.52 0 00-.928 0l-3 7.5a.5.5 0 00.278.65zM7 9.846L8.061 12.5H5.94zM6 7.5a.5.5 0 00.224-.053l2-1a.5.5 0 10-.448-.894l-2 1A.5.5 0 006 7.5zM11.75 14.25a2.025 2.025 0 001.75 2.25 2.584 2.584 0 001.482-.431c.039.088.07.152.075.162a.5.5 0 00.887-.461 4.654 4.654 0 01-.15-.368c.176-.168.359-.348.56-.548a11.374 11.374 0 001.92-2.652A1.55 1.55 0 0119 13.5a2.082 2.082 0 01-1.607 2.012.5.5 0 00.107.988.506.506 0 00.107-.012A3.055 3.055 0 0020 13.5a2.542 2.542 0 00-1.283-2.205c.16-.364.244-.6.255-.63a.5.5 0 10-.944-.33 7.97 7.97 0 01-.225.552 5.11 5.11 0 00-2.482-.21c.04-.428.091-.845.153-1.229 1.427-.123 3.04-.44 3.124-.458a.5.5 0 00-.196-.98c-.019.003-1.43.283-2.736.418.162-.761.31-1.273.313-1.284a.5.5 0 10-.958-.288c-.016.053-.206.695-.393 1.64-.041 0-.088.004-.128.004h-2a.5.5 0 000 1h1.955c-.072.476-.134.985-.17 1.517a4.001 4.001 0 00-2.535 3.233zm1.75 1.25c-.362 0-.75-.502-.75-1.25a2.82 2.82 0 011.506-2.094 11.674 11.674 0 00.384 2.927 1.684 1.684 0 01-1.14.417zm2.604-3.897a4.4 4.4 0 011.251.193 10.325 10.325 0 01-1.708 2.35l-.163.162A11.04 11.04 0 0115.25 12c0-.093.008-.185.01-.278a3.318 3.318 0 01.844-.12z M22.5 3h-21a.5.5 0 00-.5.5v16a.5.5 0 00.5.5H10v3.5a.5.5 0 00.854.354L14.707 20H22.5a.5.5 0 00.5-.5v-16a.5.5 0 00-.5-.5zM22 19h-7.5a.5.5 0 00-.354.146L11 22.293V19.5a.5.5 0 00-.5-.5H2V4h20z"></path>
+                  </svg>
+                </span>
+                <span class="header-label" data-lang-label>русский</span>
+              </button>
+              <ul class="header-lang-menu" role="listbox" hidden>
+                <li><a href="/ru/" data-locale-link="ru" hreflang="ru">Русский</a></li>
+                <li><a href="/uk/" data-locale-link="uk" hreflang="uk">Українська</a></li>
+                <li><a href="/en/" data-locale-link="en" hreflang="en">English</a></li>
+              </ul>
+            </div>
+
+              <a
+                id="loginBtn"
+                href="https://login.cyblight.org/ru/username"
+                class="header-link header-login"
+                title="Войти в учётную запись"
+              >
+                <span class="icon-24"
+                  ><svg
+                    class="cl-login"
+                    aria-hidden="true"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m0 4a3 3 0 1 1-3 3a3 3 0 0 1 3-3m0 14.2a8.21 8.21 0 0 1-5.79-2.38a4.25 4.25 0 0 1 5.79-3.82a4.25 4.25 0 0 1 5.79 3.82A8.21 8.21 0 0 1 12 20.2"
+                    /></svg
+                ></span>
+                <span class="header-label">Войти</span>
+              </a>
+
+              <div class="search-box">
+                <input type="text" placeholder="Тут нечего искать" /><button
+                  type="button"
+                  aria-label="Поиск"
+                >
+                  <svg
+                    class="jwi-search-icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M23.354 22.646l-5-5-.012-.007a8.532 8.532 0 10-.703.703l.007.012 5 5a.5.5 0 00.707-.707zM12 19.5a7.5 7.5 0 117.5-7.5 7.508 7.508 0 01-7.5 7.5z"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <button
+                class="burger"
+                id="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-label="Открыть меню"
+              >
+                <span></span><span></span><span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <nav class="header-nav">
+          <div class="container">
+            <ul class="buttons">
+              <li><a class="button" href="/ru/">Главная</a></li>
+              <li><a class="button" href="/ru/projects/">Проекты</a></li>
+              <li><a class="button disabled" href="#">Видео</a></li>
+              <li><a class="button disabled" href="#">Форум</a></li>
+              <li><a class="button" href="/ru/games/">Игры</a></li>
+              <li><a class="button" href="/ru/contacts/">Контакты</a></li>
+              <li>
+                <a class="button" href="/ru/donate/" target="_blank" rel="noopener noreferrer"
+                  >Пожертвовать</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div class="breadcrumbs-bar">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Навигация по разделам">
+            <a href="/ru/">Главная</a>
+            <span class="bc-sep">›</span>
+            <span class="bc-current">Пожертвовать</span>
+          </nav>
+        </div>
+      </div>
+
+      <main class="wrap">
+        <div class="top">
+          <h1>
+            <span class="icon fx-stars" aria-hidden="true">✨</span>
+            Поддержите мои проекты
+            <span class="icon fx-stars" aria-hidden="true">✨</span>
+          </h1>
+          <div class="brand">CybLight Projects</div>
+          <div class="divider"></div>
+        </div>
+
+        <section class="card" aria-label="Текст поддержки">
+          <h2>Ваши пожертвования помогут мне:</h2>
+          <ul class="list">
+            <li class="item">
+              <span class="icon fx-bulb" aria-hidden="true">💡</span>
+              <div class="txt">
+                Реализовать новые проекты <span class="icon fx-sat" aria-hidden="true">🛰️</span>
+              </div>
+            </li>
+            <li class="item">
+              <span class="icon fx-money" aria-hidden="true">💲</span>
+              <div class="txt">
+                Закупить компоненты для разработок
+                <span class="icon fx-tools" aria-hidden="true">🛠️</span>
+              </div>
+            </li>
+            <li class="item">
+              <span class="icon fx-straw" aria-hidden="true">🍓</span>
+              <div class="txt">
+                И купить вкусняшки для вдохновения <span aria-hidden="true">🍪</span>
+              </div>
+            </li>
+          </ul>
+
+          <p>
+            Каждая копеечка приближает меня к новым свершениям!<br />
+            Спасибо за вашу поддержку <span class="icon fx-heart">❤️</span>
+          </p>
+
+          <div class="donate-actions">
+            <a
+              class="btn primary donate-btn"
+              href="https://send.monobank.ua/jar/juPUWwZV8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="icon" aria-hidden="true">🫙</span>
+              Пополнить банку Monobank
+            </a>
+            <!-- ВИДЖЕТ БАНКИ РЯДОМ -->
+            <div class="jar-widget" aria-hidden="true">
+              <div class="jar-jar">
+                <div class="jar-liquid"></div>
+                <div class="jar-mouth"></div>
+                <div class="jar-coins"></div>
+                <div class="jar-glass"></div>
+              </div>
+              <div class="jar-label"></div>
+            </div>
+          </div>
+
+          <div class="card-flip" id="cardFlip" aria-label="Карта">
+            <div class="card-inner">
+              <div class="card-face card-front">
+                <span class="card-ico" aria-hidden="true">💳</span>
+                <div class="card-title">Карта Monobank</div>
+                <div class="card-hint">Наведи — чтобы посмотреть номер</div>
+              </div>
+              <div class="card-face card-back">
+                <div class="card-back-title">Номер карты</div>
+                <div class="card-number" id="cardNumberText">4874 1000 2227 5468</div>
+                <button
+                  class="btn ghost copy-btn"
+                  data-tooltip="Скопировать"
+                  onclick="copyText('4874100022275468', this)"
+                  aria-label="Скопировать номер карты"
+                >
+                  <span class="icon" aria-hidden="true">📋</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mono" aria-label="Monobank">
+            monobank
+            <small>Universal Bank</small>
+          </div>
+        </section>
+        <div class="top">
+          <h2>QR-код для пополнения банки</h2>
+          <div class="divider"></div>
+        </div>
+
+        <!-- decorative bubbles -->
+        <div class="bubble b1">🛠️</div>
+        <div class="bubble b2">💲</div>
+        <div class="bubble b3">🧑‍💻</div>
+        <div class="bubble b4">🤗</div>
+
+        <section class="qr-stage" aria-label="QR-код для доната">
+          <div class="qr-plate">
+            <img
+              class="qr"
+              src="/images/qr_monobank_border.png"
+              alt="QR-код Monobank: https://send.monobank.ua/jar/juPUWwZV8"
+            />
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-top">
+          <button class="footer-report" type="button" data-report-modal-open>
+            <img src="/images/report.svg" alt="" class="report-icon" aria-hidden="true" />
+            Сообщить о проблеме
+          </button>
+          <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-inner">
+            <div class="footer-copyright">
+              <p>Copyright &copy; <span id="current-year"></span> CybLight</p>
+            </div>
+            <div class="footer-made-with-love">
+              <a href="https://mynickname.com/CybLight" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://mynickname.com/img.php?nick=CybLight&sert=24&text=t4"
+                  alt="Nickname CybLight registred!"
+                />
+              </a>
+            </div>
+            <div class="footer-text">
+              <p>Сайт на 100% сделан из вторично переработанного кода</p>
+            </div>
+            <div class="footer-links">
+              <a href="#">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a>
+              &nbsp;|&nbsp;
+              <a href="/ru/privacy/">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+              &nbsp;|&nbsp;
+              <a href="#" class="jsPrivacySettings noJSHide"> НАСТРОЙКИ КОНФИДЕНЦИАЛЬНОСТИ </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
+      <div class="nav-overlay"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/strings-ru.js"></script>
+    <script src="/js/i18n.js" defer></script>
+    <script src="/js/report.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <script src="/js/theme.js" defer></script>
+    <script src="/js/donate.js"></script>
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

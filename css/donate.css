@@ -125,6 +125,32 @@ body.donate .top-header .header-top-right .header-link {
 body.donate .top-header .header-top-right .header-link:hover {
   color: var(--accent, #ff7f27) !important;
 }
+
+body.donate .header-lang-menu {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+body.donate .header-lang-menu a {
+  color: #1a1a2e !important;
+}
+
+body.donate .header-lang-menu a:hover,
+body.donate .header-lang-menu a:focus {
+  color: var(--accent, #ff7f27) !important;
+  background: rgba(255, 127, 39, 0.14);
+}
+
+body.donate.dark .header-lang-menu {
+  background: #1e1e1e;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+body.donate.dark .header-lang-menu a {
+  color: #e7ecff !important;
+}
+
 /* keep nav buttons readable (light text) */
 body.donate .top-header .header-nav .button {
   color: #f9fafb !important;

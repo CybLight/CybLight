@@ -1,5 +1,10 @@
 // standalone report modal for the main site
 
+function t(key) {
+  const s = window.CYB_STRINGS || {};
+  return s[key] != null ? s[key] : key;
+}
+
 // parse user agent to send browser/os info (copied from login repo)
 function parseUA(ua = '') {
   ua = String(ua);
@@ -77,35 +82,35 @@ async function reportApiCall(options) {
       <div class="cyb-report-modal__header">
         <img src="/images/report.svg" alt="" class="cyb-report-modal__icon" aria-hidden="true" />
         <div>
-          <div id="cybReportTitle" class="cyb-report-modal__title">Сообщить о проблеме</div>
-          <p class="cyb-report-modal__subtitle">Расскажите, что пошло не так — мы разберёмся</p>
+          <div id="cybReportTitle" class="cyb-report-modal__title">${t('reportTitle')}</div>
+          <p class="cyb-report-modal__subtitle">${t('reportSubtitle')}</p>
         </div>
       </div>
       <form id="reportForm" class="cyb-report-modal__form">
         <div class="field">
-          <label class="label" for="reportEmail">Email (опционально)</label>
+          <label class="label" for="reportEmail">${t('reportEmail')}</label>
           <input class="input" id="reportEmail" type="email" placeholder="your@email.com" />
         </div>
         <div class="field">
-          <label class="label" for="reportCategory">Категория</label>
+          <label class="label" for="reportCategory">${t('reportCategory')}</label>
           <select class="input" id="reportCategory" required>
-            <option value="">-- Выберите категорию --</option>
-            <option value="bug">Ошибка/Баг</option>
-            <option value="performance">Проблема с производительностью</option>
-            <option value="security">Проблема безопасности</option>
-            <option value="feature">Предложение функции</option>
-            <option value="other">Прочее</option>
+            <option value="">${t('reportCategoryPlaceholder')}</option>
+            <option value="bug">${t('reportBug')}</option>
+            <option value="performance">${t('reportPerformance')}</option>
+            <option value="security">${t('reportSecurity')}</option>
+            <option value="feature">${t('reportFeature')}</option>
+            <option value="other">${t('reportOther')}</option>
           </select>
         </div>
         <div class="field">
-          <label class="label" for="reportMessage">Описание проблемы</label>
-          <textarea class="input" id="reportMessage" rows="5" placeholder="Подробно опишите проблему..." required></textarea>
+          <label class="label" for="reportMessage">${t('reportMessage')}</label>
+          <textarea class="input" id="reportMessage" rows="5" placeholder="${t('reportMessagePlaceholder')}" required></textarea>
         </div>
         <div class="msg msg--warn" id="reportWarning" style="display: none;"></div>
         <div class="msg msg--ok" id="reportSuccess" style="display: none;"></div>
         <div class="cyb-report-modal__actions">
-          <button class="btn btn-outline" type="button" id="reportCancel">Отмена</button>
-          <button class="btn btn-primary" type="submit" id="reportSubmit">Отправить</button>
+          <button class="btn btn-outline" type="button" id="reportCancel">${t('reportCancel')}</button>
+          <button class="btn btn-primary" type="submit" id="reportSubmit">${t('reportSubmit')}</button>
         </div>
       </form>
     </div>
@@ -155,17 +160,17 @@ async function reportApiCall(options) {
     const category = categorySelect.value;
     const message = messageInput.value.trim();
     if (!message) {
-      warning.textContent = 'Пожалуйста, опишите проблему';
+      warning.textContent = t('reportNeedMessage');
       warning.style.display = 'block';
       return;
     }
     if (!category) {
-      warning.textContent = 'Пожалуйста, выберите категорию';
+      warning.textContent = t('reportNeedCategory');
       warning.style.display = 'block';
       return;
     }
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Отправляю...';
+    submitBtn.textContent = t('reportSending');
     warning.style.display = 'none';
     success.style.display = 'none';
 
@@ -190,22 +195,22 @@ async function reportApiCall(options) {
         }),
       });
       if (response.ok) {
-        success.textContent = '✓ Спасибо! Ваш отчёт отправлен администраторам.';
+        success.textContent = t('reportSuccess');
         success.style.display = 'block';
         form.reset();
         setTimeout(() => modal.classList.remove('is-open'), 2000);
       } else {
         const err = await response.json().catch(() => ({}));
-        warning.textContent = err.message || 'Ошибка при отправке. Попробуйте позже.';
+        warning.textContent = err.message || t('reportError');
         warning.style.display = 'block';
       }
     } catch (err) {
       console.error('Report error', err);
-      warning.textContent = 'Ошибка сети. Проверьте подключение и попробуйте ещё раз.';
+      warning.textContent = t('reportNetworkError');
       warning.style.display = 'block';
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Отправить';
+      submitBtn.textContent = t('reportSubmit');
     }
   }
 

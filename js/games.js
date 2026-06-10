@@ -1,3 +1,8 @@
+function t(key) {
+  const s = window.CYB_STRINGS || {};
+  return s[key] != null ? s[key] : key;
+}
+
 // Все вопросы с пометкой сложности
 const allQuestions = [
   {
@@ -146,10 +151,10 @@ function renderQuestion() {
       if (isCorrect) {
         score += 5; // +5 очков
         updateStatusBar();
-        resultEl.textContent = "✅ Правильно! +5 очков";
+        resultEl.textContent = t('gameCorrect');
         resultEl.style.color = "#7CFC00";
       } else {
-        resultEl.textContent = `❌ Неправильно. Правильный ответ: ${q.answer}`;
+        resultEl.textContent = `${t('gameWrong')}${q.answer}`;
         resultEl.style.color = "#ff6b6b";
         if (navigator.vibrate) navigator.vibrate(150);
       }
@@ -169,16 +174,16 @@ function finishGame() {
   const resultEl = document.getElementById("quiz-result");
   const explanationEl = document.getElementById("quiz-explanation");
 
-  codeEl.textContent = "Игра завершена!";
+  codeEl.textContent = t('gameFinished');
   optionsEl.innerHTML = "";
 
   // обновляем рекорд
   if (score > bestScore) {
     bestScore = score;
     saveBestScore();
-    resultEl.textContent = `Новый рекорд! 🎉 ${score} очков`;
+    resultEl.textContent = `${t('gameNewRecord')}${score}${t('gamePoints')} 🎉`;
   } else {
-    resultEl.textContent = `Твой финальный счёт: ${score} очков 🎉`;
+    resultEl.textContent = `${t('gameFinalScore')}${score}${t('gamePoints')} 🎉`;
   }
   resultEl.style.color = "#7CFC00";
 
@@ -229,7 +234,7 @@ function setupQuestionsByDifficulty() {
   currentIndex = 0;
 
   if (!currentQuestions.length) {
-    alert("Для выбранной сложности пока нет вопросов 🙃");
+    alert(t('gameNoQuestions'));
   }
 
   updateStatusBar();
@@ -286,7 +291,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!gameStarted) return;
 
       if (!answered) {
-        alert("Сначала выбери ответ!");
+        alert(t('gamePickAnswer'));
         return;
       }
 

@@ -5,20 +5,25 @@
 
   if (!btn) return;
 
+  function t(key) {
+    const s = window.CYB_STRINGS || {};
+    return s[key] != null ? s[key] : key;
+  }
+
   // читаем сохранённую тему
   const saved = localStorage.getItem("theme");
 
   if (saved === "dark") {
     body.classList.add("dark");
-    btn.textContent = "Светлая тема";
+    btn.textContent = t("themeLight");
   } else {
     body.classList.remove("dark");
-    btn.textContent = "Тёмная тема";
+    btn.textContent = t("themeDark");
   }
 
   btn.addEventListener("click", () => {
     const isDark = body.classList.toggle("dark");
-    btn.textContent = isDark ? "Светлая тема" : "Тёмная тема";
+    btn.textContent = isDark ? t("themeLight") : t("themeDark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 })();
@@ -40,7 +45,7 @@
     }
 
     if (clicks >= REQUIRED) {
-      trigger.textContent = "Открываю...";
+      trigger.textContent = (window.CYB_STRINGS && window.CYB_STRINGS.opening) || "Открываю...";
       setTimeout(() => {
         window.location.href = target;
       }, 500);

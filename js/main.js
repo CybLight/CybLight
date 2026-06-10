@@ -1,5 +1,27 @@
 const API_BASE = 'https://cyblight-backend.onrender.com';
 
+function t(key) {
+  const s = window.CYB_STRINGS || {};
+  return s[key] != null ? s[key] : key;
+}
+
+function localeTag() {
+  return (window.CYB_STRINGS && window.CYB_LOCALE === 'uk')
+    ? 'uk-UA'
+    : window.CYB_LOCALE === 'en'
+      ? 'en-US'
+      : 'ru-RU';
+}
+
+function loginUrl(path) {
+  if (window.CYB_I18N && typeof window.CYB_I18N.loginUrl === 'function') {
+    return window.CYB_I18N.loginUrl(path);
+  }
+  const locale = window.CYB_LOCALE || 'ru';
+  const clean = String(path || 'username').replace(/^\/+/, '');
+  return `https://login.cyblight.org/${locale}/${clean}`;
+}
+
 async function loadYoutubeStats() {
   // Основной канал
   try {
@@ -9,18 +31,18 @@ async function loadYoutubeStats() {
 
     const subsEl = document.getElementById('yt-subs');
     if (subsEl && data.subscriberCount) {
-      subsEl.textContent = Number(data.subscriberCount).toLocaleString('ru-RU');
+      subsEl.textContent = Number(data.subscriberCount).toLocaleString(localeTag());
     }
     const videosEl = document.getElementById('yt-videos');
     if (videosEl && data.videoCount) {
-      videosEl.textContent = Number(data.videoCount).toLocaleString('ru-RU');
+      videosEl.textContent = Number(data.videoCount).toLocaleString(localeTag());
     }
   } catch (e) {
     console.error(e);
     const subsEl = document.getElementById('yt-subs');
-    if (subsEl) subsEl.textContent = 'недоступно';
+    if (subsEl) subsEl.textContent = t('unavailable');
     const videosEl = document.getElementById('yt-videos');
-    if (videosEl) videosEl.textContent = 'недоступно';
+    if (videosEl) videosEl.textContent = t('unavailable');
   }
 
   // Техно канал
@@ -31,18 +53,18 @@ async function loadYoutubeStats() {
 
     const techEl = document.getElementById('yt-tech-subs');
     if (techEl && data.subscriberCount) {
-      techEl.textContent = Number(data.subscriberCount).toLocaleString('ru-RU');
+      techEl.textContent = Number(data.subscriberCount).toLocaleString(localeTag());
     }
     const techVideosEl = document.getElementById('yt-tech-videos');
     if (techVideosEl && data.videoCount) {
-      techVideosEl.textContent = Number(data.videoCount).toLocaleString('ru-RU');
+      techVideosEl.textContent = Number(data.videoCount).toLocaleString(localeTag());
     }
   } catch (e) {
     console.error(e);
     const techEl = document.getElementById('yt-tech-subs');
-    if (techEl) techEl.textContent = 'недоступно';
+    if (techEl) techEl.textContent = t('unavailable');
     const techVideosEl = document.getElementById('yt-tech-videos');
-    if (techVideosEl) techVideosEl.textContent = 'недоступно';
+    if (techVideosEl) techVideosEl.textContent = t('unavailable');
   }
 }
 
@@ -57,7 +79,7 @@ async function loadOnlineCount() {
     const data = await res.json().catch(() => null);
     if (!res.ok || !data || !data.ok) return;
 
-    countEl.textContent = Number(data.online || 0).toLocaleString('ru-RU');
+    countEl.textContent = Number(data.online || 0).toLocaleString(localeTag());
     wrap.hidden = false;
   } catch {
     // Если API недоступен — счётчик просто не показываем
@@ -81,12 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const label = btn.querySelector('.header-label') || btn;
 
     if (res.ok && data && data.ok) {
-      label.textContent = 'Профиль';
-      btn.href = 'https://login.cyblight.org/account-profile';
+      label.textContent = t('profile');
+      btn.href = loginUrl('account-profile');
       btn.classList.add('is-profile');
     } else {
-      label.textContent = 'Войти';
-      btn.href = 'https://login.cyblight.org/';
+      label.textContent = t('login');
+      btn.href = loginUrl('username');
       btn.classList.remove('is-profile');
     }
   } catch {}
@@ -149,86 +171,98 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Site search — fullscreen overlay with word-by-word matching & highlighting
 (function () {
-  const searchIndex = [
+  const L = '/' + (window.CYB_LOCALE || 'ru');
+  function localizeSearchUrl(url) {
+    if (!url || /^https?:\/\//.test(url) || /^\/(ru|uk|en)\//.test(url)) return url;
+    const path = url.startsWith('/') ? url : '/' + url;
+    return L + (path === '/' ? '/' : path);
+  }
+
+  const rawSearchIndex = (window.CYB_STRINGS && window.CYB_STRINGS.searchIndex) || [
     {
       title: 'Главная',
       desc: 'Основная страница CybLight. Добро пожаловать на сайт!',
       tags: ['главная', 'home', 'cyblight'],
-      url: '/',
+      url: L + '/',
     },
     {
       title: 'Проекты',
       desc: 'Все проекты: сайт, бот, умный дом, эхолот, Priority Manager X',
       tags: ['проекты', 'projects', 'портфолио'],
-      url: '/projects/',
+      url: L + '/projects/',
     },
     {
       title: 'Видео',
       desc: 'YouTube видео с каналов CybLight — геймплей и обзоры технологий',
       tags: ['видео', 'youtube', 'ролики'],
-      url: '/#videos',
+      url: L + '/#videos',
     },
     {
       title: 'Игры по программированию',
       desc: 'Интерактивные игры: угадай вывод кода, практика синтаксиса, алгоритмы',
       tags: ['игры', 'games', 'программирование', 'код'],
-      url: '/games/',
+      url: L + '/games/',
     },
     {
       title: 'Контакты',
       desc: 'Почта, Telegram, YouTube, GitHub — все способы связаться',
       tags: ['контакты', 'contacts', 'связь', 'email', 'telegram'],
-      url: '/contacts/',
+      url: L + '/contacts/',
     },
     {
       title: 'Пожертвовать',
       desc: 'Поддержать развитие CybLight — донат, помощь проекту',
       tags: ['донат', 'donate', 'поддержка'],
-      url: '/donate/',
+      url: L + '/donate/',
     },
     {
       title: 'Политика конфиденциальности',
       desc: 'Политика конфиденциальности и обработка данных',
       tags: ['конфиденциальность', 'privacy', 'данные'],
-      url: '/privacy/',
+      url: L + '/privacy/',
     },
     {
       title: 'YouTube каналы',
       desc: 'Техно и Game каналы CybLight, подписчики, количество видео',
       tags: ['youtube', 'каналы', 'подписчики'],
-      url: '/#projects',
+      url: L + '/#projects',
     },
     {
       title: 'Сайт CybLight',
       desc: 'Основной сайт — HTML, CSS, JavaScript, TypeScript',
       tags: ['сайт', 'web', 'html', 'css', 'javascript', 'typescript'],
-      url: '/projects/',
+      url: L + '/projects/',
     },
     {
       title: 'Telegram-бот Guardian',
       desc: 'Python бот для модерации и поддержания порядка в Telegram-группах',
       tags: ['бот', 'telegram', 'python', 'guardian', 'модерация'],
-      url: '/projects/',
+      url: L + '/projects/',
     },
     {
       title: 'Priority Manager X',
       desc: 'C# приложение — управление приоритетами процессов в Windows',
       tags: ['priority', 'windows', 'c#', 'csharp', 'процессы'],
-      url: '/projects/',
+      url: L + '/projects/',
     },
     {
       title: 'Smart Home Hub',
       desc: 'Arduino и C++ — умный дом, автоматизация, IoT',
       tags: ['arduino', 'c++', 'умный дом', 'smart home', 'iot'],
-      url: '/projects/',
+      url: L + '/projects/',
     },
     {
       title: 'Fish Finder PRO',
       desc: 'Эхолот для рыбалки на базе Arduino — самодельная рыболовная электроника',
       tags: ['arduino', 'эхолот', 'рыбалка', 'fish finder'],
-      url: '/projects/',
+      url: L + '/projects/',
     },
   ];
+
+  const searchIndex = rawSearchIndex.map((item) => ({
+    ...item,
+    url: localizeSearchUrl(item.url),
+  }));
 
   // Динамически создаём оверлей поиска, чтобы он работал на всех страницах
   function createOverlay() {
@@ -244,8 +278,8 @@ document.addEventListener('DOMContentLoaded', () => {
       '<svg class="search-overlay-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">' +
       '<path fill="currentColor" d="M23.354 22.646l-5-5-.012-.007a8.532 8.532 0 10-.703.703l.007.012 5 5a.5.5 0 00.707-.707zM12 19.5a7.5 7.5 0 117.5-7.5 7.508 7.508 0 01-7.5 7.5z"></path>' +
       '</svg>' +
-      '<input id="search-overlay-input" type="text" placeholder="Введите запрос..." autocomplete="off" />' +
-      '<button id="search-overlay-close" type="button" aria-label="Закрыть поиск">\u2715</button>' +
+      '<input id="search-overlay-input" type="text" placeholder="' + t('searchPlaceholderOverlay') + '" autocomplete="off" />' +
+      '<button id="search-overlay-close" type="button" aria-label="' + t('searchClose') + '">\u2715</button>' +
       '</div>' +
       '<div class="search-overlay-meta" id="search-meta"></div>' +
       '</div>' +
@@ -345,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       if (found) {
         domResults.push({
-          title: 'Текст на этой странице',
+          title: t('searchPageText'),
           desc: highlightText(pageText.slice(0, 300) + (pageText.length > 300 ? '...' : ''), words),
           tags: ['страница', 'текст'],
           url: path,
@@ -355,15 +389,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Объединяем результаты
     const allResults = [...domResults, ...scored.map((s) => s.item)];
-    overlayMeta.textContent = allResults.length ? 'Найдено результатов: ' + allResults.length : '';
+    overlayMeta.textContent = allResults.length ? t('searchResults') + allResults.length : '';
 
     if (allResults.length === 0) {
       overlayResults.innerHTML =
         '<div class="search-no-results">' +
         '<div class="search-no-icon">🔍</div>' +
-        '<p>Ничего не найдено по запросу «' +
-        escapeHtml(trimmed) +
-        '»</p>' +
+        '<p>' + t('searchNoResults') + ' ' +
+        escapeHtml(trimmed) + '</p>' +
         '</div>';
       return;
     }

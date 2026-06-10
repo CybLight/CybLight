@@ -1,0 +1,1181 @@
+{
+  "htmlLang": "en",
+  "ogLocale": "en_US",
+  "localeTag": "en-US",
+  "strings": {
+    "lang": {
+      "current": "English"
+    }
+  },
+  "js": {
+    "unavailable": "unavailable",
+    "login": "Sign in",
+    "profile": "Profile",
+    "themeDark": "Dark theme",
+    "themeLight": "Light theme",
+    "opening": "Opening...",
+    "searchPlaceholder": "Find an easter egg...",
+    "searchPlaceholderOverlay": "Enter a query...",
+    "searchClose": "Close search",
+    "searchLabel": "Search",
+    "searchResults": "Results found: ",
+    "searchNoResults": "Nothing found for:",
+    "searchPageText": "Text on this page",
+    "menuOpen": "Open menu",
+    "online": "online",
+    "copied": "Copied!",
+    "copy": "Copy",
+    "copiedToast": "Copied ✅",
+    "copyFailed": "Could not copy 😕",
+    "reportTitle": "Report a problem",
+    "reportSubtitle": "Tell us what went wrong — we will look into it",
+    "reportEmail": "Email (optional)",
+    "reportCategory": "Category",
+    "reportCategoryPlaceholder": "-- Select a category --",
+    "reportBug": "Bug",
+    "reportPerformance": "Performance issue",
+    "reportSecurity": "Security issue",
+    "reportFeature": "Feature request",
+    "reportOther": "Other",
+    "reportMessage": "Problem description",
+    "reportMessagePlaceholder": "Describe the problem in detail...",
+    "reportCancel": "Cancel",
+    "reportSubmit": "Send",
+    "reportSending": "Sending...",
+    "reportNeedMessage": "Please describe the problem",
+    "reportNeedCategory": "Please select a category",
+    "reportSuccess": "✓ Thank you! Your report has been sent to administrators.",
+    "reportError": "Failed to send. Please try again later.",
+    "reportNetworkError": "Network error. Check your connection and try again.",
+    "gameCorrect": "✅ Correct! +5 points",
+    "gameWrong": "❌ Wrong. Correct answer: ",
+    "gameFinished": "Game over!",
+    "gameNewRecord": "New record! 🎉 ",
+    "gameFinalScore": "Your final score: ",
+    "gamePoints": " points",
+    "gameNoQuestions": "No questions for this difficulty yet 🙃",
+    "gamePickAnswer": "Pick an answer first!",
+    "gameError": "Error",
+    "searchIndex": [
+      {
+        "title": "Home",
+        "desc": "CybLight home page. Welcome to the site!",
+        "tags": [
+          "home",
+          "cyblight",
+          "main"
+        ],
+        "url": "/"
+      },
+      {
+        "title": "Projects",
+        "desc": "All projects: website, bot, smart home, fish finder, Priority Manager X",
+        "tags": [
+          "projects",
+          "portfolio"
+        ],
+        "url": "/projects/"
+      },
+      {
+        "title": "Videos",
+        "desc": "YouTube videos from CybLight channels — gameplay and tech reviews",
+        "tags": [
+          "videos",
+          "youtube"
+        ],
+        "url": "/#videos"
+      },
+      {
+        "title": "Programming games",
+        "desc": "Interactive games: guess code output, syntax practice, algorithms",
+        "tags": [
+          "games",
+          "programming",
+          "code"
+        ],
+        "url": "/games/"
+      },
+      {
+        "title": "Contacts",
+        "desc": "Email, Telegram, YouTube, GitHub — all ways to get in touch",
+        "tags": [
+          "contacts",
+          "email",
+          "telegram"
+        ],
+        "url": "/contacts/"
+      },
+      {
+        "title": "Donate",
+        "desc": "Support CybLight development — donate and help the project",
+        "tags": [
+          "donate",
+          "support"
+        ],
+        "url": "/donate/"
+      },
+      {
+        "title": "Privacy Policy",
+        "desc": "Privacy policy and data processing",
+        "tags": [
+          "privacy",
+          "data"
+        ],
+        "url": "/privacy/"
+      },
+      {
+        "title": "YouTube channels",
+        "desc": "CybLight Tech and Game channels, subscribers, video count",
+        "tags": [
+          "youtube",
+          "channels"
+        ],
+        "url": "/#projects"
+      },
+      {
+        "title": "CybLight Website",
+        "desc": "Main site — HTML, CSS, JavaScript, TypeScript",
+        "tags": [
+          "website",
+          "web",
+          "html",
+          "css",
+          "javascript",
+          "typescript"
+        ],
+        "url": "/projects/"
+      },
+      {
+        "title": "Telegram bot Guardian",
+        "desc": "Python bot for moderation and order in Telegram groups",
+        "tags": [
+          "bot",
+          "telegram",
+          "python",
+          "guardian",
+          "moderation"
+        ],
+        "url": "/projects/"
+      },
+      {
+        "title": "Priority Manager X",
+        "desc": "C# app — process priority management on Windows",
+        "tags": [
+          "priority",
+          "windows",
+          "c#",
+          "csharp",
+          "processes"
+        ],
+        "url": "/projects/"
+      },
+      {
+        "title": "Smart Home Hub",
+        "desc": "Arduino and C++ — smart home, automation, IoT",
+        "tags": [
+          "arduino",
+          "c++",
+          "smart home",
+          "iot"
+        ],
+        "url": "/projects/"
+      },
+      {
+        "title": "Fish Finder PRO",
+        "desc": "Arduino-based fish finder — DIY fishing electronics",
+        "tags": [
+          "arduino",
+          "fish finder",
+          "fishing"
+        ],
+        "url": "/projects/"
+      }
+    ]
+  },
+  "replacements": [
+    [
+      "Эти данные используются только для того, чтобы видеть, сколько людей нашли пасхалку, из каких стран заходят посетители и как часто срабатывает та или иная игровая механика. Данные не используются для маркетинга и не передаются третьим лицам, за исключением технических сервисов, перечисленных ниже.",
+      "This data is used only to see how many people found an easter egg, which countries visitors come from, and how often a game mechanic triggers. Data is not used for marketing and is not shared with third parties except the technical services listed below."
+    ],
+    [
+      "Добро пожаловать на мой сайт! Здесь я делюсь своими проектами по электронике (Arduino, STM32), умному дому, программированию и разработкой собственного эхолота для рыбалки. Также публикую блог о технологиях и создаю интерактивные игры по программированию.",
+      "Welcome to my site! Here I share my electronics projects (Arduino, STM32), smart home, programming, and my own fish finder for fishing. I also publish a tech blog and create interactive programming games."
+    ],
+    [
+      "Технические логи запросов и уведомления о пасхалках могут храниться ограниченное время, необходимое для анализа статистики и улучшения Сайта. Я не веду отдельную долгосрочную базу персональных профилей пользователей.",
+      "Technical request logs and easter-egg notifications may be stored for a limited time needed to analyze statistics and improve the Site. I do not maintain a separate long-term database of user personal profiles."
+    ],
+    [
+      "Здесь будут собраны небольшие интерактивные задания по программированию: угадай вывод кода, работа с циклами, условиями, массивами, а позже — алгоритмы, Big-O и перевод в двоичный вид.",
+      "Small interactive programming tasks will be collected here: guess the code output, loops, conditions, arrays, and later algorithms, Big-O, and binary conversion."
+    ],
+    [
+      "Сайт <strong>CybLight</strong> (далее — «Сайт») — это личный некоммерческий проект, посвящённый электронике, программированию, играм и экспериментам с веб-технологиями.",
+      "The <strong>CybLight</strong> website (the \"Site\") is a personal non-commercial project dedicated to electronics, programming, games, and web technology experiments."
+    ],
+    [
+      "CybLight — создание сайтов, проекты для умного дома, уроки и интерактивные \n      игры по программированию, блог о технологиях, электронике, IoT и инженерных решениях.",
+      "CybLight — website development, smart home projects, programming lessons and interactive \n      games, a blog about technology, electronics, IoT, and engineering solutions."
+    ],
+    [
+      "CybLight — создание сайтов, проекты для умного дома, уроки и интерактивные \n      игры по программированию, блог о технологиях, электронике, IoT и инженерных решениях.",
+      "CybLight — website development, smart home projects, programming lessons and interactive \n      games, a blog about technology, electronics, IoT, and engineering solutions."
+    ],
+    [
+      "Cоздание сайтов, проекты для умного дома, уроки и интерактивные игры по программированию, \n      блог о технологиях, электронике, IoT и инженерных решениях.",
+      "Website development, smart home projects, programming lessons and interactive games, \n      a blog about technology, electronics, IoT, and engineering solutions."
+    ],
+    [
+      "Если вы считаете, что какие-то данные собираются некорректно или хотите задать вопрос о конфиденциальности, вы можете связаться со мной через страницу",
+      "If you believe any data is collected incorrectly or want to ask a privacy question, you can contact me via the"
+    ],
+    [
+      "Пиши по вопросам проектов на Arduino, умного дома, эхолота, игр, сотрудничества или просто, если хочется обсудить технологии и электронику.",
+      "Write about Arduino projects, smart home, fish finder, games, collaboration, or just to discuss technology and electronics."
+    ],
+    [
+      "Основной веб‑сайт, написанный на TypeScript/JavaScript с использованием HTML и CSS. Показывает блог, проекты, игры, видео и многое другое.",
+      "Main website built with TypeScript/JavaScript, HTML, and CSS. Shows blog, projects, games, videos, and more."
+    ],
+    [
+      "На Сайте могут быть размещены игровые элементы («пасхалки»), например скрытые кнопки или анимированные объекты на специальных страницах.",
+      "The Site may include game elements (\"easter eggs\"), such as hidden buttons or animated objects on special pages."
+    ],
+    [
+      "При срабатывании такой пасхалки в технических целях отправляется событие на серверную часть, а затем — уведомление в мой Telegram-бот.",
+      "When such an easter egg triggers, an event is sent to the server for technical purposes, then a notification to my Telegram bot."
+    ],
+    [
+      "<strong>Cloudflare</strong> — CDN и защита от атак. Может обрабатывать IP-адреса, страну и другую техническую информацию о запросах.",
+      "<strong>Cloudflare</strong> — CDN and attack protection. May process IP addresses, country, and other technical request data."
+    ],
+    [
+      "Эти данные используются только для технического обеспечения работы Сайта, защиты от злоупотреблений и простой статистики посещений.",
+      "This data is used only to technically operate the Site, protect against abuse, and for simple visit statistics."
+    ],
+    [
+      "Контакты CybLight: почта, Telegram, YouTube, GitHub и другие способы связи по проектам электроники, Arduino, умному дому и играм.",
+      "CybLight contacts: email, Telegram, YouTube, GitHub, and more for electronics, Arduino, smart home, and games."
+    ],
+    [
+      "Сайт может использовать <strong>localStorage</strong> или другие механизмы браузера для хранения локальных настроек, например:",
+      "The Site may use <strong>localStorage</strong> or other browser mechanisms to store local settings, for example:"
+    ],
+    [
+      "Здесь собраны основные разработки, над которыми я работаю. Под каждой карточкой — ссылки на репозитории, демо и другие детали.",
+      "Main projects I am working on. Under each card — links to repos, demos, and other details."
+    ],
+    [
+      "Описание проектов автора: сайт, телеграм-бот, приложение для Windows, умный дом и эхолот. Ссылки на репозитории и подробности.",
+      "Author projects: website, Telegram bot, Windows app, smart home, and fish finder. Repo links and details."
+    ],
+    [
+      "Система для управления умным домом: датчики, управление освещением и сценарии. <br />\n              Использует Arduino и C++.",
+      "Smart home control system: sensors, lighting, and scenarios. <br />\n              Uses Arduino and C++."
+    ],
+    [
+      "По умолчанию Сайт не просит у вас регистрацию, не собирает имена, адреса электронной почты и другую явную личную информацию.",
+      "By default, the Site does not ask you to register or collect names, email addresses, or other explicit personal information."
+    ],
+    [
+      "CybLight, создание сайтов, веб-разработка, умный дом, Arduino, электроника, Rocket League, games, DIY, IT, программирование",
+      "CybLight, website development, web development, smart home, Arduino, electronics, Rocket League, games, DIY, IT, programming"
+    ],
+    [
+      "Встроенные виджеты (например, плееры YouTube) могут собирать данные в соответствии с политиками соответствующих сервисов.",
+      "Embedded widgets (e.g. YouTube players) may collect data per their services' policies."
+    ],
+    [
+      "На данный момент сайт в активной разработке, поэтому не все функции доступны. <br />\n              Спасибо за понимание!",
+      "The site is under active development, so not all features are available yet. <br />\n              Thanks for understanding!"
+    ],
+    [
+      "<strong>Telegram</strong> — используется для отправки уведомлений о срабатывании пасхалок в мой личный Telegram-аккаунт.",
+      "<strong>Telegram</strong> — used to send easter-egg notifications to my personal Telegram account."
+    ],
+    [
+      "Приложение на C# для Windows, которое управляет приоритетами процессов и автоматически применяет правила к приложениям.",
+      "C# Windows app that manages process priorities and automatically applies rules to applications."
+    ],
+    [
+      "Интерактивные игры по программированию от CybLight: угадай вывод кода, практика синтаксиса, алгоритмы и многое другое.",
+      "Interactive programming games by CybLight: guess code output, syntax practice, algorithms, and more."
+    ],
+    [
+      "Я могу время от времени обновлять эту Политику конфиденциальности. Актуальная версия всегда доступна по ссылке",
+      "I may update this Privacy Policy from time to time. The current version is always available at the"
+    ],
+    [
+      "Политика конфиденциальности сайта CybLight: какие данные собираются, как используются и как устроены пасхалки.",
+      "CybLight privacy policy: what data is collected, how it is used, and how easter eggs work."
+    ],
+    [
+      "Если вы не хотите, чтобы техническая информация (IP, страна, браузер) попадала в логи пасхалок, вы можете:",
+      "If you do not want technical information (IP, country, browser) in easter-egg logs, you can:"
+    ],
+    [
+      "Однако при обращении к Сайту и взаимодействии с ним могут обрабатываться следующие технические данные:",
+      "However, when accessing and interacting with the Site, the following technical data may be processed:"
+    ],
+    [
+      "Эти данные хранятся только в вашем браузере и не отправляются на сервер отдельно от обычных запросов.",
+      "This data is stored only in your browser and is not sent to the server separately from regular requests."
+    ],
+    [
+      "Для работы Сайта и сбора минимальной технической статистики могут использоваться следующие сервисы:",
+      "The following services may be used to run the Site and collect minimal technical statistics:"
+    ],
+    [
+      "Каждая копеечка приближает меня к новым свершениям!<br />\n            Спасибо за вашу поддержку",
+      "Every bit brings me closer to new achievements!<br />\n            Thank you for your support"
+    ],
+    [
+      "Здесь выходят ролики связанные с электроникой и моими проектами, а также обзоры разной техники",
+      "Videos about electronics, my projects, and tech reviews are published here"
+    ],
+    [
+      "Добро пожаловать на мой сайт! Здесь я делюсь своими проектами по электронике (Arduino,",
+      "Welcome to my site! Here I share my electronics projects (Arduino,"
+    ],
+    [
+      "STM32), умному дому, программированию и разработкой собственного эхолота для рыбалки.",
+      "STM32), smart home, programming, and my own fish finder for fishing."
+    ],
+    [
+      "Подпишись на мои YouTube-каналы! 🎮 Эпичные моменты с игр и 🔧 обзоры технологий 😉",
+      "Subscribe to my YouTube channels! 🎮 Epic gaming moments and 🔧 tech reviews 😉"
+    ],
+    [
+      "Также публикую блог о технологиях и создаю интерактивные игры по программированию.",
+      "I also publish a tech blog and create interactive programming games."
+    ],
+    [
+      "IP-адрес и примерное местоположение (страна) — через инфраструктуру Cloudflare;",
+      "IP address and approximate location (country) — via Cloudflare infrastructure;"
+    ],
+    [
+      "Смотри на код и выбирай, что он выведет. Отлично тренирует внимание к деталям.",
+      "Look at the code and choose what it prints. Great for attention to detail."
+    ],
+    [
+      "На данный момент сайт в активной разработке, поэтому не все функции доступны.",
+      "The site is under active development, so not all features are available yet."
+    ],
+    [
+      "Используя Сайт, вы также принимаете условия обработки данных этими сервисами.",
+      "By using the Site, you also accept these services' data processing terms."
+    ],
+    [
+      "Поддержите проекты CybLight — донат через Monobank банку или по номеру карты.",
+      "Support CybLight projects — donate via Monobank jar or card number."
+    ],
+    [
+      "флаг о том, что пасхалка уже была найдена, чтобы не показывать её повторно.",
+      "a flag that an easter egg was already found so it is not shown again."
+    ],
+    [
+      "Время ответа зависит от загрузки, но чаще всего — в течение ближайших дней.",
+      "Response time depends on workload, but usually within the next few days."
+    ],
+    [
+      "Числа в десятичной системе, а тебе нужно быстро перевести их в двоичную.",
+      "Decimal numbers — convert them to binary quickly."
+    ],
+    [
+      "Короткие обновления, скриншоты, планы по Arduino, умному дому и эхолоту.",
+      "Short updates, screenshots, plans for Arduino, smart home, and fish finder."
+    ],
+    [
+      "в подвале Сайта. Дата последнего обновления указана в начале документа.",
+      "link in the Site footer. The last update date is shown at the top of the document."
+    ],
+    [
+      "Для детальных вопросов по проектам, сотрудничества, предложений и идей.",
+      "For detailed questions about projects, collaboration, proposals, and ideas."
+    ],
+    [
+      "Если хочешь начать всё сначала — жми <strong>«Начать заново»</strong>.",
+      "To start over, press <strong>\"Start over\"</strong>."
+    ],
+    [
+      "Профессиональный профиль CybLight в LinkedIn — навыки, опыт и проекты.",
+      "CybLight professional profile on LinkedIn — skills, experience, and projects."
+    ],
+    [
+      "Выбери один из вариантов ответа. Я сразу скажу, верно это или нет.",
+      "Pick one answer. I will tell you immediately if it is correct."
+    ],
+    [
+      "Внимательно прочитай код в блоке <strong>«Игровое поле»</strong>.",
+      "Read the code carefully in the <strong>\"Game board\"</strong> section."
+    ],
+    [
+      "Исходный код проектов, примеры, схемы и документация по CybLight.",
+      "Project source code, examples, schematics, and CybLight documentation."
+    ],
+    [
+      "Смотри на код и отвечай, какая у него асимптотическая сложность.",
+      "Look at the code and answer its asymptotic complexity."
+    ],
+    [
+      "alt=\"CybLight — проекты по электронике, умному дому и эхолоту\"",
+      "alt=\"CybLight — electronics, smart home, and fish finder projects\""
+    ],
+    [
+      "Нажимай <strong>«Следующий вопрос»</strong>, чтобы продолжить.",
+      "Press <strong>\"Next question\"</strong> to continue."
+    ],
+    [
+      "для каких задач нужен проект (эхолот, умный дом, игра и т.д.);",
+      "what the project is for (fish finder, smart home, game, etc.);"
+    ],
+    [
+      "Удобно для коротких вопросов, ссылок, скриншотов и голосовых.",
+      "Good for short questions, links, screenshots, and voice messages."
+    ],
+    [
+      "alt=\"QR-код Monobank: https://send.monobank.ua/jar/juPUWwZV8\"",
+      "alt=\"Monobank QR code: https://send.monobank.ua/jar/juPUWwZV8\""
+    ],
+    [
+      "Нажми <strong>«Начать игру»</strong> в карточке нужной игры.",
+      "Click <strong>\"Start game\"</strong> on the game card you want."
+    ],
+    [
+      "Связаться с <span class=\"contacts-highlight\">CybLight</span>",
+      "Contact <span class=\"contacts-highlight\">CybLight</span>"
+    ],
+    [
+      "какое устройство / плата используется (Arduino, ESP и т.п.);",
+      "which device / board you use (Arduino, ESP, etc.);"
+    ],
+    [
+      "дата, время и часовой пояс, указанный в настройках браузера;",
+      "date, time, and timezone from browser settings;"
+    ],
+    [
+      "Здесь выходят ролики по Rocket League, Forza и другим играм",
+      "Rocket League, Forza, and other game videos are published here"
+    ],
+    [
+      "если есть — приложить фото / скриншоты (лучше в Telegram).",
+      "if possible — attach photos / screenshots (preferably via Telegram)."
+    ],
+    [
+      "Чтобы быстрее разобраться в вопросе, можно сразу указать:",
+      "To help me understand faster, you can mention:"
+    ],
+    [
+      "служебный тип события (например, <code>egg_click</code>).",
+      "service event type (e.g. <code>egg_click</code>)."
+    ],
+    [
+      "Управление приоритетами процессов и правила для Windows.",
+      "Process priority management and rules for Windows."
+    ],
+    [
+      "не взаимодействовать с пасхалками и скрытыми элементами;",
+      "do not interact with easter eggs and hidden elements;"
+    ],
+    [
+      "адрес страницы, с которой вы пришли на Сайт (заголовок",
+      "the page address you came from (the"
+    ],
+    [
+      "отключить выполнение JavaScript в настройках браузера;",
+      "disable JavaScript in your browser settings;"
+    ],
+    [
+      "Официальный сертификат CybLight на сервисе MyNickname",
+      "Official CybLight certificate on MyNickname"
+    ],
+    [
+      "Сайт на 100% сделан из вторично переработанного кода",
+      "This site is 100% made from recycled code"
+    ],
+    [
+      "Мой основной сайт, на котором вы сейчас находитесь.",
+      "My main site — you are here now."
+    ],
+    [
+      "Эхолот для рыбалки на базе Arduino с экраном и GPS.",
+      "Arduino fish finder with display and GPS."
+    ],
+    [
+      "CybLight - создание сайтов, умный дом, электроника",
+      "CybLight — websites, smart home, electronics"
+    ],
+    [
+      "Оптимизация и уют для дома через умные технологии.",
+      "Optimization and comfort for your home through smart technology."
+    ],
+    [
+      "настройки часового пояса и языка вашего браузера.",
+      "your browser timezone and language settings."
+    ],
+    [
+      "<span class=\"accent\">Привет,</span> я разработчик",
+      "<span class=\"accent\">Hi,</span> I'm a developer"
+    ],
+    [
+      "информация о браузере и устройстве (User-Agent);",
+      "browser and device info (User-Agent);"
+    ],
+    [
+      "Технические вопросы по проектам — в приоритете",
+      "Technical project questions take priority"
+    ],
+    [
+      "информация о браузере и устройстве (заголовок",
+      "browser and device information (the"
+    ],
+    [
+      "что уже сделал и на каком шаге всё ломается;",
+      "what you have already done and where it breaks;"
+    ],
+    [
+      "следит за порядком в группах и очищает спам.",
+      "keeps order in groups and removes spam."
+    ],
+    [
+      "CybLight — Arduino, электроника и умный дом",
+      "CybLight — Arduino, electronics, and smart home"
+    ],
+    [
+      "Политика конфиденциальности сайта CybLight",
+      "CybLight Website Privacy Policy"
+    ],
+    [
+      "Открыт к сотрудничеству и совместным идеям",
+      "Open to collaboration and joint ideas"
+    ],
+    [
+      "IP-адрес и страна (по данным Cloudflare);",
+      "IP address and country (via Cloudflare);"
+    ],
+    [
+      "Создание сайтов, умный дом и электроника",
+      "Websites, smart home, and electronics"
+    ],
+    [
+      "страница, на которой сработала пасхалка;",
+      "page where the easter egg triggered;"
+    ],
+    [
+      "title=\"Бильярдный удар в Rocket League\"",
+      "title=\"Billiards shot in Rocket League\""
+    ],
+    [
+      "<span class=\"accent-2\">CybLight!</span>",
+      "<span class=\"accent-2\">CybLight!</span>"
+    ],
+    [
+      "Открыть главную страницу сайта СайбЛайт",
+      "Open CybLight home page"
+    ],
+    [
+      "Прокачай навыки кода в формате мини-игр",
+      "Level up your coding skills with mini-games"
+    ],
+    [
+      "Бот для поддержания порядка в группах.",
+      "A bot to keep order in groups."
+    ],
+    [
+      "Политика конфиденциальности — CybLight",
+      "Privacy Policy — CybLight"
+    ],
+    [
+      "CybLight — Политика конфиденциальности",
+      "CybLight — Privacy Policy"
+    ],
+    [
+      "CybLight Projects — Поддержать проекты",
+      "CybLight Projects — Support projects"
+    ],
+    [
+      "на репозитории, демо и другие детали.",
+      "links to repositories, demos, and other details."
+    ],
+    [
+      "Как писать, чтобы ответ был полезнее",
+      "How to write for a more useful reply"
+    ],
+    [
+      "Если хочешь начать всё сначала — жми",
+      "To start over, press"
+    ],
+    [
+      "Эхолот для рыбалки на базе Arduino.",
+      "Arduino-based fish finder for fishing."
+    ],
+    [
+      "Игры по программированию — CybLight",
+      "Programming games — CybLight"
+    ],
+    [
+      "выбранная светлая или тёмная тема;",
+      "selected light or dark theme;"
+    ],
+    [
+      "Закупить компоненты для разработок",
+      "Buy components for development"
+    ],
+    [
+      "И купить вкусняшки для вдохновения",
+      "And buy treats for inspiration"
+    ],
+    [
+      "Telegram канал DNLbeats с музыкой",
+      "DNLbeats Telegram channel with music"
+    ],
+    [
+      "Проекты, блог и игровые моменты.",
+      "Projects, blog, and gaming highlights."
+    ],
+    [
+      "Последнее обновление: 06.12.2025",
+      "Last updated: 06.12.2025"
+    ],
+    [
+      "4. Cookies и локальное хранилище",
+      "4. Cookies and local storage"
+    ],
+    [
+      "title=\"FlatOut 2-Ностальгия...\"",
+      "title=\"FlatOut 2 — nostalgia...\""
+    ],
+    [
+      "Войти в учётную запись CybLight",
+      "Sign in to your CybLight account"
+    ],
+    [
+      "Ваши пожертвования помогут мне:",
+      "Your donations help me:"
+    ],
+    [
+      "Наведи — чтобы посмотреть номер",
+      "Hover to see the number"
+    ],
+    [
+      "3. Пасхалки и скрытые элементы",
+      "3. Easter eggs and hidden elements"
+    ],
+    [
+      "<h2>Telegram‑бот Guardian</h2>",
+      "<h2>Telegram bot Guardian</h2>"
+    ],
+    [
+      "<h3>Telegram-бот Guardian</h3>",
+      "<h3>Telegram bot Guardian</h3>"
+    ],
+    [
+      "«Политика конфиденциальности»",
+      "\"Privacy Policy\""
+    ],
+    [
+      "НАСТРОЙКИ КОНФИДЕНЦИАЛЬНОСТИ",
+      "PRIVACY SETTINGS"
+    ],
+    [
+      "6. Как долго хранятся данные",
+      "6. How long data is stored"
+    ],
+    [
+      "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ",
+      "PRIVACY POLICY"
+    ],
+    [
+      "Политика конфиденциальности",
+      "Privacy Policy"
+    ],
+    [
+      "2. Какие данные мы собираем",
+      "2. What data we collect"
+    ],
+    [
+      "Видео инструкций и проектов",
+      "Project and tutorial videos"
+    ],
+    [
+      "QR-код для пополнения банки",
+      "QR code to top up the jar"
+    ],
+    [
+      "alt=\"Главный сайт CybLight\"",
+      "alt=\"CybLight main website\""
+    ],
+    [
+      "Нажмите, чтобы скопировать",
+      "Click to copy"
+    ],
+    [
+      "data-tooltip=\"Скопировать\"",
+      "data-tooltip=\"Copy\""
+    ],
+    [
+      "СайбЛайт Главная страница",
+      "CybLight Home page"
+    ],
+    [
+      "Реализовать новые проекты",
+      "Build new projects"
+    ],
+    [
+      "Python / JS / C-подобные",
+      "Python / JS / C-like"
+    ],
+    [
+      "Пополнить банку Monobank",
+      "Top up Monobank jar"
+    ],
+    [
+      "8. Изменения в политике",
+      "8. Policy changes"
+    ],
+    [
+      "Скопировать номер карты",
+      "Copy card number"
+    ],
+    [
+      "Войти в учётную запись",
+      "Sign in to your account"
+    ],
+    [
+      "7. Ваши выборы и права",
+      "7. Your choices and rights"
+    ],
+    [
+      "для серьёзных вопросов",
+      "for serious questions"
+    ],
+    [
+      "Поддержите мои проекты",
+      "Support my projects"
+    ],
+    [
+      "Спасибо за понимание!",
+      "Thanks for understanding!"
+    ],
+    [
+      "УСЛОВИЯ ИСПОЛЬЗОВАНИЯ",
+      "TERMS OF USE"
+    ],
+    [
+      "Telegram-бот Guardian",
+      "Telegram bot Guardian"
+    ],
+    [
+      "Навигация по разделам",
+      "Section navigation"
+    ],
+    [
+      "При этом фиксируются:",
+      "The following is recorded:"
+    ],
+    [
+      "дата и время запроса;",
+      "date and time of the request;"
+    ],
+    [
+      "в подвале Сайта. Дата",
+      "in the Site footer. The date"
+    ],
+    [
+      "Telegram‑бот Guardian",
+      "Telegram bot Guardian"
+    ],
+    [
+      "Пользователей онлайн",
+      "Users online"
+    ],
+    [
+      "5. Сторонние сервисы",
+      "5. Third-party services"
+    ],
+    [
+      "1. Угадай вывод кода",
+      "1. Guess the code output"
+    ],
+    [
+      "Сообщить о проблеме",
+      "Report a problem"
+    ],
+    [
+      "CybLight — Контакты",
+      "CybLight — Contacts"
+    ],
+    [
+      "Обновить список игр",
+      "Refresh game list"
+    ],
+    [
+      "2. Бинарный перевод",
+      "2. Binary conversion"
+    ],
+    [
+      "Как быстро отвечаю?",
+      "How fast do I reply?"
+    ],
+    [
+      "Написать в Telegram",
+      "Message on Telegram"
+    ],
+    [
+      "Мои YouTube-каналы",
+      "My YouTube channels"
+    ],
+    [
+      "Priority Manager X",
+      "Priority Manager X"
+    ],
+    [
+      "CybLight — Проекты",
+      "CybLight — Projects"
+    ],
+    [
+      "Условные операторы",
+      "Conditionals"
+    ],
+    [
+      "Открыть сертификат",
+      "Open certificate"
+    ],
+    [
+      "Тут ничего важного",
+      "Nothing important here"
+    ],
+    [
+      "aria-label=\"Карта\"",
+      "aria-label=\"Card\""
+    ],
+    [
+      "Предыдущий проект",
+      "Previous project"
+    ],
+    [
+      "Найди пасхалку...",
+      "Find an easter egg..."
+    ],
+    [
+      "Введите запрос...",
+      "Enter a query..."
+    ],
+    [
+      "не посещать Сайт.",
+      "do not visit the Site."
+    ],
+    [
+      "Электронная почта",
+      "Email"
+    ],
+    [
+      "QR-код для доната",
+      "Donation QR code"
+    ],
+    [
+      "Тут нечего искать",
+      "Nothing to search here"
+    ],
+    [
+      "Следующий проект",
+      "Next project"
+    ],
+    [
+      "Следующий вопрос",
+      "Next question"
+    ],
+    [
+      "Основной контакт",
+      "Primary contact"
+    ],
+    [
+      "Перейти на канал",
+      "Go to channel"
+    ],
+    [
+      "Открыть LinkedIn",
+      "Open LinkedIn"
+    ],
+    [
+      "Новости проектов",
+      "Project news"
+    ],
+    [
+      "апдейты и анонсы",
+      "updates and announcements"
+    ],
+    [
+      "Проекты CybLight",
+      "CybLight Projects"
+    ],
+    [
+      "Fish Finder PRO",
+      "Fish Finder PRO"
+    ],
+    [
+      "CybLight - Игры",
+      "CybLight — Games"
+    ],
+    [
+      "3. Угадай Big-O",
+      "3. Guess Big-O"
+    ],
+    [
+      "гайды и проекты",
+      "guides and projects"
+    ],
+    [
+      "Видео и гейминг",
+      "Videos and gaming"
+    ],
+    [
+      "Исходники и код",
+      "Source code"
+    ],
+    [
+      "Ссылка на бота:",
+      "Bot link:"
+    ],
+    [
+      "Текст поддержки",
+      "Support message"
+    ],
+    [
+      "🔧 Техно канал",
+      "🔧 Tech channel"
+    ],
+    [
+      "Smart Home Hub",
+      "Smart Home Hub"
+    ],
+    [
+      "← Назад в блог",
+      "← Back to blog"
+    ],
+    [
+      "Доступные игры",
+      "Available games"
+    ],
+    [
+      "Открыть GitHub",
+      "Open GitHub"
+    ],
+    [
+      "Telegram-канал",
+      "Telegram channel"
+    ],
+    [
+      "Карта Monobank",
+      "Monobank card"
+    ],
+    [
+      "Найди что надо",
+      "Find what you need"
+    ],
+    [
+      "Узнать больше",
+      "Learn more"
+    ],
+    [
+      "Сайт CybLight",
+      "CybLight Website"
+    ],
+    [
+      "Закрыть поиск",
+      "Close search"
+    ],
+    [
+      "Начать заново",
+      "Start over"
+    ],
+    [
+      "Быстрая связь",
+      "Quick contact"
+    ],
+    [
+      "YouTube канал",
+      "YouTube channel"
+    ],
+    [
+      "подтверждение",
+      "verification"
+    ],
+    [
+      "🎮 Game канал",
+      "🎮 Game channel"
+    ],
+    [
+      "Подписчиков:",
+      "Subscribers:"
+    ],
+    [
+      "Открыть меню",
+      "Open menu"
+    ],
+    [
+      "Пожертвовать",
+      "Donate"
+    ],
+    [
+      "Игровое поле",
+      "Game board"
+    ],
+    [
+      "Репозиторий:",
+      "Repository:"
+    ],
+    [
+      "Python‑бот @",
+      "Python bot @"
+    ],
+    [
+      "Скопировано!",
+      "Copied!"
+    ],
+    [
+      "Мои проекты",
+      "My projects"
+    ],
+    [
+      "Тёмная тема",
+      "Dark theme"
+    ],
+    [
+      "Начать игру",
+      "Start game"
+    ],
+    [
+      "репозитории",
+      "repositories"
+    ],
+    [
+      "Подписаться",
+      "Subscribe"
+    ],
+    [
+      "Номер карты",
+      "Card number"
+    ],
+    [
+      "Сложность:",
+      "Difficulty:"
+    ],
+    [
+      "Как играть",
+      "How to play"
+    ],
+    [
+      "по желанию",
+      "optional"
+    ],
+    [
+      "Сертификат",
+      "Certificate"
+    ],
+    [
+      "«Контакты»",
+      "\"Contacts\""
+    ],
+    [
+      "1. Кто мы",
+      "1. Who we are"
+    ],
+    [
+      "на Сайте.",
+      "on the Site."
+    ],
+    [
+      "Контакты",
+      "Contacts"
+    ],
+    [
+      "геймплей",
+      "gameplay"
+    ],
+    [
+      "Главная",
+      "Home"
+    ],
+    [
+      "Проекты",
+      "Projects"
+    ],
+    [
+      "Вопрос:",
+      "Question:"
+    ],
+    [
+      "Рекорд:",
+      "Best:"
+    ],
+    [
+      "Средняя",
+      "Medium"
+    ],
+    [
+      "Сложная",
+      "Hard"
+    ],
+    [
+      "Профиль",
+      "Profile"
+    ],
+    [
+      "карьера",
+      "career"
+    ],
+    [
+      "Видео:",
+      "Videos:"
+    ],
+    [
+      "онлайн",
+      "online"
+    ],
+    [
+      "Лёгкая",
+      "Easy"
+    ],
+    [
+      "Музыка",
+      "Music"
+    ],
+    [
+      "Поиск",
+      "Search"
+    ],
+    [
+      "Видео",
+      "Videos"
+    ],
+    [
+      "Форум",
+      "Forum"
+    ],
+    [
+      "Войти",
+      "Sign in"
+    ],
+    [
+      "Циклы",
+      "Loops"
+    ],
+    [
+      "Скоро",
+      "Coming soon"
+    ],
+    [
+      "Счёт:",
+      "Score:"
+    ],
+    [
+      "Игры",
+      "Games"
+    ],
+    [
+      "Все",
+      "All"
+    ]
+  ]
+}

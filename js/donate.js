@@ -1,3 +1,8 @@
+function t(key) {
+  const s = window.CYB_STRINGS || {};
+  return s[key] != null ? s[key] : key;
+}
+
 let audioCtx = null;
 
 function playTick() {
@@ -66,8 +71,8 @@ async function copyText(text, btn = null) {
 
     // Tooltip: "Скопировать" → "Скопировано"
     if (btn) {
-      const prev = btn.getAttribute('data-tooltip') || 'Скопировать';
-      btn.setAttribute('data-tooltip', 'Скопировано ✅');
+      const prev = btn.getAttribute('data-tooltip') || t('copy');
+      btn.setAttribute('data-tooltip', t('copiedToast'));
       btn.classList.add('copied');
 
       setTimeout(() => {
@@ -76,9 +81,9 @@ async function copyText(text, btn = null) {
       }, 1200);
     }
 
-    showToast('Скопировано ✅');
+    showToast(t('copiedToast'));
   } catch (err) {
-    showToast('Не удалось скопировать 😕');
+    showToast(t('copyFailed'));
   }
 }
 

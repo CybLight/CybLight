@@ -2896,3 +2896,53 @@ body.dark .legal-page code {
     box-shadow: none;
   }
 }
+
+/* Language switcher */
+.header-lang-wrap {
+  position: relative;
+}
+
+.header-lang-wrap .header-lang {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+.header-lang-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 1200;
+  min-width: 148px;
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  background: var(--bg, #fff);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+body.dark .header-lang-menu {
+  background: #1e1e1e;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.header-lang-menu a {
+  display: block;
+  padding: 8px 14px;
+  color: #1a1a2e;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+body.dark .header-lang-menu a {
+  color: #e7ecff;
+}
+
+.header-lang-menu a:hover,
+.header-lang-menu a:focus {
+  color: var(--accent, #ff7f27);
+  background: rgba(255, 127, 39, 0.12);
+}

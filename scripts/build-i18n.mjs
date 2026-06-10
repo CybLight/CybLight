@@ -23,7 +23,13 @@ const LEGACY_REDIRECTS = [
 ];
 
 const LEGACY_PATHS = ['games', 'contacts', 'projects', 'donate', 'privacy'];
-const SITE_ORIGIN = 'https://cyblight.org';
+const SEO_CONFIG = JSON.parse(
+  fs.readFileSync(path.join(ROOT, 'seo.config.json'), 'utf8')
+);
+const SITE_ORIGIN = SEO_CONFIG.siteOrigin;
+
+const REDIRECT_HEAD = `  <meta name="robots" content="noindex, follow" />
+`;
 
 function loadLocale(code) {
   return JSON.parse(fs.readFileSync(path.join(ROOT, 'locales', `${code}.json`), 'utf8'));
@@ -107,6 +113,18 @@ function writeJsStrings(localeCode, locale) {
   fs.writeFileSync(path.join(ROOT, 'js', `strings-${localeCode}.js`), js, 'utf8');
 }
 
+function pageLastmod(pagePath) {
+  const templatePath = path.join(ROOT, 'templates', pagePath);
+  let mtime = fs.statSync(templatePath).mtimeMs;
+  for (const loc of LOCALES) {
+    const localePath = path.join(ROOT, 'locales', `${loc}.json`);
+    if (fs.existsSync(localePath)) {
+      mtime = Math.max(mtime, fs.statSync(localePath).mtimeMs);
+    }
+  }
+  return new Date(mtime).toISOString().slice(0, 10);
+}
+
 function writeRootRedirect() {
   const html = `<!doctype html>
 <html lang="ru">
@@ -114,7 +132,7 @@ function writeRootRedirect() {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CybLight</title>
-  <link rel="canonical" href="https://cyblight.org/ru/" />
+${REDIRECT_HEAD}  <link rel="canonical" href="${SITE_ORIGIN}/ru/" />
   <script>
     (function () {
       var saved = localStorage.getItem('cyblight-lang');
@@ -131,6 +149,13 @@ function writeRootRedirect() {
 </head>
 <body>
   <p><a href="/ru/">CybLight</a></p>
+  <noscript>
+    <ul>
+      <li><a href="/ru/" hreflang="ru">Русский</a></li>
+      <li><a href="/uk/" hreflang="uk">Українська</a></li>
+      <li><a href="/en/" hreflang="en">English</a></li>
+    </ul>
+  </noscript>
 </body>
 </html>
 `;
@@ -143,8 +168,8 @@ function writeLegacyRedirect(relPath) {
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0;url=${target}" />
-  <link rel="canonical" href="https://cyblight.org${target}" />
+${REDIRECT_HEAD}  <meta http-equiv="refresh" content="0;url=${target}" />
+  <link rel="canonical" href="${SITE_ORIGIN}${target}" />
   <script>location.replace('${target}');</script>
 </head>
 <body><p><a href="${target}">Redirecting…</a></p></body>
@@ -169,10 +194,12 @@ function sitemapAlternates(pagePath) {
 function writeSitemap() {
   const entries = [];
   for (const page of PAGES) {
+    const lastmod = pageLastmod(page);
     for (const loc of LOCALES) {
       entries.push(`  <url>
     <loc>${pageUrl(loc, page)}</loc>
 ${sitemapAlternates(page)}
+    <lastmod>${lastmod}</lastmod>
     <changefreq>weekly</changefreq>
   </url>`);
     }
@@ -195,6 +222,35 @@ function writeRedirects() {
   fs.writeFileSync(path.join(ROOT, '_redirects'), `${lines.join('\n')}\n`, 'utf8');
 }
 
+function writeIndexNowKey() {
+  const { indexNowKey } = SEO_CONFIG;
+  fs.writeFileSync(path.join(ROOT, `${indexNowKey}.txt`), `${indexNowKey}\n`, 'utf8');
+}
+
+function writeCloudflareRedirectRules() {
+  const rules = [
+    {
+      description: 'Root to default locale',
+      expression: '(http.request.uri.path eq "/")',
+      status_code: 301,
+      target_url: `${SITE_ORIGIN}/ru/`,
+    },
+  ];
+  for (const segment of LEGACY_PATHS) {
+    rules.push({
+      description: `Legacy /${segment} to /ru/${segment}/`,
+      expression: `(http.request.uri.path eq "/${segment}" or http.request.uri.path eq "/${segment}/")`,
+      status_code: 301,
+      target_url: `${SITE_ORIGIN}/ru/${segment}/`,
+    });
+  }
+  fs.writeFileSync(
+    path.join(ROOT, 'cloudflare-redirect-rules.json'),
+    `${JSON.stringify(rules, null, 2)}\n`,
+    'utf8'
+  );
+}
+
 // Build localized pages
 for (const code of LOCALES) {
   const locale = loadLocale(code);
@@ -213,5 +269,7 @@ writeRootRedirect();
 for (const p of LEGACY_REDIRECTS) writeLegacyRedirect(p);
 writeSitemap();
 writeRedirects();
+writeIndexNowKey();
+writeCloudflareRedirectRules();
 
 console.log('Built locales:', LOCALES.join(', '));

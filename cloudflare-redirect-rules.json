@@ -1,0 +1,38 @@
+[
+  {
+    "description": "Root to default locale",
+    "expression": "(http.request.uri.path eq \"/\")",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/"
+  },
+  {
+    "description": "Legacy /games to /ru/games/",
+    "expression": "(http.request.uri.path eq \"/games\" or http.request.uri.path eq \"/games/\")",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/games/"
+  },
+  {
+    "description": "Legacy /contacts to /ru/contacts/",
+    "expression": "(http.request.uri.path eq \"/contacts\" or http.request.uri.path eq \"/contacts/\")",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/contacts/"
+  },
+  {
+    "description": "Legacy /projects to /ru/projects/",
+    "expression": "(http.request.uri.path eq \"/projects\" or http.request.uri.path eq \"/projects/\")",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/projects/"
+  },
+  {
+    "description": "Legacy /donate to /ru/donate/",
+    "expression": "(http.request.uri.path eq \"/donate\" or http.request.uri.path eq \"/donate/\")",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/donate/"
+  },
+  {
+    "description": "Legacy /privacy to /ru/privacy/",
+    "expression": "(http.request.uri.path eq \"/privacy\" or http.request.uri.path eq \"/privacy/\")",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/privacy/"
+  }
+]

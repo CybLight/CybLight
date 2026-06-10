@@ -46,8 +46,28 @@ async function loadYoutubeStats() {
   }
 }
 
+// Счётчик пользователей онлайн в шапке
+async function loadOnlineCount() {
+  const wrap = document.getElementById('headerOnline');
+  const countEl = document.getElementById('headerOnlineCount');
+  if (!wrap || !countEl) return;
+
+  try {
+    const res = await fetch('https://api.cyblight.org/stats/online');
+    const data = await res.json().catch(() => null);
+    if (!res.ok || !data || !data.ok) return;
+
+    countEl.textContent = Number(data.online || 0).toLocaleString('ru-RU');
+    wrap.hidden = false;
+  } catch {
+    // Если API недоступен — счётчик просто не показываем
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   loadYoutubeStats();
+  loadOnlineCount();
+  setInterval(loadOnlineCount, 60000);
 });
 
 (async () => {

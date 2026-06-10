@@ -73,8 +73,14 @@ async function reportApiCall(options) {
     modal.className = 'cyb-report-modal';
     modal.innerHTML = `
     <div class="cyb-report-modal__backdrop"></div>
-    <div class="cyb-report-modal__card" role="dialog" aria-modal="true">
-      <div class="cyb-report-modal__title">Сообщить о проблеме</div>
+    <div class="cyb-report-modal__card" role="dialog" aria-modal="true" aria-labelledby="cybReportTitle">
+      <div class="cyb-report-modal__header">
+        <img src="/images/report.svg" alt="" class="cyb-report-modal__icon" aria-hidden="true" />
+        <div>
+          <div id="cybReportTitle" class="cyb-report-modal__title">Сообщить о проблеме</div>
+          <p class="cyb-report-modal__subtitle">Расскажите, что пошло не так — мы разберёмся</p>
+        </div>
+      </div>
       <form id="reportForm" class="cyb-report-modal__form">
         <div class="field">
           <label class="label" for="reportEmail">Email (опционально)</label>
@@ -93,7 +99,7 @@ async function reportApiCall(options) {
         </div>
         <div class="field">
           <label class="label" for="reportMessage">Описание проблемы</label>
-          <textarea class="input" id="reportMessage" rows="5" placeholder="Подробно опишите проблему..." required style="resize: vertical; font-family: inherit;"></textarea>
+          <textarea class="input" id="reportMessage" rows="5" placeholder="Подробно опишите проблему..." required></textarea>
         </div>
         <div class="msg msg--warn" id="reportWarning" style="display: none;"></div>
         <div class="msg msg--ok" id="reportSuccess" style="display: none;"></div>

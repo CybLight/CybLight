@@ -1396,15 +1396,44 @@ footer {
   gap: 8px;
 }
 
-/* report button in footer */
+/* report button in footer (как на login.cyblight.org) */
 .footer-report {
+  color: rgba(255, 90, 90, 0.8);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   background: none;
-  color: inherit;
-  border: 1px solid currentColor;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.9rem;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.footer-report:hover {
+  color: rgba(255, 90, 90, 1);
+  text-decoration: underline;
+}
+
+.footer-report:hover .report-icon {
+  transform: translateY(-1px);
+}
+
+.footer-report:focus {
+  outline: 2px solid rgba(70, 200, 255, 0.12);
+  outline-offset: 2px;
+}
+
+.footer-report .report-icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  flex: 0 0 30px;
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.25));
+  transition: transform 0.2s ease;
 }
 
 /* Тёмный подвал со звёздами */
@@ -1625,140 +1654,262 @@ body.dark .footer-bottom {
   background: #050814 !important;
 }
 
-/* report modal from login repo, copied for standalone use */
+/* report modal (стиль как на login.cyblight.org) */
 .cyb-report-modal {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   display: none;
   z-index: 9999;
 }
+
 .cyb-report-modal.is-open {
   display: block;
 }
+
 .cyb-report-modal__backdrop {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #0000008c;
+  inset: 0;
+  background: rgba(2, 4, 12, 0.72);
+  backdrop-filter: blur(5px);
 }
+
+.cyb-report-modal.is-open .cyb-report-modal__backdrop {
+  animation: reportBackdropIn 0.22s ease;
+}
+
 .cyb-report-modal__card {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: min(600px, calc(100vw - 28px));
+  width: min(560px, calc(100vw - 28px));
   max-height: 90vh;
   overflow-y: auto;
-  background: #0b0f1c;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(120% 90% at 0% 0%, rgba(255, 127, 39, 0.14) 0%, transparent 50%),
+    radial-gradient(120% 90% at 100% 100%, rgba(96, 165, 250, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #1a2138 0%, #141a2e 100%);
+  border: 1px solid rgba(255, 145, 64, 0.35);
   border-radius: 18px;
-  padding: 24px;
-  box-shadow: 0 18px 60px #0000008c;
+  padding: 22px 24px 24px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+    0 0 22px rgba(255, 127, 39, 0.18),
+    0 24px 70px rgba(0, 0, 0, 0.7);
 }
+
+.cyb-report-modal.is-open .cyb-report-modal__card {
+  animation: reportCardIn 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cyb-report-modal__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.cyb-report-modal__icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(255, 90, 90, 0.35));
+}
+
 .cyb-report-modal__title {
   font-size: 20px;
-  font-weight: 900;
-  margin-bottom: 16px;
-  color: #e7ecfff2;
+  font-weight: 800;
+  line-height: 1.2;
+  color: rgba(231, 236, 255, 0.95);
+  text-align: left;
 }
+
+.cyb-report-modal__subtitle {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(231, 236, 255, 0.55);
+  text-align: left;
+}
+
 .cyb-report-modal__form {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
+
 .cyb-report-modal__form .field {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
+
 .cyb-report-modal__form .label {
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 6px;
-  color: #e7ecffe0;
+  color: rgba(231, 236, 255, 0.88);
 }
+
 .cyb-report-modal__form .input,
 .cyb-report-modal__form textarea {
-  padding: 10px 12px;
-  border-radius: 8px;
-  background: #ffffff0d;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #e7ecffe6;
-  font-size: 13px;
+  padding: 11px 13px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(231, 236, 255, 0.92);
+  font-size: 14px;
   line-height: 1.4;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
+
+.cyb-report-modal__form .input::placeholder,
+.cyb-report-modal__form textarea::placeholder {
+  color: rgba(231, 236, 255, 0.35);
+}
+
 .cyb-report-modal__form .input:focus,
 .cyb-report-modal__form textarea:focus {
   outline: none;
-  border-color: var(--accent);
-  background: #ffffff14;
-  box-shadow: 0 0 0 2px #46c8ff26;
+  border-color: rgba(255, 127, 39, 0.65);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(255, 127, 39, 0.15);
 }
+
 .cyb-report-modal__form textarea {
   font-family: inherit;
   resize: vertical;
-  min-height: 100px;
+  min-height: 110px;
 }
+
 .cyb-report-modal__form select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2346c8ff' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23ff7f27' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 10px center;
-  padding-right: 32px;
+  background-position: right 12px center;
+  padding-right: 36px;
   cursor: pointer;
 }
+
 .cyb-report-modal__form select option {
-  background-color: #0b0f1c;
-  color: #e7ecffe6;
+  background-color: #141a2e;
+  color: rgba(231, 236, 255, 0.92);
 }
+
 .cyb-report-modal__actions {
-  margin-top: 18px;
+  margin-top: 6px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   gap: 10px;
   justify-content: flex-end;
 }
+
+.cyb-report-modal__actions .btn {
+  width: auto;
+  min-width: 120px;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+.cyb-report-modal__actions .btn:active {
+  transform: scale(0.98);
+}
+
+.cyb-report-modal__actions .btn-primary {
+  background: linear-gradient(135deg, rgba(255, 127, 39, 0.95) 0%, rgba(245, 158, 11, 0.9) 100%);
+  color: #fff;
+  border: 1px solid rgba(255, 160, 80, 0.45);
+  box-shadow: 0 4px 16px rgba(255, 127, 39, 0.35);
+}
+
+.cyb-report-modal__actions .btn-primary:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 6px 22px rgba(255, 127, 39, 0.45);
+}
+
+.cyb-report-modal__actions .btn-outline {
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(231, 236, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cyb-report-modal__actions .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
 .cyb-report-modal__form .msg {
   margin-top: 4px;
   padding: 10px 12px;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 13px;
   line-height: 1.4;
   text-align: left;
 }
+
 .cyb-report-modal__form .msg--warn {
   color: #ffd8de;
   background: rgba(255, 75, 92, 0.16);
   border: 1px solid rgba(255, 75, 92, 0.45);
 }
+
 .cyb-report-modal__form .msg--ok {
   color: #d7ffe6;
   background: rgba(16, 185, 129, 0.18);
   border: 1px solid rgba(16, 185, 129, 0.5);
 }
-.cyb-report-modal__actions button {
-  flex: 1;
-  max-width: 150px;
+
+@keyframes reportBackdropIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+
+@keyframes reportCardIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 @media (max-width: 520px) {
   .cyb-report-modal__card {
     width: calc(100vw - 20px);
     max-height: calc(100vh - 40px);
-    padding: 16px;
+    padding: 16px 16px 18px;
   }
+
   .cyb-report-modal__title {
     font-size: 18px;
   }
+
   .cyb-report-modal__actions {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
-  .cyb-report-modal__actions button {
-    max-width: none;
+
+  .cyb-report-modal__actions .btn {
+    width: 100%;
+    min-width: 0;
   }
 }
 

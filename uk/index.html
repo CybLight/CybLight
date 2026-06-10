@@ -60,6 +60,59 @@
     <link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/" />
     <link rel="alternate" hreflang="en" href="https://cyblight.org/en/" />
     <link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://cyblight.org/#website",
+            "url": "https://cyblight.org/uk/",
+            "name": "CybLight",
+            "inLanguage": ["ru-RU", "uk-UA", "en-US"],
+            "publisher": { "@id": "https://cyblight.org/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://cyblight.org/#organization",
+            "name": "CybLight",
+            "url": "https://cyblight.org/uk/",
+            "logo": "https://cyblight.org/images/logo.svg"
+          },
+          {
+            "@type": "ItemList",
+            "name": "Навигация",
+            "itemListElement": [
+              {
+                "@type": "SiteNavigationElement",
+                "position": 1,
+                "name": "Проєкти",
+                "url": "https://cyblight.org/uk/projects/"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "position": 2,
+                "name": "Ігри",
+                "url": "https://cyblight.org/uk/games/"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "position": 3,
+                "name": "Контакти",
+                "url": "https://cyblight.org/uk/contacts/"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "position": 4,
+                "name": "Підтримати",
+                "url": "https://cyblight.org/uk/donate/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <link rel="manifest" href="/uk/manifest.json" />
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -220,9 +273,7 @@
                 <a class="button" href="/uk/contacts/">Контакти</a>
               </li>
               <li>
-                <a class="button" href="/uk/donate/" target="_blank" rel="noopener noreferrer"
-                  >Підтримати</a
-                >
+                <a class="button" href="/uk/donate/">Підтримати</a>
               </li>
             </ul>
 

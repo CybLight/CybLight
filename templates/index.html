@@ -57,6 +57,59 @@
     <!-- Manifest and Favicon -->
     <link rel="canonical" href="{{canonical}}" />
     {{hreflang}}
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "{{site}}/#website",
+            "url": "{{homeUrl}}",
+            "name": "CybLight",
+            "inLanguage": ["ru-RU", "uk-UA", "en-US"],
+            "publisher": { "@id": "{{site}}/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "{{site}}/#organization",
+            "name": "CybLight",
+            "url": "{{homeUrl}}",
+            "logo": "{{site}}/images/logo.svg"
+          },
+          {
+            "@type": "ItemList",
+            "name": "Навигация",
+            "itemListElement": [
+              {
+                "@type": "SiteNavigationElement",
+                "position": 1,
+                "name": "Проекты",
+                "url": "{{site}}{{L}}/projects/"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "position": 2,
+                "name": "Игры",
+                "url": "{{site}}{{L}}/games/"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "position": 3,
+                "name": "Контакты",
+                "url": "{{site}}{{L}}/contacts/"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "position": 4,
+                "name": "Пожертвовать",
+                "url": "{{site}}{{L}}/donate/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <link rel="manifest" href="{{L}}/manifest.json" />
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -217,9 +270,7 @@
                 <a class="button" href="{{L}}/contacts/">Контакты</a>
               </li>
               <li>
-                <a class="button" href="{{L}}/donate/" target="_blank" rel="noopener noreferrer"
-                  >Пожертвовать</a
-                >
+                <a class="button" href="{{L}}/donate/">Пожертвовать</a>
               </li>
             </ul>
 

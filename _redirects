@@ -1,0 +1,12 @@
+# 301 redirects for crawlers (Cloudflare Pages / Netlify)
+/ /ru/ 301
+/games /ru/games/ 301
+/games/ /ru/games/ 301
+/contacts /ru/contacts/ 301
+/contacts/ /ru/contacts/ 301
+/projects /ru/projects/ 301
+/projects/ /ru/projects/ 301
+/donate /ru/donate/ 301
+/donate/ /ru/donate/ 301
+/privacy /ru/privacy/ 301
+/privacy/ /ru/privacy/ 301

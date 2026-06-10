@@ -22,6 +22,9 @@ const LEGACY_REDIRECTS = [
   'privacy/index.html',
 ];
 
+const LEGACY_PATHS = ['games', 'contacts', 'projects', 'donate', 'privacy'];
+const SITE_ORIGIN = 'https://cyblight.org';
+
 function loadLocale(code) {
   return JSON.parse(fs.readFileSync(path.join(ROOT, 'locales', `${code}.json`), 'utf8'));
 }
@@ -67,6 +70,8 @@ function render(template, locale, localeCode, pagePath) {
   const prefix = `/${localeCode}`;
   const canonical = pageUrl(localeCode, pagePath);
 
+  const homeUrl = pageUrl(localeCode, 'index.html');
+
   let out = template
     .replace(/\{\{L\}\}/g, prefix)
     .replace(/\{\{lang\}\}/g, localeCode)
@@ -74,6 +79,8 @@ function render(template, locale, localeCode, pagePath) {
     .replace(/\{\{ogLocale\}\}/g, locale.ogLocale)
     .replace(/\{\{localeTag\}\}/g, locale.localeTag)
     .replace(/\{\{canonical\}\}/g, canonical)
+    .replace(/\{\{homeUrl\}\}/g, homeUrl)
+    .replace(/\{\{site\}\}/g, SITE_ORIGIN)
     .replace(/\{\{hreflang\}\}/g, hreflangBlock(pagePath));
 
   out = out.replace(/\{\{t\.([^}]+)\}\}/g, (_, key) => {
@@ -148,28 +155,44 @@ function writeLegacyRedirect(relPath) {
   fs.writeFileSync(outPath, html, 'utf8');
 }
 
+function sitemapAlternates(pagePath) {
+  return LOCALES.map(
+    (loc) =>
+      `    <xhtml:link rel="alternate" hreflang="${loc}" href="${pageUrl(loc, pagePath)}" />`
+  )
+    .concat(
+      `    <xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl('ru', pagePath)}" />`
+    )
+    .join('\n');
+}
+
 function writeSitemap() {
-  const urls = [];
-  for (const loc of LOCALES) {
-    for (const page of PAGES) {
-      urls.push(pageUrl(loc, page));
+  const entries = [];
+  for (const page of PAGES) {
+    for (const loc of LOCALES) {
+      entries.push(`  <url>
+    <loc>${pageUrl(loc, page)}</loc>
+${sitemapAlternates(page)}
+    <changefreq>weekly</changefreq>
+  </url>`);
     }
   }
-  const body = urls
-    .map(
-      (loc) => `  <url>
-    <loc>${loc}</loc>
-    <changefreq>weekly</changefreq>
-  </url>`
-    )
-    .join('\n\n');
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${body}
+${entries.join('\n\n')}
 </urlset>
 `;
   fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), xml, 'utf8');
+}
+
+function writeRedirects() {
+  const lines = ['# 301 redirects for crawlers (Cloudflare Pages / Netlify)', '/ /ru/ 301'];
+  for (const segment of LEGACY_PATHS) {
+    lines.push(`/${segment} /ru/${segment}/ 301`);
+    lines.push(`/${segment}/ /ru/${segment}/ 301`);
+  }
+  fs.writeFileSync(path.join(ROOT, '_redirects'), `${lines.join('\n')}\n`, 'utf8');
 }
 
 // Build localized pages
@@ -189,5 +212,6 @@ for (const code of LOCALES) {
 writeRootRedirect();
 for (const p of LEGACY_REDIRECTS) writeLegacyRedirect(p);
 writeSitemap();
+writeRedirects();
 
 console.log('Built locales:', LOCALES.join(', '));

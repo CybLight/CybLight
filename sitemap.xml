@@ -3,91 +3,163 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://cyblight.org/ru/</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/ru/games/</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/ru/contacts/</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/ru/projects/</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/ru/donate/</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/ru/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/" />
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
     <loc>https://cyblight.org/uk/</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/uk/games/</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/uk/contacts/</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/uk/projects/</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/uk/donate/</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/uk/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/" />
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
     <loc>https://cyblight.org/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/" />
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/ru/games/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/games/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/games/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/games/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/games/" />
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/uk/games/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/games/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/games/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/games/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/games/" />
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
     <loc>https://cyblight.org/en/games/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/games/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/games/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/games/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/games/" />
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/ru/contacts/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/contacts/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/contacts/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/contacts/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/contacts/" />
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/uk/contacts/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/contacts/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/contacts/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/contacts/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/contacts/" />
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
     <loc>https://cyblight.org/en/contacts/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/contacts/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/contacts/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/contacts/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/contacts/" />
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/ru/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/projects/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/projects/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/projects/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/projects/" />
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/uk/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/projects/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/projects/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/projects/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/projects/" />
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
     <loc>https://cyblight.org/en/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/projects/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/projects/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/projects/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/projects/" />
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/ru/donate/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/donate/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/donate/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/donate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/donate/" />
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/uk/donate/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/donate/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/donate/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/donate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/donate/" />
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
     <loc>https://cyblight.org/en/donate/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/donate/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/donate/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/donate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/donate/" />
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/ru/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/privacy/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/privacy/" />
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/uk/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/privacy/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/privacy/" />
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
     <loc>https://cyblight.org/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/privacy/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/privacy/" />
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

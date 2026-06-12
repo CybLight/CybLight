@@ -1206,8 +1206,12 @@
       "All"
     ],
     [
-      "<a class=\"button\" href=\"{{L}}/downloads/\">Приложение</a>",
-      "<a class=\"button\" href=\"{{L}}/downloads/\">App</a>"
+      "<li><a class=\"button\" href=\"/en/downloads/\">Приложение</a></li>",
+      "<li><a class=\"button\" href=\"/en/downloads/\">App</a></li>"
+    ],
+    [
+      "<a class=\"button\" href=\"/en/downloads/\">Приложение</a>",
+      "<a class=\"button\" href=\"/en/downloads/\">App</a>"
     ],
     [
       "CybLight — Мобильное приложение для Android",
@@ -1268,6 +1272,94 @@
     [
       "Скачайте официальное мобильное приложение CybLight для Android: вход в аккаунт, друзья, сообщения и безопасность. Прямая загрузка APK.",
       "Download the official CybLight Android app: account sign-in, friends, messages, and security. Direct APK download."
+    ],
+    [
+      "Версия",
+      "Version"
+    ],
+    [
+      "Скачать",
+      "Download"
+    ],
+    [
+      "Возможности",
+      "Features"
+    ],
+    [
+      "Установка",
+      "Installation"
+    ],
+    [
+      "Вход через <strong>login.cyblight.org</strong> (логин, пароль, Turnstile)",
+      "Sign in via <strong>login.cyblight.org</strong> (username, password, Turnstile)"
+    ],
+    [
+      "Поддержка двухфакторной аутентификации (2FA)",
+      "Two-factor authentication (2FA) support"
+    ],
+    [
+      "Список друзей с онлайн-статусом",
+      "Friends list with online status"
+    ],
+    [
+      "Личные сообщения и чаты",
+      "Private messages and chats"
+    ],
+    [
+      "Профиль, безопасность, сессии и passkeys",
+      "Profile, security, sessions, and passkeys"
+    ],
+    [
+      "Русский, украинский и английский языки",
+      "Russian, Ukrainian, and English"
+    ],
+    [
+      "Проверка обновлений при запуске",
+      "Update check on launch"
+    ],
+    [
+      "Скачайте APK-кнопкой выше.",
+      "Download the APK using the button above."
+    ],
+    [
+      "Откройте файл на телефоне.",
+      "Open the file on your phone."
+    ],
+    [
+      "Если Android предупреждает о неизвестном источнике — разрешите установку и нажмите «Всё равно установить».",
+      "If Android warns about an unknown source — allow installation and tap \"Install anyway\"."
+    ],
+    [
+      "Запустите CybLight и войдите в аккаунт.",
+      "Launch CybLight and sign in to your account."
+    ],
+    [
+      "При обновлении поверх старой версии может понадобиться удалить предыдущую сборку, если подпись отличается.",
+      "When updating over an older build, you may need to uninstall the previous version if the signing key differs."
+    ],
+    [
+      "Исходный код:",
+      "Source code:"
+    ],
+    [
+      "CybLight-Android на GitHub",
+      "CybLight-Android on GitHub"
+    ],
+    [
+      "Подробнее о проекте:",
+      "More about the project:"
+    ],
+    [
+      "страница проекта",
+      "project page"
+    ],
+    [
+      "Официальное мобильное приложение для Android: вход через login.cyblight.org, список друзей с онлайн-статусом, личные сообщения, профиль и настройки безопасности (2FA, сессии, passkeys). Поддерживаются русский, украинский и английский языки.",
+      "Official Android app: sign in via login.cyblight.org, friends list with online status, private messages, profile and security settings (2FA, sessions, passkeys). Russian, Ukrainian, and English are supported."
+    ],
+    [
+      "Скачать APK:",
+      "Download APK:"
     ]
   ]
 }

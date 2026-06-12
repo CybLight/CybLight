@@ -2683,20 +2683,36 @@ body.dark .legal-page code {
     padding: 4px 10px;
   }
 
-  /* Светлая тема: nav прозрачный, бейдж нужен тёмно-зелёный текст */
+  /* Светлая тема: полоса со статусом — чёрный фон как у header-top */
+  body:not(.dark) .top-header .header-nav:has(.header-online:not([hidden])) {
+    background: #000;
+  }
+
+  body:not(.dark) .top-header .header-nav .container:has(.header-online[hidden]) {
+    min-height: 0;
+    padding: 0;
+  }
+
+  body:not(.dark) .top-header .header-nav .container:has(.header-online:not([hidden])) {
+    min-height: 36px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  /* На тёмной полосе — светлый бейдж */
   body:not(.dark) .top-header .header-online--nav {
-    border-color: rgba(22, 163, 74, 0.45);
-    background: rgba(22, 163, 74, 0.14);
-    color: #14532d;
+    border-color: rgba(74, 222, 128, 0.35);
+    background: rgba(34, 197, 94, 0.12);
+    color: #bbf7d0;
   }
 
   body:not(.dark) .top-header .header-online-count {
-    color: #15803d;
+    color: #4ade80;
   }
 
   body:not(.dark) .top-header .header-online-label {
-    opacity: 1;
-    color: #166534;
+    opacity: 0.85;
+    color: #bbf7d0;
   }
 
   /* Выпадающее меню */

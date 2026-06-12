@@ -54,12 +54,15 @@
 
 .downloads-actions {
   margin-bottom: 28px;
+  text-align: center;
 }
 
 .downloads-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
 .downloads-btn {
@@ -68,19 +71,21 @@
 }
 
 .downloads-btn--primary {
-  background: linear-gradient(135deg, #ff7f27 0%, #e56b00 100%);
-  border-color: transparent;
-  color: #fff;
+  background: linear-gradient(135deg, #e56b00 0%, #c45a00 100%);
+  border: 1px solid transparent;
+  color: #ffffff;
 }
 
 .downloads-btn--secondary {
-  background: rgba(61, 220, 132, 0.14);
-  border-color: rgba(61, 220, 132, 0.45);
-  color: #d7ffe8;
+  background: #16a34a;
+  border: 1px solid #15803d;
+  color: #ffffff;
 }
 
 .downloads-btn--ghost {
-  background: transparent;
+  background: #ffffff;
+  border: 1px solid #6b7280;
+  color: #111827;
 }
 
 .downloads-btn.is-disabled {
@@ -89,10 +94,16 @@
 }
 
 .downloads-note {
-  margin: 14px 0 0;
+  margin: 14px auto 0;
+  max-width: 640px;
   font-size: 13px;
   line-height: 1.45;
-  color: #fbbf24;
+  text-align: center;
+  color: #92400e;
+  background: #fef3c7;
+  border: 1px solid #fcd34d;
+  border-radius: 10px;
+  padding: 10px 12px;
 }
 
 .downloads-grid {
@@ -142,6 +153,22 @@
   margin: 0 0 8px;
 }
 
+.downloads-links a:link,
+.downloads-links a:visited {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+body.dark .downloads-page .downloads-links a:link,
+body.dark .downloads-page .downloads-links a:visited {
+  color: #7dd3fc;
+}
+
+body.dark .downloads-page .downloads-links a:hover {
+  color: #bae6fd;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -157,15 +184,128 @@
 body.light .downloads-hero-card,
 body:not(.dark) .downloads-hero-card {
   background:
-    radial-gradient(120% 80% at 100% 0%, rgba(61, 220, 132, 0.16) 0%, transparent 55%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(245, 247, 250, 0.96) 100%);
-  border-color: rgba(0, 0, 0, 0.08);
+    radial-gradient(120% 80% at 100% 0%, rgba(61, 220, 132, 0.12) 0%, transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%);
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 body.light .downloads-panel,
 body:not(.dark) .downloads-panel {
-  background: rgba(255, 255, 255, 0.85);
-  border-color: rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #1f2937;
+}
+
+body:not(.dark) .downloads-page .downloads-kicker {
+  color: #15803d;
+}
+
+body:not(.dark) .downloads-page .downloads-lead,
+body:not(.dark) .downloads-page .downloads-version,
+body:not(.dark) .downloads-page .downloads-hint,
+body:not(.dark) .downloads-page .downloads-links {
+  color: #374151;
+  opacity: 1;
+}
+
+body:not(.dark) .downloads-page .downloads-panel h2,
+body:not(.dark) .downloads-page .downloads-list,
+body:not(.dark) .downloads-page .downloads-steps {
+  color: #111827;
+}
+
+/* Кнопки загрузки — перебиваем глобальный .button:hover */
+.downloads-page .downloads-buttons a.downloads-btn,
+.downloads-page .downloads-buttons a.downloads-btn:link,
+.downloads-page .downloads-buttons a.downloads-btn:visited {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.downloads-page .downloads-buttons a.downloads-btn--primary,
+.downloads-page .downloads-buttons a.downloads-btn--primary:link,
+.downloads-page .downloads-buttons a.downloads-btn--primary:visited,
+.downloads-page .downloads-buttons a.downloads-btn--primary:hover,
+.downloads-page .downloads-buttons a.downloads-btn--primary:focus-visible,
+#downloadApkBtn,
+#downloadApkBtn:link,
+#downloadApkBtn:visited,
+#downloadApkBtn:hover {
+  background: linear-gradient(135deg, #e56b00 0%, #c45a00 100%) !important;
+  border: 1px solid transparent !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(229, 107, 0, 0.35) !important;
+}
+
+.downloads-page .downloads-buttons a.downloads-btn--secondary,
+.downloads-page .downloads-buttons a.downloads-btn--secondary:link,
+.downloads-page .downloads-buttons a.downloads-btn--secondary:visited,
+.downloads-page .downloads-buttons a.downloads-btn--secondary:hover,
+.downloads-page .downloads-buttons a.downloads-btn--secondary:focus-visible,
+#downloadGithubApkBtn,
+#downloadGithubApkBtn:link,
+#downloadGithubApkBtn:visited,
+#downloadGithubApkBtn:hover {
+  background: #15803d !important;
+  border: 1px solid #14532d !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(21, 128, 61, 0.35) !important;
+}
+
+.downloads-page .downloads-buttons a.downloads-btn--ghost,
+.downloads-page .downloads-buttons a.downloads-btn--ghost:link,
+.downloads-page .downloads-buttons a.downloads-btn--ghost:visited,
+.downloads-page .downloads-buttons a.downloads-btn--ghost:hover,
+.downloads-page .downloads-buttons a.downloads-btn--ghost:focus-visible,
+#downloadGithubLink,
+#downloadGithubLink:link,
+#downloadGithubLink:visited,
+#downloadGithubLink:hover {
+  background: #ffffff !important;
+  border: 1px solid #4b5563 !important;
+  color: #111827 !important;
+  box-shadow: none !important;
+}
+
+body.dark .downloads-page .downloads-buttons a.downloads-btn--secondary,
+body.dark .downloads-page .downloads-buttons a.downloads-btn--secondary:link,
+body.dark .downloads-page .downloads-buttons a.downloads-btn--secondary:visited,
+body.dark .downloads-page .downloads-buttons a.downloads-btn--secondary:hover,
+body.dark #downloadGithubApkBtn,
+body.dark #downloadGithubApkBtn:hover {
+  background: #166534 !important;
+  border: 1px solid #4ade80 !important;
+  color: #ecfdf5 !important;
+}
+
+body.dark .downloads-page .downloads-buttons a.downloads-btn--ghost,
+body.dark .downloads-page .downloads-buttons a.downloads-btn--ghost:link,
+body.dark .downloads-page .downloads-buttons a.downloads-btn--ghost:visited,
+body.dark .downloads-page .downloads-buttons a.downloads-btn--ghost:hover,
+body.dark #downloadGithubLink,
+body.dark #downloadGithubLink:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  color: #f3f4f6 !important;
+}
+
+body:not(.dark) .downloads-page .downloads-links a:link,
+body:not(.dark) .downloads-page .downloads-links a:visited {
+  color: #1d4ed8;
+}
+
+body:not(.dark) .downloads-page .downloads-links a:hover {
+  color: #1e3a8a;
+}
+
+body.dark .downloads-page .downloads-note {
+  color: #fde68a;
+  background: rgba(251, 191, 36, 0.12);
+  border-color: rgba(251, 191, 36, 0.35);
 }
 
 @media (max-width: 720px) {
@@ -181,6 +321,7 @@ body:not(.dark) .downloads-panel {
 
   .downloads-buttons {
     flex-direction: column;
+    align-items: center;
   }
 
   .downloads-btn {

@@ -32,7 +32,7 @@
     </script>
 
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/downloads.css" />
+    <link rel="stylesheet" href="/css/downloads.css?v=3" />
 
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
@@ -117,9 +117,20 @@
               <li><a class="button disabled" href="#">Forum</a></li>
               <li><a class="button" href="/en/games/">Games</a></li>
               <li><a class="button" href="/en/contacts/">Contacts</a></li>
-              <li><a class="button" href="/en/downloads/">Приложение</a></li>
+              <li><a class="button" href="/en/downloads/">App</a></li>
               <li><a class="button" href="/en/donate/">Donate</a></li>
             </ul>
+
+            <div
+              class="header-online header-online--nav"
+              id="headerOnline"
+              title="Users online"
+              hidden
+            >
+              <span class="header-online-dot" aria-hidden="true"></span>
+              <span class="header-online-count" id="headerOnlineCount">0</span>
+              <span class="header-online-label">online</span>
+            </div>
           </div>
         </nav>
       </header>
@@ -145,19 +156,19 @@
                 Official Android app: CybLight account sign-in, friends list, private messages, and security settings.
               </p>
               <p class="downloads-version">
-                Версия <span id="appVersionBadge">0.4.0</span> · Android 8.0+
+                Version <span id="appVersionBadge">0.4.1</span> · Android 8.0+
               </p>
             </div>
           </div>
         </section>
 
         <section class="downloads-actions">
-          <h2 class="visually-hidden">Скачать</h2>
+          <h2 class="visually-hidden">Download</h2>
           <div class="downloads-buttons">
             <a
               id="downloadApkBtn"
               class="button downloads-btn downloads-btn--primary"
-              href="/downloads/cyblight-android-v0.4.0.apk"
+              href="/downloads/cyblight-android-v0.4.1.apk"
               download
             >
               Download APK from site
@@ -165,7 +176,7 @@
             <a
               id="downloadGithubApkBtn"
               class="button downloads-btn downloads-btn--secondary"
-              href="https://github.com/CybLight/CybLight-Android/releases/latest/download/cyblight-android-v0.4.0.apk"
+              href="https://github.com/CybLight/CybLight-Android/releases/latest/download/cyblight-android-v0.4.1.apk"
               rel="noopener"
             >
               Download from GitHub
@@ -187,40 +198,40 @@
 
         <section class="downloads-grid">
           <article class="downloads-panel">
-            <h2>Возможности</h2>
+            <h2>Features</h2>
             <ul class="downloads-list">
-              <li>Вход через <strong>login.cyblight.org</strong> (логин, пароль, Turnstile)</li>
-              <li>Поддержка двухфакторной аутентификации (2FA)</li>
-              <li>Список друзей с online-статусом</li>
-              <li>Личные сообщения и чаты</li>
-              <li>Profile, безопасность, сессии и passkeys</li>
-              <li>Русский, украинский и английский языки</li>
-              <li>Проверка обновлений при запуске</li>
+              <li>Sign in via <strong>login.cyblight.org</strong> (username, password, Turnstile)</li>
+              <li>Two-factor authentication (2FA) support</li>
+              <li>Friends list with online status</li>
+              <li>Private messages and chats</li>
+              <li>Profile, security, sessions, and passkeys</li>
+              <li>Russian, Ukrainian, and English</li>
+              <li>Update check on launch</li>
             </ul>
           </article>
 
           <article class="downloads-panel">
-            <h2>Установка</h2>
+            <h2>Installation</h2>
             <ol class="downloads-steps">
-              <li>Скачайте APK-кнопкой выше.</li>
-              <li>Откройте файл на телефоне.</li>
-              <li>Если Android предупреждает о неизвестном источнике — разрешите установку и нажмите «Всё равно установить».</li>
-              <li>Запустите CybLight и войдите в аккаунт.</li>
+              <li>Download the APK using the button above.</li>
+              <li>Open the file on your phone.</li>
+              <li>If Android warns about an unknown source — allow installation and tap "Install anyway".</li>
+              <li>Launch CybLight and sign in to your account.</li>
             </ol>
             <p class="downloads-hint">
-              При обновлении поверх старой версии может понадобиться удалить предыдущую сборку, если подпись отличается.
+              When updating over an older build, you may need to uninstall the previous version if the signing key differs.
             </p>
           </article>
         </section>
 
         <section class="downloads-links">
           <p>
-            Исходный код:
-            <a href="https://github.com/CybLight/CybLight-Android" target="_blank" rel="noopener noreferrer">CybLight-Android на GitHub</a>
+            Source code:
+            <a href="https://github.com/CybLight/CybLight-Android" target="_blank" rel="noopener noreferrer">CybLight-Android on GitHub</a>
           </p>
           <p>
-            Подробнее о проекте:
-            <a href="/en/projects/#android">страница проекта</a>
+            More about the project:
+            <a href="/en/projects/#android">project page</a>
           </p>
         </section>
       </main>

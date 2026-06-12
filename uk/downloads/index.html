@@ -32,7 +32,7 @@
     </script>
 
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/downloads.css" />
+    <link rel="stylesheet" href="/css/downloads.css?v=3" />
 
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
@@ -117,9 +117,20 @@
               <li><a class="button disabled" href="#">Форум</a></li>
               <li><a class="button" href="/uk/games/">Ігри</a></li>
               <li><a class="button" href="/uk/contacts/">Контакти</a></li>
-              <li><a class="button" href="/uk/downloads/">Приложение</a></li>
+              <li><a class="button" href="/uk/downloads/">Додаток</a></li>
               <li><a class="button" href="/uk/donate/">Підтримати</a></li>
             </ul>
+
+            <div
+              class="header-online header-online--nav"
+              id="headerOnline"
+              title="Користувачів онлайн"
+              hidden
+            >
+              <span class="header-online-dot" aria-hidden="true"></span>
+              <span class="header-online-count" id="headerOnlineCount">0</span>
+              <span class="header-online-label">онлайн</span>
+            </div>
           </div>
         </nav>
       </header>
@@ -145,19 +156,19 @@
                 Офіційний додаток для Android: вхід в акаунт CybLight, список друзів, особисті повідомлення та налаштування безпеки.
               </p>
               <p class="downloads-version">
-                Версия <span id="appVersionBadge">0.4.0</span> · Android 8.0+
+                Версія <span id="appVersionBadge">0.4.1</span> · Android 8.0+
               </p>
             </div>
           </div>
         </section>
 
         <section class="downloads-actions">
-          <h2 class="visually-hidden">Скачать</h2>
+          <h2 class="visually-hidden">Завантажити</h2>
           <div class="downloads-buttons">
             <a
               id="downloadApkBtn"
               class="button downloads-btn downloads-btn--primary"
-              href="/downloads/cyblight-android-v0.4.0.apk"
+              href="/downloads/cyblight-android-v0.4.1.apk"
               download
             >
               Завантажити APK з сайту
@@ -165,7 +176,7 @@
             <a
               id="downloadGithubApkBtn"
               class="button downloads-btn downloads-btn--secondary"
-              href="https://github.com/CybLight/CybLight-Android/releases/latest/download/cyblight-android-v0.4.0.apk"
+              href="https://github.com/CybLight/CybLight-Android/releases/latest/download/cyblight-android-v0.4.1.apk"
               rel="noopener"
             >
               Завантажити з GitHub
@@ -187,40 +198,40 @@
 
         <section class="downloads-grid">
           <article class="downloads-panel">
-            <h2>Возможности</h2>
+            <h2>Можливості</h2>
             <ul class="downloads-list">
-              <li>Вход через <strong>login.cyblight.org</strong> (логин, пароль, Turnstile)</li>
-              <li>Поддержка двухфакторной аутентификации (2FA)</li>
-              <li>Список друзей с онлайн-статусом</li>
-              <li>Личные сообщения и чаты</li>
-              <li>Профіль, безопасность, сессии и passkeys</li>
-              <li>Русский, украинский и английский языки</li>
-              <li>Проверка обновлений при запуске</li>
+              <li>Вхід через <strong>login.cyblight.org</strong> (логін, пароль, Turnstile)</li>
+              <li>Підтримка двофакторної автентифікації (2FA)</li>
+              <li>Список друзів з онлайн-статусом</li>
+              <li>Особисті повідомлення та чати</li>
+              <li>Профіль, безпека, сесії та passkeys</li>
+              <li>Російська, українська та англійська мови</li>
+              <li>Перевірка оновлень під час запуску</li>
             </ul>
           </article>
 
           <article class="downloads-panel">
-            <h2>Установка</h2>
+            <h2>Встановлення</h2>
             <ol class="downloads-steps">
-              <li>Скачайте APK-кнопкой выше.</li>
-              <li>Откройте файл на телефоне.</li>
-              <li>Если Android предупреждает о неизвестном источнике — разрешите установку и нажмите «Всё равно установить».</li>
-              <li>Запустите CybLight и войдите в аккаунт.</li>
+              <li>Завантажте APK кнопкою вище.</li>
+              <li>Відкрийте файл на телефоні.</li>
+              <li>Якщо Android попереджає про невідоме джерело — дозвольте встановлення та натисніть «Усе одно встановити».</li>
+              <li>Запустіть CybLight і увійдіть в акаунт.</li>
             </ol>
             <p class="downloads-hint">
-              При обновлении поверх старой версии может понадобиться удалить предыдущую сборку, если подпись отличается.
+              Під час оновлення поверх старої версії може знадобитися видалити попередню збірку, якщо підпис відрізняється.
             </p>
           </article>
         </section>
 
         <section class="downloads-links">
           <p>
-            Исходный код:
+            Вихідний код:
             <a href="https://github.com/CybLight/CybLight-Android" target="_blank" rel="noopener noreferrer">CybLight-Android на GitHub</a>
           </p>
           <p>
-            Подробнее о проекте:
-            <a href="/uk/projects/#android">страница проекта</a>
+            Докладніше про проєкт:
+            <a href="/uk/projects/#android">сторінка проєкту</a>
           </p>
         </section>
       </main>

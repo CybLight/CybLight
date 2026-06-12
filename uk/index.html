@@ -134,8 +134,6 @@
     <link rel="icon" href="/images/favicon_64.png" sizes="64x64" type="image/png" />
     <link rel="icon" href="/images/favicon_192.png" sizes="192x192" type="image/png" />
 
-    <!-- Скрипт для кнопки подписки YouTube -->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
 
   <body class="no-strawberries">
@@ -527,13 +525,12 @@
                   <span id="yt-tech-videos" class="yt-value">—</span>
                 </div>
                 <div class="yt-subscribe">
-                  <div
-                    class="g-ytsubscribe"
-                    data-channelid="UCdSnJZ0R_m4f5y6mqC__Njg"
-                    data-layout="full"
-                    data-theme="dark"
-                    data-count="default"
-                  ></div>
+                  <a
+                    class="yt-subscribe-btn"
+                    href="https://www.youtube.com/channel/UCdSnJZ0R_m4f5y6mqC__Njg?sub_confirmation=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >Підписатися</a>
                 </div>
               </div>
             </div>
@@ -551,13 +548,12 @@
                   <span id="yt-videos" class="yt-value">—</span>
                 </div>
                 <div class="yt-subscribe">
-                  <div
-                    class="g-ytsubscribe"
-                    data-channelid="UCdOzygYudpflH7DgfK7XalQ"
-                    data-layout="full"
-                    data-theme="dark"
-                    data-count="default"
-                  ></div>
+                  <a
+                    class="yt-subscribe-btn"
+                    href="https://www.youtube.com/channel/UCdOzygYudpflH7DgfK7XalQ?sub_confirmation=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >Підписатися</a>
                 </div>
               </div>
             </div>
@@ -570,47 +566,41 @@
 
         <section id="videos" class="blog-list">
           <div class="video-container">
-            <iframe
-              width="480"
-              height="270"
-              src="https://www.youtube.com/embed/8BkjWWV1MwU?si=GhmFZ4cFSW00f8ta"
-              title="Більярдний удар у Rocket League"
-              loading="lazy"
-              frameborder="0"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-              "
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+            <button
+              type="button"
+              class="yt-lite"
+              data-video-id="8BkjWWV1MwU"
+              data-title="Більярдний удар у Rocket League"
+              aria-label="Смотреть: Бильярдный удар в Rocket League"
+            >
+              <img
+                src="https://i.ytimg.com/vi/8BkjWWV1MwU/hqdefault.jpg"
+                alt=""
+                loading="lazy"
+                width="480"
+                height="360"
+              />
+              <span class="yt-lite-play" aria-hidden="true"></span>
+            </button>
           </div>
 
           <div class="video-container">
-            <iframe
-              width="480"
-              height="270"
-              src="https://www.youtube.com/embed/v2I5J9P7aVc?si=JtUeQtCtvQU3st-0"
-              title="FlatOut 2 — ностальгія..."
-              loading="lazy"
-              frameborder="0"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-              "
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+            <button
+              type="button"
+              class="yt-lite"
+              data-video-id="v2I5J9P7aVc"
+              data-title="FlatOut 2 — ностальгія..."
+              aria-label="Смотреть: FlatOut 2-Ностальгия..."
+            >
+              <img
+                src="https://i.ytimg.com/vi/v2I5J9P7aVc/hqdefault.jpg"
+                alt=""
+                loading="lazy"
+                width="480"
+                height="360"
+              />
+              <span class="yt-lite-play" aria-hidden="true"></span>
+            </button>
           </div>
         </section>
       </main>
@@ -689,6 +679,7 @@
     <script src="/js/i18n.js" defer></script>
     <script src="/js/report.js" defer></script>
     <script src="/js/dev-footer-pin.js" defer></script>
+    <script src="/js/youtube-lite.js" defer></script>
     <script src="/js/main.js" defer></script>
     <script src="/js/theme.js" defer></script>
     <script>

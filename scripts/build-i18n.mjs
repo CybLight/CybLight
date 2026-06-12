@@ -276,4 +276,7 @@ writeRedirects();
 writeIndexNowKey();
 writeCloudflareRedirectRules();
 
+// GitHub Pages ignores dot-directories (e.g. .well-known) unless Jekyll is disabled.
+fs.writeFileSync(path.join(ROOT, '.nojekyll'), '', 'utf8');
+
 console.log('Built locales:', LOCALES.join(', '));

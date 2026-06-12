@@ -56,6 +56,9 @@
     "gameNoQuestions": "No questions for this difficulty yet 🙃",
     "gamePickAnswer": "Pick an answer first!",
     "gameError": "Error",
+    "themeFluxTitle": "Pendulum",
+    "themeFluxText": "You swung the site between light and dark. Mood captured!",
+    "themeFluxBtn": "Light ↔ dark ✦",
     "searchIndex": [
       {
         "title": "Home",

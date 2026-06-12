@@ -3195,3 +3195,119 @@ body.dark .header-lang-menu a {
   color: var(--accent, #ff7f27);
   background: rgba(255, 127, 39, 0.12);
 }
+
+/* Theme Flux easter egg */
+body.theme-flux-celebrate {
+  animation: themeFluxCelebrate 1.2s ease;
+}
+
+@keyframes themeFluxCelebrate {
+  0%,
+  100% {
+    filter: none;
+  }
+  25% {
+    filter: hue-rotate(90deg) brightness(1.08);
+  }
+  50% {
+    filter: hue-rotate(180deg) brightness(0.95);
+  }
+  75% {
+    filter: hue-rotate(270deg) brightness(1.05);
+  }
+}
+
+.theme-flux-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(8, 12, 24, 0.72);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.theme-flux-overlay.is-visible {
+  opacity: 1;
+}
+
+.theme-flux-modal {
+  position: relative;
+  width: min(420px, 100%);
+  padding: 32px 28px 28px;
+  border-radius: 20px;
+  text-align: center;
+  color: #eef2ff;
+  background: linear-gradient(145deg, rgba(42, 53, 80, 0.96), rgba(18, 24, 40, 0.98));
+  border: 1px solid rgba(179, 157, 219, 0.35);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(179, 157, 219, 0.18);
+  transform: translateY(12px) scale(0.96);
+  transition: transform 0.35s ease;
+}
+
+.theme-flux-overlay.is-visible .theme-flux-modal {
+  transform: translateY(0) scale(1);
+}
+
+.theme-flux-modal__orbit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.18), transparent 60%);
+  animation: themeFluxOrbit 2.4s ease-in-out infinite;
+}
+
+.theme-flux-modal__moon {
+  font-size: 42px;
+  line-height: 1;
+}
+
+@keyframes themeFluxOrbit {
+  0%,
+  100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+}
+
+.theme-flux-modal__title {
+  margin: 0 0 12px;
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.theme-flux-modal__text {
+  margin: 0 0 22px;
+  line-height: 1.55;
+  color: rgba(238, 242, 255, 0.82);
+}
+
+.theme-flux-modal__btn {
+  appearance: none;
+  border: 1px solid rgba(179, 157, 219, 0.45);
+  border-radius: 999px;
+  padding: 11px 22px;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #5c6bc0, #7e57c2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-flux-modal__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(126, 87, 194, 0.35);
+}

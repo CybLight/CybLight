@@ -53,6 +53,9 @@
     "gamePoints": " очков",
     "gameNoQuestions": "Для выбранной сложности пока нет вопросов 🙃",
     "gamePickAnswer": "Сначала выбери ответ!",
-    "gameError": "Ошибка"
+    "gameError": "Ошибка",
+    "themeFluxTitle": "Маятник",
+    "themeFluxText": "Ты раскачал сайт между светом и тьмой. Настроение поймано!",
+    "themeFluxBtn": "Свет ↔ тьма ✦"
   }
 }

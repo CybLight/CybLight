@@ -56,6 +56,9 @@
     "gameNoQuestions": "Для обраної складності поки немає питань 🙃",
     "gamePickAnswer": "Спочатку обери відповідь!",
     "gameError": "Помилка",
+    "themeFluxTitle": "Маятник",
+    "themeFluxText": "Ти розгойдав сайт між світлом і темрявою. Настрій спіймано!",
+    "themeFluxBtn": "Світло ↔ темрява ✦",
     "searchIndex": [
       {
         "title": "Головна",

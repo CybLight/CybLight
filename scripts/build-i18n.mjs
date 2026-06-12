@@ -10,6 +10,7 @@ const PAGES = [
   'games/index.html',
   'contacts/index.html',
   'projects/index.html',
+  'downloads/index.html',
   'donate/index.html',
   'privacy/index.html',
 ];
@@ -18,11 +19,12 @@ const LEGACY_REDIRECTS = [
   'games/index.html',
   'contacts/index.html',
   'projects/index.html',
+  'downloads/index.html',
   'donate/index.html',
   'privacy/index.html',
 ];
 
-const LEGACY_PATHS = ['games', 'contacts', 'projects', 'donate', 'privacy'];
+const LEGACY_PATHS = ['games', 'contacts', 'projects', 'downloads', 'donate', 'privacy'];
 const SEO_CONFIG = JSON.parse(
   fs.readFileSync(path.join(ROOT, 'seo.config.json'), 'utf8')
 );

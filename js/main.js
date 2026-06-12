@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: 'Проекты',
-      desc: 'Все проекты: сайт, бот, умный дом, эхолот, Priority Manager X',
+      desc: 'Все проекты: сайт, Android-приложение, бот, умный дом, эхолот, Priority Manager X',
       tags: ['проекты', 'projects', 'портфолио'],
       url: L + '/projects/',
     },
@@ -208,6 +208,12 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Почта, Telegram, YouTube, GitHub — все способы связаться',
       tags: ['контакты', 'contacts', 'связь', 'email', 'telegram'],
       url: L + '/contacts/',
+    },
+    {
+      title: 'Приложение CybLight',
+      desc: 'Мобильное приложение для Android — скачать APK, друзья, сообщения',
+      tags: ['приложение', 'android', 'apk', 'mobile', 'app', 'скачать'],
+      url: L + '/downloads/',
     },
     {
       title: 'Пожертвовать',
@@ -238,6 +244,12 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Python бот для модерации и поддержания порядка в Telegram-группах',
       tags: ['бот', 'telegram', 'python', 'guardian', 'модерация'],
       url: L + '/projects/',
+    },
+    {
+      title: 'CybLight для Android',
+      desc: 'Официальное мобильное приложение — аккаунт, друзья, сообщения, 2FA',
+      tags: ['android', 'apk', 'kotlin', 'mobile', 'приложение'],
+      url: L + '/downloads/',
     },
     {
       title: 'Priority Manager X',

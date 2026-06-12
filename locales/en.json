@@ -69,7 +69,7 @@
       },
       {
         "title": "Projects",
-        "desc": "All projects: website, bot, smart home, fish finder, Priority Manager X",
+        "desc": "All projects: website, Android app, bot, smart home, fish finder, Priority Manager X",
         "tags": [
           "projects",
           "portfolio"
@@ -104,6 +104,18 @@
           "telegram"
         ],
         "url": "/contacts/"
+      },
+      {
+        "title": "CybLight App",
+        "desc": "Android mobile app — download APK, friends, messages",
+        "tags": [
+          "app",
+          "android",
+          "apk",
+          "mobile",
+          "download"
+        ],
+        "url": "/downloads/"
       },
       {
         "title": "Donate",
@@ -156,6 +168,18 @@
           "moderation"
         ],
         "url": "/projects/"
+      },
+      {
+        "title": "CybLight for Android",
+        "desc": "Official mobile app — account, friends, messages, 2FA",
+        "tags": [
+          "android",
+          "apk",
+          "kotlin",
+          "mobile",
+          "app"
+        ],
+        "url": "/downloads/"
       },
       {
         "title": "Priority Manager X",
@@ -1180,6 +1204,70 @@
     [
       "Все",
       "All"
+    ],
+    [
+      "<a class=\"button\" href=\"{{L}}/downloads/\">Приложение</a>",
+      "<a class=\"button\" href=\"{{L}}/downloads/\">App</a>"
+    ],
+    [
+      "CybLight — Мобильное приложение для Android",
+      "CybLight — Android mobile app"
+    ],
+    [
+      "CybLight — Приложение",
+      "CybLight — App"
+    ],
+    [
+      "\"name\": \"Приложение\"",
+      "\"name\": \"App\""
+    ],
+    [
+      "<span class=\"bc-current\">Приложение</span>",
+      "<span class=\"bc-current\">App</span>"
+    ],
+    [
+      "Мобильное приложение CybLight",
+      "CybLight mobile app"
+    ],
+    [
+      "Мобильное приложение CybLight для Android",
+      "CybLight mobile app for Android"
+    ],
+    [
+      "Официальное приложение для Android: вход в аккаунт CybLight, список друзей, личные сообщения и настройки безопасности.",
+      "Official Android app: CybLight account sign-in, friends list, private messages, and security settings."
+    ],
+    [
+      "Официальное Android-приложение: аккаунт, друзья, сообщения и безопасность.",
+      "Official Android app: account, friends, messages, and security."
+    ],
+    [
+      "Скачать APK с сайта",
+      "Download APK from site"
+    ],
+    [
+      "Скачать с GitHub",
+      "Download from GitHub"
+    ],
+    [
+      "Страница релизов",
+      "Release page"
+    ],
+    [
+      "Прямой файл на cyblight.org пока недоступен — используйте кнопку «Скачать с GitHub».",
+      "Direct file on cyblight.org is not available yet — use the \"Download from GitHub\" button."
+    ],
+    [
+      "Скачать APK",
+      "Download APK"
+    ],
+    [
+      "страница загрузки",
+      "download page"
+    ],
+    [
+      "Скачайте официальное мобильное приложение CybLight для Android: вход в аккаунт, друзья, сообщения и безопасность. Прямая загрузка APK.",
+      "Download the official CybLight Android app: account sign-in, friends, messages, and security. Direct APK download."
     ]
   ]
 }

@@ -11,6 +11,7 @@ const PAGES = [
   'games/index.html',
   'contacts/index.html',
   'projects/index.html',
+  'downloads/index.html',
   'donate/index.html',
   'privacy/index.html',
 ];

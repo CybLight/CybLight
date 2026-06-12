@@ -24,6 +24,12 @@
     "target_url": "https://cyblight.org/ru/projects/"
   },
   {
+    "description": "Legacy /downloads to /ru/downloads/",
+    "expression": "(http.host eq \"cyblight.org\" or http.host eq \"www.cyblight.org\") and (http.request.uri.path eq \"/downloads\" or http.request.uri.path eq \"/downloads/\")",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/downloads/"
+  },
+  {
     "description": "Legacy /donate to /ru/donate/",
     "expression": "(http.host eq \"cyblight.org\" or http.host eq \"www.cyblight.org\") and (http.request.uri.path eq \"/donate\" or http.request.uri.path eq \"/donate/\")",
     "status_code": 301,

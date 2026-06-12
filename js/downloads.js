@@ -1,5 +1,5 @@
 (function () {
-  const LOCAL_APK = "/downloads/cyblight-android-v0.4.6.apk";
+  const LOCAL_APK = "/downloads/cyblight-android-v0.4.7.apk";
   const GITHUB_RELEASES =
     "https://github.com/CybLight/CybLight-Android/releases/latest";
   const GITHUB_API =

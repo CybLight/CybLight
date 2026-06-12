@@ -2,7 +2,7 @@
 
 Place the signed release APK here for direct download from cyblight.org:
 
-`cyblight-android-v0.4.1.apk`
+`cyblight-android-v0.4.3.apk`
 
 After publishing a new app version:
 

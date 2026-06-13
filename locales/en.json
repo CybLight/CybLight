@@ -56,9 +56,6 @@
     "gameNoQuestions": "No questions for this difficulty yet 🙃",
     "gamePickAnswer": "Pick an answer first!",
     "gameError": "Error",
-    "themeFluxTitle": "Pendulum",
-    "themeFluxText": "You swung the site between light and dark. Mood captured!",
-    "themeFluxBtn": "Light ↔ dark ✦",
     "searchIndex": [
       {
         "title": "Home",
@@ -72,7 +69,7 @@
       },
       {
         "title": "Projects",
-        "desc": "All projects: website, Android app, bot, smart home, fish finder, Priority Manager X",
+        "desc": "All projects: website, bot, smart home, fish finder, Priority Manager X",
         "tags": [
           "projects",
           "portfolio"
@@ -107,18 +104,6 @@
           "telegram"
         ],
         "url": "/contacts/"
-      },
-      {
-        "title": "CybLight App",
-        "desc": "Android mobile app — download APK, friends, messages",
-        "tags": [
-          "app",
-          "android",
-          "apk",
-          "mobile",
-          "download"
-        ],
-        "url": "/downloads/"
       },
       {
         "title": "Donate",
@@ -171,18 +156,6 @@
           "moderation"
         ],
         "url": "/projects/"
-      },
-      {
-        "title": "CybLight for Android",
-        "desc": "Official mobile app — account, friends, messages, 2FA",
-        "tags": [
-          "android",
-          "apk",
-          "kotlin",
-          "mobile",
-          "app"
-        ],
-        "url": "/downloads/"
       },
       {
         "title": "Priority Manager X",
@@ -243,6 +216,10 @@
     [
       "Если вы считаете, что какие-то данные собираются некорректно или хотите задать вопрос о конфиденциальности, вы можете связаться со мной через страницу",
       "If you believe any data is collected incorrectly or want to ask a privacy question, you can contact me via the"
+    ],
+    [
+      "Официальное приложение для Android: вход в аккаунт, друзья с онлайн-статусом,\n                    личные сообщения, 2FA и настройки безопасности.",
+      "Official Android app: account sign-in, friends with online status, private messages, 2FA, and security settings."
     ],
     [
       "Пиши по вопросам проектов на Arduino, умного дома, эхолота, игр, сотрудничества или просто, если хочется обсудить технологии и электронику.",
@@ -307,10 +284,6 @@
     [
       "Встроенные виджеты (например, плееры YouTube) могут собирать данные в соответствии с политиками соответствующих сервисов.",
       "Embedded widgets (e.g. YouTube players) may collect data per their services' policies."
-    ],
-    [
-      "На данный момент сайт в активной разработке, поэтому не все функции доступны. <br />\n              Спасибо за понимание!",
-      "The site is under active development, so not all features are available yet. <br />\n              Thanks for understanding!"
     ],
     [
       "<strong>Telegram</strong> — используется для отправки уведомлений о срабатывании пасхалок в мой личный Telegram-аккаунт.",
@@ -383,10 +356,6 @@
     [
       "Смотри на код и выбирай, что он выведет. Отлично тренирует внимание к деталям.",
       "Look at the code and choose what it prints. Great for attention to detail."
-    ],
-    [
-      "На данный момент сайт в активной разработке, поэтому не все функции доступны.",
-      "The site is under active development, so not all features are available yet."
     ],
     [
       "Используя Сайт, вы также принимаете условия обработки данных этими сервисами.",
@@ -567,6 +536,10 @@
     [
       "CybLight — Arduino, электроника и умный дом",
       "CybLight — Arduino, electronics, and smart home"
+    ],
+    [
+      "Мобильное приложение CybLight уже доступно",
+      "CybLight mobile app is now available"
     ],
     [
       "Политика конфиденциальности сайта CybLight",
@@ -817,6 +790,10 @@
       "Telegram bot Guardian"
     ],
     [
+      "aria-label=\"Новости\"",
+      "aria-label=\"News\""
+    ],
+    [
       "Пользователей онлайн",
       "Users online"
     ],
@@ -879,6 +856,10 @@
     [
       "aria-label=\"Карта\"",
       "aria-label=\"Card\""
+    ],
+    [
+      "Новость · Android",
+      "News · Android"
     ],
     [
       "Предыдущий проект",
@@ -1207,162 +1188,6 @@
     [
       "Все",
       "All"
-    ],
-    [
-      "<li><a class=\"button\" href=\"/en/downloads/\">Приложение</a></li>",
-      "<li><a class=\"button\" href=\"/en/downloads/\">App</a></li>"
-    ],
-    [
-      "<a class=\"button\" href=\"/en/downloads/\">Приложение</a>",
-      "<a class=\"button\" href=\"/en/downloads/\">App</a>"
-    ],
-    [
-      "CybLight — Мобильное приложение для Android",
-      "CybLight — Android mobile app"
-    ],
-    [
-      "CybLight — Приложение",
-      "CybLight — App"
-    ],
-    [
-      "\"name\": \"Приложение\"",
-      "\"name\": \"App\""
-    ],
-    [
-      "<span class=\"bc-current\">Приложение</span>",
-      "<span class=\"bc-current\">App</span>"
-    ],
-    [
-      "Мобильное приложение CybLight",
-      "CybLight mobile app"
-    ],
-    [
-      "Мобильное приложение CybLight для Android",
-      "CybLight mobile app for Android"
-    ],
-    [
-      "Официальное приложение для Android: вход в аккаунт CybLight, список друзей, личные сообщения и настройки безопасности.",
-      "Official Android app: CybLight account sign-in, friends list, private messages, and security settings."
-    ],
-    [
-      "Официальное Android-приложение: аккаунт, друзья, сообщения и безопасность.",
-      "Official Android app: account, friends, messages, and security."
-    ],
-    [
-      "Скачать APK с сайта",
-      "Download APK from site"
-    ],
-    [
-      "Скачать с GitHub",
-      "Download from GitHub"
-    ],
-    [
-      "Страница релизов",
-      "Release page"
-    ],
-    [
-      "Прямой файл на cyblight.org пока недоступен — используйте кнопку «Скачать с GitHub».",
-      "Direct file on cyblight.org is not available yet — use the \"Download from GitHub\" button."
-    ],
-    [
-      "Скачать APK",
-      "Download APK"
-    ],
-    [
-      "страница загрузки",
-      "download page"
-    ],
-    [
-      "Скачайте официальное мобильное приложение CybLight для Android: вход в аккаунт, друзья, сообщения и безопасность. Прямая загрузка APK.",
-      "Download the official CybLight Android app: account sign-in, friends, messages, and security. Direct APK download."
-    ],
-    [
-      "Версия",
-      "Version"
-    ],
-    [
-      "Скачать",
-      "Download"
-    ],
-    [
-      "Возможности",
-      "Features"
-    ],
-    [
-      "Установка",
-      "Installation"
-    ],
-    [
-      "Вход через <strong>login.cyblight.org</strong> (логин, пароль, Turnstile)",
-      "Sign in via <strong>login.cyblight.org</strong> (username, password, Turnstile)"
-    ],
-    [
-      "Поддержка двухфакторной аутентификации (2FA)",
-      "Two-factor authentication (2FA) support"
-    ],
-    [
-      "Список друзей с онлайн-статусом",
-      "Friends list with online status"
-    ],
-    [
-      "Личные сообщения и чаты",
-      "Private messages and chats"
-    ],
-    [
-      "Профиль, безопасность, сессии и passkeys",
-      "Profile, security, sessions, and passkeys"
-    ],
-    [
-      "Русский, украинский и английский языки",
-      "Russian, Ukrainian, and English"
-    ],
-    [
-      "Проверка обновлений при запуске",
-      "Update check on launch"
-    ],
-    [
-      "Скачайте APK-кнопкой выше.",
-      "Download the APK using the button above."
-    ],
-    [
-      "Откройте файл на телефоне.",
-      "Open the file on your phone."
-    ],
-    [
-      "Если Android предупреждает о неизвестном источнике — разрешите установку и нажмите «Всё равно установить».",
-      "If Android warns about an unknown source — allow installation and tap \"Install anyway\"."
-    ],
-    [
-      "Запустите CybLight и войдите в аккаунт.",
-      "Launch CybLight and sign in to your account."
-    ],
-    [
-      "При обновлении поверх старой версии может понадобиться удалить предыдущую сборку, если подпись отличается.",
-      "When updating over an older build, you may need to uninstall the previous version if the signing key differs."
-    ],
-    [
-      "Исходный код:",
-      "Source code:"
-    ],
-    [
-      "CybLight-Android на GitHub",
-      "CybLight-Android on GitHub"
-    ],
-    [
-      "Подробнее о проекте:",
-      "More about the project:"
-    ],
-    [
-      "страница проекта",
-      "project page"
-    ],
-    [
-      "Официальное мобильное приложение для Android: вход через login.cyblight.org, список друзей с онлайн-статусом, личные сообщения, профиль и настройки безопасности (2FA, сессии, passkeys). Поддерживаются русский, украинский и английский языки.",
-      "Official Android app: sign in via login.cyblight.org, friends list with online status, private messages, profile and security settings (2FA, sessions, passkeys). Russian, Ukrainian, and English are supported."
-    ],
-    [
-      "Скачать APK:",
-      "Download APK:"
     ]
   ]
 }

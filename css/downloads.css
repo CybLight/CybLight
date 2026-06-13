@@ -6,6 +6,8 @@
 
 .downloads-hero-card {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
   align-items: center;
   margin: 8px 0 28px;
@@ -13,8 +15,16 @@
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:
-    radial-gradient(120% 80% at 100% 0%, rgba(61, 220, 132, 0.12) 0%, transparent 55%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+    radial-gradient(
+      120% 80% at 100% 0%,
+      rgba(61, 220, 132, 0.12) 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.06) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
 }
 
 .downloads-app-icon {
@@ -26,12 +36,36 @@
 }
 
 .downloads-kicker {
-  margin: 0 0 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 100%;
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(61, 220, 132, 0.35);
+}
+
+.downloads-android-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.downloads-kicker-label {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #3ddc84;
+  line-height: 1;
+}
+
+.downloads-hero-text {
+  flex: 1 1 240px;
+  min-width: 0;
+  text-align: center;
 }
 
 .downloads-hero-text h1 {
@@ -184,9 +218,22 @@ body.dark .downloads-page .downloads-links a:hover {
 body.light .downloads-hero-card,
 body:not(.dark) .downloads-hero-card {
   background:
-    radial-gradient(120% 80% at 100% 0%, rgba(61, 220, 132, 0.12) 0%, transparent 55%),
+    radial-gradient(
+      120% 80% at 100% 0%,
+      rgba(61, 220, 132, 0.12) 0%,
+      transparent 55%
+    ),
     linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%);
   border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light .downloads-kicker,
+body:not(.dark) .downloads-kicker {
+  border-bottom-color: rgba(61, 220, 132, 0.45);
+}
+
+body.dark .downloads-kicker {
+  border-bottom-color: rgba(61, 220, 132, 0.28);
 }
 
 body.light .downloads-panel,
@@ -311,8 +358,8 @@ body.dark .downloads-page .downloads-note {
 @media (max-width: 720px) {
   .downloads-hero-card {
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
   }
 
   .downloads-grid {

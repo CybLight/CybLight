@@ -42,6 +42,7 @@
 
   let toggleTimes = [];
   let unlocking = false;
+  let modalOpen = false;
 
   function t(key, fallback) {
     const s = window.CYB_STRINGS || {};
@@ -68,7 +69,27 @@
     }).catch(() => {});
   }
 
+  function syncThemeFluxModalPosition(overlay) {
+    const footer = document.querySelector("footer");
+    const gap = 18;
+
+    if (!footer) {
+      overlay.style.paddingBottom = `${gap}px`;
+      return;
+    }
+
+    const rect = footer.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      overlay.style.paddingBottom = `${Math.max(gap, window.innerHeight - rect.top + gap)}px`;
+    } else {
+      overlay.style.paddingBottom = `${gap}px`;
+    }
+  }
+
   function showThemeFluxModal() {
+    if (modalOpen) return;
+    modalOpen = true;
+
     const overlay = document.createElement("div");
     overlay.className = "theme-flux-overlay";
     overlay.innerHTML = `
@@ -89,20 +110,34 @@
     `;
 
     document.body.appendChild(overlay);
+    document.body.classList.add("theme-flux-modal-open");
+    syncThemeFluxModalPosition(overlay);
+
+    const reposition = () => syncThemeFluxModalPosition(overlay);
+    window.addEventListener("resize", reposition);
+    window.addEventListener("scroll", reposition, { passive: true });
+
     requestAnimationFrame(() => overlay.classList.add("is-visible"));
 
+    let closed = false;
     const close = () => {
+      if (closed) return;
+      closed = true;
+
+      window.removeEventListener("resize", reposition);
+      window.removeEventListener("scroll", reposition);
+      document.body.classList.remove("theme-flux-modal-open");
       overlay.classList.remove("is-visible");
       overlay.addEventListener(
         "transitionend",
-        () => overlay.remove(),
+        () => {
+          overlay.remove();
+          modalOpen = false;
+        },
         { once: true }
       );
     };
 
-    overlay.addEventListener("click", (e) => {
-      if (e.target === overlay) close();
-    });
     overlay.querySelector(".theme-flux-modal__btn").addEventListener("click", close);
   }
 
@@ -155,7 +190,7 @@
   }
 
   window.trackThemeFluxToggle = function trackThemeFluxToggle() {
-    if (localStorage.getItem(THEME_FLUX_KEY) === "1") return;
+    if (unlocking || modalOpen || localStorage.getItem(THEME_FLUX_KEY) === "1") return;
 
     const now = Date.now();
     toggleTimes.push(now);

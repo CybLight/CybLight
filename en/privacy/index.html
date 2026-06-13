@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="CybLight privacy policy: what data is collected, how it is used, and how easter eggs work."
+      content="CybLight privacy policy: website, account, Android app, API, cookies, and third-party services."
     />
 
     <script type="application/ld+json">
@@ -180,22 +180,43 @@
           <div class="legal-page">
             <h1>CybLight Website Privacy Policy</h1>
 
-            <p class="legal-updated">Last updated: 06.12.2025</p>
+            <p class="legal-updated">Last updated: 13.06.2026</p>
+
+            <nav class="legal-toc" aria-label="Sections">
+              <ul class="legal-toc-list">
+                <li><a href="#who-we-are">1. Who we are</a></li>
+                <li><a href="#scope">2. Scope of this policy</a></li>
+                <li><a href="#visit-data">3. Data when visiting the site</a></li>
+                <li><a href="#account">4. CybLight account</a></li>
+                <li><a href="#android-app">5. Android mobile app</a></li>
+                <li><a href="#easter-eggs">6. Easter eggs and hidden elements</a></li>
+                <li><a href="#report-form">7. "Report a problem" form</a></li>
+                <li><a href="#cookies">8. Cookies and local storage</a></li>
+                <li><a href="#third-party">9. Third-party services</a></li>
+                <li><a href="#retention">10. How long data is stored</a></li>
+                <li><a href="#your-rights">11. Your choices and rights</a></li>
+                <li><a href="#policy-changes">12. Policy changes</a></li>
+              </ul>
+            </nav>
 
             <section>
-              <h2>1. Who we are</h2>
+              <h2 id="who-we-are">1. Who we are</h2>
               <p>
-                The <strong>CybLight</strong> website (the "Site") is a personal non-commercial project dedicated to electronics, programming, games, and web technology experiments.
+                <strong>CybLight</strong> is the author's personal non-commercial project dedicated to electronics, programming, games, and web technologies. It includes the <strong>cyblight.org</strong> website, <strong>login.cyblight.org</strong> sign-in service, <strong>api.cyblight.org</strong> API, and the official Android mobile app.
               </p>
             </section>
 
             <section>
-              <h2>2. What data we collect</h2>
+              <h2 id="scope">2. Scope of this policy</h2>
               <p>
-                By default, the Site does not ask you to register or collect names, email addresses, or other explicit personal information.
+                This Policy describes what data may be processed when using the Site and related CybLight services. Most cyblight.org pages are available without registration. Profile, friends, and messaging features require an account on login.cyblight.org or in the mobile app.
               </p>
+            </section>
+
+            <section>
+              <h2 id="visit-data">3. Data when visiting the site</h2>
               <p>
-                However, when accessing and interacting with the Site, the following technical data may be processed:
+                When you open cyblight.org pages without signing in, the following technical data may be processed automatically:
               </p>
               <ul>
                 <li>
@@ -206,19 +227,59 @@
                   <code>User-Agent</code>);
                 </li>
                 <li>
-                  the page address you came from (the
+                  page URL and referral source (
                   <code>Referer</code>);
                 </li>
                 <li>date and time of the request;</li>
-                <li>your browser timezone and language settings.</li>
+                <li>browser language and time zone.</li>
               </ul>
               <p>
-                This data is used only to technically operate the Site, protect against abuse, and for simple visit statistics.
+                The Site may request an aggregated online user count from <strong>api.cyblight.org</strong> and check whether you are signed in (via session cookies) to show "Sign in" or "Profile". YouTube channel counters use a statistics proxy; video playback loads YouTube in <code>youtube-nocookie.com</code> mode.
+              </p>
+              <p>
+                This data is needed to run the Site, provide basic statistics, and prevent abuse.
               </p>
             </section>
 
             <section>
-              <h2>3. Easter eggs and hidden elements</h2>
+              <h2 id="account">4. CybLight account</h2>
+              <p>
+                If you register or sign in via <strong>login.cyblight.org</strong>, personal data is processed to operate your account. This may include:
+              </p>
+              <ul>
+                <li>username, email address, and password hash (passwords are not stored in plain text);</li>
+                <li>profile data: name, avatar, bio, and other fields you provide;</li>
+                <li>privacy settings for individual profile fields;</li>
+                <li>friends list, online status, private messages, and drafts;</li>
+                <li>security data: active sessions, devices, 2FA, passkeys, sign-in history;</li>
+                <li>IP address, browser, and technical information on sign-in and important account actions.</li>
+              </ul>
+              <p>
+                Session cookies and related browser mechanisms keep you signed in. They may be shared between cyblight.org and login.cyblight.org so the Site knows you are authenticated. Sign-in may use <strong>Cloudflare Turnstile</strong> to block automated abuse.
+              </p>
+              <p>
+                Account data is stored on the project's server infrastructure (including via Cloudflare). It is not used for ad targeting and is not sold to third parties.
+              </p>
+            </section>
+
+            <section>
+              <h2 id="android-app">5. Android mobile app</h2>
+              <p>
+                The official CybLight Android app uses the same account as login.cyblight.org. The app may:
+              </p>
+              <ul>
+                <li>store session data and UI settings locally on your device;</li>
+                <li>call api.cyblight.org for sign-in, profile, friends, messages, and security;</li>
+                <li>check for updates (including via GitHub Releases);</li>
+                <li>send technical request metadata similar to a browser when using the API.</li>
+              </ul>
+              <p>
+                APK files are distributed via cyblight.org and GitHub. You install the APK voluntarily; Android permissions are requested only as needed for app features (network, notifications, etc.).
+              </p>
+            </section>
+
+            <section>
+              <h2 id="easter-eggs">6. Easter eggs and hidden elements</h2>
               <p>
                 The Site may include game elements ("easter eggs"), such as hidden buttons or animated objects on special pages.
               </p>
@@ -231,7 +292,7 @@
                 <li>page where the easter egg triggered;</li>
                 <li>browser and device info (User-Agent);</li>
                 <li>date, time, and timezone from browser settings;</li>
-                <li>service event type (e.g. <code>egg_click</code>).</li>
+                <li>event type (e.g. <code>egg_click</code> or <code>theme_flux</code>).</li>
               </ul>
               <p>
                 This data is used only to see how many people found an easter egg, which countries visitors come from, and how often a game mechanic triggers. Data is not used for marketing and is not shared with third parties except the technical services listed below.
@@ -239,63 +300,106 @@
             </section>
 
             <section>
-              <h2>4. Cookies and local storage</h2>
+              <h2 id="report-form">7. "Report a problem" form</h2>
               <p>
-                The Site may use <strong>localStorage</strong> or other browser mechanisms to store local settings, for example:
+                The Site has a "Report a problem" feedback form. When you submit it, the following is sent to <strong>api.cyblight.org</strong>:
               </p>
               <ul>
-                <li>selected light or dark theme;</li>
-                <li>a flag that an easter egg was already found so it is not shown again.</li>
+                <li>selected category and message text;</li>
+                <li>email address — only if you provide it voluntarily;</li>
+                <li>URL of the page from which the report was sent;</li>
+                <li>User-Agent, browser type, operating system, and submission time.</li>
               </ul>
               <p>
-                This data is stored only in your browser and is not sent to the server separately from regular requests.
+                This information is used only to investigate issues and improve the project. Do not include unnecessary personal data in your message unless needed to describe the problem.
               </p>
             </section>
 
             <section>
-              <h2>5. Third-party services</h2>
+              <h2 id="cookies">8. Cookies and local storage</h2>
               <p>
-                The following services may be used to run the Site and collect minimal technical statistics:
+                The Site may use <strong>localStorage</strong>, cookies, and other browser mechanisms to store local settings, for example:
+              </p>
+              <ul>
+                <li>selected light or dark theme;</li>
+                <li>selected interface language (<code>cyblight-lang</code>);</li>
+                <li>флаг о том, что пасхалка уже была найдена, чтобы не показывать её повторно;</li>
+                <li>local high scores in on-site games;</li>
+                <li>session cookies for CybLight account sign-in.</li>
+              </ul>
+              <p>
+                Most of this data stays in your browser only. Session cookies are sent to the server on requests to api.cyblight.org and related domains to keep you signed in.
+              </p>
+            </section>
+
+            <section>
+              <h2 id="third-party">9. Third-party services</h2>
+              <p>
+                The following services may be used to run the Site, accounts, and minimal technical statistics:
               </p>
               <ul>
                 <li>
-                  <strong>Cloudflare</strong> — CDN and attack protection. May process IP addresses, country, and other technical request data.
+                  <strong>Cloudflare</strong> — CDN, attack protection, DNS, and hosting for part of the infrastructure. May process IP addresses, country, and other request metadata.
+                </li>
+                <li>
+                  <strong>Cloudflare Turnstile</strong> — bot protection on sign-in at login.cyblight.org.
                 </li>
                 <li>
                   <strong>Telegram</strong> — used to send easter-egg notifications to my personal Telegram account.
                 </li>
                 <li>
-                  Embedded widgets (e.g. YouTube players) may collect data per their services' policies.
+                  <strong>YouTube / Google</strong> — embedded video previews and players; channel statistics are proxied via the CybLight backend.
+                </li>
+                <li>
+                  <strong>GitHub</strong> — source code and Android app releases; GitHub processes requests when downloading APKs or checking updates under its own policies.
+                </li>
+                <li>
+                  <strong>Web of Trust (MyWOT)</strong> — site trust badge widget on the home page (when enabled).
+                </li>
+                <li>
+                  <strong>MyNickname</strong> — external certificate widget in the Site footer.
+                </li>
+                <li>
+                  Embedded widgets and CDNs (e.g. jsDelivr for technology icons) may collect data under their own policies.
                 </li>
               </ul>
-              <p>By using the Site, you also accept these services' data processing terms.</p>
+              <p>By using the Site and related services, you also accept these services' data processing terms.</p>
             </section>
 
             <section>
-              <h2>6. How long data is stored</h2>
+              <h2 id="retention">10. How long data is stored</h2>
               <p>
-                Technical request logs and easter-egg notifications may be stored for a limited time needed to analyze statistics and improve the Site. I do not maintain a separate long-term database of user personal profiles.
+                Technical request logs, easter-egg notifications, and problem reports may be kept for a limited time needed for statistics, security, and project improvements.
+              </p>
+              <p>
+                Данные учётной записи хранятся, пока аккаунт активен. Вы можете запросить удаление
+                аккаунта через страницу <a href="/en/contacts/">"Contacts"</a> или инструменты
+                безопасности в личном кабинете, если такая функция доступна.
+              </p>
+              <p>
+                Unverified registrations without a confirmed email may be automatically deleted after a limited period of inactivity.
               </p>
             </section>
 
             <section>
-              <h2>7. Your choices and rights</h2>
-              <p>
-                If you do not want technical information (IP, country, browser) in easter-egg logs, you can:
-              </p>
+              <h2 id="your-rights">11. Your choices and rights</h2>
+              <p>You can:</p>
               <ul>
+                <li>use the Site without registering or creating an account;</li>
                 <li>do not interact with easter eggs and hidden elements;</li>
-                <li>disable JavaScript in your browser settings;</li>
-                <li>do not visit the Site.</li>
+                <li>clear cookies and localStorage in your browser settings;</li>
+                <li>disable JavaScript — some Site features will stop working;</li>
+                <li>запросить информацию об обрабатываемых данных или их удаление через
+                  <a href="/en/contacts/">"Contacts"</a>.</li>
               </ul>
               <p>
-                If you believe any data is collected incorrectly or want to ask a privacy question, you can contact me via the
+                If you believe data is collected incorrectly or have a privacy question, contact me via the
                 <a class="button" href="/en/contacts/">"Contacts"</a> on the Site.
               </p>
             </section>
 
             <section>
-              <h2>8. Policy changes</h2>
+              <h2 id="policy-changes">12. Policy changes</h2>
               <p>
                 I may update this Privacy Policy from time to time. The current version is always available at the
                 <a href="/en/privacy/">"Privacy Policy"</a> link in the Site footer. The last update date is shown at the top of the document.
@@ -334,7 +438,7 @@
               </div>
 
               <div class="footer-links">
-                <a href="#">TERMS OF USE</a>
+                <a href="/en/terms/">TERMS OF USE</a>
                 &nbsp;|&nbsp;
                 <a href="/en/privacy/">PRIVACY POLICY</a>
                 &nbsp;|&nbsp;
@@ -351,6 +455,7 @@
     </div>
     <script src="/js/strings-en.js"></script>
     <script src="/js/i18n.js" defer></script>
+    <script src="/js/privacy-settings.js" defer></script>
     <script src="/js/report.js" defer></script>
     <script src="/js/dev-footer-pin.js" defer></script>
     <script src="/js/main.js" defer></script>

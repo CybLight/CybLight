@@ -41,7 +41,9 @@
         link.href = localeUrl(target);
         link.addEventListener('click', () => {
           try {
-            localStorage.setItem('cyblight-lang', target);
+            if (!window.CybPrivacy || window.CybPrivacy.allows('functional')) {
+              localStorage.setItem('cyblight-lang', target);
+            }
           } catch {}
         });
       }

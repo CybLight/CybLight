@@ -210,4 +210,34 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
+  <url>
+    <loc>https://cyblight.org/ru/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/terms/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/terms/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/terms/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/terms/" />
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/uk/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/terms/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/terms/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/terms/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/terms/" />
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/en/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/terms/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/terms/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/terms/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/terms/" />
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
 </urlset>

@@ -27,6 +27,10 @@
     var btn = e.target.closest('.yt-lite');
     if (!btn) return;
     e.preventDefault();
+    if (window.CybPrivacy && !window.CybPrivacy.allows('usage')) {
+      if (window.CybPrivacy.open) window.CybPrivacy.open();
+      return;
+    }
     loadVideo(btn);
   });
 })();

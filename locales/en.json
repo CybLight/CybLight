@@ -56,6 +56,34 @@
     "gameNoQuestions": "No questions for this difficulty yet 🙃",
     "gamePickAnswer": "Pick an answer first!",
     "gameError": "Error",
+    "privacySettingsTitle": "Privacy settings",
+    "privacySettingsClose": "Close",
+    "privacySettingsIntroBefore": "We use cookies and similar technologies to run the site and improve your experience. Learn more in the ",
+    "privacySettingsIntroLink": "Cookies and local storage",
+    "privacySettingsIntroAfter": " section of the privacy policy.",
+    "privacySettingsAllowAll": "Allow all cookies",
+    "privacySettingsRejectAll": "Reject all cookies",
+    "privacySettingsNoteLabel": "NOTE.",
+    "privacySettingsNote": "CybLight does not sell your data or use it for targeted advertising.",
+    "privacySettingsPersonal": "Personal settings",
+    "privacySettingsNecessary": "Strictly necessary cookies",
+    "privacySettingsNecessaryDesc": "Required for basic site operation, Cloudflare security, CybLight account sign-in, and saving these settings. They cannot be turned off.",
+    "privacySettingsFunctional": "Allow functional cookies",
+    "privacySettingsFunctionalDesc": "Save your theme, interface language, local game scores, and other preferences for convenience.",
+    "privacySettingsDiagnostic": "Send diagnostic data",
+    "privacySettingsDiagnosticDesc": "Allows sending \"Report a problem\" messages and technical events (for example, easter egg triggers) to fix issues.",
+    "privacySettingsUsage": "Send usage data",
+    "privacySettingsUsageDesc": "Includes the online users counter, YouTube channel statistics, embedded videos, and third-party widgets (MyWOT, MyNickname).",
+    "privacySettingsConfirm": "Confirm",
+    "privacySettingsDiagnosticBlocked": "Sending is disabled in privacy settings. Enable \"Send diagnostic data\".",
+    "privacyBannerP1": "Our site uses cookies and similar technologies to run the site and improve your experience. Some are required; others help save your preferences.",
+    "privacyBannerP2": " If you click Accept, all cookies will be saved. If you click Reject, all non-essential cookies will be blocked.",
+    "privacyBannerP3Before": " Learn more in the ",
+    "privacyBannerP3And": " and ",
+    "privacyBannerPolicyLink": "Privacy Policy",
+    "privacyBannerAccept": "Accept",
+    "privacyBannerReject": "Reject",
+    "privacyBannerConfigure": "Customize",
     "searchIndex": [
       {
         "title": "Home",
@@ -194,24 +222,104 @@
   },
   "replacements": [
     [
+      "Сайт может запрашивать у <strong>api.cyblight.org</strong> агрегированное число пользователей онлайн и проверять, авторизованы ли вы (через cookie сессии), чтобы показать кнопку «Войти» или «Профиль». Для счётчиков YouTube-каналов используется прокси-сервис статистики; при воспроизведении видео загружается плеер YouTube в режиме <code>youtube-nocookie.com</code>.",
+      "The Site may request an aggregated online user count from <strong>api.cyblight.org</strong> and check whether you are signed in (via session cookies) to show \"Sign in\" or \"Profile\". YouTube channel counters use a statistics proxy; video playback loads YouTube in <code>youtube-nocookie.com</code> mode."
+    ],
+    [
+      "<strong>CybLight</strong> — личный некоммерческий проект автора, посвящённый электронике, программированию, играм и веб-технологиям. В него входят информационный сайт <strong>cyblight.org</strong>, сервис входа <strong>login.cyblight.org</strong>, API <strong>api.cyblight.org</strong> и официальное мобильное приложение для Android.",
+      "<strong>CybLight</strong> is the author's personal non-commercial project dedicated to electronics, programming, games, and web technologies. It includes the <strong>cyblight.org</strong> website, <strong>login.cyblight.org</strong> sign-in service, <strong>api.cyblight.org</strong> API, and the official Android mobile app."
+    ],
+    [
+      "Настоящая Политика описывает, какие данные могут обрабатываться при использовании Сайта и связанных сервисов CybLight. Большинство страниц cyblight.org доступны без регистрации. Функции личного кабинета, друзей и сообщений доступны после создания учётной записи на login.cyblight.org или в мобильном приложении.",
+      "This Policy describes what data may be processed when using the Site and related CybLight services. Most cyblight.org pages are available without registration. Profile, friends, and messaging features require an account on login.cyblight.org or in the mobile app."
+    ],
+    [
       "Эти данные используются только для того, чтобы видеть, сколько людей нашли пасхалку, из каких стран заходят посетители и как часто срабатывает та или иная игровая механика. Данные не используются для маркетинга и не передаются третьим лицам, за исключением технических сервисов, перечисленных ниже.",
       "This data is used only to see how many people found an easter egg, which countries visitors come from, and how often a game mechanic triggers. Data is not used for marketing and is not shared with third parties except the technical services listed below."
+    ],
+    [
+      "Для поддержания сессии используются cookie и связанные механизмы браузера. Они могут передаваться между cyblight.org и login.cyblight.org, чтобы Сайт мог определить, что вы уже вошли. На странице входа может использоваться <strong>Cloudflare Turnstile</strong> для защиты от автоматических атак.",
+      "Session cookies and related browser mechanisms keep you signed in. They may be shared between cyblight.org and login.cyblight.org so the Site knows you are authenticated. Sign-in may use <strong>Cloudflare Turnstile</strong> to block automated abuse."
+    ],
+    [
+      "<strong>CybLight</strong> — личный некоммерческий проект автора. Сайт <strong>cyblight.org</strong>, сервис входа <strong>login.cyblight.org</strong>, API <strong>api.cyblight.org</strong> и официальное Android-приложение предоставляются «как есть», без гарантий коммерческой доступности.",
+      "<strong>CybLight</strong> is the author's personal non-commercial project. The <strong>cyblight.org</strong> website, <strong>login.cyblight.org</strong> sign-in service, <strong>api.cyblight.org</strong> API, and official Android app are provided \"as is\" without commercial availability guarantees."
     ],
     [
       "Добро пожаловать на мой сайт! Здесь я делюсь своими проектами по электронике (Arduino, STM32), умному дому, программированию и разработкой собственного эхолота для рыбалки. Также публикую блог о технологиях и создаю интерактивные игры по программированию.",
       "Welcome to my site! Here I share my electronics projects (Arduino, STM32), smart home, programming, and my own fish finder for fishing. I also publish a tech blog and create interactive programming games."
     ],
     [
+      "Проект не предназначен для критически важных задач. Используйте его на свой страх и риск. Автор не несёт ответственности за косвенный ущерб, потерю данных или проблемы, возникшие при использовании Сайта, приложения или сторонних ссылок.",
+      "The project is not intended for mission-critical use. Use it at your own risk. The author is not liable for indirect damage, data loss, or issues arising from use of the Site, app, or third-party links."
+    ],
+    [
+      "Данные учётной записи хранятся, пока аккаунт активен. Вы можете запросить удаление аккаунта через страницу <a href=\"{{L}}/contacts/\">«Контакты»</a> или инструменты безопасности в личном кабинете, если такая функция доступна.",
+      "Account data is kept while the account is active. You may request account deletion via the <a href=\"{{L}}/contacts/\">Contacts</a> page or security tools in your profile, if available."
+    ],
+    [
+      "Тексты, дизайн, код и материалы на cyblight.org, если не указано иное, принадлежат автору проекта. Их можно просматривать и цитировать с указанием источника; копирование и коммерческое использование без разрешения запрещены.",
+      "Texts, design, code, and materials on cyblight.org belong to the project author unless stated otherwise. You may view and quote them with attribution; copying and commercial use without permission are prohibited."
+    ],
+    [
       "Технические логи запросов и уведомления о пасхалках могут храниться ограниченное время, необходимое для анализа статистики и улучшения Сайта. Я не веду отдельную долгосрочную базу персональных профилей пользователей.",
       "Technical request logs and easter-egg notifications may be stored for a limited time needed to analyze statistics and improve the Site. I do not maintain a separate long-term database of user personal profiles."
+    ],
+    [
+      "APK распространяется через cyblight.org и GitHub. Установка APK выполняется вами добровольно; разрешения Android запрашиваются только в рамках работы приложения (сеть, уведомления и т.п., если включены).",
+      "APK files are distributed via cyblight.org and GitHub. You install the APK voluntarily; Android permissions are requested only as needed for app features (network, notifications, etc.)."
     ],
     [
       "Здесь будут собраны небольшие интерактивные задания по программированию: угадай вывод кода, работа с циклами, условиями, массивами, а позже — алгоритмы, Big-O и перевод в двоичный вид.",
       "Small interactive programming tasks will be collected here: guess the code output, loops, conditions, arrays, and later algorithms, Big-O, and binary conversion."
     ],
     [
+      "Сайт и сервисы могут временно быть недоступны из‑за технических работ или сбоев. Я не гарантирую бесперебойную работу, точность всех материалов и отсутствие ошибок в коде или контенте.",
+      "The Site and services may be temporarily unavailable due to maintenance or outages. I do not guarantee uninterrupted operation, accuracy of all materials, or error-free code or content."
+    ],
+    [
+      "Технические логи запросов, уведомления о пасхалках и отчёты о проблемах могут храниться ограниченное время, необходимое для анализа статистики, безопасности и улучшения проекта.",
+      "Technical request logs, easter-egg notifications, and problem reports may be kept for a limited time needed for statistics, security, and project improvements."
+    ],
+    [
+      "Если вы регистрируетесь или входите через <strong>login.cyblight.org</strong>, обработка персональных данных выполняется для работы вашего аккаунта. Могут обрабатываться:",
+      "If you register or sign in via <strong>login.cyblight.org</strong>, personal data is processed to operate your account. This may include:"
+    ],
+    [
+      "Используя Сайт и связанные сервисы, вы соглашаетесь с этими Условиями. Если вы не согласны — пожалуйста, не пользуйтесь проектом. Обработка персональных данных описана в",
+      "By using the Site and related services, you agree to these Terms. If you do not agree, please do not use the project. Personal data processing is described in the"
+    ],
+    [
       "Сайт <strong>CybLight</strong> (далее — «Сайт») — это личный некоммерческий проект, посвящённый электронике, программированию, играм и экспериментам с веб-технологиями.",
       "The <strong>CybLight</strong> website (the \"Site\") is a personal non-commercial project dedicated to electronics, programming, games, and web technology experiments."
+    ],
+    [
+      "Данные аккаунта хранятся на серверной инфраструктуре проекта (в том числе через Cloudflare). Они не используются для рекламного таргетинга и не продаются третьим лицам.",
+      "Account data is stored on the project's server infrastructure (including via Cloudflare). It is not used for ad targeting and is not sold to third parties."
+    ],
+    [
+      "<strong>GitHub</strong> — хранение исходного кода и релизов Android-приложения; при скачивании APK или проверке обновлений GitHub обрабатывает запрос по своим правилам.",
+      "<strong>GitHub</strong> — source code and Android app releases; GitHub processes requests when downloading APKs or checking updates under its own policies."
+    ],
+    [
+      "Эти сведения используются только для разбора ошибок и улучшения проекта. Не указывайте в сообщении лишние персональные данные, если это не нужно для описания проблемы.",
+      "This information is used only to investigate issues and improve the project. Do not include unnecessary personal data in your message unless needed to describe the problem."
+    ],
+    [
+      "<strong>Cloudflare</strong> — CDN, защита от атак, DNS и хостинг части инфраструктуры. Может обрабатывать IP-адреса, страну и другую техническую информацию о запросах.",
+      "<strong>Cloudflare</strong> — CDN, attack protection, DNS, and hosting for part of the infrastructure. May process IP addresses, country, and other request metadata."
+    ],
+    [
+      "Большинство таких данных хранится только в вашем браузере. Cookie сессии передаются серверу при запросах к api.cyblight.org и связанным доменам для поддержания входа.",
+      "Most of this data stays in your browser only. Session cookies are sent to the server on requests to api.cyblight.org and related domains to keep you signed in."
+    ],
+    [
+      "Сайт может содержать ссылки на сторонние ресурсы (YouTube, GitHub и др.). Я не контролирую их содержание и не несу ответственности за работу внешних сервисов.",
+      "The Site may link to third-party resources (YouTube, GitHub, etc.). I do not control their content and am not responsible for external services."
+    ],
+    [
+      "Данные профиля, сообщения и настройки приватности вы указываете сами. Не размещайте в открытом доступе то, что не хотите показывать другим пользователям.",
+      "You provide your own profile data, messages, and privacy settings. Do not publish anything you do not want other users to see."
     ],
     [
       "Если вы считаете, что какие-то данные собираются некорректно или хотите задать вопрос о конфиденциальности, вы можете связаться со мной через страницу",
@@ -220,6 +328,14 @@
     [
       "Официальное приложение для Android: вход в аккаунт, друзья с онлайн-статусом,\n                    личные сообщения, 2FA и настройки безопасности.",
       "Official Android app: account sign-in, friends with online status, private messages, 2FA, and security settings."
+    ],
+    [
+      "Встроенные виджеты и CDN (например, jsDelivr для иконок технологий) могут собирать данные в соответствии с политиками соответствующих сервисов.",
+      "Embedded widgets and CDNs (e.g. jsDelivr for technology icons) may collect data under their own policies."
+    ],
+    [
+      "Регистрация на <strong>login.cyblight.org</strong> добровольна. Вы отвечаете за сохранность пароля и действия, совершённые под вашим аккаунтом.",
+      "Registration on <strong>login.cyblight.org</strong> is voluntary. You are responsible for keeping your password safe and for actions taken under your account."
     ],
     [
       "Пиши по вопросам проектов на Arduino, умного дома, эхолота, игр, сотрудничества или просто, если хочется обсудить технологии и электронику.",
@@ -234,6 +350,10 @@
       "The Site may include game elements (\"easter eggs\"), such as hidden buttons or animated objects on special pages."
     ],
     [
+      "Если вы считаете, что какие-то данные собираются некорректно или хотите задать вопрос о конфиденциальности, напишите мне через страницу",
+      "If you believe data is collected incorrectly or have a privacy question, contact me via the"
+    ],
+    [
       "При срабатывании такой пасхалки в технических целях отправляется событие на серверную часть, а затем — уведомление в мой Telegram-бот.",
       "When such an easter egg triggers, an event is sent to the server for technical purposes, then a notification to my Telegram bot."
     ],
@@ -242,8 +362,16 @@
       "<strong>Cloudflare</strong> — CDN and attack protection. May process IP addresses, country, and other technical request data."
     ],
     [
+      "Сайт может использовать <strong>localStorage</strong>, cookie и другие механизмы браузера для хранения локальных настроек, например:",
+      "The Site may use <strong>localStorage</strong>, cookies, and other browser mechanisms to store local settings, for example:"
+    ],
+    [
       "Эти данные используются только для технического обеспечения работы Сайта, защиты от злоупотреблений и простой статистики посещений.",
       "This data is used only to technically operate the Site, protect against abuse, and for simple visit statistics."
+    ],
+    [
+      "На Сайте есть форма обратной связи «Сообщить о проблеме». Если вы её отправляете, на <strong>api.cyblight.org</strong> передаются:",
+      "The Site has a \"Report a problem\" feedback form. When you submit it, the following is sent to <strong>api.cyblight.org</strong>:"
     ],
     [
       "Контакты CybLight: почта, Telegram, YouTube, GitHub и другие способы связи по проектам электроники, Arduino, умному дому и играм.",
@@ -274,6 +402,10 @@
       "Smart home control system: sensors, lighting, and scenarios. <br />\n              Uses Arduino and C++."
     ],
     [
+      "<strong>YouTube / Google</strong> — встроенные превью и плееры видео; также прокси статистики каналов через backend CybLight.",
+      "<strong>YouTube / Google</strong> — embedded video previews and players; channel statistics are proxied via the CybLight backend."
+    ],
+    [
       "По умолчанию Сайт не просит у вас регистрацию, не собирает имена, адреса электронной почты и другую явную личную информацию.",
       "By default, the Site does not ask you to register or collect names, email addresses, or other explicit personal information."
     ],
@@ -282,8 +414,16 @@
       "CybLight, website development, web development, smart home, Arduino, electronics, Rocket League, games, DIY, IT, programming"
     ],
     [
+      "Неверифицированные регистрации без подтверждённой почты могут автоматически удаляться через ограниченный срок неактивности.",
+      "Unverified registrations without a confirmed email may be automatically deleted after a limited period of inactivity."
+    ],
+    [
       "Встроенные виджеты (например, плееры YouTube) могут собирать данные в соответствии с политиками соответствующих сервисов.",
       "Embedded widgets (e.g. YouTube players) may collect data per their services' policies."
+    ],
+    [
+      "и GitHub Releases. Установка выполняется вами на свой риск; убедитесь, что скачиваете файл только с указанных источников.",
+      "page and GitHub Releases. You install it at your own risk; download only from these official sources."
     ],
     [
       "<strong>Telegram</strong> — используется для отправки уведомлений о срабатывании пасхалок в мой личный Telegram-аккаунт.",
@@ -298,12 +438,40 @@
       "Interactive programming games by CybLight: guess code output, syntax practice, algorithms, and more."
     ],
     [
+      "<strong>Cloudflare Turnstile</strong> — проверка на автоматические действия при входе в аккаунт на login.cyblight.org.",
+      "<strong>Cloudflare Turnstile</strong> — bot protection on sign-in at login.cyblight.org."
+    ],
+    [
+      "Официальное приложение CybLight для Android использует тот же аккаунт, что и login.cyblight.org. Приложение может:",
+      "The official CybLight Android app uses the same account as login.cyblight.org. The app may:"
+    ],
+    [
+      "Политика конфиденциальности CybLight: сайт, учётная запись, Android-приложение, API, cookies и сторонние сервисы.",
+      "CybLight privacy policy: website, account, Android app, API, cookies, and third-party services."
+    ],
+    [
       "Я могу время от времени обновлять эту Политику конфиденциальности. Актуальная версия всегда доступна по ссылке",
       "I may update this Privacy Policy from time to time. The current version is always available at the"
     ],
     [
       "Политика конфиденциальности сайта CybLight: какие данные собираются, как используются и как устроены пасхалки.",
       "CybLight privacy policy: what data is collected, how it is used, and how easter eggs work."
+    ],
+    [
+      "Для работы Сайта, аккаунта и сбора минимальной технической статистики могут использоваться следующие сервисы:",
+      "The following services may be used to run the Site, accounts, and minimal technical statistics:"
+    ],
+    [
+      "запросить информацию об обрабатываемых данных или их удаление через <a href=\"{{L}}/contacts/\">«Контакты»</a>.",
+      "request information about processed data or deletion via <a href=\"{{L}}/contacts/\">Contacts</a>."
+    ],
+    [
+      "При открытии страниц cyblight.org без входа в аккаунт могут автоматически обрабатываться технические данные:",
+      "When you open cyblight.org pages without signing in, the following technical data may be processed automatically:"
+    ],
+    [
+      "<strong>Web of Trust (MyWOT)</strong> — виджет оценки безопасности сайта на главной странице (если включён).",
+      "<strong>Web of Trust (MyWOT)</strong> — site trust badge widget on the home page (when enabled)."
     ],
     [
       "Если вы не хотите, чтобы техническая информация (IP, страна, браузер) попадала в логи пасхалок, вы можете:",
@@ -318,8 +486,16 @@
       "This data is stored only in your browser and is not sent to the server separately from regular requests."
     ],
     [
+      "в подвале Сайта. Продолжая пользоваться проектом после изменений, вы принимаете обновлённые Условия.",
+      "link in the Site footer. By continuing to use the project after changes, you accept the updated Terms."
+    ],
+    [
       "Для работы Сайта и сбора минимальной технической статистики могут использоваться следующие сервисы:",
       "The following services may be used to run the Site and collect minimal technical statistics:"
+    ],
+    [
+      "Используя Сайт и связанные сервисы, вы также принимаете условия обработки данных этими сервисами.",
+      "By using the Site and related services, you also accept these services' data processing terms."
     ],
     [
       "Каждая копеечка приближает меня к новым свершениям!<br />\n            Спасибо за вашу поддержку",
@@ -334,6 +510,14 @@
       "Videos about electronics, my projects, and tech reviews are published here"
     ],
     [
+      "Условия использования CybLight: сайт, учётная запись, Android-приложение и сервисы проекта.",
+      "CybLight terms of use: website, account, Android app, and project services."
+    ],
+    [
+      "Я оставляю за собой право ограничить доступ к Сайту или аккаунту при нарушении этих правил.",
+      "I reserve the right to restrict access to the Site or account if these rules are violated."
+    ],
+    [
       "Добро пожаловать на мой сайт! Здесь я делюсь своими проектами по электронике (Arduino,",
       "Welcome to my site! Here I share my electronics projects (Arduino,"
     ],
@@ -342,16 +526,56 @@
       "STM32), smart home, programming, and my own fish finder for fishing."
     ],
     [
+      "служебный тип события (например, <code>egg_click</code> или <code>theme_flux</code>).",
+      "event type (e.g. <code>egg_click</code> or <code>theme_flux</code>)."
+    ],
+    [
+      "Приложение использует тот же аккаунт CybLight и те же правила поведения, что и Сайт.",
+      "The app uses the same CybLight account and the same conduct rules as the Site."
+    ],
+    [
       "Подпишись на мои YouTube-каналы! 🎮 Эпичные моменты с игр и 🔧 обзоры технологий 😉",
       "Subscribe to my YouTube channels! 🎮 Epic gaming moments and 🔧 tech reviews 😉"
+    ],
+    [
+      "IP-адрес, браузер и техническая информация при входе и важных действиях в аккаунте.",
+      "IP address, browser, and technical information on sign-in and important account actions."
+    ],
+    [
+      "обращаться к api.cyblight.org для входа, профиля, друзей, сообщений и безопасности;",
+      "call api.cyblight.org for sign-in, profile, friends, messages, and security;"
+    ],
+    [
+      "использовать аккаунт для оскорблений, угроз или преследования других пользователей;",
+      "use an account for insults, threats, or harassment of other users;"
     ],
     [
       "Также публикую блог о технологиях и создаю интерактивные игры по программированию.",
       "I also publish a tech blog and create interactive programming games."
     ],
     [
+      "Эти данные нужны для работы Сайта, базовой статистики и защиты от злоупотреблений.",
+      "This data is needed to run the Site, provide basic statistics, and prevent abuse."
+    ],
+    [
+      "передавать техническую информацию о запросах так же, как браузер при работе с API.",
+      "send technical request metadata similar to a browser when using the API."
+    ],
+    [
+      "логин, адрес электронной почты и хеш пароля (пароль не хранится в открытом виде);",
+      "username, email address, and password hash (passwords are not stored in plain text);"
+    ],
+    [
+      "данные профиля: имя, аватар, описание и другие поля, которые вы сами указываете;",
+      "profile data: name, avatar, bio, and other fields you provide;"
+    ],
+    [
       "IP-адрес и примерное местоположение (страна) — через инфраструктуру Cloudflare;",
       "IP address and approximate location (country) — via Cloudflare infrastructure;"
+    ],
+    [
+      "данные безопасности: активные сессии, устройства, 2FA, passkeys, журнал входов;",
+      "security data: active sessions, devices, 2FA, passkeys, sign-in history;"
     ],
     [
       "Смотри на код и выбирай, что он выведет. Отлично тренирует внимание к деталям.",
@@ -364,6 +588,14 @@
     [
       "Поддержите проекты CybLight — донат через Monobank банку или по номеру карты.",
       "Support CybLight projects — donate via Monobank jar or card number."
+    ],
+    [
+      "сохранять локально данные сессии и настройки интерфейса на вашем устройстве;",
+      "store session data and UI settings locally on your device;"
+    ],
+    [
+      "распространять спам, вредоносный код или ложную информацию от имени проекта;",
+      "spread spam, malware, or false information on behalf of the project;"
     ],
     [
       "флаг о том, что пасхалка уже была найдена, чтобы не показывать её повторно.",
@@ -382,6 +614,14 @@
       "Short updates, screenshots, plans for Arduino, smart home, and fish finder."
     ],
     [
+      "<strong>MyNickname</strong> — внешний виджет-сертификат в подвале Сайта.",
+      "<strong>MyNickname</strong> — external certificate widget in the Site footer."
+    ],
+    [
+      "отключить JavaScript — часть функций Сайта при этом перестанет работать;",
+      "disable JavaScript — some Site features will stop working;"
+    ],
+    [
       "в подвале Сайта. Дата последнего обновления указана в начале документа.",
       "link in the Site footer. The last update date is shown at the top of the document."
     ],
@@ -398,6 +638,10 @@
       "CybLight professional profile on LinkedIn — skills, experience, and projects."
     ],
     [
+      "Условия могут обновляться. Актуальная версия всегда доступна по ссылке",
+      "These terms may be updated. The current version is always available via the"
+    ],
+    [
       "Выбери один из вариантов ответа. Я сразу скажу, верно это или нет.",
       "Pick one answer. I will tell you immediately if it is correct."
     ],
@@ -410,8 +654,20 @@
       "Project source code, examples, schematics, and CybLight documentation."
     ],
     [
+      "проверять наличие обновлений (в том числе через GitHub Releases);",
+      "check for updates (including via GitHub Releases);"
+    ],
+    [
+      "адрес электронной почты — только если вы указали его добровольно;",
+      "email address — only if you provide it voluntarily;"
+    ],
+    [
       "Смотри на код и отвечай, какая у него асимптотическая сложность.",
       "Look at the code and answer its asymptotic complexity."
+    ],
+    [
+      "User-Agent, тип браузера, операционная система и время отправки.",
+      "User-Agent, browser type, operating system, and submission time."
     ],
     [
       "alt=\"CybLight — проекты по электронике, умному дому и эхолоту\"",
@@ -426,12 +682,20 @@
       "what the project is for (fish finder, smart home, game, etc.);"
     ],
     [
+      "взламывать, перегружать или обходить защиту сервисов CybLight;",
+      "hack, overload, or bypass CybLight service protections;"
+    ],
+    [
       "Удобно для коротких вопросов, ссылок, скриншотов и голосовых.",
       "Good for short questions, links, screenshots, and voice messages."
     ],
     [
       "alt=\"QR-код Monobank: https://send.monobank.ua/jar/juPUWwZV8\"",
       "alt=\"Monobank QR code: https://send.monobank.ua/jar/juPUWwZV8\""
+    ],
+    [
+      "список друзей, статус «онлайн», личные сообщения и черновики;",
+      "friends list, online status, private messages, and drafts;"
     ],
     [
       "Нажми <strong>«Начать игру»</strong> в карточке нужной игры.",
@@ -454,6 +718,10 @@
       "Rocket League, Forza, and other game videos are published here"
     ],
     [
+      "автоматически собирать данные с Сайта без моего разрешения.",
+      "automatically scrape data from the Site without my permission."
+    ],
+    [
       "если есть — приложить фото / скриншоты (лучше в Telegram).",
       "if possible — attach photos / screenshots (preferably via Telegram)."
     ],
@@ -466,12 +734,20 @@
       "service event type (e.g. <code>egg_click</code>)."
     ],
     [
+      "пользоваться Сайтом без регистрации, не создавая аккаунт;",
+      "use the Site without registering or creating an account;"
+    ],
+    [
       "Управление приоритетами процессов и правила для Windows.",
       "Process priority management and rules for Windows."
     ],
     [
       "не взаимодействовать с пасхалками и скрытыми элементами;",
       "do not interact with easter eggs and hidden elements;"
+    ],
+    [
+      "выбранный язык интерфейса (<code>cyblight-lang</code>);",
+      "selected interface language (<code>cyblight-lang</code>);"
     ],
     [
       "адрес страницы, с которой вы пришли на Сайт (заголовок",
@@ -486,8 +762,16 @@
       "Official CybLight certificate on MyNickname"
     ],
     [
+      "очистить cookie и localStorage в настройках браузера;",
+      "clear cookies and localStorage in your browser settings;"
+    ],
+    [
       "Сайт на 100% сделан из вторично переработанного кода",
       "This site is 100% made from recycled code"
+    ],
+    [
+      "Вопросы по этим Условиям можно задать через страницу",
+      "Questions about these Terms can be sent via the"
     ],
     [
       "Мой основной сайт, на котором вы сейчас находитесь.",
@@ -506,6 +790,10 @@
       "Optimization and comfort for your home through smart technology."
     ],
     [
+      "cookie сессии для входа в учётную запись CybLight.",
+      "session cookies for CybLight account sign-in."
+    ],
+    [
       "настройки часового пояса и языка вашего браузера.",
       "your browser timezone and language settings."
     ],
@@ -518,12 +806,28 @@
       "browser and device info (User-Agent);"
     ],
     [
+      "или форму «Сообщить о проблеме» в подвале Сайта.",
+      "page or the \"Report a problem\" form in the Site footer."
+    ],
+    [
+      "APK распространяется через официальную страницу",
+      "The APK is distributed via the official"
+    ],
+    [
       "Технические вопросы по проектам — в приоритете",
       "Technical project questions take priority"
     ],
     [
+      "настройки приватности отдельных полей профиля;",
+      "privacy settings for individual profile fields;"
+    ],
+    [
       "информация о браузере и устройстве (заголовок",
       "browser and device information (the"
+    ],
+    [
+      "адрес страницы и источник перехода (заголовок",
+      "page URL and referral source ("
     ],
     [
       "что уже сделал и на каком шаге всё ломается;",
@@ -562,6 +866,10 @@
       "page where the easter egg triggered;"
     ],
     [
+      "URL страницы, с которой отправлен отчёт;",
+      "URL of the page from which the report was sent;"
+    ],
+    [
       "title=\"Бильярдный удар в Rocket League\"",
       "title=\"Billiards shot in Rocket League\""
     ],
@@ -594,6 +902,14 @@
       "CybLight Projects — Support projects"
     ],
     [
+      "выбранная категория и текст сообщения;",
+      "selected category and message text;"
+    ],
+    [
+      "нарушать законы или права третьих лиц;",
+      "violate laws or third-party rights;"
+    ],
+    [
       "на репозитории, демо и другие детали.",
       "links to repositories, demos, and other details."
     ],
@@ -604,6 +920,10 @@
     [
       "Если хочешь начать всё сначала — жми",
       "To start over, press"
+    ],
+    [
+      "Условия использования сайта CybLight",
+      "CybLight website terms of use"
     ],
     [
       "Эхолот для рыбалки на базе Arduino.",
@@ -626,6 +946,10 @@
       "And buy treats for inspiration"
     ],
     [
+      "локальный рекорд в играх на Сайте;",
+      "local high scores in on-site games;"
+    ],
+    [
       "Telegram канал DNLbeats с музыкой",
       "DNLbeats Telegram channel with music"
     ],
@@ -640,6 +964,18 @@
     [
       "4. Cookies и локальное хранилище",
       "4. Cookies and local storage"
+    ],
+    [
+      "Последнее обновление: 13.06.2026",
+      "Last updated: 13.06.2026"
+    ],
+    [
+      "8. Cookies и локальное хранилище",
+      "8. Cookies and local storage"
+    ],
+    [
+      "Условия использования — CybLight",
+      "Terms of Use — CybLight"
     ],
     [
       "title=\"FlatOut 2-Ностальгия...\"",
@@ -658,6 +994,10 @@
       "Hover to see the number"
     ],
     [
+      "5. Мобильное приложение Android",
+      "5. Android mobile app"
+    ],
+    [
       "3. Пасхалки и скрытые элементы",
       "3. Easter eggs and hidden elements"
     ],
@@ -670,8 +1010,28 @@
       "<h3>Telegram bot Guardian</h3>"
     ],
     [
+      "6. Пасхалки и скрытые элементы",
+      "6. Easter eggs and hidden elements"
+    ],
+    [
+      "7. Форма «Сообщить о проблеме»",
+      "7. \"Report a problem\" form"
+    ],
+    [
       "«Политика конфиденциальности»",
       "\"Privacy Policy\""
+    ],
+    [
+      "3. Данные при посещении сайта",
+      "3. Data when visiting the site"
+    ],
+    [
+      "язык и часовой пояс браузера.",
+      "browser language and time zone."
+    ],
+    [
+      "10. Как долго хранятся данные",
+      "10. How long data is stored"
     ],
     [
       "НАСТРОЙКИ КОНФИДЕНЦИАЛЬНОСТИ",
@@ -680,6 +1040,10 @@
     [
       "6. Как долго хранятся данные",
       "6. How long data is stored"
+    ],
+    [
+      "2. Область действия политики",
+      "2. Scope of this policy"
     ],
     [
       "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ",
@@ -706,12 +1070,24 @@
       "alt=\"CybLight main website\""
     ],
     [
+      "Политике конфиденциальности",
+      "Privacy Policy"
+    ],
+    [
+      "Ограничение ответственности",
+      "Limitation of liability"
+    ],
+    [
       "Нажмите, чтобы скопировать",
       "Click to copy"
     ],
     [
       "data-tooltip=\"Скопировать\"",
       "data-tooltip=\"Copy\""
+    ],
+    [
+      "4. Учётная запись CybLight",
+      "4. CybLight account"
     ],
     [
       "СайбЛайт Главная страница",
@@ -726,6 +1102,10 @@
       "Build new projects"
     ],
     [
+      "Контент и авторские права",
+      "Content and copyright"
+    ],
+    [
       "Python / JS / C-подобные",
       "Python / JS / C-like"
     ],
@@ -734,12 +1114,28 @@
       "Top up Monobank jar"
     ],
     [
+      "12. Изменения в политике",
+      "12. Policy changes"
+    ],
+    [
+      "Допустимое использование",
+      "Acceptable use"
+    ],
+    [
       "8. Изменения в политике",
       "8. Policy changes"
     ],
     [
       "Скопировать номер карты",
       "Copy card number"
+    ],
+    [
+      "11. Ваши выборы и права",
+      "11. Your choices and rights"
+    ],
+    [
+      "«Условия использования»",
+      "Terms of Use"
     ],
     [
       "Войти в учётную запись",
@@ -790,6 +1186,10 @@
       "Telegram bot Guardian"
     ],
     [
+      "Условия использования",
+      "Terms of Use"
+    ],
+    [
       "aria-label=\"Новости\"",
       "aria-label=\"News\""
     ],
@@ -804,6 +1204,14 @@
     [
       "1. Угадай вывод кода",
       "1. Guess the code output"
+    ],
+    [
+      "9. Сторонние сервисы",
+      "9. Third-party services"
+    ],
+    [
+      "Мобильное приложение",
+      "Mobile app"
     ],
     [
       "Сообщить о проблеме",
@@ -890,6 +1298,10 @@
       "Nothing to search here"
     ],
     [
+      "Изменения условий",
+      "Changes to these terms"
+    ],
+    [
       "Следующий проект",
       "Next project"
     ],
@@ -954,6 +1366,10 @@
       "Support message"
     ],
     [
+      "Общие положения",
+      "General provisions"
+    ],
+    [
       "🔧 Техно канал",
       "🔧 Tech channel"
     ],
@@ -984,6 +1400,10 @@
     [
       "Найди что надо",
       "Find what you need"
+    ],
+    [
+      "Учётная запись",
+      "Account"
     ],
     [
       "Узнать больше",
@@ -1046,6 +1466,14 @@
       "Copied!"
     ],
     [
+      "Запрещается:",
+      "You must not:"
+    ],
+    [
+      "«Приложение»",
+      "App"
+    ],
+    [
       "Мои проекты",
       "My projects"
     ],
@@ -1090,6 +1518,14 @@
       "\"Contacts\""
     ],
     [
+      "Вы можете:",
+      "You can:"
+    ],
+    [
+      "«Контакты»",
+      "Contacts"
+    ],
+    [
       "1. Кто мы",
       "1. Who we are"
     ],
@@ -1098,12 +1534,20 @@
       "on the Site."
     ],
     [
+      "1. Кто мы",
+      "1. Who we are"
+    ],
+    [
       "Контакты",
       "Contacts"
     ],
     [
       "геймплей",
       "gameplay"
+    ],
+    [
+      "Контакты",
+      "Contact"
     ],
     [
       "Главная",
@@ -1136,6 +1580,10 @@
     [
       "карьера",
       "career"
+    ],
+    [
+      "Разделы",
+      "Sections"
     ],
     [
       "Видео:",

@@ -40,5 +40,11 @@
     "expression": "(http.host eq \"cyblight.org\" or http.host eq \"www.cyblight.org\") and (http.request.uri.path eq \"/privacy\" or http.request.uri.path eq \"/privacy/\")",
     "status_code": 301,
     "target_url": "https://cyblight.org/ru/privacy/"
+  },
+  {
+    "description": "Legacy /terms to /ru/terms/",
+    "expression": "(http.host eq \"cyblight.org\" or http.host eq \"www.cyblight.org\") and (http.request.uri.path eq \"/terms\" or http.request.uri.path eq \"/terms/\")",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/terms/"
   }
 ]

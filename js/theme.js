@@ -11,7 +11,8 @@
   }
 
   // читаем сохранённую тему
-  const saved = localStorage.getItem("theme");
+  const canStore = !window.CybPrivacy || window.CybPrivacy.allows('functional');
+  const saved = canStore ? localStorage.getItem("theme") : null;
 
   if (saved === "dark") {
     body.classList.add("dark");
@@ -24,7 +25,9 @@
   btn.addEventListener("click", () => {
     const isDark = body.classList.toggle("dark");
     btn.textContent = isDark ? t("themeLight") : t("themeDark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+    if (!window.CybPrivacy || window.CybPrivacy.allows('functional')) {
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    }
     if (typeof window.trackThemeFluxToggle === "function") {
       window.trackThemeFluxToggle();
     }
@@ -50,6 +53,7 @@
   }
 
   function sendThemeFluxLog(userName, extra = {}) {
+    if (window.CybPrivacy && !window.CybPrivacy.allows('diagnostic')) return;
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
     fetch(LOG_URL, {
       method: "POST",

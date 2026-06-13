@@ -14,6 +14,7 @@ const PAGES = [
   'downloads/index.html',
   'donate/index.html',
   'privacy/index.html',
+  'terms/index.html',
 ];
 
 function pageUrl(locale, pagePath, origin) {

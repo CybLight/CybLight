@@ -164,6 +164,11 @@ async function reportApiCall(options) {
       warning.style.display = 'block';
       return;
     }
+    if (window.CybPrivacy && !window.CybPrivacy.allows('diagnostic')) {
+      warning.textContent = t('privacySettingsDiagnosticBlocked');
+      warning.style.display = 'block';
+      return;
+    }
     if (!category) {
       warning.textContent = t('reportNeedCategory');
       warning.style.display = 'block';

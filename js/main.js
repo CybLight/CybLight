@@ -23,6 +23,7 @@ function loginUrl(path) {
 }
 
 async function loadYoutubeStats() {
+  if (window.CybPrivacy && !window.CybPrivacy.allows('usage')) return;
   // Основной канал
   try {
     const res = await fetch(`${API_BASE}/api/youtube/stats?channel=main`);
@@ -70,6 +71,7 @@ async function loadYoutubeStats() {
 
 // Счётчик пользователей онлайн в шапке
 async function loadOnlineCount() {
+  if (window.CybPrivacy && !window.CybPrivacy.allows('usage')) return;
   const wrap = document.getElementById('headerOnline');
   const countEl = document.getElementById('headerOnlineCount');
   if (!wrap || !countEl) return;
@@ -90,6 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
   loadYoutubeStats();
   loadOnlineCount();
   setInterval(loadOnlineCount, 60000);
+});
+
+window.addEventListener('cyblight-privacy-change', () => {
+  loadYoutubeStats();
+  loadOnlineCount();
 });
 
 (async () => {
@@ -220,6 +227,12 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Поддержать развитие CybLight — донат, помощь проекту',
       tags: ['донат', 'donate', 'поддержка'],
       url: L + '/donate/',
+    },
+    {
+      title: 'Условия использования',
+      desc: 'Условия использования сайта CybLight и связанных сервисов',
+      tags: ['условия', 'terms', 'правила'],
+      url: L + '/terms/',
     },
     {
       title: 'Политика конфиденциальности',

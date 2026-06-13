@@ -5,6 +5,8 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { privacyTriples } from "./privacy-locale-triples.mjs";
+import { termsTriples } from "./terms-locale-triples.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -63,6 +65,34 @@ const ukJs = {
   gameNoQuestions: "Для обраної складності поки немає питань 🙃",
   gamePickAnswer: "Спочатку обери відповідь!",
   gameError: "Помилка",
+  privacySettingsTitle: "Налаштування конфіденційності",
+  privacySettingsClose: "Закрити",
+  privacySettingsIntroBefore: "Ми використовуємо cookie та подібні технології для роботи сайту та покращення вашого досвіду. Докладніше — у розділі ",
+  privacySettingsIntroLink: "«Cookies та локальне сховище»",
+  privacySettingsIntroAfter: " політики конфіденційності.",
+  privacySettingsAllowAll: "Дозволити всі cookie",
+  privacySettingsRejectAll: "Відхилити всі cookie",
+  privacySettingsNoteLabel: "ПРИМІТКА.",
+  privacySettingsNote: "CybLight не продає ваші дані та не використовує їх для таргетованої реклами.",
+  privacySettingsPersonal: "Персональні налаштування",
+  privacySettingsNecessary: "Обовʼязково необхідні cookie",
+  privacySettingsNecessaryDesc: "Потрібні для базової роботи сайту, безпеки Cloudflare, входу в акаунт CybLight і збереження цих налаштувань. Їх не можна вимкнути.",
+  privacySettingsFunctional: "Дозволити функціональні cookie",
+  privacySettingsFunctionalDesc: "Зберігають обрану тему, мову інтерфейсу, локальні рекорди в іграх та інші налаштування для зручності.",
+  privacySettingsDiagnostic: "Надсилати діагностичні дані",
+  privacySettingsDiagnosticDesc: "Дозволяє надсилати звіти «Повідомити про проблему» та технічні події (наприклад, спрацювання пасхалок) для виправлення помилок.",
+  privacySettingsUsage: "Надсилати дані про використання",
+  privacySettingsUsageDesc: "Включає лічильник користувачів онлайн, статистику YouTube-каналів, вбудовані відео та сторонні віджети (MyWOT, MyNickname).",
+  privacySettingsConfirm: "Підтвердити",
+  privacySettingsDiagnosticBlocked: "Надсилання вимкнено в налаштуваннях конфіденційності. Увімкніть «Надсилати діагностичні дані».",
+  privacyBannerP1: "Наш сайт використовує cookie та подібні технології для роботи та покращення вашого досвіду. Деякі необхідні для роботи сайту, інші допомагають зберігати ваші налаштування.",
+  privacyBannerP2: " Якщо натиснути «Прийняти», будуть збережені всі cookie. Якщо «Відхилити» — будуть заблоковані всі необовʼязкові cookie.",
+  privacyBannerP3Before: " Докладніше — у розділі ",
+  privacyBannerP3And: " та в ",
+  privacyBannerPolicyLink: "«Політиці конфіденційності»",
+  privacyBannerAccept: "Прийняти",
+  privacyBannerReject: "Відхилити",
+  privacyBannerConfigure: "Налаштувати",
 };
 
 const enJs = {
@@ -114,6 +144,34 @@ const enJs = {
   gameNoQuestions: "No questions for this difficulty yet 🙃",
   gamePickAnswer: "Pick an answer first!",
   gameError: "Error",
+  privacySettingsTitle: "Privacy settings",
+  privacySettingsClose: "Close",
+  privacySettingsIntroBefore: "We use cookies and similar technologies to run the site and improve your experience. Learn more in the ",
+  privacySettingsIntroLink: "Cookies and local storage",
+  privacySettingsIntroAfter: " section of the privacy policy.",
+  privacySettingsAllowAll: "Allow all cookies",
+  privacySettingsRejectAll: "Reject all cookies",
+  privacySettingsNoteLabel: "NOTE.",
+  privacySettingsNote: "CybLight does not sell your data or use it for targeted advertising.",
+  privacySettingsPersonal: "Personal settings",
+  privacySettingsNecessary: "Strictly necessary cookies",
+  privacySettingsNecessaryDesc: "Required for basic site operation, Cloudflare security, CybLight account sign-in, and saving these settings. They cannot be turned off.",
+  privacySettingsFunctional: "Allow functional cookies",
+  privacySettingsFunctionalDesc: "Save your theme, interface language, local game scores, and other preferences for convenience.",
+  privacySettingsDiagnostic: "Send diagnostic data",
+  privacySettingsDiagnosticDesc: "Allows sending \"Report a problem\" messages and technical events (for example, easter egg triggers) to fix issues.",
+  privacySettingsUsage: "Send usage data",
+  privacySettingsUsageDesc: "Includes the online users counter, YouTube channel statistics, embedded videos, and third-party widgets (MyWOT, MyNickname).",
+  privacySettingsConfirm: "Confirm",
+  privacySettingsDiagnosticBlocked: "Sending is disabled in privacy settings. Enable \"Send diagnostic data\".",
+  privacyBannerP1: "Our site uses cookies and similar technologies to run the site and improve your experience. Some are required; others help save your preferences.",
+  privacyBannerP2: " If you click Accept, all cookies will be saved. If you click Reject, all non-essential cookies will be blocked.",
+  privacyBannerP3Before: " Learn more in the ",
+  privacyBannerP3And: " and ",
+  privacyBannerPolicyLink: "Privacy Policy",
+  privacyBannerAccept: "Accept",
+  privacyBannerReject: "Reject",
+  privacyBannerConfigure: "Customize",
   searchIndex: [
     {
       title: "Home",
@@ -1086,6 +1144,8 @@ const triples = [
     "<h3>Telegram-бот Guardian</h3>",
     "<h3>Telegram bot Guardian</h3>",
   ],
+  ...privacyTriples,
+  ...termsTriples,
 ];
 
 function buildLocale(code, js, langCurrent, replacements) {

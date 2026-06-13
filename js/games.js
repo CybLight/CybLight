@@ -70,6 +70,10 @@ let scoreEl,
 
 // --- служебные функции ---
 
+function canUseFunctional() {
+  return !!(window.CybPrivacy && window.CybPrivacy.allows("functional"));
+}
+
 function shuffle(array) {
   // Фишер–Йетс, честная рандомизация
   for (let i = array.length - 1; i > 0; i--) {
@@ -79,12 +83,14 @@ function shuffle(array) {
 }
 
 function loadBestScore() {
+  if (!canUseFunctional()) return;
   const stored = localStorage.getItem("cyblight_quiz_highscore");
   bestScore = stored ? Number(stored) : 0;
   if (bestScoreEl) bestScoreEl.textContent = bestScore;
 }
 
 function saveBestScore() {
+  if (!canUseFunctional()) return;
   localStorage.setItem("cyblight_quiz_highscore", String(bestScore));
 }
 

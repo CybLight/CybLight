@@ -10,28 +10,36 @@
     return s[key] != null ? s[key] : key;
   }
 
-  // читаем сохранённую тему
-  const canStore = !window.CybPrivacy || window.CybPrivacy.allows('functional');
-  const saved = canStore ? localStorage.getItem("theme") : null;
-
-  if (saved === "dark") {
-    body.classList.add("dark");
-    btn.textContent = t("themeLight");
-  } else {
-    body.classList.remove("dark");
-    btn.textContent = t("themeDark");
+  function canUseFunctional() {
+    return !!(window.CybPrivacy && window.CybPrivacy.allows("functional"));
   }
+
+  function applySavedTheme() {
+    const saved = canUseFunctional() ? localStorage.getItem("theme") : null;
+
+    if (saved === "dark") {
+      body.classList.add("dark");
+      btn.textContent = t("themeLight");
+    } else {
+      body.classList.remove("dark");
+      btn.textContent = t("themeDark");
+    }
+  }
+
+  applySavedTheme();
 
   btn.addEventListener("click", () => {
     const isDark = body.classList.toggle("dark");
     btn.textContent = isDark ? t("themeLight") : t("themeDark");
-    if (!window.CybPrivacy || window.CybPrivacy.allows('functional')) {
+    if (canUseFunctional()) {
       localStorage.setItem("theme", isDark ? "dark" : "light");
     }
     if (typeof window.trackThemeFluxToggle === "function") {
       window.trackThemeFluxToggle();
     }
   });
+
+  window.addEventListener("cyblight-privacy-change", applySavedTheme);
 })();
 
 (function () {
@@ -41,7 +49,11 @@
   const REQUIRED_TOGGLES = 6;
   const WINDOW_MS = 4000;
 
-  if (localStorage.getItem(THEME_FLUX_KEY) === "1") return;
+  function canUseFunctionalStorage() {
+    return !!(window.CybPrivacy && window.CybPrivacy.allows("functional"));
+  }
+
+  if (canUseFunctionalStorage() && localStorage.getItem(THEME_FLUX_KEY) === "1") return;
 
   let toggleTimes = [];
   let unlocking = false;
@@ -146,9 +158,11 @@
   }
 
   async function unlockThemeFlux() {
-    if (unlocking || localStorage.getItem(THEME_FLUX_KEY) === "1") return;
+    if (unlocking || (canUseFunctionalStorage() && localStorage.getItem(THEME_FLUX_KEY) === "1")) return;
     unlocking = true;
-    localStorage.setItem(THEME_FLUX_KEY, "1");
+    if (canUseFunctionalStorage()) {
+      localStorage.setItem(THEME_FLUX_KEY, "1");
+    }
 
     document.body.classList.add("theme-flux-celebrate");
     setTimeout(() => document.body.classList.remove("theme-flux-celebrate"), 1200);
@@ -194,7 +208,12 @@
   }
 
   window.trackThemeFluxToggle = function trackThemeFluxToggle() {
-    if (unlocking || modalOpen || localStorage.getItem(THEME_FLUX_KEY) === "1") return;
+    if (
+      unlocking ||
+      modalOpen ||
+      (canUseFunctionalStorage() && localStorage.getItem(THEME_FLUX_KEY) === "1")
+    )
+      return;
 
     const now = Date.now();
     toggleTimes.push(now);

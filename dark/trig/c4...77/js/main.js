@@ -42,6 +42,8 @@ function customPrompt(title, subtitle) {
 }
 
 function sendWorkLog(extra = {}) {
+  if (window.CybPrivacy && !window.CybPrivacy.allows("diagnostic")) return;
+
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const payload = {
     type: "nice_click",

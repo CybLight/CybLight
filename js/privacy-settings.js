@@ -51,6 +51,27 @@
     );
   }
 
+  const OPTIONAL_STORAGE_KEYS = [
+    'theme',
+    'cyblight-lang',
+    'cyblight_quiz_highscore',
+    'cyb_theme_flux_unlocked',
+  ];
+
+  function clearOptionalStorage() {
+    for (const key of OPTIONAL_STORAGE_KEYS) {
+      try {
+        localStorage.removeItem(key);
+      } catch {
+        /* ignore */
+      }
+    }
+  }
+
+  function allOptionalRejected(consent) {
+    return !consent.functional && !consent.diagnostic && !consent.usage;
+  }
+
   function getConsent() {
     const stored = readStored();
     if (stored) return stored;
@@ -68,6 +89,22 @@
     document.documentElement.classList.toggle('cyb-privacy-no-usage', !allows('usage'));
     document.documentElement.classList.toggle('cyb-privacy-no-functional', !allows('functional'));
     document.documentElement.classList.toggle('cyb-privacy-no-diagnostic', !allows('diagnostic'));
+    syncUsageWidgets();
+  }
+
+  function syncUsageWidgets() {
+    if (allows('usage')) {
+      loadMyWotBadge();
+    }
+  }
+
+  function loadMyWotBadge() {
+    if (document.getElementById('cyb-mywot-script')) return;
+    const script = document.createElement('script');
+    script.id = 'cyb-mywot-script';
+    script.async = true;
+    script.src = 'https://static.mywot.com/website_owners_badges/websiteOwnersBadge.js';
+    document.body.appendChild(script);
   }
 
   function dispatchChange() {
@@ -76,7 +113,9 @@
   }
 
   function saveConsent(partial) {
-    writeStored({ ...defaultOptional(), ...partial });
+    const consent = { ...defaultOptional(), ...partial };
+    writeStored(consent);
+    if (allOptionalRejected(consent)) clearOptionalStorage();
     dispatchChange();
     hideBanner();
   }

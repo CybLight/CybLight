@@ -22,8 +22,22 @@ function loginUrl(path) {
   return `https://login.cyblight.org/${locale}/${clean}`;
 }
 
+function clearUsageStats() {
+  const wrap = document.getElementById('headerOnline');
+  if (wrap) wrap.hidden = true;
+
+  const resetText = t('unavailable');
+  ['yt-subs', 'yt-videos', 'yt-tech-subs', 'yt-tech-videos'].forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = resetText;
+  });
+}
+
 async function loadYoutubeStats() {
-  if (window.CybPrivacy && !window.CybPrivacy.allows('usage')) return;
+  if (window.CybPrivacy && !window.CybPrivacy.allows('usage')) {
+    clearUsageStats();
+    return;
+  }
   // Основной канал
   try {
     const res = await fetch(`${API_BASE}/api/youtube/stats?channel=main`);
@@ -69,9 +83,11 @@ async function loadYoutubeStats() {
   }
 }
 
-// Счётчик пользователей онлайн в шапке
 async function loadOnlineCount() {
-  if (window.CybPrivacy && !window.CybPrivacy.allows('usage')) return;
+  if (window.CybPrivacy && !window.CybPrivacy.allows('usage')) {
+    clearUsageStats();
+    return;
+  }
   const wrap = document.getElementById('headerOnline');
   const countEl = document.getElementById('headerOnlineCount');
   if (!wrap || !countEl) return;
@@ -95,6 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('cyblight-privacy-change', () => {
+  if (window.CybPrivacy && !window.CybPrivacy.allows('usage')) {
+    clearUsageStats();
+    return;
+  }
   loadYoutubeStats();
   loadOnlineCount();
 });

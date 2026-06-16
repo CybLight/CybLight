@@ -342,6 +342,10 @@
       "Official Android app: account sign-in, friends with online status, private messages, 2FA, and security settings."
     ],
     [
+      "Скачайте официальное мобильное приложение CybLight для Android: вход в аккаунт, друзья, сообщения и безопасность. Загрузка APK с GitHub Releases.",
+      "Download the official CybLight mobile app for Android: account sign-in, friends, messages, and security. APK via GitHub Releases."
+    ],
+    [
       "Встроенные виджеты и CDN (например, jsDelivr для иконок технологий) могут собирать данные в соответствии с политиками соответствующих сервисов.",
       "Embedded widgets and CDNs (e.g. jsDelivr for technology icons) may collect data under their own policies."
     ],
@@ -368,10 +372,6 @@
     [
       "При срабатывании такой пасхалки в технических целях отправляется событие на серверную часть, а затем — уведомление в мой Telegram-бот.",
       "When such an easter egg triggers, an event is sent to the server for technical purposes, then a notification to my Telegram bot."
-    ],
-    [
-      "Скачайте официальное мобильное приложение CybLight для Android: вход в аккаунт, друзья, сообщения и безопасность. Прямая загрузка APK.",
-      "Download the official CybLight mobile app for Android: account sign-in, friends, messages, and security. Direct APK download."
     ],
     [
       "<strong>Cloudflare</strong> — CDN и защита от атак. Может обрабатывать IP-адреса, страну и другую техническую информацию о запросах.",
@@ -564,10 +564,6 @@
     [
       "служебный тип события (например, <code>egg_click</code> или <code>theme_flux</code>).",
       "event type (e.g. <code>egg_click</code> or <code>theme_flux</code>)."
-    ],
-    [
-      "Прямой файл на cyblight.org пока недоступен — используйте кнопку «Скачать с GitHub».",
-      "The direct file on cyblight.org is not available yet — use the \"Download from GitHub\" button."
     ],
     [
       "Приложение использует тот же аккаунт CybLight и те же правила поведения, что и Сайт.",
@@ -1018,6 +1014,10 @@
       "Programming games — CybLight"
     ],
     [
+      "Скачайте APK с GitHub кнопкой выше.",
+      "Download the APK using the GitHub button above."
+    ],
+    [
       "выбранная светлая или тёмная тема;",
       "selected light or dark theme;"
     ],
@@ -1194,10 +1194,6 @@
       "data-tooltip=\"Copy\""
     ],
     [
-      "Скачайте APK-кнопкой выше.",
-      "Download the APK using the button above."
-    ],
-    [
       "Откройте файл на телефоне.",
       "Open the file on your phone."
     ],
@@ -1368,10 +1364,6 @@
     [
       "Написать в Telegram",
       "Message on Telegram"
-    ],
-    [
-      "Скачать APK с сайта",
-      "Download APK from site"
     ],
     [
       "Мои YouTube-каналы",

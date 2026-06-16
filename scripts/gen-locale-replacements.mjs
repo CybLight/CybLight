@@ -352,9 +352,9 @@ const downloadsTriples = [
     "CybLight — Mobile app for Android",
   ],
   [
-    "Скачайте официальное мобильное приложение CybLight для Android: вход в аккаунт, друзья, сообщения и безопасность. Прямая загрузка APK.",
-    "Завантажте офіційний мобільний додаток CybLight для Android: вхід в обліковий запис, друзі, повідомлення та безпека. Пряме завантаження APK.",
-    "Download the official CybLight mobile app for Android: account sign-in, friends, messages, and security. Direct APK download.",
+    "Скачайте официальное мобильное приложение CybLight для Android: вход в аккаунт, друзья, сообщения и безопасность. Загрузка APK с GitHub Releases.",
+    "Завантажте офіційний мобільний додаток CybLight для Android: вхід в обліковий запис, друзі, повідомлення та безпека. Завантаження APK з GitHub Releases.",
+    "Download the official CybLight mobile app for Android: account sign-in, friends, messages, and security. APK via GitHub Releases.",
   ],
   [
     "CybLight — Приложение",
@@ -373,14 +373,8 @@ const downloadsTriples = [
   ],
   ["Версия", "Версія", "Version"],
   ["Скачать", "Завантажити", "Download"],
-  ["Скачать APK с сайта", "Завантажити APK з сайту", "Download APK from site"],
   ["Скачать с GitHub", "Завантажити з GitHub", "Download from GitHub"],
   ["Страница релизов", "Сторінка релізів", "Releases page"],
-  [
-    "Прямой файл на cyblight.org пока недоступен — используйте кнопку «Скачать с GitHub».",
-    "Прямий файл на cyblight.org поки недоступний — скористайтеся кнопкою «Завантажити з GitHub».",
-    'The direct file on cyblight.org is not available yet — use the "Download from GitHub" button.',
-  ],
   ["Возможности", "Можливості", "Features"],
   [
     "Вход через <strong>login.cyblight.org</strong> (логин, пароль, Turnstile)",
@@ -419,9 +413,9 @@ const downloadsTriples = [
   ],
   ["Установка", "Встановлення", "Installation"],
   [
-    "Скачайте APK-кнопкой выше.",
-    "Завантажте APK кнопкою вище.",
-    "Download the APK using the button above.",
+    "Скачайте APK с GitHub кнопкой выше.",
+    "Завантажте APK кнопкою GitHub вище.",
+    "Download the APK using the GitHub button above.",
   ],
   [
     "Откройте файл на телефоне.",

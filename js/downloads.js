@@ -1,15 +1,12 @@
 (function () {
-  const LOCAL_APK = "/downloads/cyblight-v0.7.0.apk";
   const GITHUB_RELEASES =
     "https://github.com/CybLight/CybLight-Android/releases/latest";
   const GITHUB_API =
     "https://api.github.com/repos/CybLight/CybLight-Android/releases/latest";
 
   async function init() {
-    const directBtn = document.getElementById("downloadApkBtn");
     const githubApkBtn = document.getElementById("downloadGithubApkBtn");
     const githubLink = document.getElementById("downloadGithubLink");
-    const directNote = document.getElementById("downloadDirectNote");
     const versionBadge = document.getElementById("appVersionBadge");
 
     if (githubLink) githubLink.href = GITHUB_RELEASES;
@@ -34,25 +31,6 @@
     } catch (_) {
       /* GitHub API optional */
     }
-
-    let directAvailable = false;
-    try {
-      const head = await fetch(LOCAL_APK, { method: "HEAD" });
-      directAvailable = head.ok;
-    } catch (_) {
-      directAvailable = false;
-    }
-
-    if (directBtn) {
-      directBtn.href = LOCAL_APK;
-      if (!directAvailable) {
-        directBtn.classList.add("is-disabled");
-        directBtn.setAttribute("aria-disabled", "true");
-        directBtn.removeAttribute("download");
-      }
-    }
-
-    if (directNote) directNote.hidden = directAvailable;
   }
 
   if (document.readyState === "loading") {

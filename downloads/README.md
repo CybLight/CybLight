@@ -1,15 +1,13 @@
 # APK downloads
 
-Place the signed release APK here for direct download from cyblight.org (deploy separately; APK files are not stored in git because GitHub rejects files over 100 MB):
+Release APKs are published on [GitHub Releases](https://github.com/CybLight/CybLight-Android/releases) and linked from the downloads page.
 
-`cyblight-v0.7.0.apk`
+APK files are not stored in this git repo (GitHub rejects files over 100 MB).
 
 After publishing a new app version:
 
 1. Bump `versionName` in `CybLight-Android/app/build.gradle.kts`
-2. Build release APK
-3. Copy/rename the file to match the version above
-4. Update `LOCAL_APK` in `js/downloads.js` and links in `templates/downloads/index.html` if the filename changed
-5. Run `npm run build` in the CybLight repo
+2. Build release APK and upload to GitHub Releases
+3. Run `npm run build` in the CybLight repo if page copy changed
 
-GitHub Releases remain the fallback when the file is not uploaded here yet.
+The downloads page fetches the latest release URL and version from the GitHub API automatically.

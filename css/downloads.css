@@ -278,10 +278,10 @@ body:not(.dark) .downloads-page .downloads-steps {
 .downloads-page .downloads-buttons a.downloads-btn--primary:visited,
 .downloads-page .downloads-buttons a.downloads-btn--primary:hover,
 .downloads-page .downloads-buttons a.downloads-btn--primary:focus-visible,
-#downloadApkBtn,
-#downloadApkBtn:link,
-#downloadApkBtn:visited,
-#downloadApkBtn:hover {
+#downloadGithubApkBtn,
+#downloadGithubApkBtn:link,
+#downloadGithubApkBtn:visited,
+#downloadGithubApkBtn:hover {
   background: linear-gradient(135deg, #e56b00 0%, #c45a00 100%) !important;
   border: 1px solid transparent !important;
   color: #ffffff !important;
@@ -292,11 +292,7 @@ body:not(.dark) .downloads-page .downloads-steps {
 .downloads-page .downloads-buttons a.downloads-btn--secondary:link,
 .downloads-page .downloads-buttons a.downloads-btn--secondary:visited,
 .downloads-page .downloads-buttons a.downloads-btn--secondary:hover,
-.downloads-page .downloads-buttons a.downloads-btn--secondary:focus-visible,
-#downloadGithubApkBtn,
-#downloadGithubApkBtn:link,
-#downloadGithubApkBtn:visited,
-#downloadGithubApkBtn:hover {
+.downloads-page .downloads-buttons a.downloads-btn--secondary:focus-visible {
   background: #15803d !important;
   border: 1px solid #14532d !important;
   color: #ffffff !important;

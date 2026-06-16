@@ -1,0 +1,837 @@
+/* report modal (стиль как на login.cyblight.org) */
+.cyb-report-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.cyb-report-modal.is-open {
+  display: block;
+}
+
+.cyb-report-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 4, 12, 0.72);
+  backdrop-filter: blur(5px);
+}
+
+.cyb-report-modal.is-open .cyb-report-modal__backdrop {
+  animation: reportBackdropIn 0.22s ease;
+}
+
+.cyb-report-modal__card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(560px, calc(100vw - 28px));
+  max-height: 90vh;
+  overflow-y: auto;
+  background:
+    radial-gradient(
+      120% 90% at 0% 0%,
+      rgba(255, 127, 39, 0.14) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      120% 90% at 100% 100%,
+      rgba(96, 165, 250, 0.12) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #1a2138 0%, #141a2e 100%);
+  border: 1px solid rgba(255, 145, 64, 0.35);
+  border-radius: 18px;
+  padding: 22px 24px 24px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+    0 0 22px rgba(255, 127, 39, 0.18),
+    0 24px 70px rgba(0, 0, 0, 0.7);
+}
+
+.cyb-report-modal.is-open .cyb-report-modal__card {
+  animation: reportCardIn 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cyb-report-modal__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.cyb-report-modal__icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(255, 90, 90, 0.35));
+}
+
+.cyb-report-modal__title {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: rgba(231, 236, 255, 0.95);
+  text-align: left;
+}
+
+.cyb-report-modal__subtitle {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(231, 236, 255, 0.55);
+  text-align: left;
+}
+
+.cyb-report-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cyb-report-modal__form .field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.cyb-report-modal__form .label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: rgba(231, 236, 255, 0.88);
+}
+
+.cyb-report-modal__form .input,
+.cyb-report-modal__form textarea {
+  padding: 11px 13px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(231, 236, 255, 0.92);
+  font-size: 14px;
+  line-height: 1.4;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cyb-report-modal__form .input::placeholder,
+.cyb-report-modal__form textarea::placeholder {
+  color: rgba(231, 236, 255, 0.35);
+}
+
+.cyb-report-modal__form .input:focus,
+.cyb-report-modal__form textarea:focus {
+  outline: none;
+  border-color: rgba(255, 127, 39, 0.65);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(255, 127, 39, 0.15);
+}
+
+.cyb-report-modal__form textarea {
+  font-family: inherit;
+  resize: vertical;
+  min-height: 110px;
+}
+
+.cyb-report-modal__form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23ff7f27' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.cyb-report-modal__form select option {
+  background-color: #141a2e;
+  color: rgba(231, 236, 255, 0.92);
+}
+
+.cyb-report-modal__actions {
+  margin-top: 6px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.cyb-report-modal__actions .btn {
+  width: auto;
+  min-width: 120px;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+.cyb-report-modal__actions .btn:active {
+  transform: scale(0.98);
+}
+
+.cyb-report-modal__actions .btn-primary {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 127, 39, 0.95) 0%,
+    rgba(245, 158, 11, 0.9) 100%
+  );
+  color: #fff;
+  border: 1px solid rgba(255, 160, 80, 0.45);
+  box-shadow: 0 4px 16px rgba(255, 127, 39, 0.35);
+}
+
+.cyb-report-modal__actions .btn-primary:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 6px 22px rgba(255, 127, 39, 0.45);
+}
+
+.cyb-report-modal__actions .btn-outline {
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(231, 236, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cyb-report-modal__actions .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.cyb-report-modal__form .msg {
+  margin-top: 4px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.cyb-report-modal__form .msg--warn {
+  color: #ffd8de;
+  background: rgba(255, 75, 92, 0.16);
+  border: 1px solid rgba(255, 75, 92, 0.45);
+}
+
+.cyb-report-modal__form .msg--ok {
+  color: #d7ffe6;
+  background: rgba(16, 185, 129, 0.18);
+  border: 1px solid rgba(16, 185, 129, 0.5);
+}
+
+@keyframes reportBackdropIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes reportCardIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (max-width: 520px) {
+  .cyb-report-modal__card {
+    width: calc(100vw - 20px);
+    max-height: calc(100vh - 40px);
+    padding: 16px 16px 18px;
+  }
+
+  .cyb-report-modal__title {
+    font-size: 18px;
+  }
+
+  .cyb-report-modal__actions {
+    flex-direction: column-reverse;
+  }
+
+  .cyb-report-modal__actions .btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* privacy settings modal */
+.cyb-privacy-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 10000;
+}
+
+.cyb-privacy-modal.is-open {
+  display: block;
+}
+
+body.cyb-privacy-modal-open {
+  overflow: hidden;
+}
+
+.cyb-privacy-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 4, 12, 0.72);
+  backdrop-filter: blur(5px);
+}
+
+.cyb-privacy-modal__card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(640px, calc(100vw - 28px));
+  max-height: min(90vh, 860px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(255, 127, 39, 0.28);
+  border-radius: 16px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+    0 18px 50px rgba(0, 0, 0, 0.35);
+  text-align: left;
+}
+
+body.dark .cyb-privacy-modal__card {
+  background: linear-gradient(180deg, #151b2e 0%, #101626 100%);
+  border-color: rgba(255, 155, 79, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 18px 50px rgba(0, 0, 0, 0.75);
+}
+
+.cyb-privacy-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  background: linear-gradient(90deg, #ff7f27 0%, #ff9b4f 100%);
+  color: #fff;
+}
+
+.cyb-privacy-modal__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.cyb-privacy-modal__close {
+  border: 0;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.cyb-privacy-modal__close:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.cyb-privacy-modal__body {
+  padding: 20px 22px 24px;
+  overflow-y: auto;
+}
+
+.cyb-privacy-modal__intro {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #1f2937;
+}
+
+body.dark .cyb-privacy-modal__intro {
+  color: #e5ecff;
+}
+
+.cyb-privacy-modal__intro a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+body.dark .cyb-privacy-modal__intro a {
+  color: #93c5fd;
+}
+
+.cyb-privacy-modal__quick {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.cyb-privacy-modal__btn {
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.cyb-privacy-modal__btn--primary {
+  background: linear-gradient(180deg, #ff8f3f 0%, #ff7f27 100%);
+  color: #fff;
+  border-color: rgba(255, 127, 39, 0.5);
+}
+
+.cyb-privacy-modal__btn--primary:hover {
+  filter: brightness(1.05);
+}
+
+.cyb-privacy-modal__btn--outline {
+  background: transparent;
+  color: #ff7f27;
+  border-color: rgba(255, 127, 39, 0.45);
+}
+
+body.dark .cyb-privacy-modal__btn--outline {
+  color: #ff9b4f;
+  border-color: rgba(255, 155, 79, 0.45);
+}
+
+.cyb-privacy-modal__btn--outline:hover {
+  background: rgba(255, 127, 39, 0.08);
+}
+
+.cyb-privacy-modal__note {
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+body.dark .cyb-privacy-modal__note {
+  color: #cbd5e1;
+}
+
+.cyb-privacy-modal__section-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+body.dark .cyb-privacy-modal__section-title {
+  color: #f3f4f6;
+}
+
+.cyb-privacy-modal__divider {
+  border: 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  margin: 0 0 16px;
+}
+
+.cyb-privacy-option {
+  margin-bottom: 18px;
+}
+
+.cyb-privacy-option__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  cursor: pointer;
+}
+
+body.dark .cyb-privacy-option__head {
+  color: #f3f4f6;
+}
+
+.cyb-privacy-option__head input {
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+  accent-color: #ff7f27;
+  flex-shrink: 0;
+}
+
+.cyb-privacy-option--locked .cyb-privacy-option__head {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.cyb-privacy-option__desc {
+  margin: 8px 0 0 26px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+body.dark .cyb-privacy-option__desc {
+  color: #94a3b8;
+}
+
+.cyb-privacy-modal__footer {
+  margin-top: 8px;
+}
+
+.cyb-privacy-no-usage .wot-badge_dark,
+.cyb-privacy-no-usage #wot-badge2,
+.cyb-privacy-no-usage .footer-made-with-love {
+  display: none !important;
+}
+
+.cyb-privacy-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998;
+  display: none;
+  padding: 0 16px 16px;
+  pointer-events: none;
+}
+
+.cyb-privacy-banner.is-visible {
+  display: block;
+  pointer-events: auto;
+}
+
+.cyb-privacy-banner__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 22px 18px;
+  border-radius: 14px 14px 0 0;
+  background: #ffffff;
+  border: 1px solid rgba(255, 127, 39, 0.28);
+  border-bottom: 0;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.18);
+  text-align: left;
+}
+
+body.dark .cyb-privacy-banner__inner {
+  background: linear-gradient(180deg, #151b2e 0%, #101626 100%);
+  border-color: rgba(255, 155, 79, 0.35);
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.55);
+}
+
+.cyb-privacy-banner__title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+body.dark .cyb-privacy-banner__title {
+  color: #f3f4f6;
+}
+
+.cyb-privacy-banner__text {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #374151;
+}
+
+body.dark .cyb-privacy-banner__text {
+  color: #cbd5e1;
+}
+
+.cyb-privacy-banner__text a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+body.dark .cyb-privacy-banner__text a {
+  color: #93c5fd;
+}
+
+.cyb-privacy-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+}
+
+.cyb-privacy-banner__btn {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cyb-privacy-banner__btn--primary {
+  background: linear-gradient(180deg, #ff8f3f 0%, #ff7f27 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(255, 127, 39, 0.35);
+}
+
+.cyb-privacy-banner__btn--primary:hover {
+  filter: brightness(1.05);
+}
+
+.cyb-privacy-banner__btn--link {
+  background: transparent;
+  color: #ff7f27;
+  padding: 10px 4px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body.dark .cyb-privacy-banner__btn--link {
+  color: #ff9b4f;
+}
+
+body.cyb-privacy-banner-open .scroll-top-btn {
+  bottom: calc(16px + var(--cyb-privacy-banner-height, 180px));
+}
+
+@media (max-width: 640px) {
+  .cyb-privacy-banner {
+    padding: 0 0 0;
+  }
+
+  .cyb-privacy-banner__inner {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 16px;
+  }
+
+  .cyb-privacy-banner__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cyb-privacy-banner__btn--primary {
+    width: 100%;
+  }
+
+  .cyb-privacy-banner__btn--link {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .cyb-privacy-modal__quick {
+    grid-template-columns: 1fr;
+  }
+
+  .cyb-privacy-modal__header {
+    padding: 14px 16px;
+  }
+
+  .cyb-privacy-modal__body {
+    padding: 16px;
+  }
+}
+
+#videos {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  margin-top: 2rem;
+}
+
+.video-container {
+  position: relative;
+  flex: 1 1 0;
+  max-width: 560px;
+  padding-bottom: min(315px, 28%); /* roughly 16:9 at half width */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+.yt-lite {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #000;
+  overflow: hidden;
+}
+
+.yt-lite img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.yt-lite-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(204, 0, 0, 0.92);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.yt-lite-play::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 10px 0 10px 16px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.yt-lite:hover .yt-lite-play {
+  background: #c00;
+}
+
+@media (max-width: 768px) {
+  #videos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .video-container {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 56.25%; /* full-width 16:9 */
+  }
+}
+
+/* Simple alert dialog (replaces native alert) */
+.cyb-dialog-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 10060;
+}
+
+.cyb-dialog-modal.is-open {
+  display: block;
+}
+
+body.cyb-dialog-open {
+  overflow: hidden;
+}
+
+.cyb-dialog-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 4, 12, 0.72);
+  backdrop-filter: blur(5px);
+}
+
+.cyb-dialog-modal.is-open .cyb-dialog-modal__backdrop {
+  animation: reportBackdropIn 0.22s ease;
+}
+
+.cyb-dialog-modal__card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(420px, calc(100vw - 28px));
+  padding: 24px 24px 20px;
+  border-radius: 18px;
+  text-align: center;
+  color: rgba(231, 236, 255, 0.95);
+  background:
+    radial-gradient(
+      120% 90% at 0% 0%,
+      rgba(255, 127, 39, 0.14) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #1a2138 0%, #141a2e 100%);
+  border: 1px solid rgba(255, 145, 64, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+    0 0 22px rgba(255, 127, 39, 0.18),
+    0 24px 70px rgba(0, 0, 0, 0.7);
+}
+
+.cyb-dialog-modal.is-open .cyb-dialog-modal__card {
+  animation: reportCardIn 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cyb-dialog-modal__message {
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.cyb-dialog-modal__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.cyb-dialog-modal__btn {
+  appearance: none;
+  min-width: 120px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 127, 39, 0.55);
+  background: linear-gradient(135deg, #ff7f27, #e86a10);
+  color: #fff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.cyb-dialog-modal__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(255, 127, 39, 0.35);
+}
+
+.cyb-dialog-modal__btn:focus-visible {
+  outline: 2px solid rgba(255, 127, 39, 0.8);
+  outline-offset: 2px;
+}
+

@@ -22,3 +22,7 @@ rad.json
 TestResults.xml
 #Environment variables file
 .env
+# Large release binaries — host via server deploy or GitHub Releases
+downloads/*.apk
+# Local editor config
+.continue/

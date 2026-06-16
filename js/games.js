@@ -3,6 +3,21 @@ function t(key) {
   return s[key] != null ? s[key] : key;
 }
 
+function showGameAlert(message) {
+  if (window.CybDialog && typeof window.CybDialog.alert === "function") {
+    return window.CybDialog.alert(message);
+  }
+  window.alert(message);
+  return Promise.resolve();
+}
+
+/** Internal token for "runtime error" quiz answers — displayed via t('gameError') */
+const QUIZ_ERROR = "__QUIZ_ERROR__";
+
+function formatQuizOption(value) {
+  return value === QUIZ_ERROR ? t("gameError") : value;
+}
+
 // Все вопросы с пометкой сложности
 const allQuestions = [
   {
@@ -30,8 +45,8 @@ console.log(arr.length);`,
   {
     code: `for (let i = 0; i < 3; i++) {}
 console.log(i);`,
-    options: ["3", "2", "Ошибка"],
-    answer: "Ошибка",
+    options: ["3", "2", QUIZ_ERROR],
+    answer: QUIZ_ERROR,
     difficulty: "medium",
   },
   {
@@ -133,7 +148,8 @@ function renderQuestion() {
 
   q.options.forEach((opt) => {
     const btn = document.createElement("button");
-    btn.textContent = opt;
+    btn.textContent = formatQuizOption(opt);
+    btn.dataset.option = opt;
     btn.className = "quiz-option-btn";
 
     btn.addEventListener("click", () => {
@@ -144,7 +160,7 @@ function renderQuestion() {
 
       document.querySelectorAll(".quiz-option-btn").forEach((b) => {
         b.disabled = true;
-        if (b.textContent === q.answer) {
+        if (b.dataset.option === q.answer) {
           b.style.borderColor = "#7CFC00";
           b.style.color = "#7CFC00";
         }
@@ -160,7 +176,7 @@ function renderQuestion() {
         resultEl.textContent = t('gameCorrect');
         resultEl.style.color = "#7CFC00";
       } else {
-        resultEl.textContent = `${t('gameWrong')}${q.answer}`;
+        resultEl.textContent = `${t('gameWrong')}${formatQuizOption(q.answer)}`;
         resultEl.style.color = "#ff6b6b";
         if (navigator.vibrate) navigator.vibrate(150);
       }
@@ -240,7 +256,7 @@ function setupQuestionsByDifficulty() {
   currentIndex = 0;
 
   if (!currentQuestions.length) {
-    alert(t('gameNoQuestions'));
+    showGameAlert(t('gameNoQuestions'));
   }
 
   updateStatusBar();
@@ -249,6 +265,11 @@ function setupQuestionsByDifficulty() {
 // --- Инициализация ---
 
 document.addEventListener("DOMContentLoaded", () => {
+  document.documentElement.style.setProperty(
+    "--quiz-code-label",
+    `"${t("gameCodeLabel")}"`,
+  );
+
   startBtn = document.getElementById("start-quiz");
   gameBlock = document.getElementById("code-quiz");
   nextBtn = document.getElementById("quiz-next");
@@ -297,7 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!gameStarted) return;
 
       if (!answered) {
-        alert(t('gamePickAnswer'));
+        showGameAlert(t('gamePickAnswer'));
         return;
       }
 

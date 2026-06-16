@@ -1,9 +1,7 @@
 // Скрипт для переключения темы
 (function () {
   const body = document.body;
-  const btn = document.getElementById("themeToggle");
-
-  if (!btn) return;
+  const btn = document.getElementById('themeToggle');
 
   function t(key) {
     const s = window.CYB_STRINGS || {};
@@ -11,49 +9,55 @@
   }
 
   function canUseFunctional() {
-    return !!(window.CybPrivacy && window.CybPrivacy.allows("functional"));
+    return !!(window.CybPrivacy && window.CybPrivacy.allows('functional'));
   }
 
   function applySavedTheme() {
-    const saved = canUseFunctional() ? localStorage.getItem("theme") : null;
+    const saved = canUseFunctional() ? localStorage.getItem('theme') : null;
 
-    if (saved === "dark") {
-      body.classList.add("dark");
-      btn.textContent = t("themeLight");
+    if (saved === 'dark') {
+      body.classList.add('dark');
+      if (btn) btn.textContent = t('themeLight');
     } else {
-      body.classList.remove("dark");
-      btn.textContent = t("themeDark");
+      body.classList.remove('dark');
+      if (btn) btn.textContent = t('themeDark');
     }
   }
 
   applySavedTheme();
 
-  btn.addEventListener("click", () => {
-    const isDark = body.classList.toggle("dark");
-    btn.textContent = isDark ? t("themeLight") : t("themeDark");
+  // Re-apply once consent state is known (privacy script may load after this one,
+  // or the user may change consent), so the saved theme is honored on every page.
+  // Применить заново, как только станет известно состояние согласия (скрипт конфиденциальности может загрузиться после этого,
+  // либо пользователь может изменить свое согласие), чтобы сохраненная тема применялась на каждой странице.
+  window.addEventListener('cyblight-privacy-change', applySavedTheme);
+
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    const isDark = body.classList.toggle('dark');
+    btn.textContent = isDark ? t('themeLight') : t('themeDark');
     if (canUseFunctional()) {
-      localStorage.setItem("theme", isDark ? "dark" : "light");
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
     }
-    if (typeof window.trackThemeFluxToggle === "function") {
+    if (typeof window.trackThemeFluxToggle === 'function') {
       window.trackThemeFluxToggle();
     }
   });
-
-  window.addEventListener("cyblight-privacy-change", applySavedTheme);
 })();
 
 (function () {
-  const THEME_FLUX_KEY = "cyb_theme_flux_unlocked";
-  const API_BASE = "https://api.cyblight.org";
-  const LOG_URL = "https://cyblight.org/e-log";
+  const THEME_FLUX_KEY = 'cyb_theme_flux_unlocked';
+  const API_BASE = 'https://api.cyblight.org';
+  const LOG_URL = 'https://cyblight.org/e-log';
   const REQUIRED_TOGGLES = 6;
   const WINDOW_MS = 4000;
 
   function canUseFunctionalStorage() {
-    return !!(window.CybPrivacy && window.CybPrivacy.allows("functional"));
+    return !!(window.CybPrivacy && window.CybPrivacy.allows('functional'));
   }
 
-  if (canUseFunctionalStorage() && localStorage.getItem(THEME_FLUX_KEY) === "1") return;
+  if (canUseFunctionalStorage() && localStorage.getItem(THEME_FLUX_KEY) === '1') return;
 
   let toggleTimes = [];
   let unlocking = false;
@@ -68,13 +72,13 @@
     if (window.CybPrivacy && !window.CybPrivacy.allows('diagnostic')) return;
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
     fetch(LOG_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        type: "theme_flux",
+        type: 'theme_flux',
         userName,
-        source: "rapid_theme_toggle",
-        route: "site/theme",
+        source: 'rapid_theme_toggle',
+        route: 'site/theme',
         page: window.location.href,
         timezone: tz,
         ua: navigator.userAgent,
@@ -86,7 +90,7 @@
   }
 
   function syncThemeFluxModalPosition(overlay) {
-    const footer = document.querySelector("footer");
+    const footer = document.querySelector('footer');
     const gap = 18;
 
     if (!footer) {
@@ -106,46 +110,46 @@
     if (modalOpen) return;
     modalOpen = true;
 
-    const overlay = document.createElement("div");
-    overlay.className = "theme-flux-overlay";
+    const overlay = document.createElement('div');
+    overlay.className = 'theme-flux-overlay';
     overlay.innerHTML = `
       <div class="theme-flux-modal" role="dialog" aria-modal="true">
         <div class="theme-flux-modal__orbit" aria-hidden="true">
           <span class="theme-flux-modal__moon">🌗</span>
         </div>
-        <h2 class="theme-flux-modal__title">${t("themeFluxTitle", "Маятник")}</h2>
+        <h2 class="theme-flux-modal__title">${t('themeFluxTitle', 'Маятник')}</h2>
         <p class="theme-flux-modal__text">${t(
-          "themeFluxText",
-          "Ты раскачал сайт между светом и тьмой. Настроение поймано!"
+          'themeFluxText',
+          'Ты раскачал сайт между светом и тьмой. Настроение поймано!'
         )}</p>
         <button type="button" class="theme-flux-modal__btn">${t(
-          "themeFluxBtn",
-          "Свет ↔ тьма ✦"
+          'themeFluxBtn',
+          'Свет ↔ тьма ✦'
         )}</button>
       </div>
     `;
 
     document.body.appendChild(overlay);
-    document.body.classList.add("theme-flux-modal-open");
+    document.body.classList.add('theme-flux-modal-open');
     syncThemeFluxModalPosition(overlay);
 
     const reposition = () => syncThemeFluxModalPosition(overlay);
-    window.addEventListener("resize", reposition);
-    window.addEventListener("scroll", reposition, { passive: true });
+    window.addEventListener('resize', reposition);
+    window.addEventListener('scroll', reposition, { passive: true });
 
-    requestAnimationFrame(() => overlay.classList.add("is-visible"));
+    requestAnimationFrame(() => overlay.classList.add('is-visible'));
 
     let closed = false;
     const close = () => {
       if (closed) return;
       closed = true;
 
-      window.removeEventListener("resize", reposition);
-      window.removeEventListener("scroll", reposition);
-      document.body.classList.remove("theme-flux-modal-open");
-      overlay.classList.remove("is-visible");
+      window.removeEventListener('resize', reposition);
+      window.removeEventListener('scroll', reposition);
+      document.body.classList.remove('theme-flux-modal-open');
+      overlay.classList.remove('is-visible');
       overlay.addEventListener(
-        "transitionend",
+        'transitionend',
         () => {
           overlay.remove();
           modalOpen = false;
@@ -154,24 +158,25 @@
       );
     };
 
-    overlay.querySelector(".theme-flux-modal__btn").addEventListener("click", close);
+    overlay.querySelector('.theme-flux-modal__btn').addEventListener('click', close);
   }
 
   async function unlockThemeFlux() {
-    if (unlocking || (canUseFunctionalStorage() && localStorage.getItem(THEME_FLUX_KEY) === "1")) return;
+    if (unlocking || (canUseFunctionalStorage() && localStorage.getItem(THEME_FLUX_KEY) === '1'))
+      return;
     unlocking = true;
     if (canUseFunctionalStorage()) {
-      localStorage.setItem(THEME_FLUX_KEY, "1");
+      localStorage.setItem(THEME_FLUX_KEY, '1');
     }
 
-    document.body.classList.add("theme-flux-celebrate");
-    setTimeout(() => document.body.classList.remove("theme-flux-celebrate"), 1200);
+    document.body.classList.add('theme-flux-celebrate');
+    setTimeout(() => document.body.classList.remove('theme-flux-celebrate'), 1200);
     showThemeFluxModal();
 
     try {
       const meRes = await fetch(`${API_BASE}/auth/me`, {
-        method: "GET",
-        credentials: "include",
+        method: 'GET',
+        credentials: 'include',
       });
       if (meRes.ok) {
         const meData = await meRes.json().catch(() => ({}));
@@ -179,8 +184,8 @@
         const hadBridge = meData?.user?.easter?.bridge === true;
 
         const saveRes = await fetch(`${API_BASE}/auth/easter/theme-flux`, {
-          method: "POST",
-          credentials: "include",
+          method: 'POST',
+          credentials: 'include',
         });
 
         if (userName && saveRes.ok) {
@@ -188,15 +193,15 @@
 
           if (!hadBridge) {
             const meRes2 = await fetch(`${API_BASE}/auth/me`, {
-              method: "GET",
-              credentials: "include",
+              method: 'GET',
+              credentials: 'include',
             });
             if (meRes2.ok) {
               const meData2 = await meRes2.json().catch(() => ({}));
               if (meData2?.user?.easter?.bridge === true) {
                 sendThemeFluxLog(userName, {
-                  type: "bridge",
-                  source: "web_app_same_day",
+                  type: 'bridge',
+                  source: 'web_app_same_day',
                   alex: 9,
                 });
               }
@@ -211,7 +216,7 @@
     if (
       unlocking ||
       modalOpen ||
-      (canUseFunctionalStorage() && localStorage.getItem(THEME_FLUX_KEY) === "1")
+      (canUseFunctionalStorage() && localStorage.getItem(THEME_FLUX_KEY) === '1')
     )
       return;
 
@@ -227,14 +232,14 @@
 })();
 
 (function () {
-  const trigger = document.querySelector(".dark-card .dark-trigger");
+  const trigger = document.querySelector('.dark-card .dark-trigger');
   if (!trigger) return;
 
   let clicks = 0;
   const REQUIRED = 77;
-  const target = "/dark/trig/c4...77/";
+  const target = '/dark/trig/c4...77/';
 
-  trigger.addEventListener("click", function (e) {
+  trigger.addEventListener('click', function (e) {
     e.stopPropagation();
     clicks++;
 
@@ -243,7 +248,7 @@
     }
 
     if (clicks >= REQUIRED) {
-      trigger.textContent = (window.CYB_STRINGS && window.CYB_STRINGS.opening) || "Открываю...";
+      trigger.textContent = (window.CYB_STRINGS && window.CYB_STRINGS.opening) || 'Открываю...';
       setTimeout(() => {
         window.location.href = target;
       }, 500);
@@ -252,43 +257,43 @@
 })();
 
 // Скрипт для бургер-меню
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menu-toggle");
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
   const body = document.body;
 
   if (menuToggle) {
-    menuToggle.addEventListener("click", () => {
-      body.classList.toggle("nav-open");
+    menuToggle.addEventListener('click', () => {
+      body.classList.toggle('nav-open');
     });
   }
 
   // Чтобы меню закрывалось после клика по пункту
-  const menuLinks = document.querySelectorAll(".buttons a");
+  const menuLinks = document.querySelectorAll('.buttons a');
   menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      body.classList.remove("nav-open");
+    link.addEventListener('click', () => {
+      body.classList.remove('nav-open');
     });
   });
 });
 
 // === КНОПКА НАВЕРХ ===
-const scrollBtn = document.getElementById("scrollTopBtn");
+const scrollBtn = document.getElementById('scrollTopBtn');
 
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
-    scrollBtn.classList.add("show");
+    scrollBtn.classList.add('show');
   } else {
-    scrollBtn.classList.remove("show");
+    scrollBtn.classList.remove('show');
   }
 });
 
-scrollBtn.addEventListener("click", () => {
+scrollBtn.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth",
+    behavior: 'smooth',
   });
 });
 
-document.querySelector(".nav-overlay").addEventListener("click", () => {
-  document.body.classList.remove("nav-open");
+document.querySelector('.nav-overlay').addEventListener('click', () => {
+  document.body.classList.remove('nav-open');
 });

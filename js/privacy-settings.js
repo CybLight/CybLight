@@ -333,7 +333,7 @@
   });
 
   document.addEventListener('DOMContentLoaded', () => {
-    applyPrivacyState();
+    dispatchChange();
     if (!getConsent().decided) showBanner();
   });
 })();

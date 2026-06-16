@@ -3,6 +3,13 @@ const LOG_URL = "https://cyblight.org/e-log";
 const API_BASE = "https://api.cyblight.org";
 const DARK_TRIGGER_KEY = "cyb_dark_trigger_unlocked";
 
+function dt(key) {
+  if (window.DARK_TRIGGER_I18N && typeof window.DARK_TRIGGER_I18N.dt === "function") {
+    return window.DARK_TRIGGER_I18N.dt(key);
+  }
+  return key;
+}
+
 let Unlocked = false;
 
 function customPrompt(title, subtitle) {
@@ -58,22 +65,6 @@ function sendWorkLog(extra = {}) {
     body: JSON.stringify(payload),
   }).catch(() => {});
 }
-
-const __x0f = [
-  1055, 1086, 1079, 1076, 1088, 1072, 1074, 1083, 1103, 1102, 33, 32, 1042,
-  1099, 32, 1085, 1072, 1096, 1083, 1080, 32, 1087, 1072, 1089, 1093, 1072,
-  1083, 1082, 1091, 32, 8470, 49,
-]
-  .map((q) => String.fromCharCode(q))
-  .join("");
-
-const __sv = [
-  1053, 1077, 1087, 1083, 1086, 1093, 1086, 32, 1076, 1083, 1103, 32, 1088,
-  1077, 1072, 1082, 1094, 1080, 1080, 33, 32, 1055, 1072, 1089, 1093, 1072,
-  1083, 1082, 1072, 32, 1086, 1090, 1082, 1088, 1099, 1090, 1072, 32, 8212, 32,
-]
-  .map((c) => String.fromCharCode(c))
-  .join("");
 
 async function checkIfLoggedIn() {
   try {
@@ -132,7 +123,7 @@ function spawnOrb() {
     let storedName = (localStorage.getItem("itemUserName") || "").trim();
 
     while (!storedName) {
-      const input = await customPrompt(__x0f, "Введите ваше имя пользователя:");
+      const input = await customPrompt(dt("easterTitle"), dt("promptSubtitle"));
 
       if (!input || !input.trim()) {
         // чтобы шарик мог снова сработать позже
@@ -172,7 +163,7 @@ function spawnOrb() {
 
     const msgText = document.querySelector(".msg-text");
     if (msgText) {
-      msgText.textContent = __sv;
+      msgText.textContent = dt("successMessage");
     }
 
     window.open(BUS_IMAGE_URL, "_blank", "noopener");

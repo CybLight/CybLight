@@ -29,6 +29,8 @@ const ukJs = {
   searchResults: "Знайдено результатів: ",
   searchNoResults: "Нічого не знайдено за запитом:",
   searchPageText: "Текст на цій сторінці",
+  searchTagPage: "сторінка",
+  searchTagText: "текст",
   menuOpen: "Відкрити меню",
   online: "онлайн",
   copied: "Скопійовано!",
@@ -65,6 +67,8 @@ const ukJs = {
   gameNoQuestions: "Для обраної складності поки немає питань 🙃",
   gamePickAnswer: "Спочатку обери відповідь!",
   gameError: "Помилка",
+  gameCodeLabel: "код",
+  dialogOk: "OK",
   privacySettingsTitle: "Налаштування конфіденційності",
   privacySettingsClose: "Закрити",
   privacySettingsIntroBefore: "Ми використовуємо cookie та подібні технології для роботи сайту та покращення вашого досвіду. Докладніше — у розділі ",
@@ -109,6 +113,8 @@ const enJs = {
   searchResults: "Results found: ",
   searchNoResults: "Nothing found for:",
   searchPageText: "Text on this page",
+  searchTagPage: "page",
+  searchTagText: "text",
   menuOpen: "Open menu",
   online: "online",
   copied: "Copied!",
@@ -144,6 +150,8 @@ const enJs = {
   gameNoQuestions: "No questions for this difficulty yet 🙃",
   gamePickAnswer: "Pick an answer first!",
   gameError: "Error",
+  gameCodeLabel: "code",
+  dialogOk: "OK",
   privacySettingsTitle: "Privacy settings",
   privacySettingsClose: "Close",
   privacySettingsIntroBefore: "We use cookies and similar technologies to run the site and improve your experience. Learn more in the ",
@@ -337,6 +345,124 @@ const ukSearchIndex = [
 
 ukJs.searchIndex = ukSearchIndex;
 
+const downloadsTriples = [
+  [
+    "CybLight — Мобильное приложение для Android",
+    "CybLight — Мобільний додаток для Android",
+    "CybLight — Mobile app for Android",
+  ],
+  [
+    "Скачайте официальное мобильное приложение CybLight для Android: вход в аккаунт, друзья, сообщения и безопасность. Прямая загрузка APK.",
+    "Завантажте офіційний мобільний додаток CybLight для Android: вхід в обліковий запис, друзі, повідомлення та безпека. Пряме завантаження APK.",
+    "Download the official CybLight mobile app for Android: account sign-in, friends, messages, and security. Direct APK download.",
+  ],
+  [
+    "CybLight — Приложение",
+    "CybLight — Додаток",
+    "CybLight — App",
+  ],
+  [
+    "Мобильное приложение CybLight",
+    "Мобільний додаток CybLight",
+    "CybLight mobile app",
+  ],
+  [
+    "Официальное приложение для Android: вход в аккаунт CybLight, список друзей, личные сообщения и настройки безопасности.",
+    "Офіційний додаток для Android: вхід в обліковий запис CybLight, список друзів, особисті повідомлення та налаштування безпеки.",
+    "Official Android app: sign in to your CybLight account, friends list, private messages, and security settings.",
+  ],
+  ["Версия", "Версія", "Version"],
+  ["Скачать", "Завантажити", "Download"],
+  ["Скачать APK с сайта", "Завантажити APK з сайту", "Download APK from site"],
+  ["Скачать с GitHub", "Завантажити з GitHub", "Download from GitHub"],
+  ["Страница релизов", "Сторінка релізів", "Releases page"],
+  [
+    "Прямой файл на cyblight.org пока недоступен — используйте кнопку «Скачать с GitHub».",
+    "Прямий файл на cyblight.org поки недоступний — скористайтеся кнопкою «Завантажити з GitHub».",
+    'The direct file on cyblight.org is not available yet — use the "Download from GitHub" button.',
+  ],
+  ["Возможности", "Можливості", "Features"],
+  [
+    "Вход через <strong>login.cyblight.org</strong> (логин, пароль, Turnstile)",
+    "Вхід через <strong>login.cyblight.org</strong> (логін, пароль, Turnstile)",
+    "Sign in via <strong>login.cyblight.org</strong> (username, password, Turnstile)",
+  ],
+  [
+    "Поддержка двухфакторной аутентификации (2FA)",
+    "Підтримка двофакторної аутентифікації (2FA)",
+    "Two-factor authentication (2FA) support",
+  ],
+  [
+    "Список друзей с онлайн-статусом",
+    "Список друзів зі статусом у мережі",
+    "Friends list with online status",
+  ],
+  [
+    "Личные сообщения и чаты",
+    "Особисті повідомлення та чати",
+    "Private messages and chats",
+  ],
+  [
+    "Профиль, безопасность, сессии и passkeys",
+    "Профіль, безпека, сесії та passkeys",
+    "Profile, security, sessions, and passkeys",
+  ],
+  [
+    "Русский, украинский и английский языки",
+    "Російська, українська та англійська мови",
+    "Russian, Ukrainian, and English languages",
+  ],
+  [
+    "Проверка обновлений при запуске",
+    "Перевірка оновлень під час запуску",
+    "Update check on launch",
+  ],
+  ["Установка", "Встановлення", "Installation"],
+  [
+    "Скачайте APK-кнопкой выше.",
+    "Завантажте APK кнопкою вище.",
+    "Download the APK using the button above.",
+  ],
+  [
+    "Откройте файл на телефоне.",
+    "Відкрийте файл на телефоні.",
+    "Open the file on your phone.",
+  ],
+  [
+    "Если Android предупреждает о неизвестном источнике — разрешите установку и нажмите «Всё равно установить».",
+    "Якщо Android попереджає про невідоме джерело — дозвольте встановлення й натисніть «Усе одно встановити».",
+    'If Android warns about an unknown source — allow installation and tap "Install anyway".',
+  ],
+  [
+    "Запустите CybLight и войдите в аккаунт.",
+    "Запустіть CybLight і увійдіть в обліковий запис.",
+    "Launch CybLight and sign in to your account.",
+  ],
+  [
+    "При обновлении поверх старой версии может понадобиться удалить предыдущую сборку, если подпись отличается.",
+    "Під час оновлення поверх старої версії може знадобитися видалити попередню збірку, якщо підпис відрізняється.",
+    "When updating over an older version, you may need to uninstall the previous build if the signature differs.",
+  ],
+  ["Исходный код:", "Вихідний код:", "Source code:"],
+  [
+    "CybLight-Android на GitHub",
+    "CybLight-Android на GitHub",
+    "CybLight-Android on GitHub",
+  ],
+  [
+    "Подробнее о проекте:",
+    "Докладніше про проєкт:",
+    "Learn more about the project:",
+  ],
+  ["страница проекта", "сторінка проєкту", "project page"],
+  ["Приложение", "Додаток", "App"],
+  [
+    "Открыть главную страницу сайта СайбLight",
+    "Відкрити головну сторінку сайту CybLight",
+    "Open CybLight home page",
+  ],
+];
+
 // [Russian, Ukrainian, English] — longest strings first when flattened
 const triples = [
   [
@@ -436,9 +562,9 @@ const triples = [
     "This data is stored only in your browser and is not sent to the server separately from regular requests.",
   ],
   [
-    "флаг о том, что пасхалка уже была найдена, чтобы не показывать её повторно.",
-    "прапорець про те, що пасхалку вже знайдено, щоб не показувати її повторно.",
-    "a flag that an easter egg was already found so it is not shown again.",
+    "флаг о том, что пасхалка уже была найдена, чтобы не показывать её повторно;",
+    "прапорець про те, що пасхалку вже знайдено, щоб не показувати її повторно;",
+    "a flag that an easter egg was already found so it is not shown again;",
   ],
   [
     "Сайт может использовать <strong>localStorage</strong> или другие механизмы браузера для хранения локальных настроек, например:",
@@ -509,6 +635,16 @@ const triples = [
     "Официальное приложение для Android: вход в аккаунт, друзья с онлайн-статусом,\n                    личные сообщения, 2FA и настройки безопасности.",
     "Офіційний додаток для Android: вхід в акаунт, друзі з онлайн-статусом, особисті повідомлення, 2FA та налаштування безпеки.",
     "Official Android app: account sign-in, friends with online status, private messages, 2FA, and security settings.",
+  ],
+  [
+    "Официальное Android-приложение: аккаунт, друзья, сообщения и\n                    безопасность.",
+    "Офіційний Android-додаток: обліковий запис, друзі, повідомлення та\n                    безпеку.",
+    "Official Android app: account, friends, messages, and\n                    security.",
+  ],
+  [
+    "Официальное Android-приложение: аккаунт, друзья, сообщения и безопасность.",
+    "Офіційний Android-додаток: обліковий запис, друзі, повідомлення та безпеку.",
+    "Official Android app: account, friends, messages, and security.",
   ],
   ["Новость · Android", "Новина · Android", "News · Android"],
   ['aria-label="Новости"', 'aria-label="Новини"', 'aria-label="News"'],
@@ -950,6 +1086,28 @@ const triples = [
     "Основний вебсайт на TypeScript/JavaScript з HTML і CSS. Показує блог, проєкти, ігри, відео та багато іншого.",
     "Main website built with TypeScript/JavaScript, HTML, and CSS. Shows blog, projects, games, videos, and more.",
   ],
+  [
+    "Мобильное приложение CybLight для Android",
+    "Мобільний додаток CybLight для Android",
+    "CybLight mobile app for Android",
+  ],
+  [
+    "CybLight mobile app для Android",
+    "CybLight mobile app для Android",
+    "CybLight mobile app for Android",
+  ],
+  [
+    "Официальное мобильное приложение для Android: вход через login.cyblight.org, список\n              друзей с онлайн-статусом, личные сообщения, профиль и настройки безопасности (2FA,\n              сессии, passkeys). Поддерживаются русский, украинский и английский языки.",
+    "Офіційний мобільний додаток для Android: вхід через login.cyblight.org, список\n              друзів з онлайн-статусом, особисті повідомлення, профіль і налаштування безпеки (2FA,\n              сесії, passkeys). Підтримуються російська, українська та англійська мови.",
+    "Official Android app: sign in via login.cyblight.org, friends list with online status, private messages, profile and security settings (2FA, sessions, passkeys). Russian, Ukrainian, and English are supported.",
+  ],
+  [
+    "Официальное мобильное приложение для Android: вход через login.cyblight.org, список\n              друзей с online-статусом, личные сообщения, профиль и настройки безопасности (2FA,\n              сессии, passkeys). Поддерживаются русский, украинский и английский языки.",
+    "Офіційний мобільний додаток для Android: вхід через login.cyblight.org, список\n              друзів з онлайн-статусом, особисті повідомлення, профіль і налаштування безпеки (2FA,\n              сесії, passkeys). Підтримуються російська, українська та англійська мови.",
+    "Official Android app: sign in via login.cyblight.org, friends list with online status, private messages, profile and security settings (2FA, sessions, passkeys). Russian, Ukrainian, and English are supported.",
+  ],
+  ["Скачать APK:", "Завантажити APK:", "Download APK:"],
+  ["страница загрузки", "сторінка завантаження", "download page"],
   ["Репозиторий:", "Репозиторій:", "Repository:"],
   ["Python‑бот @", "Python‑бот @", "Python bot @"],
   [
@@ -1022,6 +1180,16 @@ const triples = [
     "Наведи — чтобы посмотреть номер",
     "Наведи — щоб подивитися номер",
     "Hover to see the number",
+  ],
+  [
+    "Нажми — чтобы посмотреть номер",
+    "Натисни — щоб подивитися номер",
+    "Tap to see the number",
+  ],
+  [
+    "data-hint-hover=\"Наведи — чтобы посмотреть номер\" data-hint-tap=\"Нажми — чтобы посмотреть номер\">Наведи — чтобы посмотреть номер",
+    "data-hint-hover=\"Наведи — щоб подивитися номер\" data-hint-tap=\"Натисни — щоб подивитися номер\">Наведи — щоб подивитися номер",
+    "data-hint-hover=\"Hover to see the number\" data-hint-tap=\"Tap to see the number\">Hover to see the number",
   ],
   ["Номер карты", "Номер картки", "Card number"],
   ["Скопировать номер карты", "Скопіювати номер картки", "Copy card number"],
@@ -1144,9 +1312,11 @@ const triples = [
     "<h3>Telegram-бот Guardian</h3>",
     "<h3>Telegram bot Guardian</h3>",
   ],
+  ...downloadsTriples,
   ...privacyTriples,
   ...termsTriples,
 ];
+
 
 function buildLocale(code, js, langCurrent, replacements) {
   return {

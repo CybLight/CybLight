@@ -1,0 +1,425 @@
+main {
+  flex: 1 0 auto;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.hero-content h1.neon-text {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.neon-text {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-align: center;
+
+  /* Неоновая окантовка текста */
+  text-shadow:
+    0 0 4px #ff4444,
+    0 0 8px #ff4444,
+    0 0 12px #ff4444,
+    0 0 18px #ff4444,
+    0 0 24px #ff4444;
+
+  animation: neonPulse 2s infinite alternate ease-in-out;
+}
+
+.neon-text .accent {
+  color: var(--primary-green);
+}
+
+.neon-text .accent-2 {
+  color: var(--primary-orange);
+}
+
+/* Анимация пульсации неона */
+@keyframes neonPulse {
+  0% {
+    text-shadow:
+      0 0 4px #ff4444,
+      0 0 8px #ff4444,
+      0 0 12px #ff4444,
+      0 0 18px #ff4444,
+      0 0 24px #ff4444;
+  }
+  100% {
+    text-shadow:
+      0 0 8px #ff0000,
+      0 0 16px #ff0000,
+      0 0 24px #ff0000,
+      0 0 32px #ff0000,
+      0 0 48px #ff0000;
+  }
+}
+
+.hero-content-one {
+  text-align: justify;
+  text-align-last: center; /* последняя строка по центру */
+  line-height: 1.25;
+}
+
+.hero-news-banner {
+  margin-top: 24px;
+}
+
+.hero-news-banner-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  align-items: center;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 2px solid rgba(241, 196, 15, 0.45);
+  background:
+    radial-gradient(
+      120% 80% at 100% 0%,
+      rgba(61, 220, 132, 0.14) 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 127, 39, 0.08) 0%,
+      rgba(255, 255, 255, 0.04) 100%
+    );
+  box-shadow:
+    0 0 3px #f1c40f,
+    0 0 8px rgba(241, 196, 15, 0.25);
+}
+
+.hero-news-icon {
+  flex: 0 0 auto;
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.hero-news-body {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+.hero-news-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #3ddc84;
+}
+
+.hero-news-android {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.hero-news-title {
+  margin: 0 0 8px;
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
+  line-height: 1.25;
+  color: #ff4444;
+  font-weight: 700;
+  text-shadow:
+    0 0 3px #f1c40f,
+    0 0 6px rgba(241, 196, 15, 0.6);
+}
+
+.hero-news-text {
+  margin: 0;
+  line-height: 1.45;
+  font-size: 15px;
+  text-align: left;
+}
+
+.hero-news-cta {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .hero-news-banner-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-news-text {
+    text-align: center;
+  }
+}
+
+body.dark .hero-news-banner-inner {
+  background:
+    radial-gradient(
+      120% 80% at 100% 0%,
+      rgba(61, 220, 132, 0.12) 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.06) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+  border-color: rgba(241, 196, 15, 0.35);
+}
+
+.layout-landing {
+  --layout-padding-inline: 16px;
+  padding: 0 16px 0;
+}
+
+/* Dark theme styles */
+
+body.dark {
+  background: var(--primary-gray) !important;
+  color: #f5f5f5;
+}
+
+/* Контентный блок  */
+body.dark main {
+  background: var(--primary-gray) !important;
+}
+
+/* Общий стиль селекта сложности */
+#quiz-difficulty {
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+/* Светлая тема */
+body:not(.dark) #quiz-difficulty {
+  background: #ffffff;
+  color: #111827;
+  border-color: #cbd5e1;
+}
+
+/* Тёмная тема */
+body.dark #quiz-difficulty {
+  background: #151b30; /* тёмный фон под общий стиль */
+  color: #f5f5f5; /* светлый текст */
+  border-color: #3b4670;
+}
+
+/* Варианты в выпадающем списке в тёмной теме */
+body.dark #quiz-difficulty option {
+  background: #151b30;
+  color: #f5f5f5;
+}
+
+body.dark #quiz-difficulty:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.6);
+  border-color: #38bdf8;
+}
+
+/* Светлая тема: цвета для "в разработке" */
+body:not(.dark) .game-card-disabled {
+  background: #d4d7de;
+  color: #1f2933;
+}
+
+/* Лента под светлую тему — чуть темнее текста */
+body:not(.dark) .game-card-disabled::before {
+  color: #1b1e26;
+}
+
+body:not(.dark) .game-card-disabled::after {
+  color: #1b1e26;
+}
+
+/* Тёмная тема для disabled-карточек */
+body.dark .game-card-disabled {
+  background: #6c7079;
+  color: #dfe1e5;
+}
+
+/* Стили для блока YouTube */
+
+.youtube-block {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #151b30;
+  border: 1px solid #222c4a;
+  color: #f5f5f5;
+}
+
+.youtube-widget a {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 3px 8px;
+  border-radius: 6px;
+  color: #fff !important;
+}
+
+/* Светлая тема — бирюзовый неон */
+
+.button:hover {
+  border-color: rgba(0, 255, 240, 0.6);
+  box-shadow:
+    0 0 6px rgba(0, 255, 240, 0.4),
+    0 0 12px rgba(0, 255, 240, 0.3),
+    inset 0 0 4px rgba(0, 255, 240, 0.2);
+  color: #0efff3;
+}
+
+body.dark .button:hover {
+  border-color: rgba(255, 240, 120, 0.6);
+  box-shadow:
+    0 0 6px rgba(255, 240, 120, 0.5),
+    0 0 14px rgba(255, 240, 120, 0.4),
+    inset 0 0 4px rgba(255, 240, 120, 0.3);
+  color: #f1c40f;
+}
+
+/* НЕОНОВАЯ ОБВОДКА */
+
+.theme-toggle {
+  position: relative;
+  border-radius: 999px;
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Светлая тема — бирюзовый неон */
+.theme-toggle {
+  border: 1px solid rgba(0, 255, 240, 0.5);
+  box-shadow: 0 0 6px rgba(0, 255, 240, 0.3);
+}
+
+.theme-toggle:hover {
+  box-shadow:
+    0 0 12px rgba(0, 255, 240, 0.6),
+    0 0 20px rgba(0, 255, 240, 0.4);
+  border-color: rgba(0, 255, 240, 0.9);
+}
+
+/* Тёмная тема — неоново-жёлтый */
+body.dark .theme-toggle {
+  border: 1px solid rgba(255, 240, 120, 0.5);
+  box-shadow: 0 0 6px rgba(255, 240, 120, 0.3);
+  color: #fff; /* чтобы текст был виден */
+}
+
+body.dark .theme-toggle:hover {
+  box-shadow:
+    0 0 12px rgba(255, 240, 120, 0.7),
+    0 0 20px rgba(255, 240, 120, 0.5);
+  border-color: rgba(255, 240, 120, 1);
+}
+
+/* Стили для счётчиков YouTube */
+
+.yt-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.yt-channels {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.yt-channel {
+  flex: 1 1 0;
+  min-width: 240px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.yt-channel-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.yt-counter {
+  font-size: 1.2rem;
+}
+
+.yt-label {
+  opacity: 0.8;
+  margin-right: 8px;
+}
+
+.yt-value {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.yt-note {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.yt-subscribe-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: #c00;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.yt-subscribe-btn:hover {
+  background: #a00;
+  color: #fff;
+}
+
+.dark-card {
+  position: relative;
+}
+
+.dark-trigger {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  color: var(--primary-orange, #ff7f27);
+}
+
+.dark-card:hover .dark-trigger {
+  opacity: 0.8;
+}
+
+.dark-trigger:hover {
+  opacity: 1;
+}

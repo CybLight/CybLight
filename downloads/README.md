@@ -1,8 +1,8 @@
 # APK downloads
 
-Place the signed release APK here for direct download from cyblight.org:
+Place the signed release APK here for direct download from cyblight.org (deploy separately; APK files are not stored in git because GitHub rejects files over 100 MB):
 
-`cyblight-android-v0.4.3.apk`
+`cyblight-v0.7.0.apk`
 
 After publishing a new app version:
 

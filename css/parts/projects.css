@@ -1,0 +1,321 @@
+/* projects carousel */
+.projects-carousel {
+  padding: 2rem 0;
+}
+.projects-carousel .carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  /* hide native scrollbar */
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.projects-carousel .carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* wrapper around carousel for nav buttons */
+.projects-carousel .carousel-wrapper {
+  position: relative;
+  overflow: visible; /* allow nav buttons to extend outside */
+  max-width: 1200px; /* constrain width on large screens */
+  margin: 0 auto; /* center the carousel */
+}
+
+/* navigation buttons */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.carousel-nav:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.carousel-nav:focus {
+  outline: 2px solid #fff;
+}
+.carousel-nav.prev {
+  left: -40px;
+}
+.carousel-nav.next {
+  right: -40px;
+}
+
+/* tablet adjustments — buttons inside wrapper so they don't overflow viewport */
+@media (max-width: 1100px) {
+  .projects-carousel .carousel-wrapper {
+    padding: 0 48px; /* room for nav buttons inside */
+  }
+  .carousel-nav.prev {
+    left: 4px;
+  }
+  .carousel-nav.next {
+    right: 4px;
+  }
+}
+
+/* mobile adjustments */
+@media (max-width: 768px) {
+  .projects-carousel .carousel {
+    gap: 0.5rem;
+  }
+  .projects-carousel .project-card {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+  .carousel-nav {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+}
+
+/* individual project slide styling */
+.project-card {
+  flex: 0 0 300px; /* fixed width on desktop */
+  max-width: 400px;
+  background: var(--card-bg, #fff);
+  border-radius: 8px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0; /* no gap under image */
+  max-height: 200px; /* limit tall logos */
+  object-fit: contain;
+}
+
+/* highlight Smart Home Hub picture with matching accent color */
+.project-card img[alt="Smart Home Hub"] {
+  border: 2px solid #00979d;
+  border-radius: 6px;
+  box-sizing: border-box; /* keep border inside image's width */
+}
+.project-info {
+  padding: 0 1rem 0.5rem; /* no top padding at all */
+}
+.project-info h3 {
+  margin: 0; /* completely flush against image */
+}
+.project-info p {
+  margin-top: 0.25rem; /* small space before description */
+}
+.project-info {
+  padding: 0.25rem 1rem 0.5rem; /* smaller top padding so text hugs image */
+}
+
+/* project listing page layout and spacing */
+.projects-page {
+  padding: 2rem 0;
+}
+
+.projects-page #android h2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.projects-page .project-android-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.projects-page .project-detail {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #fff; /* white background */
+  border: 1px solid #ccc; /* stronger border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.projects-page .project-detail:first-child {
+  margin-top: 3rem;
+}
+.projects-page .project-detail:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.projects-page .project-detail > img {
+  display: block;
+  margin: 0.5rem auto; /* centered horizontally */
+  max-width: 100%;
+  max-height: 300px; /* keep images from becoming too tall */
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* special adjustments for very wide images */
+.projects-page #guardian img,
+.projects-page #smarthome img {
+  max-height: 240px;
+}
+
+/* Guardian bot image is wide; constrain height so it doesn't overflow the card */
+.projects-page #guardian img {
+  max-height: 300px;
+  object-fit: contain;
+}
+.projects-page .project-detail h2 {
+  margin-top: 0;
+}
+.projects-page .project-detail p a {
+  color: #007acc;
+}
+/* dark theme adjustments for listing page */
+body.dark .projects-page .project-detail {
+  background: #1f1f1f;
+  color: #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+body.dark .projects-page .project-detail p a {
+  color: #66aaff;
+}
+
+/* copyable username style */
+.copy-name {
+  cursor: pointer;
+  text-decoration: underline dotted;
+  color: #007acc;
+}
+.copy-name:active {
+  opacity: 0.7;
+}
+.project-langs {
+  margin: 0.25rem 0;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* constrain carousel images to avoid huge empty borders */
+.carousel .project-card img {
+  max-height: 240px;
+  object-fit: contain;
+}
+.project-langs .lang {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.65rem;
+}
+.project-langs .lang img {
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 4px;
+  border-radius: 6px;
+}
+
+/* make icons readable on dark backgrounds */
+body.dark .project-langs .lang img {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #444;
+  filter: brightness(1.4) drop-shadow(0 0 4px rgba(255, 255, 255, 0.25));
+  transition: transform 0.2s;
+}
+body.dark .project-langs .lang img:hover {
+  transform: scale(1.1);
+}
+.project-langs .lang span {
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+/* dark theme adjustments for projects */
+body.dark .project-card {
+  background: #1e1e1e;
+  color: #ddd;
+}
+body.dark .project-card a.button {
+  background: #2a2a2a;
+  color: #fff;
+}
+body.dark .project-langs .lang span {
+  color: #ccc;
+}
+
+/* Кнопка "Наверх" */
+.scroll-top-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+
+  box-shadow: 0 0 10px rgba(0, 255, 240, 0.6);
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+  transform: translateY(20px);
+
+  z-index: 9999;
+}
+
+/* Появление */
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Ховер эффект */
+.scroll-top-btn:hover {
+  box-shadow:
+    0 0 14px rgba(0, 255, 240, 0.9),
+    0 0 18px rgba(0, 255, 240, 0.7);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Тёмная тема */
+body.dark .scroll-top-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: #0efff3;
+  box-shadow: 0 0 10px rgba(255, 240, 120, 0.5);
+}
+
+body.dark .scroll-top-btn:hover {
+  box-shadow:
+    0 0 14px rgba(255, 240, 120, 0.9),
+    0 0 18px rgba(255, 240, 120, 0.7);
+  background: rgba(255, 255, 255, 0.25);
+}

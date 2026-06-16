@@ -1,0 +1,446 @@
+/* АДАРТИВНЫЕ стили для мобильных устройств */
+
+@media (max-width: 768px) {
+  .hero-content h1.neon-text {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+}
+
+/* 📱 МОБИЛЬНЫЙ И ПЛАНШЕТНЫЙ ХЕЙДЕР */
+
+@media (max-width: 992px) {
+  /* Верхняя белая полоса */
+  .top-header .header-top {
+    background: #000;
+    padding: 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Светлая тема: разделитель как в тёмной (оранжевая линия + неон снизу) */
+  body:not(.dark) .top-header .header-top {
+    border-bottom: 1px solid rgba(255, 127, 39, 0.35);
+    box-shadow:
+      0 3px 12px rgba(0, 0, 0, 0.6),
+      0 3px 12px rgba(255, 127, 39, 0.08);
+  }
+
+  body:not(.dark) .top-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 127, 39, 0) 0%,
+      rgba(255, 127, 39, 0.9) 25%,
+      rgba(255, 200, 120, 1) 50%,
+      rgba(255, 127, 39, 0.9) 75%,
+      rgba(255, 127, 39, 0) 100%
+    );
+    box-shadow: 0 0 14px rgba(255, 127, 39, 0.8);
+    pointer-events: none;
+  }
+
+  /* SVG иконки (язык, профиль, поиск) — белые */
+  .top-header svg {
+    color: #ffffff;
+    fill: #ffffff;
+  }
+
+  .top-header .header-top .container {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: 0 10px;
+    gap: 8px;
+    padding-left: 0 !important;
+    padding-right: 10px;
+  }
+
+  /* Логотип слева, фиксированный размер */
+  .site-logo-global {
+    position: static !important;
+    width: 55px;
+    height: 55px;
+    flex: 0 0 auto;
+    padding: 0;
+    background: transparent;
+    margin-left: 5px;
+    padding-left: 0;
+  }
+
+  .logo-global {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  /* H2 убрал*/
+  .top-header .siteName {
+    display: none;
+    color: #fff;
+  }
+
+  /* Правый блок: язык, войти, бургер */
+  .top-header .header-top-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 12px;
+    flex: 0 0 auto;
+  }
+
+  /* Поиск прячем в мобилке */
+  .top-header .search-box {
+    display: none;
+  }
+
+  /* show labels by default and make them more legible */
+  .top-header .header-top-right .header-label {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 4px;
+  }
+
+  /* Навигационная тёмная полоса убирается — меню выпадает ниже */
+  .top-header .header-nav {
+    background: transparent;
+    border-top: none;
+    box-shadow: none;
+  }
+
+  .top-header .header-nav .container {
+    position: relative;
+    padding: 0 16px;
+    justify-content: flex-end;
+    min-height: 36px;
+  }
+
+  .top-header .header-online--nav {
+    margin-left: 0;
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  /* Светлая тема: полоса со статусом — чёрный фон как у header-top */
+  body:not(.dark) .top-header .header-nav:has(.header-online:not([hidden])) {
+    background: #000;
+  }
+
+  body:not(.dark)
+    .top-header
+    .header-nav
+    .container:has(.header-online[hidden]) {
+    min-height: 0;
+    padding: 0;
+  }
+
+  body:not(.dark)
+    .top-header
+    .header-nav
+    .container:has(.header-online:not([hidden])) {
+    min-height: 36px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  /* На тёмной полосе — светлый бейдж */
+  body:not(.dark) .top-header .header-online--nav {
+    border-color: rgba(74, 222, 128, 0.35);
+    background: rgba(34, 197, 94, 0.12);
+    color: #bbf7d0;
+  }
+
+  body:not(.dark) .top-header .header-online-count {
+    color: #4ade80;
+  }
+
+  body:not(.dark) .top-header .header-online-label {
+    opacity: 0.85;
+    color: #bbf7d0;
+  }
+
+  /* Выпадающее меню */
+  .top-header .header-nav .buttons {
+    display: none;
+    position: absolute;
+    top: 100%; /* сразу под белой полосой */
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 12px 16px 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  body.dark .top-header .header-nav .buttons {
+    background: #101322;
+    border-bottom-color: #1f2840;
+  }
+
+  .top-header .header-nav .button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+    padding: 8px 0;
+  }
+
+  /* Показать список, когда body.nav-open */
+  body.nav-open .top-header .header-nav .buttons {
+    display: flex;
+  }
+
+  /* Бургер — справа в верхней полосе */
+  .top-header .burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  /* Полоски бургера */
+  .top-header .burger span {
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
+
+  body.dark .top-header .burger span {
+    background: #ffffff; /* тёмная тема — белые линии */
+  }
+
+  .top-header .burger span:nth-child(1) {
+    top: 9px;
+  }
+  .top-header .burger span:nth-child(2) {
+    top: 15px;
+  }
+  .top-header .burger span:nth-child(3) {
+    top: 21px;
+  }
+
+  /* Анимация бургера в крестик */
+  body.nav-open .top-header .burger span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  body.nav-open .top-header .burger span:nth-child(2) {
+    opacity: 0;
+  }
+  body.nav-open .top-header .burger span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* Цвета пунктов меню */
+  body:not(.dark) .top-header .header-nav .button {
+    color: #111827;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  body.dark .top-header .header-nav .button {
+    color: #f9fafb;
+    border-bottom: 1px solid #1f2937;
+  }
+
+  .top-header .header-nav .button:hover {
+    color: var(--accent, #ff7f27) !important;
+    border-bottom-color: var(--accent, #ff7f27) !important;
+    background: rgba(255, 127, 39, 0.08);
+  }
+}
+
+/* Компактная горизонтальная навигация на узких ноутбуках */
+@media (min-width: 993px) and (max-width: 1140px) {
+  .top-header .header-nav .container {
+    flex-wrap: wrap;
+    row-gap: 6px;
+    padding: 0 12px;
+  }
+
+  .top-header .header-nav .buttons {
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    padding-left: 16px;
+    padding-right: 8px;
+  }
+
+  .top-header .header-nav .button {
+    font-size: 13px;
+    padding: 5px 7px;
+  }
+
+  .top-header .header-online--nav {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+}
+
+/* 📱 МОБИЛЬНАЯ ВЕРСИЯ СТРАНИЦЫ ИГР */
+
+@media (max-width: 600px) {
+  .games-page {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* HEADER компактнее */
+  .site-title {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 4px 0 6px;
+    padding: 0;
+  }
+
+  main.games-page {
+    max-width: 100%;
+    margin: 8px auto 16px;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  /* карточки игр чуть компактнее и на всю ширину контейнера */
+  .game-card,
+  .game-card-disabled {
+    margin: 12px 0;
+    padding: 16px 14px;
+    border-radius: 10px;
+    box-sizing: border-box; /* чтобы паддинги не ломали ширину */
+  }
+
+  .game-card h2,
+  .game-card h3 {
+    font-size: 16px;
+  }
+
+  /* Лента "В разработке" */
+  .game-card-disabled::before {
+    top: 10px;
+    right: -30px;
+    padding: 4px 26px 4px 80px;
+    font-size: 10px;
+  }
+
+  .game-card-disabled::after {
+    top: 3px;
+    right: 92px;
+    font-size: 12px;
+  }
+
+  /* Игра "Угадай код" */
+  #quiz-code {
+    margin: 0 2px 14px;
+    font-size: 14px;
+    padding: 14px 10px 12px;
+  }
+
+  #quiz-code::before {
+    top: 7px;
+    left: 10px;
+  }
+
+  #quiz-code::after {
+    top: 5px;
+    right: 10px;
+    font-size: 10px;
+  }
+
+  /* Варианты ответа */
+  #quiz-options {
+    gap: 8px;
+  }
+
+  #quiz-options button {
+    width: 80%;
+    max-width: 260px;
+    padding: 8px 10px;
+  }
+
+  /* Кнопки "Следующий / Начать заново" */
+  .game-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .game-buttons .button {
+    width: 80%;
+    max-width: 260px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  /* Кнопки навигации в хедере*/
+  nav .button {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .button,
+  .button-secondary {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts-page {
+    padding: 24px 16px 40px;
+  }
+
+  .contacts-title {
+    font-size: 1.65rem;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-card {
+    padding: 18px 18px 32px;
+  }
+
+  .contact-card-header {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 960px) {
+  .page-frame {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 2.5em 0.5em rgba(204, 204, 204, 0.5);
+  }
+}
+
+@media (max-width: 960px) {
+  .page-frame {
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

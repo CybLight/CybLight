@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-i18n.mjs",
+    "build": "node scripts/build-css.mjs && node scripts/build-i18n.mjs",
+    "build:css": "node scripts/build-css.mjs",
     "build:i18n": "node scripts/build-i18n.mjs",
     "indexnow": "node scripts/submit-indexnow.mjs"
   }

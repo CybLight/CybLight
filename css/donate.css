@@ -978,15 +978,15 @@ body.donate .top-header .header-nav .button:hover {
 
 /* MOBILE ADAPTIVE */
 
-/* По умолчанию (ПК): "Наведи — ..." */
+/* По умолчанию (ПК): подсказка из data-hint-hover */
 .card-flip .card-hint::before {
-  content: 'Наведи — чтобы посмотреть номер';
+  content: attr(data-hint-hover);
 }
 
-/* Мобилка/тач: "Нажми — ..." */
+/* Мобилка/тач: подсказка из data-hint-tap */
 @media (hover: none), (pointer: coarse), (max-width: 640px) {
   .card-flip .card-hint::before {
-    content: 'Нажми — чтобы посмотреть номер';
+    content: attr(data-hint-tap);
   }
 }
 

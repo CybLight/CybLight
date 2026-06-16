@@ -175,6 +175,16 @@ export const privacyTriples = [
     'local high scores in on-site games;',
   ],
   [
+    'флаг о том, что пасхалка уже была найдена, чтобы не показывать её повторно;',
+    'прапорець про те, що пасхалку вже знайдено, щоб не показувати її повторно;',
+    'a flag that an easter egg was already found so it is not shown again;',
+  ],
+  [
+    'выбранная светлая или тёмная тема;',
+    'обрана світла або темна тема;',
+    'selected light or dark theme;',
+  ],
+  [
     'cookie сессии для входа в учётную запись CybLight.',
     'cookie сесії для входу в обліковий запис CybLight.',
     'session cookies for CybLight account sign-in.',
@@ -272,6 +282,11 @@ export const privacyTriples = [
     'Если вы считаете, что какие-то данные собираются некорректно или хотите задать вопрос о конфиденциальности, напишите мне через страницу',
     'Якщо ви вважаєте, що якісь дані збираються некоректно або хочете поставити запитання про конфіденційність, напишіть мені через сторінку',
     'If you believe data is collected incorrectly or have a privacy question, contact me via the',
+  ],
+  [
+    'не взаимодействовать с пасхалками и скрытыми элементами;',
+    'не взаимодіяти з пасхалками та прихованими елементами;',
+    'not interact with easter eggs and hidden elements;',
   ],
   ['12. Изменения в политике', '12. Зміни в політиці', '12. Policy changes'],
 ];

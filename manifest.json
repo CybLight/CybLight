@@ -39,6 +39,10 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "theme_color": "#0d6efd",
+      "background_color": "#ffffff"
     }
   ]
 }

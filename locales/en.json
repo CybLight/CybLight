@@ -21,6 +21,8 @@
     "searchResults": "Results found: ",
     "searchNoResults": "Nothing found for:",
     "searchPageText": "Text on this page",
+    "searchTagPage": "page",
+    "searchTagText": "text",
     "menuOpen": "Open menu",
     "online": "online",
     "copied": "Copied!",
@@ -56,6 +58,8 @@
     "gameNoQuestions": "No questions for this difficulty yet 🙃",
     "gamePickAnswer": "Pick an answer first!",
     "gameError": "Error",
+    "gameCodeLabel": "code",
+    "dialogOk": "OK",
     "privacySettingsTitle": "Privacy settings",
     "privacySettingsClose": "Close",
     "privacySettingsIntroBefore": "We use cookies and similar technologies to run the site and improve your experience. Learn more in the ",
@@ -246,6 +250,14 @@
       "<strong>CybLight</strong> is the author's personal non-commercial project. The <strong>cyblight.org</strong> website, <strong>login.cyblight.org</strong> sign-in service, <strong>api.cyblight.org</strong> API, and official Android app are provided \"as is\" without commercial availability guarantees."
     ],
     [
+      "Официальное мобильное приложение для Android: вход через login.cyblight.org, список\n              друзей с онлайн-статусом, личные сообщения, профиль и настройки безопасности (2FA,\n              сессии, passkeys). Поддерживаются русский, украинский и английский языки.",
+      "Official Android app: sign in via login.cyblight.org, friends list with online status, private messages, profile and security settings (2FA, sessions, passkeys). Russian, Ukrainian, and English are supported."
+    ],
+    [
+      "Официальное мобильное приложение для Android: вход через login.cyblight.org, список\n              друзей с online-статусом, личные сообщения, профиль и настройки безопасности (2FA,\n              сессии, passkeys). Поддерживаются русский, украинский и английский языки.",
+      "Official Android app: sign in via login.cyblight.org, friends list with online status, private messages, profile and security settings (2FA, sessions, passkeys). Russian, Ukrainian, and English are supported."
+    ],
+    [
       "Добро пожаловать на мой сайт! Здесь я делюсь своими проектами по электронике (Arduino, STM32), умному дому, программированию и разработкой собственного эхолота для рыбалки. Также публикую блог о технологиях и создаю интерактивные игры по программированию.",
       "Welcome to my site! Here I share my electronics projects (Arduino, STM32), smart home, programming, and my own fish finder for fishing. I also publish a tech blog and create interactive programming games."
     ],
@@ -358,6 +370,10 @@
       "When such an easter egg triggers, an event is sent to the server for technical purposes, then a notification to my Telegram bot."
     ],
     [
+      "Скачайте официальное мобильное приложение CybLight для Android: вход в аккаунт, друзья, сообщения и безопасность. Прямая загрузка APK.",
+      "Download the official CybLight mobile app for Android: account sign-in, friends, messages, and security. Direct APK download."
+    ],
+    [
       "<strong>Cloudflare</strong> — CDN и защита от атак. Может обрабатывать IP-адреса, страну и другую техническую информацию о запросах.",
       "<strong>Cloudflare</strong> — CDN and attack protection. May process IP addresses, country, and other technical request data."
     ],
@@ -376,6 +392,10 @@
     [
       "Контакты CybLight: почта, Telegram, YouTube, GitHub и другие способы связи по проектам электроники, Arduino, умному дому и играм.",
       "CybLight contacts: email, Telegram, YouTube, GitHub, and more for electronics, Arduino, smart home, and games."
+    ],
+    [
+      "data-hint-hover=\"Наведи — чтобы посмотреть номер\" data-hint-tap=\"Нажми — чтобы посмотреть номер\">Наведи — чтобы посмотреть номер",
+      "data-hint-hover=\"Hover to see the number\" data-hint-tap=\"Tap to see the number\">Hover to see the number"
     ],
     [
       "CybLight — создание сайтов, проекты умного дома, интерактивные игры по программированию, блог о технологиях, электронике и IoT.",
@@ -438,6 +458,10 @@
       "Interactive programming games by CybLight: guess code output, syntax practice, algorithms, and more."
     ],
     [
+      "Официальное приложение для Android: вход в аккаунт CybLight, список друзей, личные сообщения и настройки безопасности.",
+      "Official Android app: sign in to your CybLight account, friends list, private messages, and security settings."
+    ],
+    [
       "<strong>Cloudflare Turnstile</strong> — проверка на автоматические действия при входе в аккаунт на login.cyblight.org.",
       "<strong>Cloudflare Turnstile</strong> — bot protection on sign-in at login.cyblight.org."
     ],
@@ -478,6 +502,14 @@
       "If you do not want technical information (IP, country, browser) in easter-egg logs, you can:"
     ],
     [
+      "Если Android предупреждает о неизвестном источнике — разрешите установку и нажмите «Всё равно установить».",
+      "If Android warns about an unknown source — allow installation and tap \"Install anyway\"."
+    ],
+    [
+      "При обновлении поверх старой версии может понадобиться удалить предыдущую сборку, если подпись отличается.",
+      "When updating over an older version, you may need to uninstall the previous build if the signature differs."
+    ],
+    [
       "Однако при обращении к Сайту и взаимодействии с ним могут обрабатываться следующие технические данные:",
       "However, when accessing and interacting with the Site, the following technical data may be processed:"
     ],
@@ -506,6 +538,10 @@
       "Website development, smart home, programming games, electronics, IoT, and engineering projects."
     ],
     [
+      "Официальное Android-приложение: аккаунт, друзья, сообщения и\n                    безопасность.",
+      "Official Android app: account, friends, messages, and\n                    security."
+    ],
+    [
       "Здесь выходят ролики связанные с электроникой и моими проектами, а также обзоры разной техники",
       "Videos about electronics, my projects, and tech reviews are published here"
     ],
@@ -528,6 +564,10 @@
     [
       "служебный тип события (например, <code>egg_click</code> или <code>theme_flux</code>).",
       "event type (e.g. <code>egg_click</code> or <code>theme_flux</code>)."
+    ],
+    [
+      "Прямой файл на cyblight.org пока недоступен — используйте кнопку «Скачать с GitHub».",
+      "The direct file on cyblight.org is not available yet — use the \"Download from GitHub\" button."
     ],
     [
       "Приложение использует тот же аккаунт CybLight и те же правила поведения, что и Сайт.",
@@ -598,12 +638,24 @@
       "spread spam, malware, or false information on behalf of the project;"
     ],
     [
-      "флаг о том, что пасхалка уже была найдена, чтобы не показывать её повторно.",
-      "a flag that an easter egg was already found so it is not shown again."
+      "флаг о том, что пасхалка уже была найдена, чтобы не показывать её повторно;",
+      "a flag that an easter egg was already found so it is not shown again;"
     ],
     [
       "Время ответа зависит от загрузки, но чаще всего — в течение ближайших дней.",
       "Response time depends on workload, but usually within the next few days."
+    ],
+    [
+      "флаг о том, что пасхалка уже была найдена, чтобы не показывать её повторно;",
+      "a flag that an easter egg was already found so it is not shown again;"
+    ],
+    [
+      "Официальное Android-приложение: аккаунт, друзья, сообщения и безопасность.",
+      "Official Android app: account, friends, messages, and security."
+    ],
+    [
+      "Вход через <strong>login.cyblight.org</strong> (логин, пароль, Turnstile)",
+      "Sign in via <strong>login.cyblight.org</strong> (username, password, Turnstile)"
     ],
     [
       "Числа в десятичной системе, а тебе нужно быстро перевести их в двоичную.",
@@ -746,6 +798,10 @@
       "do not interact with easter eggs and hidden elements;"
     ],
     [
+      "не взаимодействовать с пасхалками и скрытыми элементами;",
+      "not interact with easter eggs and hidden elements;"
+    ],
+    [
       "выбранный язык интерфейса (<code>cyblight-lang</code>);",
       "selected interface language (<code>cyblight-lang</code>);"
     ],
@@ -838,8 +894,16 @@
       "keeps order in groups and removes spam."
     ],
     [
+      "Поддержка двухфакторной аутентификации (2FA)",
+      "Two-factor authentication (2FA) support"
+    ],
+    [
       "CybLight — Arduino, электроника и умный дом",
       "CybLight — Arduino, electronics, and smart home"
+    ],
+    [
+      "CybLight — Мобильное приложение для Android",
+      "CybLight — Mobile app for Android"
     ],
     [
       "Мобильное приложение CybLight уже доступно",
@@ -854,6 +918,10 @@
       "Open to collaboration and joint ideas"
     ],
     [
+      "Мобильное приложение CybLight для Android",
+      "CybLight mobile app for Android"
+    ],
+    [
       "IP-адрес и страна (по данным Cloudflare);",
       "IP address and country (via Cloudflare);"
     ],
@@ -864,6 +932,14 @@
     [
       "страница, на которой сработала пасхалка;",
       "page where the easter egg triggered;"
+    ],
+    [
+      "Профиль, безопасность, сессии и passkeys",
+      "Profile, security, sessions, and passkeys"
+    ],
+    [
+      "Открыть главную страницу сайта СайбLight",
+      "Open CybLight home page"
     ],
     [
       "URL страницы, с которой отправлен отчёт;",
@@ -886,6 +962,10 @@
       "Level up your coding skills with mini-games"
     ],
     [
+      "Запустите CybLight и войдите в аккаунт.",
+      "Launch CybLight and sign in to your account."
+    ],
+    [
       "Бот для поддержания порядка в группах.",
       "A bot to keep order in groups."
     ],
@@ -900,6 +980,10 @@
     [
       "CybLight Projects — Поддержать проекты",
       "CybLight Projects — Support projects"
+    ],
+    [
+      "Русский, украинский и английский языки",
+      "Russian, Ukrainian, and English languages"
     ],
     [
       "выбранная категория и текст сообщения;",
@@ -950,6 +1034,10 @@
       "local high scores in on-site games;"
     ],
     [
+      "выбранная светлая или тёмная тема;",
+      "selected light or dark theme;"
+    ],
+    [
       "Telegram канал DNLbeats с музыкой",
       "DNLbeats Telegram channel with music"
     ],
@@ -986,6 +1074,10 @@
       "Sign in to your CybLight account"
     ],
     [
+      "CybLight mobile app для Android",
+      "CybLight mobile app for Android"
+    ],
+    [
       "Ваши пожертвования помогут мне:",
       "Your donations help me:"
     ],
@@ -994,12 +1086,24 @@
       "Hover to see the number"
     ],
     [
+      "Список друзей с онлайн-статусом",
+      "Friends list with online status"
+    ],
+    [
+      "Проверка обновлений при запуске",
+      "Update check on launch"
+    ],
+    [
       "5. Мобильное приложение Android",
       "5. Android mobile app"
     ],
     [
       "3. Пасхалки и скрытые элементы",
       "3. Easter eggs and hidden elements"
+    ],
+    [
+      "Нажми — чтобы посмотреть номер",
+      "Tap to see the number"
     ],
     [
       "<h2>Telegram‑бот Guardian</h2>",
@@ -1020,6 +1124,10 @@
     [
       "«Политика конфиденциальности»",
       "\"Privacy Policy\""
+    ],
+    [
+      "Мобильное приложение CybLight",
+      "CybLight mobile app"
     ],
     [
       "3. Данные при посещении сайта",
@@ -1086,6 +1194,18 @@
       "data-tooltip=\"Copy\""
     ],
     [
+      "Скачайте APK-кнопкой выше.",
+      "Download the APK using the button above."
+    ],
+    [
+      "Откройте файл на телефоне.",
+      "Open the file on your phone."
+    ],
+    [
+      "CybLight-Android на GitHub",
+      "CybLight-Android on GitHub"
+    ],
+    [
       "4. Учётная запись CybLight",
       "4. CybLight account"
     ],
@@ -1128,6 +1248,10 @@
     [
       "Скопировать номер карты",
       "Copy card number"
+    ],
+    [
+      "Личные сообщения и чаты",
+      "Private messages and chats"
     ],
     [
       "11. Ваши выборы и права",
@@ -1186,6 +1310,10 @@
       "Telegram bot Guardian"
     ],
     [
+      "CybLight — Приложение",
+      "CybLight — App"
+    ],
+    [
       "Условия использования",
       "Terms of Use"
     ],
@@ -1204,6 +1332,10 @@
     [
       "1. Угадай вывод кода",
       "1. Guess the code output"
+    ],
+    [
+      "Подробнее о проекте:",
+      "Learn more about the project:"
     ],
     [
       "9. Сторонние сервисы",
@@ -1236,6 +1368,10 @@
     [
       "Написать в Telegram",
       "Message on Telegram"
+    ],
+    [
+      "Скачать APK с сайта",
+      "Download APK from site"
     ],
     [
       "Мои YouTube-каналы",
@@ -1290,6 +1426,10 @@
       "Email"
     ],
     [
+      "страница загрузки",
+      "download page"
+    ],
+    [
       "QR-код для доната",
       "Donation QR code"
     ],
@@ -1332,6 +1472,18 @@
     [
       "Проекты CybLight",
       "CybLight Projects"
+    ],
+    [
+      "Скачать с GitHub",
+      "Download from GitHub"
+    ],
+    [
+      "Страница релизов",
+      "Releases page"
+    ],
+    [
+      "страница проекта",
+      "project page"
     ],
     [
       "Fish Finder PRO",
@@ -1438,6 +1590,10 @@
       "🎮 Game channel"
     ],
     [
+      "Исходный код:",
+      "Source code:"
+    ],
+    [
       "Подписчиков:",
       "Subscribers:"
     ],
@@ -1452,6 +1608,10 @@
     [
       "Игровое поле",
       "Game board"
+    ],
+    [
+      "Скачать APK:",
+      "Download APK:"
     ],
     [
       "Репозиторий:",
@@ -1498,6 +1658,10 @@
       "Card number"
     ],
     [
+      "Возможности",
+      "Features"
+    ],
+    [
       "Сложность:",
       "Difficulty:"
     ],
@@ -1518,6 +1682,10 @@
       "\"Contacts\""
     ],
     [
+      "Приложение",
+      "App"
+    ],
+    [
       "Вы можете:",
       "You can:"
     ],
@@ -1532,6 +1700,10 @@
     [
       "на Сайте.",
       "on the Site."
+    ],
+    [
+      "Установка",
+      "Installation"
     ],
     [
       "1. Кто мы",
@@ -1582,6 +1754,10 @@
       "career"
     ],
     [
+      "Скачать",
+      "Download"
+    ],
+    [
       "Разделы",
       "Sections"
     ],
@@ -1600,6 +1776,10 @@
     [
       "Музыка",
       "Music"
+    ],
+    [
+      "Версия",
+      "Version"
     ],
     [
       "Поиск",

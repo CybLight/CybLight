@@ -4,20 +4,22 @@
     <meta charset="UTF-8" />
     <title>404 — Страница не найдена</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div class="error-card">
       <h1 class="error-code">404</h1>
-      <p class="error-subtitle">Кажется, такой страницы не существует.</p>
+      <p id="errorSubtitle" class="error-subtitle">Кажется, такой страницы не существует.</p>
       <p class="error-text">
-        Возможно, ты ошибся адресом. <br />
-        Или просто заблудился в кибер-подсветке.
+        <span id="errorLine1">Возможно, ты ошибся адресом.</span>
+        <br />
+        <span id="errorLine2">Или просто заблудился в кибер-подсветке.</span>
       </p>
 
-      <a href="/" class="link-home">
-        <span>Вернуться на главную</span>
-        <span>↩</span>
+      <a id="linkHome" href="/ru/" class="link-home">
+        <span class="link-home-label">Вернуться на главную</span>
+        <span aria-hidden="true">↩</span>
       </a>
 
       <p id="serviceMessage" class="service-message">
@@ -43,11 +45,12 @@
         <p class="subtitle"></p>
         <input type="text" id="promptInput" placeholder="Ваш Nickname" />
         <div class="buttons">
-          <button id="confirmBtn">OK</button>
-          <button id="cancelBtn" class="cancel">Отмена</button>
+          <button type="button" id="confirmBtn">OK</button>
+          <button type="button" id="cancelBtn" class="cancel">Отмена</button>
         </div>
       </div>
     </div>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

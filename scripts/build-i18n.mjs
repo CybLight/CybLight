@@ -105,7 +105,9 @@ function render(template, locale, localeCode, pagePath) {
     out = out.replace(/\r\n/g, '\n');
     const sorted = [...locale.replacements].sort((a, b) => b[0].length - a[0].length);
     for (const [from, to] of sorted) {
-      out = applyReplacement(out, from, to);
+      const fromResolved = from.replace(/\{\{L\}\}/g, prefix);
+      const toResolved = to.replace(/\{\{L\}\}/g, prefix);
+      out = applyReplacement(out, fromResolved, toResolved);
     }
   }
 

@@ -1,0 +1,281 @@
+/* Styles for the games page */
+
+/* Общий текст страницы игр */
+.games-page {
+  color: #111827; /* нормальный тёмный для светлой темы */
+}
+
+body.dark .games-page {
+  color: #f5f5f5; /* светлый текст в тёмной теме */
+}
+
+/* Обычная карточка доступной игры */
+.game-card {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #0c1220;
+  border: 1px solid #222c4a;
+  color: #f5f5f5;
+  max-width: 900px;
+  width: 100%;
+}
+
+#quiz-result {
+  display: block; /* делает p блочным */
+  width: fit-content; /* чтобы ширина была только по тексту */
+  margin: 0 auto 8px; /* выравнивает по центру */
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+#quiz-result.correct {
+  background: rgba(50, 205, 50, 0.15);
+  color: #10b981;
+}
+
+#quiz-result.wrong {
+  background: rgba(255, 0, 0, 0.15);
+  color: #ef4444;
+}
+
+/* Бейдж "Скоро" */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #ff6f00;
+  color: #fff;
+  border-radius: 4px;
+  margin-left: 6px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 8px rgba(255, 111, 0, 0.7);
+}
+
+/* Карточка с игрой "Угадай вывод кода" — чуть уютнее */
+#code-quiz.game-card {
+  padding: 24px 20px 28px;
+  text-align: left;
+}
+
+/* Анимация появления игрового поля */
+
+#code-quiz {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(16px);
+  overflow: hidden;
+  transition:
+    max-height 0.45s ease,
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* Когда игра запущена — плавно раскрываем блок */
+#code-quiz.quiz-visible {
+  max-height: 900px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Кнопка "Начать игру" — лёгкое растворение */
+#start-quiz {
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+#start-quiz.hidden {
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+}
+
+/* Красивый блок с кодом */
+#quiz-code {
+  position: relative;
+
+  max-width: 700px;
+  margin: 0 auto 20px;
+
+  padding: 18px 18px 16px; /* сверху чуть больше под индикаторы */
+  border-radius: 12px;
+
+  background: radial-gradient(circle at 0 0, #151b30 0, #050814 55%);
+  border: 1px solid #273b5f;
+
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
+
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #e5e7eb;
+
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+/* Три “макаОС-лампочки” слева сверху */
+#quiz-code::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff5f57;
+  box-shadow:
+    14px 0 0 #febc2e,
+    28px 0 0 #28c840;
+  opacity: 0.95;
+}
+
+/* Небольшой подписи “Код” справа */
+#quiz-code::after {
+  content: var(--quiz-code-label, "код");
+  position: absolute;
+  top: 6px;
+  right: 14px;
+
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  opacity: 0.9;
+}
+
+#quiz-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ← центрирует кнопки */
+  gap: 10px; /* расстояние между кнопками */
+}
+
+#quiz-options button {
+  display: block;
+  width: auto;
+  text-align: center;
+  margin: 0;
+  padding: 8px 12px;
+  background: #1f2740;
+  color: #f5f5f5;
+  border: 1px solid #2e3a60;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#quiz-options button:hover {
+  background: #283357;
+}
+
+#quiz-code {
+  color: #f5f5f5 !important;
+  font-family: "Fira Code", monospace;
+  font-size: 17px;
+  white-space: pre-wrap;
+}
+
+/* Контейнер с кнопками игры */
+.game-buttons {
+  display: flex;
+  justify-content: center; /* выравниваем по центру */
+  gap: 16px; /* расстояние между кнопками */
+  margin-top: 20px;
+}
+
+/* Убираем левый отступ, который нужен только в навигации */
+.game-buttons .button {
+  margin-left: 0;
+}
+
+/* 🔒 Недоступные игры (в разработке)*/
+
+.game-card-disabled {
+  position: relative;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+
+  opacity: 0.95;
+  cursor: not-allowed;
+  overflow: hidden;
+}
+
+/* Лента "В разработке" */
+
+.game-card-disabled::before {
+  content: "В разработке";
+  position: absolute;
+
+  top: 14px;
+  right: -30px;
+
+  padding: 6px 40px 6px 90px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  background: linear-gradient(135deg, #ffa726, #fb8c00);
+  color: #1b1e26;
+
+  transform: rotate(12deg);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 166, 0, 0.7);
+  pointer-events: none;
+  z-index: 5;
+  text-align: left;
+}
+
+/* Неоновое </> + маленькое dev */
+
+.game-card-disabled::after {
+  content: "</>\A dev";
+  white-space: pre;
+
+  position: absolute;
+
+  top: 1px; /* вертикальное положение внутри ленты */
+  right: 125px; /* правый отступ */
+
+  font-family: "Consolas", "Fira Code", monospace;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1;
+
+  color: #1b1e26;
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.5),
+    0 0 8px rgba(0, 255, 200, 0.8),
+    0 0 14px rgba(0, 255, 200, 0.6);
+
+  transform: rotate(12deg);
+  z-index: 6;
+  pointer-events: none;
+
+  animation: codePulse 1.5s ease-in-out infinite;
+}
+
+/* Анимация пульса */
+@keyframes codePulse {
+  0% {
+    transform: rotate(12deg) scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: rotate(12deg) scale(1.12);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(12deg) scale(1);
+    opacity: 0.85;
+  }
+}

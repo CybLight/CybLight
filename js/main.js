@@ -426,7 +426,7 @@ window.addEventListener('cyblight-privacy-change', () => {
         domResults.push({
           title: t('searchPageText'),
           desc: highlightText(pageText.slice(0, 300) + (pageText.length > 300 ? '...' : ''), words),
-          tags: ['страница', 'текст'],
+          tags: [t('searchTagPage'), t('searchTagText')],
           url: path,
         });
       }

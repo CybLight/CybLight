@@ -1,0 +1,35 @@
+/* Определение цветовых переменных */
+:root {
+  --primary-dark: #03040a;
+  --primary-gray: #292929;
+  --primary-green: #1e905d;
+  --primary-orange: #ff7f27;
+  --burger-color: #ff7f27;
+  --secondary-color: #0efff3;
+  --accent-color: #f1c40f;
+  --button-background: #333;
+  --color-li: #333;
+  --button-hover-background: #1e905d;
+  --button-active-background: #f1c40f;
+  --text-header: #fff;
+  --bg-header: #0a0f1f;
+  --button-text-color: #fff;
+  --dark-text-color: #fff;
+  --bg-nav: #050816;
+  --bg-card: #0b1020;
+  --bg-chip: #050b16;
+  --accent: #ff7f27;
+  --accent-soft: rgba(255, 127, 39, 0.2);
+  --accent-strong: rgba(255, 127, 39, 0.6);
+  --text-main: #292929;
+  --text-muted: #9aa4c6;
+  --border-soft: #1b243c;
+  --error: #ff4b5c;
+  --shadow-neon:
+    0 0 12px rgba(255, 127, 39, 0.6), 0 0 32px rgba(255, 127, 39, 0.35);
+  --text-description: #6b7280;
+  --text-description-dark: #c7cbd4;
+  --cyb-header-dark-1: #050816;
+  --cyb-header-dark-2: #0b1220;
+  --cyb-header-glow: #ff7f27;
+}

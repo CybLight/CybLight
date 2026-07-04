@@ -14,6 +14,7 @@ const PAGES = [
   'donate/index.html',
   'privacy/index.html',
   'terms/index.html',
+  'smarthomehub/index.html',
 ];
 
 const LEGACY_REDIRECTS = [

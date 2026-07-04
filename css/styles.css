@@ -3561,6 +3561,306 @@ body.dark .contacts-side-list {
   margin-bottom: 0;
 }
 
+/* ===== css/parts/smarthomehub.css ===== */
+/* Smart Home Hub Page Styles — Light & Dark Aesthetic */
+
+.smarthome-page-frame {
+  background-color: #f8f9fd !important;
+  color: #111827 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+body.dark .smarthome-page-frame,
+body.dark .smarthome-page-frame main {
+  background-color: #050816 !important;
+  color: #ffffff !important;
+}
+
+/* Элемент canvas для электрических связей на фоне */
+#smarthome-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Убеждаемся, что контент отображается поверх canvas */
+.smarthome-logo-container,
+.hero-content,
+.smarthome-section,
+header,
+nav,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Стили для логотипа Smart Home Hub */
+.smarthome-logo-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  perspective: 1000px;
+}
+
+.smarthome-logo {
+  max-width: 480px;
+  width: 90%;
+  height: auto;
+  border-radius: 16px;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 8px 32px rgba(0, 150, 255, 0.08), 0 0 16px rgba(255, 127, 39, 0.05);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+  background-color: #ffffff;
+}
+
+body.dark .smarthome-logo {
+  border-color: var(--border-soft);
+  box-shadow: 0 8px 32px rgba(0, 255, 243, 0.15), 0 0 16px rgba(255, 127, 39, 0.1);
+  background-color: transparent;
+}
+
+.smarthome-logo:hover {
+  transform: scale(1.03) rotateY(2deg);
+  box-shadow: 0 12px 40px rgba(0, 150, 255, 0.25), 0 0 24px rgba(255, 127, 39, 0.15);
+  border-color: #ff7f27;
+}
+
+body.dark .smarthome-logo:hover {
+  box-shadow: 0 12px 40px rgba(0, 255, 243, 0.35), 0 0 24px rgba(255, 127, 39, 0.25);
+  border-color: var(--primary-orange);
+}
+
+.smarthome-subtitle {
+  color: #4b5563;
+  font-size: 16px;
+  max-width: 700px;
+  margin: 10px auto 30px auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+body.dark .smarthome-subtitle {
+  color: var(--text-description-dark);
+}
+
+.smarthome-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+/* Стили карточек для светлой темы */
+.smarthome-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+body.dark .smarthome-card {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-soft) !important;
+}
+
+.smarthome-card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #111827;
+  transition: color 0.2s ease;
+}
+
+body.dark .smarthome-card h3 {
+  color: #ffffff;
+}
+
+.smarthome-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+body.dark .smarthome-card p {
+  color: #9aa4c6;
+}
+
+.smarthome-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease;
+}
+
+body.dark .smarthome-icon-wrap {
+  background-color: var(--bg-chip) !important;
+  border: 1px solid var(--border-soft) !important;
+}
+
+.smarthome-card:hover {
+  transform: translateY(-5px);
+}
+
+.smarthome-card:hover .smarthome-icon-wrap {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Неоновые эффекты при наведении — Светлая тема */
+.smarthome-card:nth-child(1):hover {
+  border-color: #ff7f27;
+  box-shadow: 0 8px 20px rgba(255, 127, 39, 0.15);
+}
+.smarthome-card:nth-child(1):hover h3 {
+  color: #ff7f27;
+}
+
+.smarthome-card:nth-child(2):hover {
+  border-color: #f1c40f;
+  box-shadow: 0 8px 20px rgba(241, 196, 15, 0.15);
+}
+.smarthome-card:nth-child(2):hover h3 {
+  color: #f1c40f;
+}
+
+.smarthome-card:nth-child(3):hover {
+  border-color: #0efff3;
+  box-shadow: 0 8px 20px rgba(14, 255, 243, 0.15);
+}
+.smarthome-card:nth-child(3):hover h3 {
+  color: #0efff3;
+}
+
+.smarthome-card:nth-child(4):hover {
+  border-color: #2ecc71;
+  box-shadow: 0 8px 20px rgba(46, 204, 113, 0.15);
+}
+.smarthome-card:nth-child(4):hover h3 {
+  color: #2ecc71;
+}
+
+.smarthome-card:nth-child(5):hover {
+  border-color: #3498db;
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.15);
+}
+.smarthome-card:nth-child(5):hover h3 {
+  color: #3498db;
+}
+
+/* Яркие неоновые эффекты при наведении — Тёмная тема */
+body.dark .smarthome-card:nth-child(1):hover {
+  border-color: #ff7f27 !important;
+  box-shadow: 0 10px 30px rgba(255, 127, 39, 0.55), 0 0 15px rgba(255, 127, 39, 0.25) !important;
+}
+
+body.dark .smarthome-card:nth-child(2):hover {
+  border-color: #f1c40f !important;
+  box-shadow: 0 10px 30px rgba(241, 196, 15, 0.55), 0 0 15px rgba(241, 196, 15, 0.25) !important;
+}
+
+body.dark .smarthome-card:nth-child(3):hover {
+  border-color: #0efff3 !important;
+  box-shadow: 0 10px 30px rgba(14, 255, 243, 0.55), 0 0 15px rgba(14, 255, 243, 0.25) !important;
+}
+
+body.dark .smarthome-card:nth-child(4):hover {
+  border-color: #2ecc71 !important;
+  box-shadow: 0 10px 30px rgba(46, 204, 113, 0.55), 0 0 15px rgba(46, 204, 113, 0.25) !important;
+}
+
+body.dark .smarthome-card:nth-child(5):hover {
+  border-color: #3498db !important;
+  box-shadow: 0 10px 30px rgba(52, 152, 219, 0.55), 0 0 15px rgba(52, 152, 219, 0.25) !important;
+}
+
+.smarthome-section {
+  padding: 50px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+body.dark .smarthome-section {
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.smarthome-section:last-of-type {
+  border-bottom: none;
+}
+
+.smarthome-section h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+body.dark .smarthome-section h2 {
+  color: #ffffff;
+}
+
+/* Уникальный заголовок H1 с анимацией переливающегося градиента */
+.smarthome-title-glow {
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  margin: 15px 0 20px;
+  text-shadow: none !important;
+  background: linear-gradient(120deg, #ff7f27, #3090ff, #2ecc71, #ff7f27);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: smarthomeGradientFlow 8s ease infinite;
+}
+
+.smarthome-title-glow .accent,
+.smarthome-title-glow .accent-2 {
+  color: inherit !important;
+  background: inherit !important;
+  -webkit-background-clip: inherit !important;
+  background-clip: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+body.dark .smarthome-title-glow {
+  background: linear-gradient(120deg, #0efff3, #a855f7, #ec4899, #0efff3);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: smarthomeGradientFlow 8s ease infinite;
+  text-shadow: none !important;
+}
+
+/* Анимация перелива градиента для заголовка */
+@keyframes smarthomeGradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* ===== css/parts/legal.css ===== */
 /* ===== Страница политики конфиденциальности ===== */
 

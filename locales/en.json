@@ -1808,6 +1808,94 @@
     [
       "Все",
       "All"
+    ],
+    [
+      "Smart Home Hub — управляйте всеми устройствами умного дома с одного центрального хаба, исследуйте проекты автоматизации и сенсоры Arduino.",
+      "Smart Home Hub — manage all your smart home devices from a single central hub, explore automation projects and Arduino sensors."
+    ],
+    [
+      "<span class=\"accent\">Управляйте</span> своими <span class=\"accent-2\">устройствами</span>",
+      "<span class=\"accent\">Manage</span> your <span class=\"accent-2\">devices</span>"
+    ],
+    [
+      "Управляйте всеми устройствами умного дома с одного центрального хаба",
+      "Manage all your smart home devices from a single central hub"
+    ],
+    [
+      "Настройте свой умный дом с помощью различных настроек",
+      "Configure your smart home with various settings"
+    ],
+    [
+      "Исследуйте различные проекты умного дома, которые вы можете создать",
+      "Explore various smart home projects you can build"
+    ],
+    [
+      "Автоматизация освещения",
+      "Lighting automation"
+    ],
+    [
+      "Создайте систему автоматического освещения для вашего дома",
+      "Create an automatic lighting system for your home"
+    ],
+    [
+      "Умный термостат",
+      "Smart thermostat"
+    ],
+    [
+      "Контролируйте температуру в вашем доме удаленно",
+      "Control your home temperature remotely"
+    ],
+    [
+      "Настройте систему безопасности с камерами и датчиками движения",
+      "Set up a security system with cameras and motion sensors"
+    ],
+    [
+      "Автоматизируйте полив и уход за вашим садом",
+      "Automate watering and care for your garden"
+    ],
+    [
+      "Умный эхолот для рыбалки",
+      "Smart fish finder for fishing"
+    ],
+    [
+      "Сенсоры и модули для умного дома",
+      "Sensors and modules for smart home"
+    ],
+    [
+      "Датчик температуры и влажности DHT22",
+      "DHT22 temperature and humidity sensor"
+    ],
+    [
+      "Мониторинг температуры и влажности в помещении",
+      "Indoor temperature and humidity monitoring"
+    ],
+    [
+      "Подключение устройств к WiFi сети",
+      "Connecting devices to WiFi network"
+    ],
+    [
+      "Датчик движения PIR",
+      "PIR motion sensor"
+    ],
+    [
+      "Обнаружение движения для систем безопасности",
+      "Motion detection for security systems"
+    ],
+    [
+      "Настройка",
+      "Configuration"
+    ],
+    [
+      "Система безопасности",
+      "Security system"
+    ],
+    [
+      "Умный сад",
+      "Smart garden"
+    ],
+    [
+      "ESP8266 WiFi модуль",
+      "ESP8266 WiFi module"
     ]
   ]
 }

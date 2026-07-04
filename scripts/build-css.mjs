@@ -24,6 +24,7 @@ const PART_FILES = [
   "modals.css",
   "projects.css",
   "contacts.css",
+  "smarthomehub.css",
   "legal.css",
   "responsive.css",
   "misc.css",

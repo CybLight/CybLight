@@ -17,4 +17,12 @@
 /terms/ /ru/terms/ 301
 /refund /ru/refund/ 301
 /refund/ /ru/refund/ 301
+/pricing https://login.cyblight.org/en/pricing 302
+/pricing/ https://login.cyblight.org/en/pricing 302
+/en/pricing https://login.cyblight.org/en/pricing 302
+/en/pricing/ https://login.cyblight.org/en/pricing 302
+/ru/pricing https://login.cyblight.org/ru/pricing 302
+/ru/pricing/ https://login.cyblight.org/ru/pricing 302
+/uk/pricing https://login.cyblight.org/uk/pricing 302
+/uk/pricing/ https://login.cyblight.org/uk/pricing 302
 /downloads/cyblight-android-v0.4.3.apk <https://github.com/CybLight/CybLight-Android/releases/latest/download/cyblight-android-v0.4.3.apk> 301

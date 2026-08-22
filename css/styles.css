@@ -698,6 +698,7 @@ body.dark .search-no-results {
 body.dark .top-header .search-box {
   background: rgba(15, 23, 42, 0.75);
   border-color: rgba(148, 163, 184, 0.5);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -2045,6 +2046,7 @@ body.dark .footer-bottom {
   position: absolute;
   inset: 0;
   background: rgba(2, 4, 12, 0.72);
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 
@@ -2320,6 +2322,7 @@ body.cyb-privacy-modal-open {
   position: absolute;
   inset: 0;
   background: rgba(2, 4, 12, 0.72);
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 
@@ -2793,6 +2796,7 @@ body.cyb-dialog-open {
   position: absolute;
   inset: 0;
   background: rgba(2, 4, 12, 0.72);
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 
@@ -4537,6 +4541,7 @@ body.theme-flux-celebrate {
   justify-content: center;
   padding: 24px 24px 18px;
   background: rgba(8, 12, 24, 0.72);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   opacity: 0;
   transition: opacity 0.35s ease;

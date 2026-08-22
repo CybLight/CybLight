@@ -337,19 +337,6 @@ body.dark .header-link {
   box-shadow: inset 0 0 0 1px rgba(255, 127, 39, 0.45);
 }
 
-.top-header .header-premium,
-body.dark .top-header .header-premium {
-  color: #fef08a !important;
-  font-weight: 700;
-}
-
-.top-header .header-premium:hover,
-body.dark .top-header .header-premium:hover {
-  color: #fef08a !important;
-  background-color: rgba(234, 179, 8, 0.14);
-  box-shadow: inset 0 0 0 1px rgba(234, 179, 8, 0.5), 0 0 12px rgba(234, 179, 8, 0.3);
-}
-
 /* Счётчик пользователей онлайн */
 .top-header .header-online {
   display: inline-flex;
@@ -792,18 +779,6 @@ body.dark .header-nav .button:hover {
   color: #ffb257;
   border-bottom-color: #ff7f27;
   text-shadow: 0 0 6px rgba(255, 127, 39, 0.8);
-}
-
-.top-header .header-nav .button-premium,
-body.dark .header-nav .button-premium {
-  color: #fef08a;
-  font-weight: 700;
-}
-
-body.dark .header-nav .button-premium:hover {
-  color: #facc15;
-  border-bottom-color: #eab308;
-  text-shadow: 0 0 8px rgba(234, 179, 8, 0.8);
 }
 
 /* BURGER */

@@ -25,9 +25,11 @@ const LEGACY_REDIRECTS = [
   'donate/index.html',
   'privacy/index.html',
   'terms/index.html',
+  'refund/index.html',
+  'pricing/index.html',
 ];
 
-const LEGACY_PATHS = ['games', 'contacts', 'projects', 'downloads', 'donate', 'privacy', 'terms'];
+const LEGACY_PATHS = ['games', 'contacts', 'projects', 'downloads', 'donate', 'privacy', 'terms', 'refund', 'pricing'];
 const SEO_CONFIG = JSON.parse(
   fs.readFileSync(path.join(ROOT, 'seo.config.json'), 'utf8')
 );
@@ -84,6 +86,7 @@ function render(template, locale, localeCode, pagePath) {
   const homeUrl = pageUrl(localeCode, 'index.html');
 
   let out = template
+    .replace(/<html lang="[^"]*"/, `<html lang="${locale.htmlLang}"`)
     .replace(/\{\{L\}\}/g, prefix)
     .replace(/\{\{lang\}\}/g, localeCode)
     .replace(/\{\{htmlLang\}\}/g, locale.htmlLang)
@@ -175,6 +178,8 @@ function writeLegacyRedirect(relPath) {
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting — CybLight</title>
 ${REDIRECT_HEAD}  <meta http-equiv="refresh" content="0;url=${target}" />
   <link rel="canonical" href="${SITE_ORIGIN}${target}" />
   <script>location.replace('${target}');</script>

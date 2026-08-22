@@ -46,5 +46,17 @@
     "expression": "(http.host eq \"cyblight.org\" or http.host eq \"www.cyblight.org\") and (http.request.uri.path eq \"/terms\" or http.request.uri.path eq \"/terms/\")",
     "status_code": 301,
     "target_url": "https://cyblight.org/ru/terms/"
+  },
+  {
+    "description": "Legacy /refund to /ru/refund/",
+    "expression": "(http.host eq \"cyblight.org\" or http.host eq \"www.cyblight.org\") and (http.request.uri.path eq \"/refund\" or http.request.uri.path eq \"/refund/\")",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/refund/"
+  },
+  {
+    "description": "Legacy /pricing to /ru/pricing/",
+    "expression": "(http.host eq \"cyblight.org\" or http.host eq \"www.cyblight.org\") and (http.request.uri.path eq \"/pricing\" or http.request.uri.path eq \"/pricing/\")",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/pricing/"
   }
 ]

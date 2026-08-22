@@ -1,4 +1,5 @@
 # 301 redirects for crawlers (Cloudflare Pages / Netlify)
+
 / /ru/ 301
 /games /ru/games/ 301
 /games/ /ru/games/ 301
@@ -14,3 +15,6 @@
 /privacy/ /ru/privacy/ 301
 /terms /ru/terms/ 301
 /terms/ /ru/terms/ 301
+/refund /ru/refund/ 301
+/refund/ /ru/refund/ 301
+/downloads/cyblight-android-v0.4.3.apk <https://github.com/CybLight/CybLight-Android/releases/latest/download/cyblight-android-v0.4.3.apk> 301

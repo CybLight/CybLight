@@ -166,6 +166,19 @@ body.dark .header-link {
   box-shadow: inset 0 0 0 1px rgba(255, 127, 39, 0.45);
 }
 
+.top-header .header-premium,
+body.dark .top-header .header-premium {
+  color: #fef08a !important;
+  font-weight: 700;
+}
+
+.top-header .header-premium:hover,
+body.dark .top-header .header-premium:hover {
+  color: #fef08a !important;
+  background-color: rgba(234, 179, 8, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(234, 179, 8, 0.5), 0 0 12px rgba(234, 179, 8, 0.3);
+}
+
 /* Счётчик пользователей онлайн */
 .top-header .header-online {
   display: inline-flex;

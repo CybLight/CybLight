@@ -2895,7 +2895,12 @@ body.cyb-dialog-open {
   scroll-snap-type: x mandatory;
   /* hide native scrollbar */
   -ms-overflow-style: none; /* IE/Edge */
-  scrollbar-width: none; /* Firefox */
+}
+
+@supports (scrollbar-width: none) {
+  .projects-carousel .carousel {
+    scrollbar-width: none;
+  }
 }
 
 .projects-carousel .carousel::-webkit-scrollbar {

@@ -125,8 +125,12 @@ function writeJsStrings(localeCode, locale) {
 
 function pageLastmod(pagePath) {
   const templatePath = path.join(ROOT, 'templates', pagePath);
-  let mtime = fs.statSync(templatePath).mtimeMs;
+  let mtime = fs.existsSync(templatePath) ? fs.statSync(templatePath).mtimeMs : Date.now();
   for (const loc of LOCALES) {
+    const locFile = path.join(ROOT, loc, pagePath);
+    if (fs.existsSync(locFile)) {
+      mtime = Math.max(mtime, fs.statSync(locFile).mtimeMs);
+    }
     const localePath = path.join(ROOT, 'locales', `${loc}.json`);
     if (fs.existsSync(localePath)) {
       mtime = Math.max(mtime, fs.statSync(localePath).mtimeMs);
@@ -204,8 +208,9 @@ function sitemapAlternates(pagePath) {
 }
 
 function writeSitemap() {
+  const SITEMAP_PAGES = [...PAGES, 'pricing/index.html', 'refund/index.html'];
   const entries = [];
-  for (const page of PAGES) {
+  for (const page of SITEMAP_PAGES) {
     const lastmod = pageLastmod(page);
     for (const loc of LOCALES) {
       entries.push(`  <url>

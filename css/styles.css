@@ -1016,9 +1016,14 @@ body.dark .hero-news-banner-inner {
   border-color: rgba(241, 196, 15, 0.35);
 }
 
+main.layout-landing,
 .layout-landing {
-  --layout-padding-inline: 16px;
-  padding: 0 16px 0;
+  --layout-padding-inline: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* Dark theme styles */

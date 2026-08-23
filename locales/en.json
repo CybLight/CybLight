@@ -226,6 +226,122 @@
   },
   "replacements": [
     [
+      "Подробнее",
+      "Learn more"
+    ],
+    [
+      "<span class=\"accent\">CybLight</span> — Платформа\n              <span class=\"accent-2\">Smart Home & IoT Cloud</span>",
+      "<span class=\"accent\">CybLight</span> — <span class=\"accent-2\">Smart Home & IoT Cloud</span> Platform"
+    ],
+    [
+      "Интеллектуальная программная экосистема для автоматизации умного дома, мониторинга IoT-датчиков, управления микроконтроллерами (ESP32, STM32, Arduino) и аналитики телеметрии в реальном времени.",
+      "Intelligent software ecosystem for smart home automation, IoT sensor monitoring, microcontroller control (ESP32, STM32, Arduino), and real-time telemetry analytics."
+    ],
+    [
+      "👑 Выбрать тариф",
+      "👑 View Pricing"
+    ],
+    [
+      "Облачная телеметрия · Мобильное приложение",
+      "Cloud Telemetry · Mobile App"
+    ],
+    [
+      "CybLight Mobile & Cloud Platform",
+      "CybLight Mobile & Cloud Platform"
+    ],
+    [
+      "Удалённый доступ к Smart Home Hub, оперативный мониторинг датчиков, мгновенные push-оповещения о событиях и двухфакторная защита (2FA).",
+      "Remote access to Smart Home Hub, real-time sensor monitoring, instant push event alerts, and two-factor authentication (2FA)."
+    ],
+    [
+      "Продукты и решения платформы CybLight",
+      "CybLight Platform Products & Solutions"
+    ],
+    [
+      "Предыдущий продукт",
+      "Previous product"
+    ],
+    [
+      "Следующий продукт",
+      "Next product"
+    ],
+    [
+      "Центральный сервер автоматизации: сбор телеметрии датчиков, сценарии и локальный веб-интерфейс.",
+      "Central automation server: sensor telemetry collection, automation scenarios, and local web dashboard."
+    ],
+    [
+      "CybLight Mobile Client",
+      "CybLight Mobile Client"
+    ],
+    [
+      "Клиентское приложение: телеметрия в реальном времени, пуш-уведомления, 2FA и управление устройствами.",
+      "Client app: real-time telemetry, push notifications, 2FA, and device management."
+    ],
+    [
+      "Скачать приложение",
+      "Download App"
+    ],
+    [
+      "Программный сервис для Windows: автоматическая оптимизация системных процессов и распределение CPU.",
+      "Windows software service: automated process optimization and CPU resource management."
+    ],
+    [
+      "IoT Hydro-Acoustic System",
+      "IoT Hydro-Acoustic System"
+    ],
+    [
+      "Программно-аппаратный комплекс цифровой обработки сигналов сенсоров и визуализации эхолокации.",
+      "Hardware and software system for digital sensor signal processing and echolocation visualization."
+    ],
+    [
+      "CybLight Cloud Core",
+      "CybLight Cloud Core"
+    ],
+    [
+      "Единый личный кабинет, управление лицензиями, синхронизация настроек и безопасность учетных записей.",
+      "Unified dashboard, license management, preference synchronization, and account security."
+    ],
+    [
+      "Тарифные планы",
+      "Pricing Plans"
+    ],
+    [
+      "Видеообзоры и демонстрации решений CybLight",
+      "CybLight Solutions Video Demos & Tutorials"
+    ],
+    [
+      "CybLight — Программные решения и облачная инфраструктура для IoT и умного дома. Все права защищены.",
+      "CybLight — Software solutions and cloud infrastructure for IoT and Smart Home. All rights reserved."
+    ],
+    [
+      "Официальное приложение для Android: удалённый доступ к Smart Home Hub, оперативный мониторинг IoT-датчиков, push-оповещения и настройки безопасности.",
+      "Official Android app: remote access to Smart Home Hub, real-time IoT sensor monitoring, push notifications, and security settings."
+    ],
+    [
+      "Удалённое подключение и управление сервером <strong>Smart Home Hub</strong>",
+      "Remote connection and control of <strong>Smart Home Hub</strong> server"
+    ],
+    [
+      "Мониторинг параметров микроклимата и IoT-датчиков в реальном времени",
+      "Real-time monitoring of microclimate parameters and IoT sensors"
+    ],
+    [
+      "Мгновенные push-оповещения о событиях и сценариях",
+      "Instant push notifications for events and automation triggers"
+    ],
+    [
+      "Управление активными сессиями и устройствами",
+      "Active session and device management"
+    ],
+    [
+      "Сервис диспетчеризации оповещений CybLight",
+      "CybLight Notification & Alert Dispatcher"
+    ],
+    [
+      "Серверный микросервис для маршрутизации тревожных событий, отчетов телеметрии и уведомлений со Smart Home Hub в защищенные каналы связи.",
+      "Server microservice for routing alarm events, telemetry reports, and notifications from Smart Home Hub to secure communication channels."
+    ],
+    [
       "Сайт может запрашивать у <strong>api.cyblight.org</strong> агрегированное число пользователей онлайн и проверять, авторизованы ли вы (через cookie сессии), чтобы показать кнопку «Войти» или «Профиль». Для счётчиков YouTube-каналов используется прокси-сервис статистики; при воспроизведении видео загружается плеер YouTube в режиме <code>youtube-nocookie.com</code>.",
       "The Site may request an aggregated online user count from <strong>api.cyblight.org</strong> and check whether you are signed in (via session cookies) to show \"Sign in\" or \"Profile\". YouTube channel counters use a statistics proxy; video playback loads YouTube in <code>youtube-nocookie.com</code> mode."
     ],

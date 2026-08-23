@@ -389,15 +389,16 @@
         <section class="hero">
           <div class="hero-content">
             <h1 class="neon-text">
-              <span class="accent">Привет,</span> я разработчик
-              <span class="accent-2">CybLight!</span>
+              <span class="accent">CybLight</span> — Платформа
+              <span class="accent-2">Smart Home & IoT Cloud</span>
             </h1>
             <p class="hero-content-one">
-              Добро пожаловать на мой сайт! Здесь я делюсь своими проектами по
-              электронике (Arduino, STM32), умному дому, программированию и
-              разработкой собственного эхолота для рыбалки. Также публикую блог
-              о технологиях и создаю интерактивные игры по программированию.
+              Интеллектуальная программная экосистема для автоматизации умного дома, мониторинга IoT-датчиков, управления микроконтроллерами (ESP32, STM32, Arduino) и аналитики телеметрии в реальном времени.
             </p>
+            <div class="hero-actions" style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 26px;">
+              <a class="button header-premium" href="/ru/pricing/" style="padding: 10px 24px; font-size: 16px; font-weight: 700;">👑 Выбрать тариф</a>
+              <a class="button" href="/ru/smarthomehub/" style="padding: 10px 22px; font-size: 15px;">Smart Home Hub →</a>
+            </div>
             <aside class="hero-news-banner" aria-label="Новости">
               <div class="hero-news-banner-inner">
                 <img
@@ -405,12 +406,12 @@
                   src="/images/favicon_192.png"
                   width="72"
                   height="72"
-                  alt="CybLight Android"
+                  alt="CybLight Cloud & Mobile"
                   loading="lazy"
                 />
                 <div class="hero-news-body">
                   <p class="hero-news-kicker">
-                    Новость · Android
+                    Облачная телеметрия · Мобильное приложение
                     <img
                       class="hero-news-android"
                       src="/images/project/free-icon-android.png"
@@ -421,12 +422,10 @@
                     />
                   </p>
                   <h2 class="hero-news-title">
-                    Мобильное приложение CybLight уже доступно
+                    CybLight Mobile & Cloud Platform
                   </h2>
                   <p class="hero-news-text">
-                    Официальное приложение для Android: вход в аккаунт, друзья с
-                    онлайн-статусом, личные сообщения, 2FA и настройки
-                    безопасности.
+                    Удалённый доступ к Smart Home Hub, оперативный мониторинг датчиков, мгновенные push-оповещения о событиях и двухфакторная защита (2FA).
                   </p>
                 </div>
                 <a class="button hero-news-cta" href="/ru/downloads/"
@@ -435,65 +434,46 @@
               </div>
             </aside>
           </div>
-          <!-- <div class="hero-image">
-            <img
-              src="/images/hero.png"
-              alt="CybLight — проекты по электронике, умному дому и эхолоту"
-            />
-          </div>
-          -->
         </section>
 
         <section id="projects" class="projects-carousel">
-          <h2>Мои проекты</h2>
+          <h2>Продукты и решения платформы CybLight</h2>
           <div class="carousel-wrapper">
-            <button class="carousel-nav prev" aria-label="Предыдущий проект">
+            <button class="carousel-nav prev" aria-label="Предыдущий продукт">
               ‹
             </button>
             <div class="carousel">
-              <!-- 1. основной сайт -->
+              <!-- 1. Smart Home Hub -->
               <article class="project-card">
                 <div class="project-langs">
                   <div class="lang">
                     <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/typescript.svg?color=3178c6"
-                      alt="TypeScript"
-                    /><span>TypeScript</span>
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/arduino.svg?color=00979d"
+                      alt="Arduino"
+                    /><span>ESP32 / Arduino</span>
                   </div>
                   <div class="lang">
                     <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg?color=f7df1e"
-                      alt="JavaScript"
-                    /><span>JavaScript</span>
-                  </div>
-                  <div class="lang">
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg?color=e34f26"
-                      alt="HTML"
-                    /><span>HTML</span>
-                  </div>
-                  <div class="lang">
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg?color=1572b6"
-                      alt="CSS"
-                    /><span>CSS</span>
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cplusplus.svg?color=00599c"
+                      alt="C++"
+                    /><span>C++ / RTOS</span>
                   </div>
                 </div>
                 <img
-                  src="/images/hero.png"
-                  alt="CybLight main site"
-                  width="1536"
-                  height="1024"
+                  src="/images/project/Smart Home Hub (640 x 360).png"
+                  alt="Smart Home Hub"
+                  width="640"
+                  height="360"
                   loading="lazy"
                 />
                 <div class="project-info">
-                  <h3>Сайт CybLight</h3>
-                  <p>Мой основной сайт, на котором вы сейчас находитесь.</p>
-                  <a class="button" href="/ru/projects/">Узнать больше</a>
+                  <h3>Smart Home Hub</h3>
+                  <p>Центральный сервер автоматизации: сбор телеметрии датчиков, сценарии и локальный веб-интерфейс.</p>
+                  <a class="button" href="/ru/smarthomehub/">Подробнее</a>
                 </div>
               </article>
 
-              <!-- 2. Android app -->
+              <!-- 2. Android & Web App -->
               <article class="project-card">
                 <div class="project-langs">
                   <div class="lang">
@@ -511,42 +491,17 @@
                 </div>
                 <img
                   src="/images/favicon_192.png"
-                  alt="CybLight Android app"
+                  alt="CybLight Mobile App"
                   width="192"
                   height="192"
                   loading="lazy"
                 />
                 <div class="project-info">
-                  <h3>Мобильное приложение CybLight</h3>
+                  <h3>CybLight Mobile Client</h3>
                   <p>
-                    Официальное Android-приложение: аккаунт, друзья, сообщения и
-                    безопасность.
+                    Клиентское приложение: телеметрия в реальном времени, пуш-уведомления, 2FA и управление устройствами.
                   </p>
-                  <a class="button" href="/ru/downloads/">Скачать APK</a>
-                </div>
-              </article>
-
-              <!-- 3. Python бот -->
-              <article class="project-card">
-                <div class="project-langs">
-                  <div class="lang">
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg?color=3776ab"
-                      alt="Python"
-                    /><span>Python</span>
-                  </div>
-                </div>
-                <img
-                  src="/images/project/Guardian_BOT.jpg"
-                  alt="CybLight Guardian Bot"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                />
-                <div class="project-info">
-                  <h3>Telegram-бот Guardian</h3>
-                  <p>Бот для поддержания порядка в группах.</p>
-                  <a class="button" href="/ru/projects/">Узнать больше</a>
+                  <a class="button" href="/ru/downloads/">Скачать приложение</a>
                 </div>
               </article>
 
@@ -557,7 +512,7 @@
                     <img
                       src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/csharp.svg?color=239120"
                       alt="C#"
-                    /><span>C Sharp</span>
+                    /><span>C# .NET</span>
                   </div>
                 </div>
                 <img
@@ -568,82 +523,82 @@
                   loading="lazy"
                 />
                 <div class="project-info">
-                  <h3>Priority Manager X</h3>
+                  <h3>Priority Manager X</h3>
                   <p>
-                    Управление приоритетами процессов и правила для Windows.
+                    Программный сервис для Windows: автоматическая оптимизация системных процессов и распределение CPU.
                   </p>
-                  <a class="button" href="/ru/projects/">Узнать больше</a>
+                  <a class="button" href="/ru/projects/">Подробнее</a>
                 </div>
               </article>
 
-              <!-- 4. Smart Home Hub -->
+              <!-- 4. Fish Finder PRO / IoT Telemetry -->
               <article class="project-card">
                 <div class="project-langs">
                   <div class="lang">
                     <img
                       src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/arduino.svg?color=00979d"
                       alt="Arduino"
-                    /><span>Arduino</span>
+                    /><span>STM32 / IoT</span>
                   </div>
                   <div class="lang">
                     <img
                       src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cplusplus.svg?color=00599c"
                       alt="C++"
-                    /><span>C++</span>
-                  </div>
-                </div>
-                <img
-                  src="/images/project/Smart Home Hub (640 x 360).png"
-                  alt="Smart Home Hub"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                />
-                <div class="project-info">
-                  <h3>Smart Home Hub</h3>
-                  <p>Оптимизация и уют для дома через умные технологии.</p>
-                  <a class="button" href="/ru/projects/">Узнать больше</a>
-                </div>
-              </article>
-
-              <!-- 5. Fish Finder PRO -->
-              <article class="project-card">
-                <div class="project-langs">
-                  <div class="lang">
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/arduino.svg?color=00979d"
-                      alt="Arduino"
-                    /><span>Arduino</span>
-                  </div>
-                  <div class="lang">
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cplusplus.svg?color=00599c"
-                      alt="C++"
-                    /><span>C++</span>
+                    /><span>DSP & Sensor C++</span>
                   </div>
                 </div>
                 <img
                   src="/images/project/Fish Finder PRO.jpg"
-                  alt="Fish Finder PRO"
+                  alt="IoT Hydro-acoustic System"
                   width="1024"
                   height="1024"
                   loading="lazy"
                 />
                 <div class="project-info">
-                  <h3>Fish Finder PRO</h3>
-                  <p>Эхолот для рыбалки на базе Arduino.</p>
-                  <a class="button" href="/ru/projects/">Узнать больше</a>
+                  <h3>IoT Hydro-Acoustic System</h3>
+                  <p>Программно-аппаратный комплекс цифровой обработки сигналов сенсоров и визуализации эхолокации.</p>
+                  <a class="button" href="/ru/projects/">Подробнее</a>
+                </div>
+              </article>
+
+              <!-- 5. CybLight Web Platform -->
+              <article class="project-card">
+                <div class="project-langs">
+                  <div class="lang">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/typescript.svg?color=3178c6"
+                      alt="TypeScript"
+                    /><span>TypeScript</span>
+                  </div>
+                  <div class="lang">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg?color=f7df1e"
+                      alt="JavaScript"
+                    /><span>Cloud API</span>
+                  </div>
+                </div>
+                <img
+                  src="/images/hero.png"
+                  alt="CybLight Cloud Core"
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                />
+                <div class="project-info">
+                  <h3>CybLight Cloud Core</h3>
+                  <p>Единый личный кабинет, управление лицензиями, синхронизация настроек и безопасность учетных записей.</p>
+                  <a class="button" href="/ru/pricing/">Тарифные планы</a>
                 </div>
               </article>
             </div>
-            <button class="carousel-nav next" aria-label="Следующий проект">
+            <button class="carousel-nav next" aria-label="Следующий продукт">
               ›
             </button>
           </div>
         </section>
 
         <section class="youtube-block">
-          <h2>Мои YouTube-каналы</h2>
+          <h2>Видеообзоры и демонстрации решений CybLight</h2>
           <div class="yt-channels">
             <!-- Техно канал -->
             <div class="yt-channel">
@@ -785,21 +740,8 @@
               <p>Copyright &copy; <span id="current-year"></span> CybLight</p>
             </div>
 
-            <div class="footer-made-with-love">
-              <a
-                href="https://mynickname.com/CybLight"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://mynickname.com/img.php?nick=CybLight&sert=24&text=t4"
-                  alt="Nickname CybLight registred!"
-                />
-              </a>
-            </div>
-
             <div class="footer-text">
-              <p>Сайт на 100% сделан из вторично переработанного кода</p>
+              <p>CybLight — Программные решения и облачная инфраструктура для IoT и умного дома. Все права защищены.</p>
             </div>
 
             <div class="footer-links">

@@ -8,7 +8,7 @@
   "id": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "theme_color": "#0a0f1f",
+  "theme_color": "#FF7F27",
   "background_color": "#0a0f1f",
   "icons": [
     {
@@ -39,10 +39,6 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
-    },
-    {
-      "theme_color": "#0d6efd",
-      "background_color": "#ffffff"
     }
   ]
 }

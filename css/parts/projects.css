@@ -24,9 +24,11 @@
 /* wrapper around carousel for nav buttons */
 .projects-carousel .carousel-wrapper {
   position: relative;
-  overflow: visible; /* allow nav buttons to extend outside */
-  max-width: 1200px; /* constrain width on large screens */
-  margin: 0 auto; /* center the carousel */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 48px;
+  box-sizing: border-box;
 }
 
 /* navigation buttons */
@@ -34,70 +36,72 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.65);
   color: #fff;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   width: 40px;
   height: 40px;
-  border-radius: 20px;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
 .carousel-nav:hover {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.9);
+  border-color: var(--accent, #ff7f27);
+  transform: translateY(-50%) scale(1.08);
 }
 .carousel-nav:focus {
-  outline: 2px solid #fff;
+  outline: 2px solid var(--accent, #ff7f27);
 }
 .carousel-nav.prev {
-  left: -40px;
+  left: 0;
 }
 .carousel-nav.next {
-  right: -40px;
+  right: 0;
 }
 
-/* tablet adjustments — buttons inside wrapper so they don't overflow viewport */
-@media (max-width: 1100px) {
+/* individual project slide styling */
+.project-card {
+  flex: 0 0 calc((100% - 2rem) / 3);
+  min-width: 260px;
+  max-width: 380px;
+  background: var(--card-bg, #fff);
+  border-radius: 8px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+@media (max-width: 960px) {
+  .project-card {
+    flex: 0 0 calc((100% - 1rem) / 2);
+    min-width: 240px;
+  }
+}
+
+@media (max-width: 640px) {
   .projects-carousel .carousel-wrapper {
-    padding: 0 48px; /* room for nav buttons inside */
+    padding: 0 36px;
   }
-  .carousel-nav.prev {
-    left: 4px;
-  }
-  .carousel-nav.next {
-    right: 4px;
-  }
-}
-
-/* mobile adjustments */
-@media (max-width: 768px) {
   .projects-carousel .carousel {
     gap: 0.5rem;
   }
   .projects-carousel .project-card {
-    flex: 0 0 90%;
-    max-width: 90%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 0;
   }
   .carousel-nav {
     width: 32px;
     height: 32px;
     font-size: 1.2rem;
   }
-}
-
-/* individual project slide styling */
-.project-card {
-  flex: 0 0 300px; /* fixed width on desktop */
-  max-width: 400px;
-  background: var(--card-bg, #fff);
-  border-radius: 8px;
-  overflow: hidden;
-  scroll-snap-align: start;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .project-card img {

@@ -153,6 +153,214 @@
   },
   "replacements": [
     [
+      "Решения",
+      "Solutions"
+    ],
+    [
+      "Тарифы",
+      "Pricing"
+    ],
+    [
+      "Простые и прозрачные тарифы",
+      "Simple & Transparent Pricing"
+    ],
+    [
+      "Получите максимум от умного дома Smart Home Hub, ускорьте синхронизацию и расширьте лимиты API с премиум-планами CybLight.",
+      "Unlock the full potential of Smart Home Hub, accelerate cloud sync, and scale API limits with CybLight premium plans."
+    ],
+    [
+      "Оплата помесячно",
+      "Monthly Billing"
+    ],
+    [
+      "Оплата за год",
+      "Annual Billing"
+    ],
+    [
+      "Скидка 20%",
+      "Save 20%"
+    ],
+    [
+      "Базовый набор возможностей для личного использования и быстрого старта.",
+      "Essential toolkit for personal projects and quick IoT setup."
+    ],
+    [
+      "Идеальный выбор для активных пользователей и энтузиастов умного дома.",
+      "Ideal choice for power users and smart home automation enthusiasts."
+    ],
+    [
+      "Максимум мощности для разработчиков, команд и профессионалов.",
+      "Maximum performance and dedicated bandwidth for developers and teams."
+    ],
+    [
+      "Популярный выбор",
+      "Most Popular"
+    ],
+    [
+      "/ месяц",
+      "/ month"
+    ],
+    [
+      "/ год",
+      "/ year"
+    ],
+    [
+      "Списание ежемесячно",
+      "Billed monthly"
+    ],
+    [
+      "Списание раз в год ($3.99/мес)",
+      "Billed annually ($3.99/mo)"
+    ],
+    [
+      "Списание раз в год ($7.99/мес)",
+      "Billed annually ($7.99/mo)"
+    ],
+    [
+      "Списание раз в год ($15.80/мес)",
+      "Billed annually ($15.80/mo)"
+    ],
+    [
+      "Стандартные лимиты API (60 запр/мин)",
+      "Standard API limits (60 req/min)"
+    ],
+    [
+      "До 3 комнат в Smart Home Hub",
+      "Up to 3 rooms in Smart Home Hub"
+    ],
+    [
+      "Сквозная E2EE синхронизация",
+      "End-to-End E2EE synchronization"
+    ],
+    [
+      "Базовый набор аватаров",
+      "Standard avatar collection"
+    ],
+    [
+      "Золотой значок Premium 👑",
+      "Gold Premium badge 👑"
+    ],
+    [
+      "Поддержка в сообществе",
+      "Community forum & support"
+    ],
+    [
+      "<strong>Безлимитный</strong> Smart Home Hub (комнаты и устройства)",
+      "<strong>Unlimited</strong> Smart Home Hub (rooms & devices)"
+    ],
+    [
+      "<strong>10x увеличенные</strong> лимиты API (600 запр/мин)",
+      "<strong>10x higher</strong> API limits (600 req/min)"
+    ],
+    [
+      "Мгновенная приоритетная E2EE синхронизация",
+      "Instant high-priority E2EE sync"
+    ],
+    [
+      "Все эксклюзивные неоновые рамки аватара",
+      "All exclusive neon avatar borders"
+    ],
+    [
+      "Кастомный титул и бейдж в профиле",
+      "Custom profile title & badge"
+    ],
+    [
+      "Приоритетная поддержка 24/7",
+      "24/7 Priority Support"
+    ],
+    [
+      "<strong>Безлимитные лимиты API</strong> и выделенный канал",
+      "<strong>Unlimited API rate limits</strong> & dedicated lane"
+    ],
+    [
+      "Все возможности тарифа Pro",
+      "Everything included in Pro tier"
+    ],
+    [
+      "Ранний доступ к новым модулям и бета-релизам",
+      "Early access to new modules & betas"
+    ],
+    [
+      "Прямой закрытый чат с разработчиками",
+      "Private dev channel access"
+    ],
+    [
+      "Расширенный аудит и кастомные вебхуки",
+      "Advanced audit logs & custom webhooks"
+    ],
+    [
+      "VIP ∞ статус в экосистеме CybLight",
+      "VIP ∞ status in CybLight ecosystem"
+    ],
+    [
+      "Выбрать Starter",
+      "Get Starter"
+    ],
+    [
+      "Выбрать Pro",
+      "Get Pro"
+    ],
+    [
+      "Выбрать Advanced",
+      "Get Advanced"
+    ],
+    [
+      "Безопасная оплата и гарантия",
+      "Secure Payment & Money-Back Guarantee"
+    ],
+    [
+      "Приём платежей и выставление счетов безопасно осуществляются нашим официальным платёжным провайдером <strong>Paddle.com Market Limited</strong> (\"Paddle\"), выступающим продавцом записи (Merchant of Record). Все платежи защищены TLS-шифрованием банковского уровня. Предоставляется <strong>14-дневная гарантия возврата средств</strong> и самостоятельная отмена в любой момент.",
+      "Payments and billing are securely processed by our official Merchant of Record partner <strong>Paddle.com Market Limited</strong> (\"Paddle\"). All transactions are protected with bank-grade TLS encryption. Backed by our <strong>14-day money-back guarantee</strong> and self-serve cancellation anytime."
+    ],
+    [
+      "Условия использования",
+      "Terms of Service"
+    ],
+    [
+      "Политика конфиденциальности",
+      "Privacy Policy"
+    ],
+    [
+      "Политика возврата средств",
+      "Refund Policy"
+    ],
+    [
+      "Часто задаваемые вопросы",
+      "Frequently Asked Questions"
+    ],
+    [
+      "Какие способы оплаты поддерживаются?",
+      "Which payment methods are supported?"
+    ],
+    [
+      "Мы принимаем банковские карты (Visa, Mastercard, МИР/UnionPay через международный шлюз), Apple Pay, Google Pay и PayPal через платёжного партнёра Paddle.",
+      "We accept all major debit/credit cards (Visa, Mastercard, American Express, UnionPay), Apple Pay, Google Pay, and PayPal securely through Paddle."
+    ],
+    [
+      "Можно ли отменить подписку в любой момент?",
+      "Can I cancel my subscription at any time?"
+    ],
+    [
+      "Да! Вы можете отменить автопродление в 1 клик в настройках своего профиля или по ссылке в чеке Paddle. Все возможности останутся активными до конца оплаченного периода.",
+      "Yes! You can cancel auto-renewal with 1 click in your profile settings or via the link in your Paddle receipt. All features remain active until the end of your billing cycle."
+    ],
+    [
+      "Как работает возврат средств?",
+      "How does the refund policy work?"
+    ],
+    [
+      "Мы предоставляем 14-дневную гарантию полного возврата средств на первую покупку подписки. Если сервис вам не подошёл, напишите на <a href=\"mailto:support@cyblight.org\">support@cyblight.org</a>, и мы вернём деньги.",
+      "We offer a 14-day 100% money-back guarantee for first-time subscription purchases. If you are not satisfied, simply email <a href=\"mailto:support@cyblight.org\">support@cyblight.org</a> and we will process your refund."
+    ],
+    [
+      "Как быстро активируется Premium?",
+      "How fast is Premium activated?"
+    ],
+    [
+      "Премиум-статус активируется автоматически через защищённый серверный вебхук в течение нескольких секунд после подтверждения транзакции.",
+      "Premium benefits are provisioned automatically via secure server webhooks within seconds after transaction approval."
+    ],
+    [
       "Подробнее",
       "Learn more"
     ],

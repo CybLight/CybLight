@@ -153,6 +153,70 @@
   },
   "replacements": [
     [
+      "Проекты CybLight: Smart Home Hub, Android-приложение, IoT микроконтроллеры, облачные сервисы и интерактивные веб-приложения.",
+      "CybLight Solutions: Smart Home Hub, Android App, IoT Microcontrollers, Cloud Services, and Interactive Web Applications."
+    ],
+    [
+      "Обзор открытых и прикладных проектов CybLight: умный дом, мобильные приложения, сервисы авторизации и IoT.",
+      "Overview of CybLight software and applied projects: smart home, mobile applications, authentication services, and IoT."
+    ],
+    [
+      "Решения и продукты",
+      "Solutions & Products"
+    ],
+    [
+      "Программные решения CybLight",
+      "CybLight Software Solutions"
+    ],
+    [
+      "Программная экосистема CybLight для IoT, домашней автоматизации, встроенных систем и облачного управления устройствами.",
+      "CybLight software ecosystem for IoT, home automation, embedded systems, and cloud device fleet management."
+    ],
+    [
+      "Облачный портал CybLight",
+      "CybLight Cloud Portal"
+    ],
+    [
+      "Официальный веб-портал платформы CybLight, документация, панель управления подписками и синхронизация IoT-устройств.",
+      "Official web portal for the CybLight platform, documentation, subscription management console, and IoT device synchronization."
+    ],
+    [
+      "Репозиторий:",
+      "Repository:"
+    ],
+    [
+      "Мобильное приложение CybLight для Android",
+      "CybLight Android Mobile Application"
+    ],
+    [
+      "Официальное мобильное приложение для Android: вход через login.cyblight.org, список\n              друзей с онлайн-статусом, личные сообщения, профиль и настройки безопасности (2FA,\n              сессии, passkeys). Поддерживаются русский, украинский и английский языки.",
+      "Official Android mobile client: authorization via login.cyblight.org, real-time device telemetries, secure profile management, 2FA, active sessions, and passkeys. Multi-language support (EN, RU, UK)."
+    ],
+    [
+      "Скачать APK:",
+      "Download APK:"
+    ],
+    [
+      "Сервис диспетчеризации оповещений CybLight",
+      "CybLight Alert Dispatcher Service"
+    ],
+    [
+      "Серверный микросервис для маршрутизации тревожных событий, отчетов телеметрии и уведомлений со Smart Home Hub в защищенные каналы связи.",
+      "Backend microservice for routing critical alert events, telemetry reports, and notifications from Smart Home Hub into secure communication channels."
+    ],
+    [
+      "Приложение на C# для Windows, которое управляет приоритетами процессов и автоматически\n              применяет правила к приложениям.",
+      "Windows desktop application in C# that manages process priorities and automatically enforces performance profiles."
+    ],
+    [
+      "Система для управления умным домом: датчики, управление освещением и сценарии. <br />\n              Использует Arduino и C++.",
+      "Smart home control system: sensors, lighting management, and automation routines. <br />\n              Built with Arduino & C++."
+    ],
+    [
+      "Эхолот для рыбалки на базе Arduino с экраном и GPS.",
+      "Arduino-based sonar fish finder equipped with digital display and GPS."
+    ],
+    [
       "Решения",
       "Solutions"
     ],

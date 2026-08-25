@@ -25,6 +25,7 @@ const PART_FILES = [
   "projects.css",
   "contacts.css",
   "smarthomehub.css",
+  "status.css",
   "legal.css",
   "responsive.css",
   "misc.css",

@@ -330,4 +330,34 @@
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
+  <url>
+    <loc>https://cyblight.org/ru/status/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/status/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/status/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/status/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/status/" />
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/uk/status/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/status/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/status/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/status/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/status/" />
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://cyblight.org/en/status/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/status/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/status/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/status/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/status/" />
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
 </urlset>

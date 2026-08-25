@@ -58,5 +58,11 @@
     "expression": "(http.host eq \"cyblight.org\" or http.host eq \"www.cyblight.org\") and (http.request.uri.path eq \"/pricing\" or http.request.uri.path eq \"/pricing/\")",
     "status_code": 301,
     "target_url": "https://cyblight.org/ru/pricing/"
+  },
+  {
+    "description": "Legacy /status to /ru/status/",
+    "expression": "(http.host eq \"cyblight.org\" or http.host eq \"www.cyblight.org\") and (http.request.uri.path eq \"/status\" or http.request.uri.path eq \"/status/\")",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/status/"
   }
 ]

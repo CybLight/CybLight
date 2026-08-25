@@ -17,6 +17,7 @@ const PAGES = [
   'smarthomehub/index.html',
   'pricing/index.html',
   'refund/index.html',
+  'status/index.html',
 ];
 
 const LEGACY_REDIRECTS = [
@@ -29,9 +30,10 @@ const LEGACY_REDIRECTS = [
   'terms/index.html',
   'refund/index.html',
   'pricing/index.html',
+  'status/index.html',
 ];
 
-const LEGACY_PATHS = ['games', 'contacts', 'projects', 'downloads', 'donate', 'privacy', 'terms', 'refund', 'pricing'];
+const LEGACY_PATHS = ['games', 'contacts', 'projects', 'downloads', 'donate', 'privacy', 'terms', 'refund', 'pricing', 'status'];
 const SEO_CONFIG = JSON.parse(
   fs.readFileSync(path.join(ROOT, 'seo.config.json'), 'utf8')
 );

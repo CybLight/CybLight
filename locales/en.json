@@ -233,8 +233,68 @@
       "Pricing Plans"
     ],
     [
-      "Видеообзоры и демонстрации решений CybLight",
-      "CybLight Solutions Video Demos & Tutorials"
+      "Enterprise & IoT Ecosystem",
+      "Enterprise & IoT Ecosystem"
+    ],
+    [
+      "Архитектура и сервисы платформы CybLight",
+      "CybLight Platform Architecture & Services"
+    ],
+    [
+      "Надёжные программные решения для умного дома, интернета вещей (IoT) и защищённой облачной синхронизации данных в реальном времени",
+      "Reliable software solutions for smart homes, Internet of Things (IoT), and real-time secure cloud synchronization"
+    ],
+    [
+      "E2EE Безопасность",
+      "E2EE Security"
+    ],
+    [
+      "Сквозное шифрование телеметрии и команд управления. Ключи доступа генерируются и хранятся исключительно на ваших устройствах.",
+      "End-to-end encryption for telemetry and control commands. Access keys are generated and stored exclusively on your devices."
+    ],
+    [
+      "Smart Home Hub v0.4",
+      "Smart Home Hub v0.4"
+    ],
+    [
+      "Полностью автономный локальный сервер автоматизации с поддержкой протоколов MQTT, REST API и сверхнизкими задержками.",
+      "Fully autonomous local automation server supporting MQTT, REST APIs, and ultra-low latency."
+    ],
+    [
+      "Мобильный клиент Android",
+      "Android Mobile Client"
+    ],
+    [
+      "Интуитивное управление сценариями, мониторинг датчиков в реальном времени, графики телеметрии и мгновенные push-уведомления.",
+      "Intuitive scenario control, real-time sensor monitoring, telemetry graphs, and instant push alerts."
+    ],
+    [
+      "Cloud Sync & Anycast API",
+      "Cloud Sync & Anycast API"
+    ],
+    [
+      "Высокоскоростная Anycast сеть, гарантированный 99.9% аптайм инфраструктуры и документированные API для разработчиков.",
+      "High-speed Anycast network, guaranteed 99.9% infrastructure uptime, and comprehensive developer APIs."
+    ],
+    [
+      "⚡ Простой старт за 2 минуты",
+      "⚡ Easy 2-Minute Setup"
+    ],
+    [
+      "Готовы автоматизировать ваш дом?",
+      "Ready to Automate Your Home?"
+    ],
+    [
+      "Подключите устройства, выберите подходящий тарифный план и получите полный доступ к облачной синхронизации и премиум-поддержке.",
+      "Connect your devices, pick a suitable plan, and unlock full access to cloud synchronization and priority support."
+    ],
+    [
+      "Выбрать тариф",
+      "Choose a Plan"
+    ],
+    [
+      "Изучить Hub",
+      "Explore Hub"
     ],
     [
       "CybLight — Программные решения и облачная инфраструктура для IoT и умного дома. Все права защищены.",

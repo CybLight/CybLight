@@ -91,136 +91,63 @@
     "searchIndex": [
       {
         "title": "Home",
-        "desc": "CybLight home page. Welcome to the site!",
-        "tags": [
-          "home",
-          "cyblight",
-          "main"
-        ],
+        "desc": "CybLight Platform — IoT and Smart Home Cloud Ecosystem",
+        "tags": ["home", "cyblight", "main"],
         "url": "/"
       },
       {
-        "title": "Projects",
-        "desc": "All projects: website, bot, smart home, fish finder, Priority Manager X",
-        "tags": [
-          "projects",
-          "portfolio"
-        ],
+        "title": "Smart Home Hub",
+        "desc": "Autonomous Smart Home Hub Server & IoT Automation",
+        "tags": ["smarthomehub", "hub", "iot", "smart home"],
+        "url": "/smarthomehub/"
+      },
+      {
+        "title": "Android App",
+        "desc": "CybLight Android Client — device control & live telemetry",
+        "tags": ["app", "android", "apk", "downloads"],
+        "url": "/downloads/"
+      },
+      {
+        "title": "Solutions & Products",
+        "desc": "CybLight ecosystem: Smart Home Hub, Cloud Core, API & Developer Tools",
+        "tags": ["solutions", "products", "projects"],
         "url": "/projects/"
       },
       {
-        "title": "Videos",
-        "desc": "YouTube videos from CybLight channels — gameplay and tech reviews",
-        "tags": [
-          "videos",
-          "youtube"
-        ],
-        "url": "/#videos"
+        "title": "Pricing Plans",
+        "desc": "CybLight Cloud Subscriptions, E2EE Gateways & IoT Sync",
+        "tags": ["pricing", "plans", "premium", "subscription"],
+        "url": "/pricing/"
       },
       {
-        "title": "Programming games",
-        "desc": "Interactive games: guess code output, syntax practice, algorithms",
-        "tags": [
-          "games",
-          "programming",
-          "code"
-        ],
-        "url": "/games/"
+        "title": "Platform Status",
+        "desc": "Realtime availability of Cloud API, Gateways, CDN and Billing",
+        "tags": ["status", "uptime", "availability"],
+        "url": "/status/"
       },
       {
-        "title": "Contacts",
-        "desc": "Email, Telegram, YouTube, GitHub — all ways to get in touch",
-        "tags": [
-          "contacts",
-          "email",
-          "telegram"
-        ],
+        "title": "Contacts & Support",
+        "desc": "CybLight Support, Email, Telegram & GitHub Repositories",
+        "tags": ["contacts", "support", "email"],
         "url": "/contacts/"
       },
       {
-        "title": "Donate",
-        "desc": "Support CybLight development — donate and help the project",
-        "tags": [
-          "donate",
-          "support"
-        ],
-        "url": "/donate/"
-      },
-      {
         "title": "Privacy Policy",
-        "desc": "Privacy policy and data processing",
-        "tags": [
-          "privacy",
-          "data"
-        ],
+        "desc": "Privacy Policy and data protection standards",
+        "tags": ["privacy", "security", "gdpr"],
         "url": "/privacy/"
       },
       {
-        "title": "YouTube channels",
-        "desc": "CybLight Tech and Game channels, subscribers, video count",
-        "tags": [
-          "youtube",
-          "channels"
-        ],
-        "url": "/#projects"
+        "title": "Terms of Service",
+        "desc": "Terms of Service for CybLight platform and software",
+        "tags": ["terms", "tos", "agreement"],
+        "url": "/terms/"
       },
       {
-        "title": "CybLight Website",
-        "desc": "Main site — HTML, CSS, JavaScript, TypeScript",
-        "tags": [
-          "website",
-          "web",
-          "html",
-          "css",
-          "javascript",
-          "typescript"
-        ],
-        "url": "/projects/"
-      },
-      {
-        "title": "Telegram bot Guardian",
-        "desc": "Python bot for moderation and order in Telegram groups",
-        "tags": [
-          "bot",
-          "telegram",
-          "python",
-          "guardian",
-          "moderation"
-        ],
-        "url": "/projects/"
-      },
-      {
-        "title": "Priority Manager X",
-        "desc": "C# app — process priority management on Windows",
-        "tags": [
-          "priority",
-          "windows",
-          "c#",
-          "csharp",
-          "processes"
-        ],
-        "url": "/projects/"
-      },
-      {
-        "title": "Smart Home Hub",
-        "desc": "Arduino and C++ — smart home, automation, IoT",
-        "tags": [
-          "arduino",
-          "c++",
-          "smart home",
-          "iot"
-        ],
-        "url": "/projects/"
-      },
-      {
-        "title": "Fish Finder PRO",
-        "desc": "Arduino-based fish finder — DIY fishing electronics",
-        "tags": [
-          "arduino",
-          "fish finder",
-          "fishing"
-        ],
-        "url": "/projects/"
+        "title": "Refund Policy",
+        "desc": "Refund and subscription cancellation policy via Paddle",
+        "tags": ["refund", "cancellation", "paddle"],
+        "url": "/refund/"
       }
     ]
   },

@@ -91,146 +91,63 @@
     "searchIndex": [
       {
         "title": "Головна",
-        "desc": "Головна сторінка CybLight. Ласкаво просимо на сайт!",
-        "tags": [
-          "головна",
-          "home",
-          "cyblight"
-        ],
+        "desc": "Головна сторінка платформи CybLight — IoT та розумний дім",
+        "tags": ["головна", "home", "cyblight"],
         "url": "/"
       },
       {
-        "title": "Проєкти",
-        "desc": "Усі проєкти: сайт, бот, розумний дім, ехолот, Priority Manager X",
-        "tags": [
-          "проєкти",
-          "projects",
-          "портфоліо"
-        ],
+        "title": "Smart Home Hub",
+        "desc": "Програмний сервер розумного дому — автономний хаб автоматизації",
+        "tags": ["smarthomehub", "хаб", "iot", "розумний дім"],
+        "url": "/smarthomehub/"
+      },
+      {
+        "title": "Додаток",
+        "desc": "Мобільний додаток CybLight Android — керування пристроями та телеметрія",
+        "tags": ["додаток", "android", "apk", "downloads"],
+        "url": "/downloads/"
+      },
+      {
+        "title": "Рішення та продукти",
+        "desc": "Огляд екосистеми CybLight: Smart Home Hub, хмарні сервіси, API та утиліти",
+        "tags": ["рішення", "проєкти", "products", "projects"],
         "url": "/projects/"
       },
       {
-        "title": "Відео",
-        "desc": "YouTube відео з каналів CybLight — геймплей і огляди технологій",
-        "tags": [
-          "відео",
-          "youtube",
-          "ролики"
-        ],
-        "url": "/#videos"
+        "title": "Тарифні плани",
+        "desc": "Підписки CybLight: Cloud Core, розширена телеметрія, E2EE шлюзи",
+        "tags": ["тарифи", "pricing", "premium", "підписка"],
+        "url": "/pricing/"
       },
       {
-        "title": "Ігри з програмування",
-        "desc": "Інтерактивні ігри: вгадай вивід коду, практика синтаксису, алгоритми",
-        "tags": [
-          "ігри",
-          "games",
-          "програмування",
-          "код"
-        ],
-        "url": "/games/"
+        "title": "Статус платформи",
+        "desc": "Моніторинг доступності Cloud API, шлюзів, серверів та білінгу",
+        "tags": ["статус", "status", "uptime", "доступність"],
+        "url": "/status/"
       },
       {
         "title": "Контакти",
-        "desc": "Пошта, Telegram, YouTube, GitHub — усі способи звʼязку",
-        "tags": [
-          "контакти",
-          "contacts",
-          "звʼязок",
-          "email",
-          "telegram"
-        ],
+        "desc": "Служба підтримки CybLight, пошта, Telegram, репозиторії",
+        "tags": ["контакти", "contacts", "звʼязок", "email", "support"],
         "url": "/contacts/"
       },
       {
-        "title": "Підтримати",
-        "desc": "Підтримати розвиток CybLight — донат, допомога проєкту",
-        "tags": [
-          "донат",
-          "donate",
-          "підтримка"
-        ],
-        "url": "/donate/"
-      },
-      {
         "title": "Політика конфіденційності",
-        "desc": "Політика конфіденційності та обробка даних",
-        "tags": [
-          "конфіденційність",
-          "privacy",
-          "дані"
-        ],
+        "desc": "Політика конфіденційності та захист персональних даних",
+        "tags": ["конфіденційність", "privacy", "безпека"],
         "url": "/privacy/"
       },
       {
-        "title": "YouTube канали",
-        "desc": "Техно та Game канали CybLight, підписники, кількість відео",
-        "tags": [
-          "youtube",
-          "канали",
-          "підписники"
-        ],
-        "url": "/#projects"
+        "title": "Умови використання",
+        "desc": "Умови використання сервісів та програмного забезпечення CybLight",
+        "tags": ["умови", "terms", "угода"],
+        "url": "/terms/"
       },
       {
-        "title": "Сайт CybLight",
-        "desc": "Основний сайт — HTML, CSS, JavaScript, TypeScript",
-        "tags": [
-          "сайт",
-          "web",
-          "html",
-          "css",
-          "javascript",
-          "typescript"
-        ],
-        "url": "/projects/"
-      },
-      {
-        "title": "Telegram-бот Guardian",
-        "desc": "Python бот для модерації та підтримання порядку в Telegram-групах",
-        "tags": [
-          "бот",
-          "telegram",
-          "python",
-          "guardian",
-          "модерація"
-        ],
-        "url": "/projects/"
-      },
-      {
-        "title": "Priority Manager X",
-        "desc": "Додаток C# — керування пріоритетами процесів у Windows",
-        "tags": [
-          "priority",
-          "windows",
-          "c#",
-          "csharp",
-          "процеси"
-        ],
-        "url": "/projects/"
-      },
-      {
-        "title": "Smart Home Hub",
-        "desc": "Arduino і C++ — розумний дім, автоматизація, IoT",
-        "tags": [
-          "arduino",
-          "c++",
-          "розумний дім",
-          "smart home",
-          "iot"
-        ],
-        "url": "/projects/"
-      },
-      {
-        "title": "Fish Finder PRO",
-        "desc": "Ехолот для риболовлі на базі Arduino — саморобна рибальська електроніка",
-        "tags": [
-          "arduino",
-          "ехолот",
-          "риболовля",
-          "fish finder"
-        ],
-        "url": "/projects/"
+        "title": "Політика повернення",
+        "desc": "Правила повернення коштів та скасування підписки через Paddle",
+        "tags": ["повернення", "refund", "paddle"],
+        "url": "/refund/"
       }
     ]
   },

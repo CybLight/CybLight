@@ -7,11 +7,9 @@ const ROOT = path.join(__dirname, '..');
 const LOCALES = ['ru', 'uk', 'en'];
 const PAGES = [
   'index.html',
-  'games/index.html',
   'contacts/index.html',
   'projects/index.html',
   'downloads/index.html',
-  'donate/index.html',
   'privacy/index.html',
   'terms/index.html',
   'smarthomehub/index.html',
@@ -21,11 +19,9 @@ const PAGES = [
 ];
 
 const LEGACY_REDIRECTS = [
-  'games/index.html',
   'contacts/index.html',
   'projects/index.html',
   'downloads/index.html',
-  'donate/index.html',
   'privacy/index.html',
   'terms/index.html',
   'refund/index.html',
@@ -33,7 +29,7 @@ const LEGACY_REDIRECTS = [
   'status/index.html',
 ];
 
-const LEGACY_PATHS = ['games', 'contacts', 'projects', 'downloads', 'donate', 'privacy', 'terms', 'refund', 'pricing', 'status'];
+const LEGACY_PATHS = ['contacts', 'projects', 'downloads', 'privacy', 'terms', 'refund', 'pricing', 'status'];
 const SEO_CONFIG = JSON.parse(
   fs.readFileSync(path.join(ROOT, 'seo.config.json'), 'utf8')
 );

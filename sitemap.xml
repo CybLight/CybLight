@@ -32,36 +32,6 @@
   </url>
 
   <url>
-    <loc>https://cyblight.org/ru/games/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/games/" />
-    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/games/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/games/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/games/" />
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/uk/games/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/games/" />
-    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/games/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/games/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/games/" />
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/en/games/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/games/" />
-    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/games/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/games/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/games/" />
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
     <loc>https://cyblight.org/ru/contacts/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/contacts/" />
     <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/contacts/" />
@@ -147,36 +117,6 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/downloads/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/downloads/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/downloads/" />
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/ru/donate/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/donate/" />
-    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/donate/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/donate/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/donate/" />
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/uk/donate/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/donate/" />
-    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/donate/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/donate/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/donate/" />
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://cyblight.org/en/donate/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/donate/" />
-    <xhtml:link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/donate/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://cyblight.org/en/donate/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/donate/" />
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
   </url>

@@ -9,67 +9,98 @@
       name="description"
       content="Скачайте официальное мобильное приложение CybLight для Android: вход в аккаунт, друзья, сообщения и безопасность. Прямая загрузка APK."
     />
+    <meta
+      name="keywords"
+      content="CybLight, CybLight Android, скачать APK, мобильное приложение, Smart Home Android, умный дом"
+    />
+    <meta name="author" content="CybLight" />
+    <meta name="theme-color" content="#FF7F27" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:title" content="CybLight — Мобильное приложение для Android" />
+    <meta property="og:site_name" content="CybLight" />
+    <meta
+      property="og:description"
+      content="Официальное мобильное приложение CybLight для Android: прямое управление Smart Home Hub, E2EE синхронизация и безопасность."
+    />
+    <meta property="og:url" content="https://cyblight.org/ru/downloads/" />
+    <meta property="og:image" content="https://cyblight.org/images/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CybLight — Мобильное приложение для Android" />
+    <meta
+      name="twitter:description"
+      content="Официальное мобильное приложение CybLight для Android: прямое управление Smart Home Hub, E2EE синхронизация и безопасность."
+    />
+    <meta name="twitter:image" content="https://cyblight.org/images/og-image.png" />
+
+    <link rel="canonical" href="https://cyblight.org/ru/downloads/" />
+        <link rel="alternate" hreflang="ru" href="https://cyblight.org/ru/downloads/" />
+    <link rel="alternate" hreflang="uk" href="https://cyblight.org/uk/downloads/" />
+    <link rel="alternate" hreflang="en" href="https://cyblight.org/en/downloads/" />
+    <link rel="alternate" hreflang="x-default" href="https://cyblight.org/ru/downloads/" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
+        "@graph": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Главная",
-            "item": "https://cyblight.org/ru/"
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная",
+                "item": "https://cyblight.org/ru/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Приложение",
+                "item": "https://cyblight.org/ru/downloads/"
+              }
+            ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Приложение",
-            "item": "https://cyblight.org/ru/downloads/"
+            "@type": "SoftwareApplication",
+            "name": "CybLight Android",
+            "operatingSystem": "Android",
+            "applicationCategory": "UtilitiesApplication",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "downloadUrl": "https://github.com/CybLight/CybLight-Android/releases/latest",
+            "fileFormat": "application/vnd.android.package-archive"
           }
         ]
       }
     </script>
 
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://apis.google.com" />
+    <link rel="preload" href="/css/styles.css" as="style" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/downloads.css?v=3" />
+    <link rel="stylesheet" href="/css/downloads.css?v=4" />
 
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-    <link
-      rel="icon"
-      href="/images/favicon_16.png"
-      sizes="16x16"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="/images/favicon_32.png"
-      sizes="32x32"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="/images/favicon_48.png"
-      sizes="48x48"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="/images/favicon_64.png"
-      sizes="64x64"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="/images/favicon_192.png"
-      sizes="192x192"
-      type="image/png"
-    />
+    <link rel="icon" href="/images/favicon_16.png" sizes="16x16" type="image/png" />
+    <link rel="icon" href="/images/favicon_32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/images/favicon_48.png" sizes="48x48" type="image/png" />
+    <link rel="icon" href="/images/favicon_64.png" sizes="64x64" type="image/png" />
+    <link rel="icon" href="/images/favicon_192.png" sizes="192x192" type="image/png" />
   </head>
   <body class="downloads-page no-strawberries">
+    <a href="#main" class="skip-link">Перейти к контенту</a>
     <div class="page-frame">
       <header class="top-header">
         <div class="header-top">
@@ -237,7 +268,7 @@
         </div>
       </div>
 
-      <main>
+      <main id="main">
         <section class="downloads-hero">
           <div class="downloads-hero-card">
             <div class="downloads-kicker">

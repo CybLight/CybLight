@@ -491,23 +491,35 @@ window.addEventListener('cyblight-privacy-change', () => {
   }
 
   // Close overlay
-  closeBtn.addEventListener('click', closeSearch);
+  if (closeBtn) closeBtn.addEventListener('click', closeSearch);
 
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) closeSearch();
-  });
+  if (overlay) {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeSearch();
+    });
+  }
 
   // Real-time search inside overlay
-  overlayInput.addEventListener('input', () => performSearch(overlayInput.value));
+  if (overlayInput) {
+    overlayInput.addEventListener('input', () => performSearch(overlayInput.value));
+    overlayInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeSearch();
+      if (e.key === 'Enter') performSearch(overlayInput.value);
+    });
+  }
 
-  overlayInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeSearch();
-    if (e.key === 'Enter') performSearch(overlayInput.value);
-  });
-
-  // Keyboard shortcut: Ctrl+K to open search
+  // Keyboard shortcut: Ctrl+K / Cmd+K or "/" to open search, Esc to close
   document.addEventListener('keydown', (e) => {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+    if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K')) {
+      e.preventDefault();
+      openSearch(headerInput ? headerInput.value : '');
+    } else if (e.key === 'Escape' && overlay && overlay.classList.contains('active')) {
+      closeSearch();
+    } else if (
+      e.key === '/' &&
+      !['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName) &&
+      (!overlay || !overlay.classList.contains('active'))
+    ) {
       e.preventDefault();
       openSearch('');
     }

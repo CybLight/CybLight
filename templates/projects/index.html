@@ -7,8 +7,40 @@
 
     <meta
       name="description"
-      content="Описание проектов автора: сайт, телеграм-бот, приложение для Windows, умный дом и эхолот. Ссылки на репозитории и подробности."
+      content="Проекты CybLight: Smart Home Hub, Android-приложение, IoT микроконтроллеры, облачные сервисы и интерактивные веб-приложения."
     />
+    <meta
+      name="keywords"
+      content="CybLight проекты, open source умный дом, Android CybLight, ESP32 проекты, портфолио разработчика"
+    />
+    <meta name="author" content="CybLight" />
+    <meta name="theme-color" content="#FF7F27" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="{{ogLocale}}" />
+    <meta property="og:title" content="CybLight — Проекты" />
+    <meta property="og:site_name" content="CybLight" />
+    <meta
+      property="og:description"
+      content="Обзор открытых и прикладных проектов CybLight: умный дом, мобильные приложения, сервисы авторизации и IoT."
+    />
+    <meta property="og:url" content="{{canonical}}" />
+    <meta property="og:image" content="https://cyblight.org/images/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CybLight — Проекты" />
+    <meta
+      name="twitter:description"
+      content="Обзор открытых и прикладных проектов CybLight: умный дом, мобильные приложения, сервисы авторизации и IoT."
+    />
+    <meta name="twitter:image" content="https://cyblight.org/images/og-image.png" />
+
+    <link rel="canonical" href="{{canonical}}" />
+    {{hreflang}}
 
     <script type="application/ld+json">
       {
@@ -31,11 +63,14 @@
       }
     </script>
 
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://apis.google.com" />
+    <link rel="preload" href="/css/styles.css" as="style" />
     <link rel="stylesheet" href="/css/styles.css" />
 
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
     <link rel="icon" href="/images/favicon_16.png" sizes="16x16" type="image/png" />
     <link rel="icon" href="/images/favicon_32.png" sizes="32x32" type="image/png" />
@@ -44,6 +79,7 @@
     <link rel="icon" href="/images/favicon_192.png" sizes="192x192" type="image/png" />
   </head>
   <body class="no-strawberries">
+    <a href="#main" class="skip-link">Перейти к контенту</a>
     <div class="page-frame">
       <header class="top-header">
         <div class="header-top">
@@ -187,7 +223,7 @@
         </div>
       </div>
 
-      <main>
+      <main id="main">
         <section class="projects-page">
           <h1>Проекты CybLight</h1>
           <p>

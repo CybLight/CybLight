@@ -4,10 +4,33 @@
   const GITHUB_API =
     "https://api.github.com/repos/CybLight/CybLight-Android/releases/latest";
 
+  function detectOS() {
+    const ua = navigator.userAgent || '';
+    if (/android/i.test(ua)) return 'android';
+    if (/iphone|ipad|ipod/i.test(ua)) return 'ios';
+    if (/windows/i.test(ua)) return 'windows';
+    if (/macintosh|mac os x/i.test(ua)) return 'mac';
+    if (/linux/i.test(ua)) return 'linux';
+    return 'other';
+  }
+
   async function init() {
     const githubApkBtn = document.getElementById("downloadGithubApkBtn");
     const githubLink = document.getElementById("downloadGithubLink");
     const versionBadge = document.getElementById("appVersionBadge");
+    const heroText = document.querySelector(".downloads-version");
+
+    const os = detectOS();
+    if (os === 'android' && githubApkBtn) {
+      githubApkBtn.classList.add('downloads-btn--highlight');
+      if (heroText && !document.getElementById('osBadge')) {
+        const badge = document.createElement('span');
+        badge.id = 'osBadge';
+        badge.className = 'os-detected-badge';
+        badge.textContent = ' • Ваша система: Android ✓';
+        heroText.appendChild(badge);
+      }
+    }
 
     if (githubLink) githubLink.href = GITHUB_RELEASES;
 
@@ -39,3 +62,4 @@
     init();
   }
 })();
+

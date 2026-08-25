@@ -15,6 +15,8 @@ const PAGES = [
   'privacy/index.html',
   'terms/index.html',
   'smarthomehub/index.html',
+  'pricing/index.html',
+  'refund/index.html',
 ];
 
 const LEGACY_REDIRECTS = [
@@ -208,7 +210,7 @@ function sitemapAlternates(pagePath) {
 }
 
 function writeSitemap() {
-  const SITEMAP_PAGES = [...PAGES, 'pricing/index.html', 'refund/index.html'];
+  const SITEMAP_PAGES = [...PAGES];
   const entries = [];
   for (const page of SITEMAP_PAGES) {
     const lastmod = pageLastmod(page);

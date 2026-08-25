@@ -276,24 +276,31 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// === КНОПКА НАВЕРХ ===
-const scrollBtn = document.getElementById('scrollTopBtn');
+// === КНОПКА НАВЕРХ И НАВИГАЦИЯ ===
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollBtn = document.getElementById('scrollTopBtn');
+  if (scrollBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    }, { passive: true });
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    scrollBtn.classList.add('show');
-  } else {
-    scrollBtn.classList.remove('show');
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    });
+  }
+
+  const navOverlay = document.querySelector('.nav-overlay');
+  if (navOverlay) {
+    navOverlay.addEventListener('click', () => {
+      document.body.classList.remove('nav-open');
+    });
   }
 });
 
-scrollBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
-});
-
-document.querySelector('.nav-overlay').addEventListener('click', () => {
-  document.body.classList.remove('nav-open');
-});

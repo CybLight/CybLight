@@ -53,16 +53,15 @@
 
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body class="dark status-page-layout">
+  <body class="status-body dark">
     <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
-    <div class="page-wrap">
+    <div class="page-frame">
       <header class="top-header" role="banner">
-        <div class="header-main">
+        <div class="header-top">
           <div class="container">
-            <div class="header-logo-wrap">
+            <div class="site-logo-global">
               <a
-                class="header-logo"
                 href="/ru/"
                 aria-label="Главная страница CybLight"
                 title="Открыть главную страницу"
@@ -71,7 +70,7 @@
               </a>
             </div>
 
-            <h2 class="siteName">CybLight Status</h2>
+            <h2 class="siteName">CybLight</h2>
 
             <div class="header-top-right">
               <div class="header-lang-wrap">
@@ -89,6 +88,16 @@
                   <li><a href="/en/status/" data-locale-link="en" hreflang="en">English</a></li>
                 </ul>
               </div>
+
+              <a
+                id="headerPremiumBtn"
+                href="/ru/pricing/"
+                class="header-link header-premium"
+                title="CybLight Premium"
+              >
+                <span class="icon-24" aria-hidden="true">👑</span>
+                <span class="header-label">Premium</span>
+              </a>
 
               <a
                 id="loginBtn"
@@ -371,6 +380,10 @@
             <img src="/images/report.svg" alt="Сообщить о проблеме" class="report-icon" />
             Сообщить о проблеме
           </button>
+          <a class="footer-status-btn" href="/ru/status/" title="Статус платформы CybLight">
+            <span class="cyb-status-dot cyb-status-dot--green"></span>
+            <span>CybLight Status</span>
+          </a>
           <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
         </div>
 

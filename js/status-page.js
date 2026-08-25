@@ -52,8 +52,10 @@
     const minPing = Math.min(...pingHistory, 10);
     const range = maxPing - minPing || 1;
 
+    const isDark = document.body.classList.contains('dark');
+
     // Draw grid lines
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.06)';
+    ctx.strokeStyle = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.08)';
     ctx.lineWidth = 1;
     ctx.beginPath();
     ctx.moveTo(0, h * 0.5);
@@ -61,7 +63,7 @@
     ctx.stroke();
 
     // Draw line
-    ctx.strokeStyle = '#38bdf8';
+    ctx.strokeStyle = isDark ? '#38bdf8' : '#0284c7';
     ctx.lineWidth = 2.5;
     ctx.lineJoin = 'round';
     ctx.beginPath();
@@ -80,8 +82,8 @@
     ctx.lineTo(0, h);
     ctx.closePath();
     const grad = ctx.createLinearGradient(0, 0, 0, h);
-    grad.addColorStop(0, 'rgba(56, 189, 248, 0.25)');
-    grad.addColorStop(1, 'rgba(56, 189, 248, 0.0)');
+    grad.addColorStop(0, isDark ? 'rgba(56, 189, 248, 0.25)' : 'rgba(2, 132, 199, 0.15)');
+    grad.addColorStop(1, isDark ? 'rgba(56, 189, 248, 0.0)' : 'rgba(2, 132, 199, 0.0)');
     ctx.fillStyle = grad;
     ctx.fill();
   }

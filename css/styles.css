@@ -4652,44 +4652,47 @@ body.dark .hub-relay-meter {
 }
 
 .status-page {
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
 .status-hero {
   padding: 30px 0 20px;
 }
 
-/* Global Operational Banner */
+/* =========================================================
+   1. Global Operational Banner (Light Default & Dark Mode)
+   ========================================================= */
+
 .status-global-banner {
-  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-  border: 1px solid #86efac;
+  background: #f0fdf4;
+  border: 2px solid #22c55e;
   border-radius: 16px;
   padding: 22px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.12);
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.15);
   margin-bottom: 24px;
   transition: all 0.3s ease;
 }
 
 body.dark .status-global-banner {
   background: linear-gradient(135deg, rgba(34, 197, 94, 0.18), rgba(16, 185, 129, 0.08));
-  border-color: rgba(74, 222, 128, 0.35);
-  box-shadow: 0 8px 32px rgba(34, 197, 94, 0.15);
+  border-color: rgba(74, 222, 128, 0.4);
+  box-shadow: 0 8px 32px rgba(34, 197, 94, 0.18);
 }
 
 .status-global-banner.is-degraded {
-  background: linear-gradient(135deg, #fefce8, #fef08a);
-  border-color: #fde047;
-  box-shadow: 0 4px 20px rgba(234, 179, 8, 0.12);
+  background: #fefce8;
+  border-color: #eab308;
+  box-shadow: 0 4px 20px rgba(234, 179, 8, 0.15);
 }
 
 body.dark .status-global-banner.is-degraded {
   background: linear-gradient(135deg, rgba(234, 179, 8, 0.18), rgba(202, 138, 4, 0.08));
-  border-color: rgba(250, 204, 21, 0.4);
-  box-shadow: 0 8px 32px rgba(234, 179, 8, 0.15);
+  border-color: rgba(250, 204, 21, 0.45);
+  box-shadow: 0 8px 32px rgba(234, 179, 8, 0.18);
 }
 
 .status-global-main {
@@ -4699,8 +4702,8 @@ body.dark .status-global-banner.is-degraded {
 }
 
 .status-indicator-icon {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   background: rgba(34, 197, 94, 0.2);
   display: flex;
@@ -4708,73 +4711,89 @@ body.dark .status-global-banner.is-degraded {
   justify-content: center;
   font-size: 22px;
   flex-shrink: 0;
-  box-shadow: 0 0 16px rgba(34, 197, 94, 0.35);
+  box-shadow: 0 0 16px rgba(34, 197, 94, 0.4);
 }
 
 .status-global-title {
   margin: 0 0 4px;
   font-size: 22px;
   font-weight: 800;
-  color: #0f172a;
+  color: #14532d !important;
   letter-spacing: -0.01em;
 }
 
 body.dark .status-global-title {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .status-global-subtitle {
   margin: 0;
   font-size: 13px;
-  color: #475569;
+  color: #166534 !important;
+  font-weight: 500;
 }
 
 body.dark .status-global-subtitle {
-  color: #94a3b8;
+  color: #94a3b8 !important;
+  font-weight: normal;
 }
 
 .status-global-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   flex-shrink: 0;
+}
+
+.status-global-actions span {
+  color: #166534;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+body.dark .status-global-actions span {
+  color: #94a3b8;
+  font-weight: normal;
 }
 
 .status-refresh-btn {
   background: #ffffff;
-  border: 1px solid #cbd5e1;
-  color: #0f172a;
+  border: 1.5px solid #22c55e;
+  color: #14532d;
   padding: 8px 16px;
   border-radius: 10px;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.15);
 }
 
 .status-refresh-btn:hover {
-  background: #f8fafc;
-  border-color: #94a3b8;
+  background: #ecfdf5;
+  border-color: #16a34a;
   transform: translateY(-1px);
 }
 
 body.dark .status-refresh-btn {
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   box-shadow: none;
 }
 
 body.dark .status-refresh-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Services Container */
+/* =========================================================
+   2. Service Cards
+   ========================================================= */
+
 .status-services-container {
   display: flex;
   flex-direction: column;
@@ -4787,7 +4806,7 @@ body.dark .status-refresh-btn:hover {
   border: 1px solid #e2e8f0;
   border-radius: 16px;
   padding: 22px 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -4799,11 +4818,11 @@ body.dark .status-refresh-btn:hover {
 body.dark .status-service-card {
   background: rgba(17, 24, 39, 0.75);
   border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 body.dark .status-service-card:hover {
-  border-color: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .status-service-header {
@@ -4822,44 +4841,46 @@ body.dark .status-service-card:hover {
 
 .status-service-icon {
   font-size: 20px;
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
-  background: rgba(0, 0, 0, 0.04);
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 body.dark .status-service-icon {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .status-service-name {
   margin: 0 0 2px;
   font-size: 17px;
   font-weight: 700;
-  color: #0f172a;
+  color: #0f172a !important;
 }
 
 body.dark .status-service-name {
-  color: #f8fafc;
+  color: #f8fafc !important;
 }
 
 .status-service-desc {
   margin: 0;
   font-size: 13px;
-  color: #64748b;
+  color: #475569 !important;
 }
 
 body.dark .status-service-desc {
-  color: #94a3b8;
+  color: #94a3b8 !important;
 }
 
 .status-badge {
   font-size: 12px;
   font-weight: 700;
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: 20px;
   display: inline-flex;
   align-items: center;
@@ -4868,27 +4889,27 @@ body.dark .status-service-desc {
 }
 
 .status-badge--operational {
-  background: rgba(34, 197, 94, 0.12);
-  color: #16a34a;
-  border: 1px solid rgba(74, 222, 128, 0.4);
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
 }
 
 body.dark .status-badge--operational {
-  background: rgba(34, 197, 94, 0.15);
+  background: rgba(34, 197, 94, 0.18);
   color: #4ade80;
-  border-color: rgba(74, 222, 128, 0.3);
+  border-color: rgba(74, 222, 128, 0.35);
 }
 
 .status-badge--degraded {
-  background: rgba(234, 179, 8, 0.12);
-  color: #ca8a04;
-  border: 1px solid rgba(234, 179, 8, 0.4);
+  background: #fef08a;
+  color: #a16207;
+  border: 1px solid #fde047;
 }
 
 body.dark .status-badge--degraded {
-  background: rgba(234, 179, 8, 0.15);
+  background: rgba(234, 179, 8, 0.18);
   color: #facc15;
-  border-color: rgba(234, 179, 8, 0.3);
+  border-color: rgba(234, 179, 8, 0.35);
 }
 
 /* 90-day Uptime Bars */
@@ -4901,6 +4922,15 @@ body.dark .status-badge--degraded {
   align-items: center;
   gap: 3px;
   height: 32px;
+  background: #f8fafc;
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+body.dark .status-uptime-bars {
+  background: rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 255, 255, 0.05);
 }
 
 .status-uptime-bar {
@@ -4923,7 +4953,7 @@ body.dark .status-uptime-bar {
 }
 
 .status-uptime-bar.is-today {
-  box-shadow: 0 0 6px rgba(34, 197, 94, 0.7);
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.8);
 }
 
 .status-uptime-bar.is-degraded {
@@ -4937,21 +4967,27 @@ body.dark .status-uptime-bar {
   margin-top: 8px;
   font-size: 12px;
   color: #64748b;
+  font-weight: 500;
+}
+
+body.dark .status-uptime-legend {
+  color: #94a3b8;
+  font-weight: normal;
 }
 
 .status-uptime-percent {
-  font-weight: 700;
-  color: #16a34a;
+  font-weight: 800;
+  color: #15803d;
 }
 
 body.dark .status-uptime-percent {
   color: #4ade80;
 }
 
-/* Sub-items accordion */
+/* Sub-items list */
 .status-sub-items {
-  margin-top: 14px;
-  border-top: 1px solid #f1f5f9;
+  margin-top: 16px;
+  border-top: 1px solid #e2e8f0;
   padding-top: 12px;
   display: flex;
   flex-direction: column;
@@ -4967,11 +5003,13 @@ body.dark .status-sub-items {
   align-items: center;
   justify-content: space-between;
   font-size: 13px;
-  color: #334155;
+  color: #1e293b;
+  font-weight: 500;
 }
 
 body.dark .status-sub-row {
   color: #cbd5e1;
+  font-weight: normal;
 }
 
 .status-sub-status {
@@ -4979,28 +5017,32 @@ body.dark .status-sub-row {
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  color: #16a34a;
-  font-weight: 600;
+  color: #15803d;
+  font-weight: 700;
 }
 
 body.dark .status-sub-status {
   color: #4ade80;
+  font-weight: 600;
 }
 
-/* Metrics Section */
+/* =========================================================
+   3. Metrics Section
+   ========================================================= */
+
 .status-metrics-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 body.dark .status-metrics-card {
   background: rgba(17, 24, 39, 0.75);
   border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 .status-metrics-header {
@@ -5014,11 +5056,11 @@ body.dark .status-metrics-card {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
-  color: #0f172a;
+  color: #0f172a !important;
 }
 
 body.dark .status-metrics-title {
-  color: #f8fafc;
+  color: #f8fafc !important;
 }
 
 .status-metrics-grid {
@@ -5042,12 +5084,14 @@ body.dark .status-metric-box {
 
 .status-metric-label {
   font-size: 12px;
-  color: #64748b;
+  color: #475569;
+  font-weight: 600;
   margin-bottom: 4px;
 }
 
 body.dark .status-metric-label {
   color: #94a3b8;
+  font-weight: normal;
 }
 
 .status-metric-value {
@@ -5067,31 +5111,34 @@ body.dark .status-metric-value {
   display: block;
 }
 
-/* Incident History */
+/* =========================================================
+   4. Incident History Timeline
+   ========================================================= */
+
 .status-history-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 body.dark .status-history-card {
   background: rgba(17, 24, 39, 0.75);
   border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 .status-history-title {
   margin: 0 0 20px;
   font-size: 18px;
   font-weight: 700;
-  color: #0f172a;
+  color: #0f172a !important;
 }
 
 body.dark .status-history-title {
-  color: #f8fafc;
+  color: #f8fafc !important;
 }
 
 .status-history-timeline {
@@ -5101,7 +5148,7 @@ body.dark .status-history-title {
 }
 
 .status-timeline-item {
-  border-left: 2px solid rgba(34, 197, 94, 0.5);
+  border-left: 2px solid #22c55e;
   padding-left: 18px;
   position: relative;
 }
@@ -5139,24 +5186,24 @@ body.dark .status-timeline-date {
 
 .status-timeline-event {
   font-size: 15px;
-  font-weight: 600;
-  color: #0f172a;
+  font-weight: 700;
+  color: #0f172a !important;
   margin-bottom: 4px;
 }
 
 body.dark .status-timeline-event {
-  color: #f1f5f9;
+  color: #f1f5f9 !important;
 }
 
 .status-timeline-desc {
   font-size: 13px;
-  color: #475569;
+  color: #334155 !important;
   line-height: 1.5;
   margin: 0;
 }
 
 body.dark .status-timeline-desc {
-  color: #94a3b8;
+  color: #94a3b8 !important;
 }
 
 @media (max-width: 640px) {

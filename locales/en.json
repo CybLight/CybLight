@@ -14,8 +14,8 @@
     "themeDark": "Dark theme",
     "themeLight": "Light theme",
     "opening": "Opening...",
-    "searchPlaceholder": "Find an easter egg...",
-    "searchPlaceholderOverlay": "Enter a query...",
+    "searchPlaceholder": "Search platform...",
+    "searchPlaceholderOverlay": "Search services, hub, and documentation...",
     "searchClose": "Close search",
     "searchLabel": "Search",
     "searchResults": "Results found: ",
@@ -1716,6 +1716,10 @@
     [
       "Пожертвовать",
       "Donate"
+    ],
+    [
+      "Тарифы",
+      "Pricing"
     ],
     [
       "Игровое поле",

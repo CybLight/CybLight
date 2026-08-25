@@ -14,8 +14,8 @@
     "themeDark": "Темна тема",
     "themeLight": "Світла тема",
     "opening": "Відкриваю...",
-    "searchPlaceholder": "Знайди пасхалку...",
-    "searchPlaceholderOverlay": "Введіть запит...",
+    "searchPlaceholder": "Пошук по платформі...",
+    "searchPlaceholderOverlay": "Пошук по сервісах, хабу та документації...",
     "searchClose": "Закрити пошук",
     "searchLabel": "Пошук",
     "searchResults": "Знайдено результатів: ",
@@ -1726,6 +1726,10 @@
     [
       "Пожертвовать",
       "Підтримати"
+    ],
+    [
+      "Тарифы",
+      "Тарифи"
     ],
     [
       "Игровое поле",

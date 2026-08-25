@@ -153,6 +153,190 @@
   },
   "replacements": [
     [
+      "Политика возврата",
+      "Refund Policy"
+    ],
+    [
+      "Последнее обновление: 22 августа 2026 г.",
+      "Last updated: August 22, 2026"
+    ],
+    [
+      "распространять спам, вредоносный код или ложную информацию от имени платформы;",
+      "spread spam, malware, or misleading information on behalf of the platform;"
+    ],
+    [
+      "автоматически собирать данные с Сайта без предварительного согласия.",
+      "automatically scrape or harvest data from the Site without prior authorization."
+    ],
+    [
+      "Администрация платформы оставляет за собой право ограничить доступ к Сайту или аккаунту при нарушении этих правил.",
+      "The platform administration reserves the right to restrict access to the Site or account in case of violation of these rules."
+    ],
+    [
+      "Тексты, дизайн, код и материалы на cyblight.org, если не указано иное, защищены авторским правом. Их можно просматривать и цитировать с указанием источника; несанкционированное копирование и коммерческое использование запрещены.",
+      "Texts, design, code, and materials on cyblight.org are protected by copyright unless stated otherwise. You may view and quote them with attribution; unauthorized copying and commercial use are prohibited."
+    ],
+    [
+      "Сайт может содержать ссылки на сторонние ресурсы (YouTube, GitHub и др.). Платформа не контролирует их содержание и не несёт ответственности за работу внешних сервисов.",
+      "The Site may contain links to third-party resources (YouTube, GitHub, etc.). The platform does not control their content and is not responsible for the operation of external services."
+    ],
+    [
+      "<strong>CybLight</strong> — программная платформа и облачная экосистема для IoT и умного дома. Платформа предоставляет услуги управления лицензиями, облачную синхронизацию настроек устройств, мобильное приложение и API доступа к сервисам умного дома.",
+      "<strong>CybLight</strong> is a software platform and cloud ecosystem for IoT and smart homes. The platform provides license management services, cloud device configuration synchronization, a mobile application, and APIs for smart home automation."
+    ],
+    [
+      "Используя Сайт и связанные сервисы, вы соглашаетесь с настоящими Условиями. Обработка персональных данных регулируется\n                <a href=\"{{L}}/privacy/\">Политикой конфиденциальности</a>, а порядок оформления и отмены платных подписок — <a href=\"{{L}}/refund/\">Политикой возврата</a>.",
+      "By using the Site and related services, you agree to these Terms. Personal data processing is governed by our <a href=\"{{L}}/privacy/\">Privacy Policy</a>, and subscription orders and cancellations are governed by our <a href=\"{{L}}/refund/\">Refund Policy</a>."
+    ],
+    [
+      "Условия использования сайта CybLight",
+      "CybLight Website Terms of Use"
+    ],
+    [
+      "Я оставляю за собой право ограничить доступ к Сайту или аккаунту при нарушении этих\n                правил.",
+      "We reserve the right to restrict access to the Site or account in case of violation of these rules."
+    ],
+    [
+      "Сайт может содержать ссылки на сторонние ресурсы (YouTube, GitHub и др.). Я не\n                контролирую их содержание и не несу ответственности за работу внешних сервисов.",
+      "The Site may contain links to third-party resources (YouTube, GitHub, etc.). We do not control their content and are not responsible for the operation of external services."
+    ],
+    [
+      "APK распространяется через официальную страницу\n                <a href=\"{{L}}/downloads/\">«Приложение»</a> и GitHub Releases. Установка выполняется\n                вами на свой риск; убедитесь, что скачиваете файл только с указанных источников.",
+      "The APK is distributed through the official <a href=\"{{L}}/downloads/\">App</a> page and GitHub Releases. Installation is performed at your own discretion; ensure you download files only from verified sources."
+    ],
+    [
+      "Приложение использует тот же аккаунт CybLight и те же правила поведения, что и Сайт.",
+      "The application uses the same CybLight account and terms of conduct as the Site."
+    ],
+    [
+      "Сайт и сервисы могут временно быть недоступны из‑за технических работ или сбоев. Я не\n                гарантирую бесперебойную работу, точность всех материалов и отсутствие ошибок в коде или\n                контенте.",
+      "The Site and services may be temporarily unavailable due to maintenance or outages. We do not guarantee uninterrupted operation, complete accuracy of materials, or absence of software errors."
+    ],
+    [
+      "Проект не предназначен для критически важных задач. Используйте его на свой страх и\n                риск. Автор не несёт ответственности за косвенный ущерб, потерю данных или проблемы,\n                возникшие при использовании Сайта, приложения или сторонних ссылок.",
+      "The platform is not intended for mission-critical life-support operations. Use it at your own discretion. CybLight is not liable for indirect damages, data loss, or issues arising from use of the Site, application, or third-party links."
+    ],
+    [
+      "Условия могут обновляться. Актуальная версия всегда доступна по ссылке\n                <a href=\"{{L}}/terms/\">«Условия использования»</a> в подвале Сайта. Продолжая\n                пользоваться проектом после изменений, вы принимаете обновлённые Условия.",
+      "These Terms may be updated. The current version is always available via the <a href=\"{{L}}/terms/\">Terms of Use</a> link in the footer. By continuing to use the service after changes, you accept the updated Terms."
+    ],
+    [
+      "Вопросы по этим Условиям можно задать через страницу\n                <a href=\"{{L}}/contacts/\">«Контакты»</a> или форму «Сообщить о проблеме» в подвале\n                Сайта.",
+      "Questions regarding these Terms can be submitted via the <a href=\"{{L}}/contacts/\">Contacts</a> page or the \"Report an issue\" form in the Site footer."
+    ],
+    [
+      "Политика конфиденциальности сайта CybLight",
+      "CybLight Website Privacy Policy"
+    ],
+    [
+      "1. О платформе",
+      "1. About the Platform"
+    ],
+    [
+      "<strong>CybLight</strong> — программная платформа и облачная экосистема для автоматизации IoT и умного дома. В сервисную инфраструктуру входят веб-портал <strong>cyblight.org</strong>, сервис единой безопасной авторизации <strong>login.cyblight.org</strong>, REST & WebSocket API <strong>api.cyblight.org</strong> и официальное мобильное приложение CybLight для Android.",
+      "<strong>CybLight</strong> is a software platform and cloud ecosystem for IoT and smart home automation. The service infrastructure includes the web portal <strong>cyblight.org</strong>, single sign-on service <strong>login.cyblight.org</strong>, REST & WebSocket API <strong>api.cyblight.org</strong>, and the official CybLight Android mobile application."
+    ],
+    [
+      "Политика возврата средств и отмены подписок",
+      "Refund & Subscription Cancellation Policy"
+    ],
+    [
+      "Команда CybLight (<strong>cyblight.org</strong>) стремится предоставлять качественные цифровые услуги и возможности в рамках подписок CybLight Premium (Starter, Pro, Advanced, VIP).",
+      "The CybLight team (<strong>cyblight.org</strong>) is dedicated to delivering high-quality digital services and features within CybLight Premium subscriptions (Starter, Pro, Advanced, VIP)."
+    ],
+    [
+      "Все финансовые операции, обработка платежей и выставление счетов осуществляются нашим официальным платёжным партнёром — <strong>Paddle.com Market Limited</strong> («Paddle»), выступающим Merchant of Record (продавцом записей).",
+      "All financial transactions, payment processing, and billing are securely handled by our official payment partner — <strong>Paddle.com Market Limited</strong> (\"Paddle\"), operating as the Merchant of Record."
+    ],
+    [
+      "2. 14 дней гарантии возврата средств",
+      "2. 14-Day Money-Back Guarantee"
+    ],
+    [
+      "Мы предоставляем <strong>14-дневную гарантию полного возврата средств</strong> при первичном оформлении подписки. Если по какой-либо причине сервис не оправдал ваших ожиданий, вы имеете право запросить полный возврат средств в течение <strong>14 календарных дней</strong> со дня совершения покупки.",
+      "We provide a <strong>14-day 100% money-back guarantee</strong> for initial subscription purchases. If for any reason the service does not meet your expectations, you are entitled to request a full refund within <strong>14 calendar days</strong> of purchase."
+    ],
+    [
+      "Условия действия 14-дневной гарантии:",
+      "Conditions for the 14-day guarantee:"
+    ],
+    [
+      "Запрос отправлен в течение 14 дней с момента первоначальной оплаты.",
+      "The request is submitted within 14 days of the initial payment."
+    ],
+    [
+      "Указан email аккаунта, номер квитанции или идентификатор заказа Paddle.",
+      "The account email, receipt number, or Paddle order ID is provided."
+    ],
+    [
+      "3. Отмена подписки",
+      "3. Subscription Cancellation"
+    ],
+    [
+      "Вы можете отменить автопродление подписки CybLight Premium в любой момент:",
+      "You can cancel your CybLight Premium subscription auto-renewal at any time:"
+    ],
+    [
+      "<strong>В личном кабинете:</strong> Отмена доступна в один клик в настройках аккаунта (вкладка <em>«Подписка / Premium»</em>), либо по ссылке в чеке-квитанции Paddle.",
+      "<strong>In Account Settings:</strong> Cancellation is available with 1 click in your account settings (<em>\"Subscription / Premium\"</em> tab), or via the link in your Paddle receipt."
+    ],
+    [
+      "<strong>Действие после отмены:</strong> После отмены подписка остаётся активной до конца оплаченного периода (месяца или года). Никаких последующих списаний не производится.",
+      "<strong>Access After Cancellation:</strong> After cancellation, your subscription remains fully active until the end of the paid billing cycle (month or year). No further charges will occur."
+    ],
+    [
+      "<strong>Отсутствие штрафов:</strong> Отмена подписки бесплатна и не влечёт скрытых комиссий.",
+      "<strong>No Cancellation Fees:</strong> Cancelling your subscription is completely free with no hidden fees."
+    ],
+    [
+      "4. Как запросить возврат средств",
+      "4. How to Request a Refund"
+    ],
+    [
+      "Вы можете запросить возврат одним из следующих способов:",
+      "You can request a refund through either of the following methods:"
+    ],
+    [
+      "<strong>Через поддержку CybLight:</strong> Напишите на <a href=\"mailto:support@cyblight.org\">support@cyblight.org</a> с темой <em>«Запрос на возврат средств»</em> и данными аккаунта.",
+      "<strong>Via CybLight Support:</strong> Email <a href=\"mailto:support@cyblight.org\">support@cyblight.org</a> with the subject <em>\"Refund Request\"</em> and your account details."
+    ],
+    [
+      "<strong>Через поддержку покупателей Paddle:</strong> Воспользуйтесь ссылкой в квитанции об оплате или посетите портал <a href=\"https://paddle.net\" target=\"_blank\" rel=\"noopener noreferrer\">paddle.net</a>.",
+      "<strong>Via Paddle Buyer Support:</strong> Use the link in your email receipt or visit <a href=\"https://paddle.net\" target=\"_blank\" rel=\"noopener noreferrer\">paddle.net</a>."
+    ],
+    [
+      "Возврат средств производится на тот же платёжный инструмент (банковская карта, PayPal, Apple Pay, Google Pay) в течение <strong>5–10 рабочих дней</strong> в зависимости от вашего банка.",
+      "Refunds are credited to the original payment method (debit/credit card, PayPal, Apple Pay, Google Pay) within <strong>5–10 business days</strong> depending on your financial institution."
+    ],
+    [
+      "5. Исключения",
+      "5. Exceptions"
+    ],
+    [
+      "Возврат средств не осуществляется в случаях:",
+      "Refunds are not granted in the following cases:"
+    ],
+    [
+      "Обращения по истечении 14 календарных дней с момента первоначального платежа.",
+      "Requests submitted after 14 calendar days from the initial payment."
+    ],
+    [
+      "Блокировки учётной записи за грубые нарушения <a href=\"{{L}}/terms/\">Условий использования</a> (мошенничество, вредоносная активность, атаки на сервисы).",
+      "Account suspension due to severe violations of our <a href=\"{{L}}/terms/\">Terms of Service</a> (fraud, malicious activities, attacks against services)."
+    ],
+    [
+      "6. Контакты",
+      "6. Contacts"
+    ],
+    [
+      "Форма обратной связи: <a href=\"{{L}}/contacts/\">https://cyblight.org{{L}}/contacts/</a>",
+      "Contact form: <a href=\"{{L}}/contacts/\">https://cyblight.org{{L}}/contacts/</a>"
+    ],
+    [
+      "Портал поддержки Paddle: <a href=\"https://paddle.net\" target=\"_blank\" rel=\"noopener noreferrer\">https://paddle.net</a>",
+      "Paddle buyer support portal: <a href=\"https://paddle.net\" target=\"_blank\" rel=\"noopener noreferrer\">https://paddle.net</a>"
+    ],
+    [
       "Проекты CybLight: Smart Home Hub, Android-приложение, IoT микроконтроллеры, облачные сервисы и интерактивные веб-приложения.",
       "CybLight Solutions: Smart Home Hub, Android App, IoT Microcontrollers, Cloud Services, and Interactive Web Applications."
     ],

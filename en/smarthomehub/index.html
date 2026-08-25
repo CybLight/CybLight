@@ -216,7 +216,7 @@
               <span class="accent">Manage</span> your <span class="accent-2">devices</span>
             </h1>
             <p class="hero-content-one">
-              Manage all your smart home devices from a single central hub, синхронизируйте IoT-датчики и автоматизируйте сценарии без сложных настроек.
+              Manage all your smart home devices from a single central hub, synchronize IoT sensors, and automate scenarios without complex setup.
             </p>
           </div>
         </section>
@@ -225,19 +225,19 @@
         <section class="smarthome-section container" id="simulator">
           <div class="simulator-badge">
             <span class="cyb-status-dot cyb-status-dot--pulse"></span>
-            <span>Интерактивная консоль хаба (E2EE Live Demo)</span>
+            <span>Interactive Hub Console (E2EE Live Demo)</span>
           </div>
-          <h2>Симулятор умного дома</h2>
+          <h2>Smart Home Simulator</h2>
           <p class="smarthome-subtitle">
-            Протестируйте прямое управление виртуальными устройствами и оцените мгновенный поток зашифрованной телеметрии.
+            Test direct control of virtual devices and experience real-time encrypted telemetry streaming.
           </p>
 
           <div class="hub-sim-wrapper">
             <!-- Room Navigation Tabs -->
             <div class="hub-sim-rooms">
-              <button type="button" class="hub-room-tab active" data-room="living_room">🛋️ Гостиная</button>
-              <button type="button" class="hub-room-tab" data-room="bedroom">🛏️ Спальня</button>
-              <button type="button" class="hub-room-tab" data-room="server_room">⚡ Серверная</button>
+              <button type="button" class="hub-room-tab active" data-room="living_room">🛋️ Living Room</button>
+              <button type="button" class="hub-room-tab" data-room="bedroom">🛏️ Bedroom</button>
+              <button type="button" class="hub-room-tab" data-room="server_room">⚡ Server Room</button>
             </div>
 
             <!-- Virtual Devices Grid -->
@@ -247,8 +247,8 @@
                 <div class="hub-device-card__head">
                   <div class="hub-device-icon">💡</div>
                   <div>
-                    <h3 class="hub-device-title">RGB-освещение</h3>
-                    <span class="hub-device-type">Диммируемый светильник</span>
+                    <h3 class="hub-device-title">RGB Lighting</h3>
+                    <span class="hub-device-type">Dimmable Light Fixture</span>
                   </div>
                   <label class="switch-toggle">
                     <input type="checkbox" id="demoLightToggle" checked />
@@ -262,7 +262,7 @@
 
                 <div class="hub-device-control">
                   <div class="control-label-row">
-                    <span>Яркость</span>
+                    <span>Brightness</span>
                     <strong id="demoLightBrightnessVal">80%</strong>
                   </div>
                   <input type="range" id="demoLightBrightness" min="0" max="100" value="80" class="hub-range-slider" />
@@ -282,19 +282,19 @@
                 <div class="hub-device-card__head">
                   <div class="hub-device-icon">🌡️</div>
                   <div>
-                    <h3 class="hub-device-title">Климат-контроль</h3>
+                    <h3 class="hub-device-title">Climate Control</h3>
                     <span class="hub-device-type">ESP32 + BME280</span>
                   </div>
-                  <span class="hub-mode-badge" id="demoClimateMode">❄️ Охлаждение</span>
+                  <span class="hub-mode-badge" id="demoClimateMode">❄️ Cooling</span>
                 </div>
 
                 <div class="hub-climate-display">
                   <div class="climate-current">
                     <span class="climate-temp" id="demoClimateTemp">21.8°C</span>
-                    <span class="climate-label">Текущая температура (Влажность 46%)</span>
+                    <span class="climate-label">Current Temperature (Humidity 46%)</span>
                   </div>
                   <div class="climate-target-wrap">
-                    <span class="target-label">Целевая:</span>
+                    <span class="target-label">Target:</span>
                     <button type="button" class="temp-btn" id="demoTempDown">-</button>
                     <span class="target-val" id="demoClimateTarget">22.0°C</span>
                     <button type="button" class="temp-btn" id="demoTempUp">+</button>
@@ -302,9 +302,9 @@
                 </div>
 
                 <div class="hub-mode-selector">
-                  <button type="button" class="mode-btn active" data-mode="cool">❄️ Охлаждение</button>
-                  <button type="button" class="mode-btn" data-mode="heat">🔥 Нагрев</button>
-                  <button type="button" class="mode-btn" data-mode="eco">🍃 Эко</button>
+                  <button type="button" class="mode-btn active" data-mode="cool">❄️ Cooling</button>
+                  <button type="button" class="mode-btn" data-mode="heat">🔥 Heating</button>
+                  <button type="button" class="mode-btn" data-mode="eco">🍃 Eco</button>
                 </div>
               </div>
 
@@ -313,8 +313,8 @@
                 <div class="hub-device-card__head">
                   <div class="hub-device-icon">🔌</div>
                   <div>
-                    <h3 class="hub-device-title">Силовое реле / Розетка</h3>
-                    <span class="hub-device-type">Мониторинг энергии</span>
+                    <h3 class="hub-device-title">Power Relay / Smart Plug</h3>
+                    <span class="hub-device-type">Energy Monitoring</span>
                   </div>
                   <label class="switch-toggle">
                     <input type="checkbox" id="demoRelayToggle" checked />
@@ -324,11 +324,11 @@
 
                 <div class="hub-relay-meter">
                   <div class="meter-metric">
-                    <span class="meter-val" id="demoRelayPower">142.5 Вт</span>
-                    <span class="meter-desc">Текущая нагрузка электросети</span>
+                    <span class="meter-val" id="demoRelayPower">142.5 W</span>
+                    <span class="meter-desc">Current Grid Power Load</span>
                   </div>
                   <div class="meter-status">
-                    <span class="meter-dot"></span> 228 В · 50.1 Гц
+                    <span class="meter-dot"></span> 228 V · 50.1 Hz
                   </div>
                 </div>
               </div>
@@ -338,18 +338,18 @@
                 <div class="hub-device-card__head">
                   <div class="hub-device-icon">🛡️</div>
                   <div>
-                    <h3 class="hub-device-title">Охрана и датчик PIR</h3>
-                    <span class="hub-device-type">Периметр безопасности</span>
+                    <h3 class="hub-device-title">Security & PIR Sensor</h3>
+                    <span class="hub-device-type">Security Perimeter</span>
                   </div>
-                  <span class="security-status-badge" id="demoSecurityBadge">🛡️ Охрана активна</span>
+                  <span class="security-status-badge" id="demoSecurityBadge">🛡️ Armed & Active</span>
                 </div>
 
                 <p class="hub-security-desc">
-                  Инфракрасный датчик фиксирует активность и мгновенно рассылает E2EE push-уведомления на мобильные устройства.
+                  Infrared motion sensor detects activity and dispatches instant E2EE push alerts to mobile devices.
                 </p>
 
                 <button type="button" class="button hub-alarm-btn" id="demoTriggerMotion">
-                  🚨 Смоделировать движение
+                  🚨 Simulate Motion
                 </button>
               </div>
             </div>
@@ -359,13 +359,13 @@
               <div class="telemetry-header">
                 <div class="telemetry-title">
                   <span class="telemetry-icon">📡</span>
-                  <strong>Шлюз телеметрии (E2EE MQTT Packet Stream)</strong>
+                  <strong>Telemetry Gateway (E2EE MQTT Packet Stream)</strong>
                 </div>
                 <button type="button" class="button telemetry-copy-btn" id="demoCopyTelemetry">
-                  Копировать JSON
+                  Copy JSON
                 </button>
               </div>
-              <pre class="telemetry-pre"><code id="hubTelemetryConsole">// Инициализация защищённого канала...</code></pre>
+              <pre class="telemetry-pre"><code id="hubTelemetryConsole">// Initializing secure encrypted channel...</code></pre>
             </div>
           </div>
         </section>
@@ -405,24 +405,24 @@
 
         <section class="smarthome-section container" id="arduino">
           <h2>Arduino</h2>
-          <p class="smarthome-subtitle">Sensors and modules for smart home</p>
+          <p class="smarthome-subtitle">Sensors and modules for smart homes</p>
 
           <div class="smarthome-grid">
             <article class="smarthome-card">
               <div class="smarthome-icon-wrap">🌡️</div>
-              <h3>DHT22 temperature and humidity sensor</h3>
+              <h3>DHT22 Temperature & Humidity Sensor</h3>
               <p>Indoor temperature and humidity monitoring</p>
             </article>
 
             <article class="smarthome-card">
               <div class="smarthome-icon-wrap">📶</div>
-              <h3>ESP8266 WiFi module</h3>
-              <p>Connecting devices to WiFi network</p>
+              <h3>ESP8266 WiFi Module</h3>
+              <p>Connecting devices to local WiFi network</p>
             </article>
 
             <article class="smarthome-card">
               <div class="smarthome-icon-wrap">🚶</div>
-              <h3>PIR motion sensor</h3>
+              <h3>PIR Motion Sensor</h3>
               <p>Motion detection for security systems</p>
             </article>
           </div>

@@ -85,20 +85,36 @@
     const targetEl = document.getElementById('demoClimateTarget');
     const modeEl = document.getElementById('demoClimateMode');
 
+    const lang = document.documentElement.lang || 'ru';
+    const isEn = lang === 'en';
+    const isUk = lang === 'uk';
+
+    const i18nLabels = {
+      cool: isEn ? '❄️ Cooling' : isUk ? '❄️ Охолодження' : '❄️ Охлаждение',
+      heat: isEn ? '🔥 Heating' : isUk ? '🔥 Нагрів' : '🔥 Нагрев',
+      eco: isEn ? '🍃 Eco' : isUk ? '🍃 Еко' : '🍃 Эко',
+      watt: isEn ? 'W' : 'Вт',
+      alarm: isEn ? '🚨 MOTION DETECTED' : isUk ? '🚨 РУХ ВИЯВЛЕНО' : '🚨 ДВИЖЕНИЕ ОБНАРУЖЕНО',
+      safe: isEn ? '🛡️ Armed & Active' : isUk ? '🛡️ Охорона активна' : '🛡️ Охрана активна',
+      copied: isEn ? 'Copied ✅' : isUk ? 'Скопійовано ✅' : 'Скопировано ✅'
+    };
+
     if (tempEl) tempEl.textContent = `${state.climate.currentTemp.toFixed(1)}°C`;
     if (targetEl) targetEl.textContent = `${state.climate.targetTemp.toFixed(1)}°C`;
     if (modeEl) {
-      const modeNames = { cool: '❄️ Охлаждение', heat: '🔥 Нагрев', eco: '🍃 Эко' };
-      modeEl.textContent = modeNames[state.climate.mode] || state.climate.mode;
+      modeEl.textContent = i18nLabels[state.climate.mode] || state.climate.mode;
     }
   }
 
   function updateRelayUI() {
     const toggle = document.getElementById('demoRelayToggle');
     const powerEl = document.getElementById('demoRelayPower');
+    const lang = document.documentElement.lang || 'ru';
+    const wattUnit = lang === 'en' ? 'W' : 'Вт';
+
     if (toggle) toggle.checked = state.relay.on;
     if (powerEl) {
-      powerEl.textContent = state.relay.on ? `${state.relay.power.toFixed(1)} Вт` : '0.0 Вт';
+      powerEl.textContent = state.relay.on ? `${state.relay.power.toFixed(1)} ${wattUnit}` : `0.0 ${wattUnit}`;
     }
   }
 
@@ -115,6 +131,16 @@
     const roomBtns = document.querySelectorAll('[data-room]');
 
     if (!lightToggle) return;
+
+    const lang = document.documentElement.lang || 'ru';
+    const isEn = lang === 'en';
+    const isUk = lang === 'uk';
+
+    const i18nLabels = {
+      alarm: isEn ? '🚨 MOTION DETECTED' : isUk ? '🚨 РУХ ВИЯВЛЕНО' : '🚨 ДВИЖЕНИЕ ОБНАРУЖЕНО',
+      safe: isEn ? '🛡️ Armed & Active' : isUk ? '🛡️ Охорона активна' : '🛡️ Охрана активна',
+      copied: isEn ? 'Copied ✅' : isUk ? 'Скопійовано ✅' : 'Скопировано ✅'
+    };
 
     // Room Switcher
     roomBtns.forEach((btn) => {
@@ -198,14 +224,14 @@
       motionBtn.addEventListener('click', () => {
         const alertBadge = document.getElementById('demoSecurityBadge');
         if (alertBadge) {
-          alertBadge.textContent = '🚨 ДВИЖЕНИЕ ОБНАРУЖЕНО';
+          alertBadge.textContent = i18nLabels.alarm;
           alertBadge.classList.add('is-alarm');
         }
         emitTelemetry('security/motion', { event: 'MOTION_DETECTED', zone: 'living_room_pir', confidence: 0.98 });
 
         setTimeout(() => {
           if (alertBadge) {
-            alertBadge.textContent = '🛡️ Охрана активна (Спокойно)';
+            alertBadge.textContent = i18nLabels.safe;
             alertBadge.classList.remove('is-alarm');
           }
         }, 3500);
@@ -219,7 +245,7 @@
         if (!consoleEl) return;
         navigator.clipboard.writeText(consoleEl.textContent).then(() => {
           const orig = copyTelemetryBtn.textContent;
-          copyTelemetryBtn.textContent = 'Скопировано ✅';
+          copyTelemetryBtn.textContent = i18nLabels.copied;
           setTimeout(() => (copyTelemetryBtn.textContent = orig), 2000);
         });
       });

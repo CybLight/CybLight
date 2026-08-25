@@ -2129,6 +2129,150 @@
       "All"
     ],
     [
+      "Управляйте всеми устройствами умного дома с одного центрального хаба, синхронизируйте IoT-датчики и автоматизируйте сценарии без сложных настроек.",
+      "Manage all your smart home devices from a single central hub, synchronize IoT sensors, and automate scenarios without complex setup."
+    ],
+    [
+      "Интерактивная консоль хаба (E2EE Live Demo)",
+      "Interactive Hub Console (E2EE Live Demo)"
+    ],
+    [
+      "Симулятор умного дома",
+      "Smart Home Simulator"
+    ],
+    [
+      "Протестируйте прямое управление виртуальными устройствами и оцените мгновенный поток зашифрованной телеметрии.",
+      "Test direct control of virtual devices and experience real-time encrypted telemetry streaming."
+    ],
+    [
+      "🛋️ Гостиная",
+      "🛋️ Living Room"
+    ],
+    [
+      "🛏️ Спальня",
+      "🛏️ Bedroom"
+    ],
+    [
+      "⚡ Серверная",
+      "⚡ Server Room"
+    ],
+    [
+      "RGB-освещение",
+      "RGB Lighting"
+    ],
+    [
+      "Диммируемый светильник",
+      "Dimmable Light Fixture"
+    ],
+    [
+      "Яркость",
+      "Brightness"
+    ],
+    [
+      "Климат-контроль",
+      "Climate Control"
+    ],
+    [
+      "❄️ Охлаждение",
+      "❄️ Cooling"
+    ],
+    [
+      "🔥 Нагрев",
+      "🔥 Heating"
+    ],
+    [
+      "🍃 Эко",
+      "🍃 Eco"
+    ],
+    [
+      "Текущая температура (Влажность 46%)",
+      "Current Temperature (Humidity 46%)"
+    ],
+    [
+      "Целевая:",
+      "Target:"
+    ],
+    [
+      "Силовое реле / Розетка",
+      "Power Relay / Smart Plug"
+    ],
+    [
+      "Мониторинг энергии",
+      "Energy Monitoring"
+    ],
+    [
+      "142.5 Вт",
+      "142.5 W"
+    ],
+    [
+      "228 В · 50.1 Гц",
+      "228 V · 50.1 Hz"
+    ],
+    [
+      "Текущая нагрузка электросети",
+      "Current Grid Power Load"
+    ],
+    [
+      "Охрана и датчик PIR",
+      "Security & PIR Sensor"
+    ],
+    [
+      "Периметр безопасности",
+      "Security Perimeter"
+    ],
+    [
+      "🛡️ Охрана активна",
+      "🛡️ Armed & Active"
+    ],
+    [
+      "Инфракрасный датчик фиксирует активность и мгновенно рассылает E2EE push-уведомления на мобильные устройства.",
+      "Infrared motion sensor detects activity and dispatches instant E2EE push alerts to mobile devices."
+    ],
+    [
+      "🚨 Смоделировать движение",
+      "🚨 Simulate Motion"
+    ],
+    [
+      "Шлюз телеметрии (E2EE MQTT Packet Stream)",
+      "Telemetry Gateway (E2EE MQTT Packet Stream)"
+    ],
+    [
+      "Копировать JSON",
+      "Copy JSON"
+    ],
+    [
+      "// Инициализация защищённого канала...",
+      "// Initializing secure encrypted channel..."
+    ],
+    [
+      "Датчик температуры и влажности DHT22",
+      "DHT22 Temperature & Humidity Sensor"
+    ],
+    [
+      "Мониторинг температуры и влажности в помещении",
+      "Indoor temperature and humidity monitoring"
+    ],
+    [
+      "ESP8266 WiFi модуль",
+      "ESP8266 WiFi Module"
+    ],
+    [
+      "Подключение устройств к WiFi сети",
+      "Connecting devices to local WiFi network"
+    ],
+    [
+      "Датчик движения PIR",
+      "PIR Motion Sensor"
+    ],
+    [
+      "Обнаружение движения для систем безопасности",
+      "Motion detection for security systems"
+    ],
+    [
+      "Сенсоры и модули для умного дома",
+      "Sensors and modules for smart homes"
+    ],
+    [
       "Smart Home Hub — управляйте всеми устройствами умного дома с одного центрального хаба, исследуйте проекты автоматизации и сенсоры Arduino.",
       "Smart Home Hub — manage all your smart home devices from a single central hub, explore automation projects and Arduino sensors."
     ],

@@ -21,6 +21,9 @@
     const heroText = document.querySelector(".downloads-version");
 
     const os = detectOS();
+    const qrBox = document.getElementById("desktopQrBox");
+    const qrImage = document.getElementById("qrImage");
+
     if (os === 'android' && githubApkBtn) {
       githubApkBtn.classList.add('downloads-btn--highlight');
       if (heroText && !document.getElementById('osBadge')) {
@@ -30,9 +33,12 @@
         badge.textContent = ' • Ваша система: Android ✓';
         heroText.appendChild(badge);
       }
+    } else if (['windows', 'mac', 'linux', 'other'].includes(os) && qrBox) {
+      qrBox.style.display = 'flex';
     }
 
     if (githubLink) githubLink.href = GITHUB_RELEASES;
+
 
     try {
       const res = await fetch(GITHUB_API, {

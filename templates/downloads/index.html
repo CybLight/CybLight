@@ -307,7 +307,7 @@
               href="https://github.com/CybLight/CybLight-Android/releases/latest/download/cyblight-android-v0.4.3.apk"
               rel="noopener"
             >
-              Скачать с GitHub
+              Скачать APK с GitHub
             </a>
             <a
               id="downloadGithubLink"
@@ -318,6 +318,24 @@
             >
               Страница релизов
             </a>
+          </div>
+
+          <!-- Desktop QR Code Assistant -->
+          <div id="desktopQrBox" class="downloads-qr-box" style="display: none;">
+            <div class="downloads-qr-wrap">
+              <img
+                id="qrImage"
+                src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&margin=4&data=https://github.com/CybLight/CybLight-Android/releases/latest"
+                alt="QR-код для загрузки APK на смартфон"
+                width="140"
+                height="140"
+                loading="lazy"
+              />
+            </div>
+            <div class="downloads-qr-text">
+              <strong>Зашли с компьютера?</strong>
+              <p>Наведите камеру смартфона на QR-код для мгновенного перехода к скачиванию APK.</p>
+            </div>
           </div>
         </section>
 
@@ -418,6 +436,7 @@
     <script src="/js/dev-footer-pin.js" defer></script>
     <script src="/js/main.js" defer></script>
     <script src="/js/theme.js" defer></script>
+    <script src="/js/status.js" defer></script>
     <script src="/js/downloads.js" defer></script>
     <script>
       document.getElementById("current-year").textContent =

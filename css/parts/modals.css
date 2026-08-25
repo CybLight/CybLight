@@ -838,3 +838,216 @@ body.cyb-dialog-open {
   outline-offset: 2px;
 }
 
+/* ===== Status Modal ===== */
+.cyb-status-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.cyb-status-modal.is-open {
+  display: block;
+}
+
+.cyb-status-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 4, 12, 0.75);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.cyb-status-modal__card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(600px, calc(100vw - 28px));
+  max-height: 90vh;
+  overflow-y: auto;
+  background:
+    radial-gradient(120% 90% at 0% 0%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
+    radial-gradient(120% 90% at 100% 100%, rgba(255, 127, 39, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #161d31 0%, #101626 100%);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 0 24px rgba(34, 197, 94, 0.2),
+    0 24px 70px rgba(0, 0, 0, 0.7);
+  animation: reportCardIn 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  text-align: left;
+  color: #f1f5f9;
+}
+
+.cyb-status-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cyb-status-modal__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4ade80;
+  margin-bottom: 8px;
+}
+
+.cyb-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.cyb-status-dot--green {
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.cyb-status-dot--yellow {
+  background: #eab308;
+  box-shadow: 0 0 8px #eab308;
+}
+
+.cyb-status-dot--pulse {
+  background: #22c55e;
+  animation: headerOnlinePulse 2s infinite;
+}
+
+.cyb-status-modal__title {
+  margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.cyb-status-modal__subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.cyb-status-modal__close {
+  appearance: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.cyb-status-modal__close:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+.cyb-status-services {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.cyb-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: border-color 0.2s ease;
+}
+
+.cyb-status-row:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.cyb-status-row__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.cyb-status-row__desc {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.cyb-status-row__state {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.cyb-status-row__badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.cyb-status-row__badge.is-operational {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.cyb-status-row__badge.is-degraded {
+  background: rgba(234, 179, 8, 0.15);
+  color: #facc15;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.cyb-status-row__ping {
+  font-size: 11px;
+  color: #64748b;
+  font-family: monospace;
+}
+
+.cyb-status-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cyb-status-updated {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.cyb-status-actions {
+  display: flex;
+  gap: 8px;
+}
+
+

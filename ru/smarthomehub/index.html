@@ -199,6 +199,16 @@
         </nav>
       </header>
 
+      <div class="breadcrumbs-bar">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Навигация по разделам">
+            <a href="/ru/">Главная</a>
+            <span class="bc-sep">›</span>
+            <span class="bc-current">Smart Home Hub</span>
+          </nav>
+        </div>
+      </div>
+
       <main id="content" class="layout-landing" role="main">
         <section class="hero">
           <div class="smarthome-logo-container">
@@ -209,14 +219,158 @@
               <span class="accent">Управляйте</span> своими <span class="accent-2">устройствами</span>
             </h1>
             <p class="hero-content-one">
-              Управляйте всеми устройствами умного дома с одного центрального хаба
+              Управляйте всеми устройствами умного дома с одного центрального хаба, синхронизируйте IoT-датчики и автоматизируйте сценарии без сложных настроек.
             </p>
           </div>
         </section>
 
-        <section class="smarthome-section container">
-          <h2>Настройка</h2>
-          <p class="smarthome-subtitle">Настройте свой умный дом с помощью различных настроек</p>
+        <!-- ИНТЕРАКТИВНЫЙ СИМУЛЯТОР SMART HOME HUB -->
+        <section class="smarthome-section container" id="simulator">
+          <div class="simulator-badge">
+            <span class="cyb-status-dot cyb-status-dot--pulse"></span>
+            <span>Интерактивная консоль хаба (E2EE Live Demo)</span>
+          </div>
+          <h2>Симулятор умного дома</h2>
+          <p class="smarthome-subtitle">
+            Протестируйте прямое управление виртуальными устройствами и оцените мгновенный поток зашифрованной телеметрии.
+          </p>
+
+          <div class="hub-sim-wrapper">
+            <!-- Room Navigation Tabs -->
+            <div class="hub-sim-rooms">
+              <button type="button" class="hub-room-tab active" data-room="living_room">🛋️ Гостиная</button>
+              <button type="button" class="hub-room-tab" data-room="bedroom">🛏️ Спальня</button>
+              <button type="button" class="hub-room-tab" data-room="server_room">⚡ Серверная</button>
+            </div>
+
+            <!-- Virtual Devices Grid -->
+            <div class="hub-sim-grid">
+              <!-- Device 1: RGB Smart Light -->
+              <div class="hub-device-card">
+                <div class="hub-device-card__head">
+                  <div class="hub-device-icon">💡</div>
+                  <div>
+                    <h3 class="hub-device-title">RGB-освещение</h3>
+                    <span class="hub-device-type">Диммируемый светильник</span>
+                  </div>
+                  <label class="switch-toggle">
+                    <input type="checkbox" id="demoLightToggle" checked />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="hub-bulb-preview">
+                  <div class="hub-bulb-glow" id="demoBulbVisual"></div>
+                </div>
+
+                <div class="hub-device-control">
+                  <div class="control-label-row">
+                    <span>Яркость</span>
+                    <strong id="demoLightBrightnessVal">80%</strong>
+                  </div>
+                  <input type="range" id="demoLightBrightness" min="0" max="100" value="80" class="hub-range-slider" />
+                </div>
+
+                <div class="hub-color-presets">
+                  <button type="button" class="color-dot" data-color="#ff7f27" style="background:#ff7f27;" title="CybLight Orange"></button>
+                  <button type="button" class="color-dot" data-color="#38bdf8" style="background:#38bdf8;" title="Cyber Sky Blue"></button>
+                  <button type="button" class="color-dot" data-color="#3ddc84" style="background:#3ddc84;" title="Mint Green"></button>
+                  <button type="button" class="color-dot" data-color="#a855f7" style="background:#a855f7;" title="Neon Purple"></button>
+                  <button type="button" class="color-dot" data-color="#fef08a" style="background:#fef08a;" title="Warm White 2700K"></button>
+                </div>
+              </div>
+
+              <!-- Device 2: Smart Climate / Thermostat -->
+              <div class="hub-device-card">
+                <div class="hub-device-card__head">
+                  <div class="hub-device-icon">🌡️</div>
+                  <div>
+                    <h3 class="hub-device-title">Климат-контроль</h3>
+                    <span class="hub-device-type">ESP32 + BME280</span>
+                  </div>
+                  <span class="hub-mode-badge" id="demoClimateMode">❄️ Охлаждение</span>
+                </div>
+
+                <div class="hub-climate-display">
+                  <div class="climate-current">
+                    <span class="climate-temp" id="demoClimateTemp">21.8°C</span>
+                    <span class="climate-label">Текущая температура (Влажность 46%)</span>
+                  </div>
+                  <div class="climate-target-wrap">
+                    <span class="target-label">Целевая:</span>
+                    <button type="button" class="temp-btn" id="demoTempDown">-</button>
+                    <span class="target-val" id="demoClimateTarget">22.0°C</span>
+                    <button type="button" class="temp-btn" id="demoTempUp">+</button>
+                  </div>
+                </div>
+
+                <div class="hub-mode-selector">
+                  <button type="button" class="mode-btn active" data-mode="cool">❄️ Охлаждение</button>
+                  <button type="button" class="mode-btn" data-mode="heat">🔥 Нагрев</button>
+                  <button type="button" class="mode-btn" data-mode="eco">🍃 Эко</button>
+                </div>
+              </div>
+
+              <!-- Device 3: Power Relay & Smart Plug -->
+              <div class="hub-device-card">
+                <div class="hub-device-card__head">
+                  <div class="hub-device-icon">🔌</div>
+                  <div>
+                    <h3 class="hub-device-title">Силовое реле / Розетка</h3>
+                    <span class="hub-device-type">Мониторинг энергии</span>
+                  </div>
+                  <label class="switch-toggle">
+                    <input type="checkbox" id="demoRelayToggle" checked />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="hub-relay-meter">
+                  <div class="meter-metric">
+                    <span class="meter-val" id="demoRelayPower">142.5 Вт</span>
+                    <span class="meter-desc">Текущая нагрузка электросети</span>
+                  </div>
+                  <div class="meter-status">
+                    <span class="meter-dot"></span> 228 В · 50.1 Гц
+                  </div>
+                </div>
+              </div>
+
+              <!-- Device 4: Security & PIR Motion -->
+              <div class="hub-device-card">
+                <div class="hub-device-card__head">
+                  <div class="hub-device-icon">🛡️</div>
+                  <div>
+                    <h3 class="hub-device-title">Охрана и датчик PIR</h3>
+                    <span class="hub-device-type">Периметр безопасности</span>
+                  </div>
+                  <span class="security-status-badge" id="demoSecurityBadge">🛡️ Охрана активна</span>
+                </div>
+
+                <p class="hub-security-desc">
+                  Инфракрасный датчик фиксирует активность и мгновенно рассылает E2EE push-уведомления на мобильные устройства.
+                </p>
+
+                <button type="button" class="button hub-alarm-btn" id="demoTriggerMotion">
+                  🚨 Смоделировать движение
+                </button>
+              </div>
+            </div>
+
+            <!-- E2EE Live Telemetry Terminal -->
+            <div class="hub-telemetry-box">
+              <div class="telemetry-header">
+                <div class="telemetry-title">
+                  <span class="telemetry-icon">📡</span>
+                  <strong>Шлюз телеметрии (E2EE MQTT Packet Stream)</strong>
+                </div>
+                <button type="button" class="button telemetry-copy-btn" id="demoCopyTelemetry">
+                  Копировать JSON
+                </button>
+              </div>
+              <pre class="telemetry-pre"><code id="hubTelemetryConsole">// Инициализация защищённого канала...</code></pre>
+            </div>
+          </div>
         </section>
 
         <section class="smarthome-section container" id="projects">
@@ -322,6 +476,8 @@
     <script src="/js/dev-footer-pin.js" defer></script>
     <script src="/js/main.js" defer></script>
     <script src="/js/theme.js" defer></script>
+    <script src="/js/status.js" defer></script>
+    <script src="/js/smarthome-demo.js" defer></script>
 
     <script>
       document.getElementById('current-year').textContent = new Date().getFullYear();

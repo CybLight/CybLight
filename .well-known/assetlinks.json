@@ -12,5 +12,19 @@
         "34:34:DE:6B:A0:79:30:C0:6B:E7:4A:A6:D5:EE:3D:1B:10:89:D9:4C:AF:EE:8A:28:03:67:02:FC:AF:C5:C0:44"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.cyblight.smarthomehub",
+      "sha256_cert_fingerprints": [
+        "DC:5E:CE:3B:D4:99:D3:46:1E:06:4A:39:08:BE:09:1B:6F:3E:93:72:FD:87:F3:B6:36:5F:D1:50:F3:16:0C:04",
+        "34:34:DE:6B:A0:79:30:C0:6B:E7:4A:A6:D5:EE:3D:1B:10:89:D9:4C:AF:EE:8A:28:03:67:02:FC:AF:C5:C0:44"
+      ]
+    }
   }
 ]

@@ -249,24 +249,16 @@
       "Payment processing and top-ups are securely handled through the <strong>Monobank</strong> payment infrastructure with support for Apple Pay, Google Pay, and Visa/Mastercard debit/credit cards."
     ],
     [
-      "2. 14 дней гарантии возврата средств",
-      "2. 14-Day Money-Back Guarantee"
+      "2. Цифровой контент и условия платежей",
+      "2. Digital Content & Payment Terms"
     ],
     [
-      "Мы предоставляем <strong>14-дневную гарантию полного возврата средств</strong> при первичном оформлении подписки. Если по какой-либо причине сервис не оправдал ваших ожиданий, вы имеете право запросить полный возврат средств в течение <strong>14 календарных дней</strong> со дня совершения покупки.",
-      "We provide a <strong>14-day 100% money-back guarantee</strong> for initial subscription purchases. If for any reason the service does not meet your expectations, you are entitled to request a full refund within <strong>14 calendar days</strong> of purchase."
+      "Подписки CybLight Premium предоставляют мгновенный доступ к цифровым возможностям платформы, расширенным лимитам API и облачной E2EE-синхронизации Smart Home Hub сразу после подтверждения транзакции.",
+      "CybLight Premium subscriptions grant immediate access to digital platform capabilities, higher API limits, and cloud E2EE synchronization for Smart Home Hub upon transaction confirmation."
     ],
     [
-      "Условия действия 14-дневной гарантии:",
-      "Conditions for the 14-day guarantee:"
-    ],
-    [
-      "Запрос отправлен в течение 14 дней с момента первоначальной оплаты.",
-      "The request is submitted within 14 days of the initial payment."
-    ],
-    [
-      "Указан email или логин аккаунта CybLight, квитанция или время и сумма перевода.",
-      "Your CybLight account email or username, receipt, or transaction timestamp and amount is provided."
+      "В соответствии с действующим законодательством о защите прав потребителей в отношении цифрового контента и программных услуг, <strong>все платежи за цифровые подписки являются окончательными</strong>. После активации доступа услуга считается оказанной в полном объёме, и средства не подлежат безусловному возврату.",
+      "In accordance with consumer protection regulations for digital content and software services, <strong>all subscription payments are final</strong>. Once access is activated, services are deemed fully delivered and non-refundable."
     ],
     [
       "3. Отмена и окончание подписки",
@@ -289,32 +281,44 @@
       "<strong>Data Retention:</strong> When a subscription ends, all your device configs and automation setups remain safe in free tier mode."
     ],
     [
-      "4. Как запросить возврат средств",
-      "4. How to Request a Refund"
+      "4. Технические сбои и компенсации",
+      "4. Technical Failures & Compensation"
     ],
     [
-      "Для оформления возврата средств напишите в нашу службу поддержки:",
-      "To request a refund, please contact our support team:"
+      "Возврат средств или начисление компенсации возможны исключительно в случаях доказанных технических сбоев со стороны платформы или платёжного шлюза:",
+      "Refunds or service credits are granted exclusively in proven cases of technical failures on the platform or payment gateway side:"
     ],
     [
-      "<strong>Email:</strong> <a href=\"mailto:support@cyblight.org\">support@cyblight.org</a> с темой <em>«Запрос на возврат средств»</em> и логином аккаунта.",
-      "<strong>Email:</strong> <a href=\"mailto:support@cyblight.org\">support@cyblight.org</a> with the subject <em>\"Refund Request\"</em> and your CybLight username."
+      "Ошибочное повторное (двойное) списание средств за один и тот же расчётный период.",
+      "Erroneous duplicate charge for the exact same billing cycle."
     ],
     [
-      "Возврат средств производится на исходный платёжный инструмент (банковскую карту) в течение <strong>3–7 рабочих дней</strong> в соответствии с регламентом межбанковских переводов.",
-      "Refunds are credited back to the original payment card within <strong>3–7 business days</strong> according to interbank settlement procedures."
+      "Технический сбой, из-за которого оплаченный доступ не был активирован, и проблему не удалось устранить силами технической поддержки.",
+      "A technical outage where paid access failed to activate and could not be resolved by our technical support."
     ],
     [
-      "5. Исключения",
-      "5. Exceptions"
+      "В подобных ситуациях напишите на нашу почту:",
+      "In such circumstances, please contact our support team:"
+    ],
+    [
+      "<strong>Email:</strong> <a href=\"mailto:support@cyblight.org\">support@cyblight.org</a> с темой <em>«Технический сбой оплаты»</em>, указав логин аккаунта и приложив квитанцию.",
+      "<strong>Email:</strong> <a href=\"mailto:support@cyblight.org\">support@cyblight.org</a> with the subject <em>\"Payment Technical Error\"</em>, including your username and payment receipt."
+    ],
+    [
+      "В случае подтверждения технического сбоя возврат средств производится на исходный платёжный инструмент в течение 3–7 рабочих дней.",
+      "Upon technical error confirmation, refunds are issued back to the original payment instrument within 3–7 business days."
+    ],
+    [
+      "5. Отказ в возврате",
+      "5. Non-Refundable Scenarios"
     ],
     [
       "Возврат средств не осуществляется в случаях:",
       "Refunds are not granted in the following cases:"
     ],
     [
-      "Обращения по истечении 14 календарных дней с момента первоначального платежа.",
-      "Requests submitted after 14 calendar days from the initial payment."
+      "Субъективного изменения решения пользователя («передумал», «больше не требуется») после начала действия подписки.",
+      "Subjective change of mind (\"changed mind\", \"no longer needed\") after subscription activation."
     ],
     [
       "Блокировки учётной записи за грубые нарушения <a href=\"{{L}}/terms/\">Условий использования</a> (мошенничество, вредоносная активность, атаки на сервисы).",
@@ -682,8 +686,8 @@
       "How does the payment process work?"
     ],
     [
-      "Вы выбираете тариф ➔ переходите в официальную Банку Monobank с предзаполненной суммой ➔ в комментарии указываете ваш логин CybLight ➔ оплачиваете в 1 клик через Apple Pay / GPay или картой.",
-      "You select a plan ➔ navigate to the official Monobank Jar with prefilled amount ➔ enter your CybLight username in the comment ➔ complete the payment in 1 click via Apple Pay, Google Pay, or card."
+      "Вы выбираете тариф ➔ переходите в официальную Банку Monobank с предзаполненной суммой ➔ в комментарии указываете ваш логин на сайте CybLight ➔ оплачиваете в 1 клик через Apple Pay / GPay или картой.",
+      "You select a plan ➔ navigate to the official Monobank Jar with prefilled amount ➔ enter your username on the CybLight website in the comment ➔ complete the payment in 1 click via Apple Pay, Google Pay, or card."
     ],
     [
       "Что если у меня уже есть активная подписка?",

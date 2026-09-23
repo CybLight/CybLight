@@ -66,9 +66,8 @@ function splitLegacyStyles() {
 }
 
 function buildStyles() {
-  const chunks = [
-    "/* AUTO-GENERATED — edit css/parts/*.css and run: npm run build:css */\n",
-  ];
+  const imports = [];
+  const bodyChunks = [];
 
   for (const name of PART_FILES) {
     const filePath = path.join(PARTS_DIR, name);
@@ -76,11 +75,21 @@ function buildStyles() {
       console.error(`Missing part: css/parts/${name}`);
       process.exit(1);
     }
-    const content = fs.readFileSync(filePath, "utf8").trimEnd();
-    chunks.push(`/* ===== css/parts/${name} ===== */\n`);
-    chunks.push(content);
-    chunks.push("\n\n");
+    let content = fs.readFileSync(filePath, "utf8").trimEnd();
+    content = content.replace(/@import\s+(?:url\([^)]+\)|"[^"]+"|'[^']+')[^;]*;\s*\r?\n?/g, (match) => {
+      imports.push(match.trim());
+      return "";
+    });
+    bodyChunks.push(`/* ===== css/parts/${name} ===== */\n`);
+    bodyChunks.push(content.trim());
+    bodyChunks.push("\n\n");
   }
+
+  const chunks = [
+    imports.length > 0 ? imports.join("\n") + "\n\n" : "",
+    "/* AUTO-GENERATED — edit css/parts/*.css and run: npm run build:css */\n",
+    ...bodyChunks,
+  ];
 
   fs.writeFileSync(OUTPUT, chunks.join("").replace(/\n{3,}/g, "\n\n") + "\n", "utf8");
   console.log(`Built ${OUTPUT} from ${PART_FILES.length} parts`);

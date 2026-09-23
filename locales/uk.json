@@ -328,10 +328,7 @@
       "Форма обратной связи: <a href=\"{{L}}/contacts/\">https://cyblight.org{{L}}/contacts/</a>",
       "Форма зворотного зв'язку: <a href=\"{{L}}/contacts/\">https://cyblight.org{{L}}/contacts/</a>"
     ],
-    [
-      "Портал поддержки Paddle: <a href=\"https://paddle.net\" target=\"_blank\" rel=\"noopener noreferrer\">https://paddle.net</a>",
-      "Портал підтримки Paddle: <a href=\"https://paddle.net\" target=\"_blank\" rel=\"noopener noreferrer\">https://paddle.net</a>"
-    ],
+
     [
       "Проекты CybLight: Smart Home Hub, Android-приложение, IoT микроконтроллеры, облачные сервисы и интерактивные веб-приложения.",
       "Проєкти CybLight: Smart Home Hub, Android-додаток, IoT мікроконтролери, хмарні сервіси та інтерактивні веб-застосунки."

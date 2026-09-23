@@ -145,8 +145,8 @@
       },
       {
         "title": "Refund Policy",
-        "desc": "Refund and subscription cancellation policy via Paddle",
-        "tags": ["refund", "cancellation", "paddle"],
+        "desc": "Refund and subscription cancellation policy",
+        "tags": ["refund", "cancellation", "premium"],
         "url": "/refund/"
       }
     ]
@@ -328,10 +328,7 @@
       "Форма обратной связи: <a href=\"{{L}}/contacts/\">https://cyblight.org{{L}}/contacts/</a>",
       "Contact form: <a href=\"{{L}}/contacts/\">https://cyblight.org{{L}}/contacts/</a>"
     ],
-    [
-      "Портал поддержки Paddle: <a href=\"https://paddle.net\" target=\"_blank\" rel=\"noopener noreferrer\">https://paddle.net</a>",
-      "Paddle buyer support portal: <a href=\"https://paddle.net\" target=\"_blank\" rel=\"noopener noreferrer\">https://paddle.net</a>"
-    ],
+
     [
       "Проекты CybLight: Smart Home Hub, Android-приложение, IoT микроконтроллеры, облачные сервисы и интерактивные веб-приложения.",
       "CybLight Solutions: Smart Home Hub, Android App, IoT Microcontrollers, Cloud Services, and Interactive Web Applications."

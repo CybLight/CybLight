@@ -185,106 +185,136 @@
             <p>
               Unlock the full potential of Smart Home Hub, accelerate cloud sync, and scale API limits with CybLight premium plans.
             </p>
-
-            <div class="billing-toggle-wrap">
-              <button type="button" class="billing-toggle-btn active" id="btnMonthly">
-                Monthly Billing
-              </button>
-              <button type="button" class="billing-toggle-btn" id="btnYearly">
-                Annual Billing <span class="discount-badge">Save 20%</span>
-              </button>
-            </div>
           </section>
 
-          <!-- Pricing Grid -->
-          <div class="pricing-grid">
-            <!-- Starter Tier -->
+          <!-- Pricing Grid (4 Plans) -->
+          <div class="pricing-grid pricing-grid--four">
+            <!-- 1 Month -->
             <div class="pricing-card">
               <div class="pricing-card-header">
-                <div class="pricing-card-title">Starter</div>
+                <div class="pricing-card-top-row">
+                  <span class="plan-badge">1M</span>
+                </div>
+                <div class="pricing-card-title">1 Month</div>
                 <div class="pricing-card-desc">
-                  Essential toolkit for personal projects and quick IoT setup.
+                  Essential tier for personal use and getting started quickly.
                 </div>
               </div>
               <div class="pricing-card-price">
-                <span class="price-amount" data-price-month="$4.99" data-price-year="$47.99" data-price-id-month="pri_01m0k5jyembs4fq9xpqjfdmkwg" data-price-id-year="pri_01m0k5z8j175095gnjjk6epyb6">$4.99</span>
-                <span class="price-period" data-period-month="/ month" data-period-year="/ year">/ month</span>
-                <div class="price-note" data-note-month="Billed monthly" data-note-year="Billed annually ($3.99/mo)">Billed monthly</div>
+                <span class="price-amount">199 ₴</span>
+                <span class="price-period">/ month</span>
+                <div class="price-note">~$4.99 USD</div>
               </div>
               <ul class="pricing-features-list">
-                <li><span class="feature-check">✓</span> Standard API limits (60 req/min)</li>
-                <li><span class="feature-check">✓</span> Up to 3 rooms in Smart Home Hub</li>
-                <li><span class="feature-check">✓</span> End-to-End E2EE synchronization</li>
-                <li><span class="feature-check">✓</span> IoT dashboard customization</li>
-                <li><span class="feature-check">✓</span> Starter account status 👑</li>
-                <li><span class="feature-check">✓</span> Documentation & Knowledge Base</li>
+                <li><span class="feature-check">✓</span> Gold Premium badge ⭐ in profile & hub</li>
+                <li><span class="feature-check">✓</span> <strong>Unlimited</strong> Smart Home Hub (rooms & devices)</li>
+                <li><span class="feature-check">✓</span> Instant high-priority E2EE sync</li>
+                <li><span class="feature-check">✓</span> Exclusive UI themes & animated neon avatar borders</li>
+                <li><span class="feature-check">✓</span> <strong>10x higher</strong> API rate limits (600 req/min)</li>
+                <li><span class="feature-check">✓</span> 24/7 Priority Support</li>
               </ul>
-              <a href="https://login.cyblight.org/en/pricing?tier=starter" class="pricing-cta-btn">
-                Get Starter
+              <a href="https://login.cyblight.org/en/pricing?plan=month_1" class="pricing-cta-btn">
+                Choose 1 Month
               </a>
             </div>
 
-            <!-- Pro Tier (Popular) -->
+            <!-- 3 Months -->
+            <div class="pricing-card">
+              <div class="pricing-card-header">
+                <div class="pricing-card-top-row">
+                  <span class="plan-badge">3M</span>
+                  <span class="discount-pill">Скидка 16%</span>
+                </div>
+                <div class="pricing-card-title">3 Months</div>
+                <div class="pricing-card-desc">
+                  Optimal quarterly plan for active smart home automation.
+                </div>
+              </div>
+              <div class="pricing-card-price">
+                <span class="price-amount">499 ₴</span>
+                <span class="price-period">/ 3 months</span>
+                <div class="price-note">~$12.49 USD (166 ₴/mo)</div>
+              </div>
+              <ul class="pricing-features-list">
+                <li><span class="feature-check">✓</span> All features included in 1-month plan</li>
+                <li><span class="feature-check">✓</span> Save 16% with quarterly billing</li>
+                <li><span class="feature-check">✓</span> Exclusive Season Guardian badge</li>
+                <li><span class="feature-check">✓</span> Early access to new modules & beta releases</li>
+                <li><span class="feature-check">✓</span> Priority E2EE queue processing</li>
+              </ul>
+              <a href="https://login.cyblight.org/en/pricing?plan=month_3" class="pricing-cta-btn">
+                Choose 3 Months
+              </a>
+            </div>
+
+            <!-- 6 Months -->
+            <div class="pricing-card">
+              <div class="pricing-card-header">
+                <div class="pricing-card-top-row">
+                  <span class="plan-badge">6M</span>
+                  <span class="discount-pill">Скидка 25%</span>
+                </div>
+                <div class="pricing-card-title">6 Months</div>
+                <div class="pricing-card-desc">
+                  Semi-annual plan with significant value.
+                </div>
+              </div>
+              <div class="pricing-card-price">
+                <span class="price-amount">899 ₴</span>
+                <span class="price-period">/ 6 months</span>
+                <div class="price-note">~$22.49 USD (150 ₴/mo)</div>
+              </div>
+              <ul class="pricing-features-list">
+                <li><span class="feature-check">✓</span> All features included in 3-month plan</li>
+                <li><span class="feature-check">✓</span> Save 25% with 6-month billing</li>
+                <li><span class="feature-check">✓</span> Exclusive Epoch Keeper profile title</li>
+                <li><span class="feature-check">✓</span> Dedicated technical support channel</li>
+                <li><span class="feature-check">✓</span> Advanced audit logs & cloud telemetry</li>
+              </ul>
+              <a href="https://login.cyblight.org/en/pricing?plan=month_6" class="pricing-cta-btn">
+                Choose 6 Months
+              </a>
+            </div>
+
+            <!-- 1 Year (Popular) -->
             <div class="pricing-card pricing-card--popular">
               <div class="pricing-card-badge">Most Popular</div>
               <div class="pricing-card-header">
-                <div class="pricing-card-title">Pro</div>
+                <div class="pricing-card-top-row">
+                  <span class="plan-badge">1Y 👑</span>
+                  <span class="discount-pill">Скидка 33%</span>
+                </div>
+                <div class="pricing-card-title">1 Year</div>
                 <div class="pricing-card-desc">
-                  Ideal choice for power users and smart home automation enthusiasts.
+                  Maximum savings for long-term users and power enthusiasts.
                 </div>
               </div>
               <div class="pricing-card-price">
-                <span class="price-amount" data-price-month="$9.99" data-price-year="$95.99" data-price-id-month="pri_01m0k5sp5mww8cj01zn2gvcrra" data-price-id-year="pri_01m0k5wjmasr7sky6x2tp1bem6">$9.99</span>
-                <span class="price-period" data-period-month="/ month" data-period-year="/ year">/ month</span>
-                <div class="price-note" data-note-month="Billed monthly" data-note-year="Billed annually ($7.99/mo)">Billed monthly</div>
+                <span class="price-amount">1,599 ₴</span>
+                <span class="price-period">/ year</span>
+                <div class="price-note">~$39.99 USD (133 ₴/mo)</div>
               </div>
               <ul class="pricing-features-list">
-                <li><span class="feature-check">✓</span> <strong>Unlimited</strong> Smart Home Hub (rooms & devices)</li>
-                <li><span class="feature-check">✓</span> <strong>10x higher</strong> API limits (600 req/min)</li>
-                <li><span class="feature-check">✓</span> Instant high-priority E2EE sync</li>
-                <li><span class="feature-check">✓</span> Advanced dashboard UI themes</li>
-                <li><span class="feature-check">✓</span> Custom device tags & metadata</li>
-                <li><span class="feature-check">✓</span> 24/7 Priority Support (Email & Ticket)</li>
-              </ul>
-              <a href="https://login.cyblight.org/en/pricing?tier=pro" class="pricing-cta-btn">
-                Get Pro
-              </a>
-            </div>
-
-            <!-- Advanced Tier -->
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <div class="pricing-card-title">Advanced</div>
-                <div class="pricing-card-desc">
-                  Maximum performance and dedicated bandwidth for developers and teams.
-                </div>
-              </div>
-              <div class="pricing-card-price">
-                <span class="price-amount" data-price-month="$19.99" data-price-year="$189.99" data-price-id-month="pri_01m0k60avherwb2nkmdcrsg6dd" data-price-id-year="pri_01m0k6120wbwhakkw0sw50jbgn">$19.99</span>
-                <span class="price-period" data-period-month="/ month" data-period-year="/ year">/ month</span>
-                <div class="price-note" data-note-month="Billed monthly" data-note-year="Billed annually ($15.80/mo)">Billed monthly</div>
-              </div>
-              <ul class="pricing-features-list">
-                <li><span class="feature-check">✓</span> <strong>Unlimited API rate limits</strong> & dedicated lane</li>
-                <li><span class="feature-check">✓</span> Everything included in Pro tier</li>
-                <li><span class="feature-check">✓</span> Early access to new modules & betas</li>
-                <li><span class="feature-check">✓</span> Dedicated technical support channel</li>
-                <li><span class="feature-check">✓</span> Advanced audit logs & custom webhooks</li>
+                <li><span class="feature-check">✓</span> <strong>Maximum 33% discount</strong> for the full year</li>
+                <li><span class="feature-check">✓</span> Unlimited access to all ecosystem features</li>
+                <li><span class="feature-check">✓</span> Golden crown 👑 & VIP account status</li>
+                <li><span class="feature-check">✓</span> Direct private developer channel</li>
+                <li><span class="feature-check">✓</span> Dedicated server gateway & custom webhooks</li>
                 <li><span class="feature-check">✓</span> Maximum cloud processing priority</li>
               </ul>
-              <a href="https://login.cyblight.org/en/pricing?tier=advanced" class="pricing-cta-btn">
-                Get Advanced
+              <a href="https://login.cyblight.org/en/pricing?plan=year_1" class="pricing-cta-btn">
+                Choose 1 Year
               </a>
             </div>
           </div>
 
-          <!-- Paddle Compliance Notice Box -->
+          <!-- Monobank Compliance & Payment Notice Box -->
           <div class="pricing-compliance-box">
-            <div class="compliance-icon" aria-hidden="true">🔒</div>
+            <div class="compliance-icon" aria-hidden="true">🏦</div>
             <div class="compliance-text">
-              <h4>Secure Payment & Money-Back Guarantee</h4>
+              <h4>Secure Payments via Monobank Jar</h4>
               <p>
-                Payments and billing are securely processed by our official Merchant of Record partner <strong>Paddle.com Market Limited</strong> ("Paddle"). All transactions are protected with bank-grade TLS encryption. Backed by our <strong>14-day money-back guarantee</strong> and self-serve cancellation anytime.
+                Payments are securely processed via the <strong>Monobank</strong> payment infrastructure with full support for Apple Pay, Google Pay, and worldwide Visa/Mastercard debit/credit cards with zero hidden fees. Backed by our <strong>14-day money-back guarantee</strong>.
               </p>
               <div class="compliance-links">
                 <a href="/en/terms/">Terms of Service</a>
@@ -300,25 +330,31 @@
             <div class="faq-item">
               <h3>Which payment methods are supported?</h3>
               <p>
-                We accept all major debit/credit cards (Visa, Mastercard, American Express, UnionPay), Apple Pay, Google Pay, and PayPal securely through Paddle.
+                We accept bank cards from any bank worldwide (Visa, Mastercard), Apple Pay, and Google Pay via Monobank.
               </p>
             </div>
             <div class="faq-item">
-              <h3>Can I cancel my subscription at any time?</h3>
+              <h3>How does the payment process work?</h3>
               <p>
-                Yes! You can cancel auto-renewal with 1 click in your profile settings or via the link in your Paddle receipt. All features remain active until the end of your billing cycle.
+                You select a plan ➔ navigate to the official Monobank Jar with prefilled amount ➔ enter your CybLight username in the comment ➔ complete the payment in 1 click via Apple Pay, Google Pay, or card.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>How fast is Premium activated?</h3>
+              <p>
+                Premium benefits are activated automatically via server webhooks within seconds after the transfer is received.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>What if I already have an active subscription?</h3>
+              <p>
+                The new purchased period seamlessly adds to your existing expiration date, preserving all your active days.
               </p>
             </div>
             <div class="faq-item">
               <h3>How does the refund policy work?</h3>
               <p>
                 We offer a 14-day 100% money-back guarantee for first-time subscription purchases. If you are not satisfied, simply email <a href="mailto:support@cyblight.org">support@cyblight.org</a> and we will process your refund.
-              </p>
-            </div>
-            <div class="faq-item">
-              <h3>How fast is Premium activated?</h3>
-              <p>
-                Premium benefits are provisioned automatically via secure server webhooks within seconds after transaction approval.
               </p>
             </div>
           </section>

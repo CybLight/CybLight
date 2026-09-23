@@ -185,106 +185,136 @@
             <p>
               Отримайте максимум від розумного будинку Smart Home Hub, прискорте синхронізацію та розширте ліміти API з преміум-планами CybLight.
             </p>
-
-            <div class="billing-toggle-wrap">
-              <button type="button" class="billing-toggle-btn active" id="btnMonthly">
-                Оплата щомісяця
-              </button>
-              <button type="button" class="billing-toggle-btn" id="btnYearly">
-                Оплата за рік <span class="discount-badge">Знижка 20%</span>
-              </button>
-            </div>
           </section>
 
-          <!-- Pricing Grid -->
-          <div class="pricing-grid">
-            <!-- Starter Tier -->
+          <!-- Pricing Grid (4 Plans) -->
+          <div class="pricing-grid pricing-grid--four">
+            <!-- 1 Month -->
             <div class="pricing-card">
               <div class="pricing-card-header">
-                <div class="pricing-card-title">Starter</div>
+                <div class="pricing-card-top-row">
+                  <span class="plan-badge">1M</span>
+                </div>
+                <div class="pricing-card-title">1 Місяць</div>
                 <div class="pricing-card-desc">
-                  Базовий набір можливостей для особистого використання та швидкого старту.
+                  Базовий період для особистого використання та швидкого старту.
                 </div>
               </div>
               <div class="pricing-card-price">
-                <span class="price-amount" data-price-month="$4.99" data-price-year="$47.99" data-price-id-month="pri_01m0k5jyembs4fq9xpqjfdmkwg" data-price-id-year="pri_01m0k5z8j175095gnjjk6epyb6">$4.99</span>
-                <span class="price-period" data-period-month="/ місяць" data-period-year="/ рік">/ місяць</span>
-                <div class="price-note" data-note-month="Списання щомісяця" data-note-year="Списання раз на рік ($3.99/міс)">Списання щомісяця</div>
+                <span class="price-amount">199 ₴</span>
+                <span class="price-period">/ місяць</span>
+                <div class="price-note">~$4.99 USD</div>
               </div>
               <ul class="pricing-features-list">
-                <li><span class="feature-check">✓</span> Стандартні ліміти API (60 зап/хв)</li>
-                <li><span class="feature-check">✓</span> До 3 кімнат у Smart Home Hub</li>
-                <li><span class="feature-check">✓</span> Наскрізна E2EE синхронізація</li>
-                <li><span class="feature-check">✓</span> Базова кастомізація IoT-панелі</li>
-                <li><span class="feature-check">✓</span> Статус акаунта Starter 👑</li>
-                <li><span class="feature-check">✓</span> Документація та база знань</li>
+                <li><span class="feature-check">✓</span> Золотий значок Premium ⭐ у профілі</li>
+                <li><span class="feature-check">✓</span> <strong>Безлімітний</strong> Smart Home Hub (кімнати та пристрої)</li>
+                <li><span class="feature-check">✓</span> Миттєва E2EE синхронізація</li>
+                <li><span class="feature-check">✓</span> Ексклюзивні теми оформлення та неонові рамки</li>
+                <li><span class="feature-check">✓</span> <strong>10x збільшені</strong> ліміти API (600 зап/хв)</li>
+                <li><span class="feature-check">✓</span> Пріоритетна підтримка 24/7</li>
               </ul>
-              <a href="https://login.cyblight.org/uk/pricing?tier=starter" class="pricing-cta-btn">
-                Обрати Starter
+              <a href="https://login.cyblight.org/uk/pricing?plan=month_1" class="pricing-cta-btn">
+                Обрати 1 Місяць
               </a>
             </div>
 
-            <!-- Pro Tier (Popular) -->
+            <!-- 3 Months -->
+            <div class="pricing-card">
+              <div class="pricing-card-header">
+                <div class="pricing-card-top-row">
+                  <span class="plan-badge">3M</span>
+                  <span class="discount-pill">Скидка 16%</span>
+                </div>
+                <div class="pricing-card-title">3 Місяці</div>
+                <div class="pricing-card-desc">
+                  Оптимальний квартальний план для активної автоматизації.
+                </div>
+              </div>
+              <div class="pricing-card-price">
+                <span class="price-amount">499 ₴</span>
+                <span class="price-period">/ 3 місяці</span>
+                <div class="price-note">~$12.49 USD (166 ₴/міс)</div>
+              </div>
+              <ul class="pricing-features-list">
+                <li><span class="feature-check">✓</span> Усі можливості тарифу на 1 місяць</li>
+                <li><span class="feature-check">✓</span> Економія 16% при квартальній оплаті</li>
+                <li><span class="feature-check">✓</span> Ексклюзивний бейдж Сезонного хранителя</li>
+                <li><span class="feature-check">✓</span> Ранній доступ до нових бета-модулів</li>
+                <li><span class="feature-check">✓</span> Пріоритетна обробка черг E2EE</li>
+              </ul>
+              <a href="https://login.cyblight.org/uk/pricing?plan=month_3" class="pricing-cta-btn">
+                Обрати 3 Місяці
+              </a>
+            </div>
+
+            <!-- 6 Months -->
+            <div class="pricing-card">
+              <div class="pricing-card-header">
+                <div class="pricing-card-top-row">
+                  <span class="plan-badge">6M</span>
+                  <span class="discount-pill">Скидка 25%</span>
+                </div>
+                <div class="pricing-card-title">6 Місяців</div>
+                <div class="pricing-card-desc">
+                  Піврічна підписка з відчутною вигодою.
+                </div>
+              </div>
+              <div class="pricing-card-price">
+                <span class="price-amount">899 ₴</span>
+                <span class="price-period">/ 6 місяців</span>
+                <div class="price-note">~$22.49 USD (150 ₴/міс)</div>
+              </div>
+              <ul class="pricing-features-list">
+                <li><span class="feature-check">✓</span> Усі можливості тарифу на 3 місяці</li>
+                <li><span class="feature-check">✓</span> Економія 25% при оплаті за півроку</li>
+                <li><span class="feature-check">✓</span> Ексклюзивний титул Хранителя Епохи</li>
+                <li><span class="feature-check">✓</span> Виділений канал технічної підтримки</li>
+                <li><span class="feature-check">✓</span> Розширений аудит логів та телеметрії</li>
+              </ul>
+              <a href="https://login.cyblight.org/uk/pricing?plan=month_6" class="pricing-cta-btn">
+                Обрати 6 Місяців
+              </a>
+            </div>
+
+            <!-- 1 Year (Popular) -->
             <div class="pricing-card pricing-card--popular">
               <div class="pricing-card-badge">Популярний вибір</div>
               <div class="pricing-card-header">
-                <div class="pricing-card-title">Pro</div>
+                <div class="pricing-card-top-row">
+                  <span class="plan-badge">1Y 👑</span>
+                  <span class="discount-pill">Скидка 33%</span>
+                </div>
+                <div class="pricing-card-title">1 Рік</div>
                 <div class="pricing-card-desc">
-                  Ідеальний вибір для активних користувачів та ентузіастів розумного будинку.
+                  Максимальна вигода для постійних користувачів та ентузіастів.
                 </div>
               </div>
               <div class="pricing-card-price">
-                <span class="price-amount" data-price-month="$9.99" data-price-year="$95.99" data-price-id-month="pri_01m0k5sp5mww8cj01zn2gvcrra" data-price-id-year="pri_01m0k5wjmasr7sky6x2tp1bem6">$9.99</span>
-                <span class="price-period" data-period-month="/ місяць" data-period-year="/ рік">/ місяць</span>
-                <div class="price-note" data-note-month="Списання щомісяця" data-note-year="Списання раз на рік ($7.99/міс)">Списання щомісяця</div>
+                <span class="price-amount">1 599 ₴</span>
+                <span class="price-period">/ рік</span>
+                <div class="price-note">~$39.99 USD (133 ₴/міс)</div>
               </div>
               <ul class="pricing-features-list">
-                <li><span class="feature-check">✓</span> <strong>Безлімітний</strong> Smart Home Hub (кімнати та пристрої)</li>
-                <li><span class="feature-check">✓</span> <strong>10x збільшені</strong> ліміти API (600 зап/хв)</li>
-                <li><span class="feature-check">✓</span> Миттєва пріоритетна E2EE синхронізація</li>
-                <li><span class="feature-check">✓</span> Розширена кастомізація тем панелі</li>
-                <li><span class="feature-check">✓</span> Кастомні мітки та теги пристроїв</li>
-                <li><span class="feature-check">✓</span> Пріоритетна підтримка (Email/Ticket)</li>
-              </ul>
-              <a href="https://login.cyblight.org/uk/pricing?tier=pro" class="pricing-cta-btn">
-                Обрати Pro
-              </a>
-            </div>
-
-            <!-- Advanced Tier -->
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <div class="pricing-card-title">Advanced</div>
-                <div class="pricing-card-desc">
-                  Максимум потужності для розробників, команд і професіоналів.
-                </div>
-              </div>
-              <div class="pricing-card-price">
-                <span class="price-amount" data-price-month="$19.99" data-price-year="$189.99" data-price-id-month="pri_01m0k60avherwb2nkmdcrsg6dd" data-price-id-year="pri_01m0k6120wbwhakkw0sw50jbgn">$19.99</span>
-                <span class="price-period" data-period-month="/ місяць" data-period-year="/ рік">/ місяць</span>
-                <div class="price-note" data-note-month="Списання щомісяця" data-note-year="Списання раз на рік ($15.80/міс)">Списання щомісяця</div>
-              </div>
-              <ul class="pricing-features-list">
-                <li><span class="feature-check">✓</span> <strong>Безлімітні ліміти API</strong> та виділений канал</li>
-                <li><span class="feature-check">✓</span> Усі можливості тарифу Pro</li>
-                <li><span class="feature-check">✓</span> Ранній доступ до нових модулів і бета-релізів</li>
-                <li><span class="feature-check">✓</span> Виділений канал техпідтримки</li>
-                <li><span class="feature-check">✓</span> Розширений аудит і кастомні вебхуки</li>
+                <li><span class="feature-check">✓</span> <strong>Максимальна знижка 33%</strong> на весь рік</li>
+                <li><span class="feature-check">✓</span> Повний безліміт на всі можливості екосистеми</li>
+                <li><span class="feature-check">✓</span> Золота корона 👑 та VIP статус акаунта</li>
+                <li><span class="feature-check">✓</span> Прямий закритий чат із розробниками</li>
+                <li><span class="feature-check">✓</span> Виділений серверний шлюз і вебхуки</li>
                 <li><span class="feature-check">✓</span> Максимальний пріоритет хмарних задач</li>
               </ul>
-              <a href="https://login.cyblight.org/uk/pricing?tier=advanced" class="pricing-cta-btn">
-                Обрати Advanced
+              <a href="https://login.cyblight.org/uk/pricing?plan=year_1" class="pricing-cta-btn">
+                Обрати 1 Рік
               </a>
             </div>
           </div>
 
-          <!-- Paddle Compliance Notice Box -->
+          <!-- Monobank Compliance & Payment Notice Box -->
           <div class="pricing-compliance-box">
-            <div class="compliance-icon" aria-hidden="true">🔒</div>
+            <div class="compliance-icon" aria-hidden="true">🏦</div>
             <div class="compliance-text">
-              <h4>Безпечна оплата та гарантія</h4>
+              <h4>Безпечна оплата через Банку Monobank</h4>
               <p>
-                Прийом платежів та виставлення рахунків безпечно здійснюються нашим офіційним платіжним провайдером <strong>Paddle.com Market Limited</strong> ("Paddle"), що виступає продавцем запису (Merchant of Record). Усі платежі захищені TLS-шифруванням банківського рівня. Надається <strong>14-денна гарантія повернення коштів</strong> та самостійне скасування в будь-який момент.
+                Оплата безпечно здійснюється через платіжний шлюз <strong>Monobank</strong> із підтримкою Apple Pay, Google Pay та банківських карток Visa/Mastercard будь-якого банку світу без прихованих комісій. Надається <strong>14-денна гарантія повернення коштів</strong>.
               </p>
               <div class="compliance-links">
                 <a href="/uk/terms/">Умови використання</a>
@@ -300,25 +330,31 @@
             <div class="faq-item">
               <h3>Які способи оплати підтримуються?</h3>
               <p>
-                Ми приймаємо банківські картки (Visa, Mastercard, UnionPay через міжнародний шлюз), Apple Pay, Google Pay та PayPal через платіжного партнера Paddle.
+                Ми приймаємо банківські картки будь-якого банку (Visa, Mastercard), Apple Pay та Google Pay через платіжний шлюз Monobank.
               </p>
             </div>
             <div class="faq-item">
-              <h3>Чи можу я скасувати підписку в будь-який момент?</h3>
+              <h3>Як відбувається оплата?</h3>
               <p>
-                Так! Ви можете скасувати автоподовження в 1 клік у налаштуваннях свого профілю або за посиланням у чеку Paddle. Усі можливості залишаться активними до кінця оплаченого періоду.
+                Ви обираєте тариф ➔ переходите в офіційну Банку Monobank із попередньо заповненою сумою ➔ у коментарі вказуєте ваш логін CybLight ➔ сплачуєте в 1 клік через Apple Pay / GPay або карткою.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>Як швидко активується Premium?</h3>
+              <p>
+                Преміум-статус активується автоматично через серверний вебхук протягом кількох секунд після надходження переказу.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>Що якщо у мене вже є активна підписка?</h3>
+              <p>
+                Новий сплачений період підсумовується з поточним терміном дії, усі ваші дні зберігаються.
               </p>
             </div>
             <div class="faq-item">
               <h3>Як працює повернення коштів?</h3>
               <p>
                 Ми надаємо 14-денну гарантію повного повернення коштів на першу покупку підписки. Якщо сервіс вам не підійшов, напишіть на <a href="mailto:support@cyblight.org">support@cyblight.org</a>, і ми повернемо гроші.
-              </p>
-            </div>
-            <div class="faq-item">
-              <h3>Як швидко активується Premium?</h3>
-              <p>
-                Преміум-статус активується автоматично через захищений серверний вебхук протягом кількох секунд після підтвердження транзакції.
               </p>
             </div>
           </section>

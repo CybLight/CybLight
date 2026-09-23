@@ -241,12 +241,12 @@
       "Refund & Subscription Cancellation Policy"
     ],
     [
-      "Команда CybLight (<strong>cyblight.org</strong>) стремится предоставлять качественные цифровые услуги и возможности в рамках подписок CybLight Premium (Starter, Pro, Advanced, VIP).",
-      "The CybLight team (<strong>cyblight.org</strong>) is dedicated to delivering high-quality digital services and features within CybLight Premium subscriptions (Starter, Pro, Advanced, VIP)."
+      "Команда CybLight (<strong>cyblight.org</strong>) стремится предоставлять качественные цифровые услуги и возможности в рамках подписок CybLight Premium (1 месяц, 3 месяца, 6 месяцев, 1 год).",
+      "The CybLight team (<strong>cyblight.org</strong>) is dedicated to delivering high-quality digital services and features within CybLight Premium subscriptions (1 Month, 3 Months, 6 Months, 1 Year)."
     ],
     [
-      "Все финансовые операции, обработка платежей и выставление счетов осуществляются нашим официальным платёжным партнёром — <strong>Paddle.com Market Limited</strong> («Paddle»), выступающим Merchant of Record (продавцом записей).",
-      "All financial transactions, payment processing, and billing are securely handled by our official payment partner — <strong>Paddle.com Market Limited</strong> (\"Paddle\"), operating as the Merchant of Record."
+      "Приём платежей и пополнение осуществляются через защищённую платёжную инфраструктуру <strong>Monobank</strong> с поддержкой Apple Pay, Google Pay и карт Visa/Mastercard.",
+      "Payment processing and top-ups are securely handled through the <strong>Monobank</strong> payment infrastructure with support for Apple Pay, Google Pay, and Visa/Mastercard debit/credit cards."
     ],
     [
       "2. 14 дней гарантии возврата средств",
@@ -265,48 +265,44 @@
       "The request is submitted within 14 days of the initial payment."
     ],
     [
-      "Указан email аккаунта, номер квитанции или идентификатор заказа Paddle.",
-      "The account email, receipt number, or Paddle order ID is provided."
+      "Указан email или логин аккаунта CybLight, квитанция или время и сумма перевода.",
+      "Your CybLight account email or username, receipt, or transaction timestamp and amount is provided."
     ],
     [
-      "3. Отмена подписки",
-      "3. Subscription Cancellation"
+      "3. Отмена и окончание подписки",
+      "3. Subscription Duration & Renewal"
     ],
     [
-      "Вы можете отменить автопродление подписки CybLight Premium в любой момент:",
-      "You can cancel your CybLight Premium subscription auto-renewal at any time:"
+      "Вы можете использовать все преимущества подписки в течение всего оплаченного срока:",
+      "You can enjoy all subscription benefits throughout your entire paid period:"
     ],
     [
-      "<strong>В личном кабинете:</strong> Отмена доступна в один клик в настройках аккаунта (вкладка <em>«Подписка / Premium»</em>), либо по ссылке в чеке-квитанции Paddle.",
-      "<strong>In Account Settings:</strong> Cancellation is available with 1 click in your account settings (<em>\"Subscription / Premium\"</em> tab), or via the link in your Paddle receipt."
+      "<strong>Фиксированный период:</strong> Подписка действует ровно оплаченное количество дней (30, 90, 180 или 365 дней). Никаких скрытых или неожиданных списаний не происходит.",
+      "<strong>Fixed Period:</strong> Subscriptions remain active for the exact duration purchased (30, 90, 180, or 365 days). There are zero hidden fees or unexpected recurring auto-debits."
     ],
     [
-      "<strong>Действие после отмены:</strong> После отмены подписка остаётся активной до конца оплаченного периода (месяца или года). Никаких последующих списаний не производится.",
-      "<strong>Access After Cancellation:</strong> After cancellation, your subscription remains fully active until the end of the paid billing cycle (month or year). No further charges will occur."
+      "<strong>Продление:</strong> Для продления тарифа достаточно выбрать желаемый период в личном кабинете. Новый срок суммируется с текущим.",
+      "<strong>Renewal:</strong> To extend your plan, simply choose your desired period in your account. The new period seamlessly adds to your existing active time."
     ],
     [
-      "<strong>Отсутствие штрафов:</strong> Отмена подписки бесплатна и не влечёт скрытых комиссий.",
-      "<strong>No Cancellation Fees:</strong> Cancelling your subscription is completely free with no hidden fees."
+      "<strong>Сохранение данных:</strong> По истечении срока все ваши устройства и настройки сохраняются в базовом бесплатном режиме.",
+      "<strong>Data Retention:</strong> When a subscription ends, all your device configs and automation setups remain safe in free tier mode."
     ],
     [
       "4. Как запросить возврат средств",
       "4. How to Request a Refund"
     ],
     [
-      "Вы можете запросить возврат одним из следующих способов:",
-      "You can request a refund through either of the following methods:"
+      "Для оформления возврата средств напишите в нашу службу поддержки:",
+      "To request a refund, please contact our support team:"
     ],
     [
-      "<strong>Через поддержку CybLight:</strong> Напишите на <a href=\"mailto:support@cyblight.org\">support@cyblight.org</a> с темой <em>«Запрос на возврат средств»</em> и данными аккаунта.",
-      "<strong>Via CybLight Support:</strong> Email <a href=\"mailto:support@cyblight.org\">support@cyblight.org</a> with the subject <em>\"Refund Request\"</em> and your account details."
+      "<strong>Email:</strong> <a href=\"mailto:support@cyblight.org\">support@cyblight.org</a> с темой <em>«Запрос на возврат средств»</em> и логином аккаунта.",
+      "<strong>Email:</strong> <a href=\"mailto:support@cyblight.org\">support@cyblight.org</a> with the subject <em>\"Refund Request\"</em> and your CybLight username."
     ],
     [
-      "<strong>Через поддержку покупателей Paddle:</strong> Воспользуйтесь ссылкой в квитанции об оплате или посетите портал <a href=\"https://paddle.net\" target=\"_blank\" rel=\"noopener noreferrer\">paddle.net</a>.",
-      "<strong>Via Paddle Buyer Support:</strong> Use the link in your email receipt or visit <a href=\"https://paddle.net\" target=\"_blank\" rel=\"noopener noreferrer\">paddle.net</a>."
-    ],
-    [
-      "Возврат средств производится на тот же платёжный инструмент (банковская карта, PayPal, Apple Pay, Google Pay) в течение <strong>5–10 рабочих дней</strong> в зависимости от вашего банка.",
-      "Refunds are credited to the original payment method (debit/credit card, PayPal, Apple Pay, Google Pay) within <strong>5–10 business days</strong> depending on your financial institution."
+      "Возврат средств производится на исходный платёжный инструмент (банковскую карту) в течение <strong>3–7 рабочих дней</strong> в соответствии с регламентом межбанковских переводов.",
+      "Refunds are credited back to the original payment card within <strong>3–7 business days</strong> according to interbank settlement procedures."
     ],
     [
       "5. Исключения",
@@ -469,96 +465,196 @@
       "Billed annually ($15.80/mo)"
     ],
     [
-      "Стандартные лимиты API (60 запр/мин)",
-      "Standard API limits (60 req/min)"
+      "1 Месяц",
+      "1 Month"
     ],
     [
-      "До 3 комнат в Smart Home Hub",
-      "Up to 3 rooms in Smart Home Hub"
+      "Базовый период для личного использования и быстрого старта.",
+      "Essential tier for personal use and getting started quickly."
     ],
     [
-      "Сквозная E2EE синхронизация",
-      "End-to-End E2EE synchronization"
+      "199 ₴",
+      "199 ₴"
     ],
     [
-      "Базовая кастомизация IoT-панели",
-      "IoT dashboard customization"
+      "/ месяц",
+      "/ month"
     ],
     [
-      "Статус аккаунта Starter 👑",
-      "Starter account status 👑"
+      "~$4.99 USD",
+      "~$4.99 USD"
     ],
     [
-      "Документация и база знаний",
-      "Documentation & Knowledge Base"
+      "Золотой значок Premium ⭐ в профиле",
+      "Gold Premium badge ⭐ in profile & hub"
     ],
     [
       "<strong>Безлимитный</strong> Smart Home Hub (комнаты и устройства)",
       "<strong>Unlimited</strong> Smart Home Hub (rooms & devices)"
     ],
     [
-      "<strong>10x увеличенные</strong> лимиты API (600 запр/мин)",
-      "<strong>10x higher</strong> API limits (600 req/min)"
-    ],
-    [
-      "Мгновенная приоритетная E2EE синхронизация",
+      "Мгновенная E2EE синхронизация",
       "Instant high-priority E2EE sync"
     ],
     [
-      "Расширенная кастомизация тем панели",
-      "Advanced dashboard UI themes"
+      "Эксклюзивные темы оформления и неоновые рамки",
+      "Exclusive UI themes & animated neon avatar borders"
     ],
     [
-      "Кастомные метки и теги устройств",
-      "Custom device tags & metadata"
+      "<strong>10x увеличенные</strong> лимиты API (600 запр/мин)",
+      "<strong>10x higher</strong> API rate limits (600 req/min)"
     ],
     [
-      "Приоритетная поддержка (Email/Ticket)",
-      "24/7 Priority Support (Email & Ticket)"
+      "Приоритетная поддержка 24/7",
+      "24/7 Priority Support"
     ],
     [
-      "<strong>Безлимитные лимиты API</strong> и выделенный канал",
-      "<strong>Unlimited API rate limits</strong> & dedicated lane"
+      "Выбрать 1 Месяц",
+      "Choose 1 Month"
     ],
     [
-      "Все возможности тарифа Pro",
-      "Everything included in Pro tier"
+      "3 Месяца",
+      "3 Months"
     ],
     [
-      "Ранний доступ к новым модулям и бета-релизам",
-      "Early access to new modules & betas"
+      "Оптимальный квартальный план для активной автоматизации.",
+      "Optimal quarterly plan for active smart home automation."
     ],
     [
-      "Выделенный канал техподдержки",
+      "499 ₴",
+      "499 ₴"
+    ],
+    [
+      "/ 3 месяца",
+      "/ 3 months"
+    ],
+    [
+      "~$12.49 USD (166 ₴/мес)",
+      "~$12.49 USD (166 ₴/mo)"
+    ],
+    [
+      "Все возможности тарифа на 1 месяц",
+      "All features included in 1-month plan"
+    ],
+    [
+      "Экономия 16% при квартальной оплате",
+      "Save 16% with quarterly billing"
+    ],
+    [
+      "Эксклюзивный бейдж Сезонного хранителя",
+      "Exclusive Season Guardian badge"
+    ],
+    [
+      "Ранний доступ к новым бета-модулям",
+      "Early access to new modules & beta releases"
+    ],
+    [
+      "Приоритетная обработка очередей E2EE",
+      "Priority E2EE queue processing"
+    ],
+    [
+      "Выбрать 3 Месяца",
+      "Choose 3 Months"
+    ],
+    [
+      "6 Месяцев",
+      "6 Months"
+    ],
+    [
+      "Полугодовая подписка с существенной выгодой.",
+      "Semi-annual plan with significant value."
+    ],
+    [
+      "899 ₴",
+      "899 ₴"
+    ],
+    [
+      "/ 6 месяцев",
+      "/ 6 months"
+    ],
+    [
+      "~$22.49 USD (150 ₴/мес)",
+      "~$22.49 USD (150 ₴/mo)"
+    ],
+    [
+      "Все возможности тарифа на 3 месяца",
+      "All features included in 3-month plan"
+    ],
+    [
+      "Экономия 25% при оплате за полгода",
+      "Save 25% with 6-month billing"
+    ],
+    [
+      "Эксклюзивный титул Хранителя Эпохи",
+      "Exclusive Epoch Keeper profile title"
+    ],
+    [
+      "Выделенный канал технической поддержки",
       "Dedicated technical support channel"
     ],
     [
-      "Расширенный аудит и кастомные вебхуки",
-      "Advanced audit logs & custom webhooks"
+      "Расширенный аудит логов и телеметрии",
+      "Advanced audit logs & cloud telemetry"
+    ],
+    [
+      "Выбрать 6 Месяцев",
+      "Choose 6 Months"
+    ],
+    [
+      "1 Год",
+      "1 Year"
+    ],
+    [
+      "Максимальная выгода для постоянных пользователей и энтузиастов.",
+      "Maximum savings for long-term users and power enthusiasts."
+    ],
+    [
+      "1 599 ₴",
+      "1,599 ₴"
+    ],
+    [
+      "/ год",
+      "/ year"
+    ],
+    [
+      "~$39.99 USD (133 ₴/мес)",
+      "~$39.99 USD (133 ₴/mo)"
+    ],
+    [
+      "<strong>Максимальная скидка 33%</strong> на весь год",
+      "<strong>Maximum 33% discount</strong> for the full year"
+    ],
+    [
+      "Полный безлимит на все возможности экосистемы",
+      "Unlimited access to all ecosystem features"
+    ],
+    [
+      "Золотая корона 👑 и VIP статус аккаунта",
+      "Golden crown 👑 & VIP account status"
+    ],
+    [
+      "Прямой закрытый чат с разработчиками",
+      "Direct private developer channel"
+    ],
+    [
+      "Выделенный серверный шлюз и вебхуки",
+      "Dedicated server gateway & custom webhooks"
     ],
     [
       "Максимальный приоритет облачных задач",
       "Maximum cloud processing priority"
     ],
     [
-      "Выбрать Starter",
-      "Get Starter"
+      "Выбрать 1 Год",
+      "Choose 1 Year"
     ],
     [
-      "Выбрать Pro",
-      "Get Pro"
+      "Безопасная оплата через Monobank Банку",
+      "Secure Payments via Monobank Jar"
     ],
     [
-      "Выбрать Advanced",
-      "Get Advanced"
-    ],
-    [
-      "Безопасная оплата и гарантия",
-      "Secure Payment & Money-Back Guarantee"
-    ],
-    [
-      "Приём платежей и выставление счетов безопасно осуществляются нашим официальным платёжным провайдером <strong>Paddle.com Market Limited</strong> (\"Paddle\"), выступающим продавцом записи (Merchant of Record). Все платежи защищены TLS-шифрованием банковского уровня. Предоставляется <strong>14-дневная гарантия возврата средств</strong> и самостоятельная отмена в любой момент.",
-      "Payments and billing are securely processed by our official Merchant of Record partner <strong>Paddle.com Market Limited</strong> (\"Paddle\"). All transactions are protected with bank-grade TLS encryption. Backed by our <strong>14-day money-back guarantee</strong> and self-serve cancellation anytime."
+      "Оплата безопасно осуществляется через платёжный шлюз <strong>Monobank</strong> с поддержкой Apple Pay, Google Pay и банковских карт Visa/Mastercard любого банка мира без скрытых комиссий. Предоставляется <strong>14-дневная гарантия возврата средств</strong>.",
+      "Payments are securely processed via the <strong>Monobank</strong> payment infrastructure with full support for Apple Pay, Google Pay, and worldwide Visa/Mastercard debit/credit cards with zero hidden fees. Backed by our <strong>14-day money-back guarantee</strong>."
     ],
     [
       "Условия использования",
@@ -581,16 +677,24 @@
       "Which payment methods are supported?"
     ],
     [
-      "Мы принимаем банковские карты (Visa, Mastercard, МИР/UnionPay через международный шлюз), Apple Pay, Google Pay и PayPal через платёжного партнёра Paddle.",
-      "We accept all major debit/credit cards (Visa, Mastercard, American Express, UnionPay), Apple Pay, Google Pay, and PayPal securely through Paddle."
+      "Мы принимаем банковские карты любого банка (Visa, Mastercard), Apple Pay и Google Pay через платёжный шлюз Monobank.",
+      "We accept bank cards from any bank worldwide (Visa, Mastercard), Apple Pay, and Google Pay via Monobank."
     ],
     [
-      "Можно ли отменить подписку в любой момент?",
-      "Can I cancel my subscription at any time?"
+      "Как происходит оплата?",
+      "How does the payment process work?"
     ],
     [
-      "Да! Вы можете отменить автопродление в 1 клик в настройках своего профиля или по ссылке в чеке Paddle. Все возможности останутся активными до конца оплаченного периода.",
-      "Yes! You can cancel auto-renewal with 1 click in your profile settings or via the link in your Paddle receipt. All features remain active until the end of your billing cycle."
+      "Вы выбираете тариф ➔ переходите в официальную Банку Monobank с предзаполненной суммой ➔ в комментарии указываете ваш логин CybLight ➔ оплачиваете в 1 клик через Apple Pay / GPay или картой.",
+      "You select a plan ➔ navigate to the official Monobank Jar with prefilled amount ➔ enter your CybLight username in the comment ➔ complete the payment in 1 click via Apple Pay, Google Pay, or card."
+    ],
+    [
+      "Что если у меня уже есть активная подписка?",
+      "What if I already have an active subscription?"
+    ],
+    [
+      "Новый оплаченный период суммируется с текущим сроком действия, все ваши дни сохраняются.",
+      "The new purchased period seamlessly adds to your existing expiration date, preserving all your active days."
     ],
     [
       "Как работает возврат средств?",
@@ -605,8 +709,8 @@
       "How fast is Premium activated?"
     ],
     [
-      "Премиум-статус активируется автоматически через защищённый серверный вебхук в течение нескольких секунд после подтверждения транзакции.",
-      "Premium benefits are provisioned automatically via secure server webhooks within seconds after transaction approval."
+      "Премиум-статус активируется автоматически через серверный вебхук в течение нескольких секунд после поступления перевода.",
+      "Premium benefits are activated automatically via server webhooks within seconds after the transfer is received."
     ],
     [
       "Подробнее",

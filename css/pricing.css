@@ -131,6 +131,50 @@ body.dark .discount-badge {
   align-items: stretch;
 }
 
+.pricing-grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1160px) {
+  .pricing-grid--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-grid,
+  .pricing-grid--four {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pricing-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.plan-badge {
+  background: rgba(255, 127, 39, 0.12);
+  color: #ff7f27;
+  border: 1px solid rgba(255, 127, 39, 0.3);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.discount-pill {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 9999px;
+}
+
 .pricing-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;

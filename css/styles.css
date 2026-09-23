@@ -2056,6 +2056,43 @@ body.dark .footer-status-btn:hover {
   color: #86efac;
 }
 
+.footer-premium-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(234, 179, 8, 0.12);
+  border: 1px solid rgba(234, 179, 8, 0.45);
+  color: #b45309;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-premium-btn:hover {
+  background: rgba(234, 179, 8, 0.22);
+  border-color: rgba(234, 179, 8, 0.7);
+  transform: translateY(-1px);
+  color: #92400e;
+  box-shadow: 0 4px 14px rgba(234, 179, 8, 0.25);
+  text-decoration: none;
+}
+
+body.dark .footer-premium-btn {
+  background: rgba(234, 179, 8, 0.14);
+  border-color: rgba(234, 179, 8, 0.45);
+  color: #fef08a;
+}
+
+body.dark .footer-premium-btn:hover {
+  background: rgba(234, 179, 8, 0.25);
+  border-color: #facc15;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(234, 179, 8, 0.4);
+}
+
 /* Тёмный подвал со звёздами */
 body.dark footer {
   background: #050814 !important;

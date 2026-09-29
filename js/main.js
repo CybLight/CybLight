@@ -425,7 +425,7 @@ window.addEventListener('cyblight-privacy-change', () => {
       if (found) {
         domResults.push({
           title: t('searchPageText'),
-          desc: highlightText(pageText.slice(0, 300) + (pageText.length > 300 ? '...' : ''), words),
+          desc: pageText.slice(0, 300) + (pageText.length > 300 ? '...' : ''),
           tags: [t('searchTagPage'), t('searchTagText')],
           url: path,
         });
@@ -449,7 +449,11 @@ window.addEventListener('cyblight-privacy-change', () => {
     // Выводим все результаты
     allResults.forEach((item, i) => {
       const a = document.createElement('a');
-      a.href = item.url;
+      const safeUrl =
+        item.url && (item.url.startsWith('/') || item.url.startsWith('https://') || item.url.startsWith('http://'))
+          ? item.url
+          : '#';
+      a.href = safeUrl;
       a.className = 'search-result-item';
       a.style.animationDelay = i * 0.05 + 's';
 
@@ -462,13 +466,13 @@ window.addEventListener('cyblight-privacy-change', () => {
         highlightText(item.title, words) +
         '</div>' +
         '<div class="search-result-desc">' +
-        (item.desc || '') +
+        highlightText(item.desc || '', words) +
         '</div>' +
         '<div class="search-result-tags">' +
         tagsHtml +
         '</div>' +
         '<div class="search-result-url">' +
-        escapeHtml(item.url) +
+        escapeHtml(safeUrl) +
         '</div>';
 
       a.addEventListener('click', closeSearch);

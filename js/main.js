@@ -390,11 +390,61 @@ window.addEventListener('cyblight-privacy-change', () => {
     return score;
   }
 
+  function isXssPayload(str) {
+    if (!str) return false;
+    const s = str.trim().toLowerCase();
+    return (
+      /<script[\s>]/i.test(s) ||
+      /<\/?(script|iframe|object|embed|applet|meta|link|style)/i.test(s) ||
+      /(onerror|onload|onclick|onmouseover|onfocus|onblur|autofocus)\s*=/i.test(s) ||
+      /javascript\s*:/i.test(s) ||
+      /(alert|prompt|confirm|eval)\s*\(/i.test(s) ||
+      /document\.(cookie|location|domain|write)/i.test(s) ||
+      /<[a-z]+[^>]+(src\s*=\s*[^>]+onerror|onerror\s*=)[^>]*>/i.test(s) ||
+      /<svg[^>]*onload/i.test(s)
+    );
+  }
+
+  function renderXssEaster(payload) {
+    const rawJokes = t('searchXssJokes');
+    const jokes = Array.isArray(rawJokes) && rawJokes.length ? rawJokes : [
+      'alert(1) не сработал? Не расстраивайся, держи печеньку 🍪 — ведь наши cookies мы тебе всё равно не отдадим!',
+      'Тут вам не innerHTML без экранирования! Наши sanitizers передают пламенный привет вашему alert() 🛡️',
+      'Хакер detected! 🥷 Уровень угрозы: 1 alert из 10. Попробуй лучше собрать умный дом на ESP32 😉',
+      'Кажется, кто-то уронил свой эксплойт! Не переживай, мы бережно нейтрализовали его и положили на полочку 😎'
+    ];
+    const jokeIndex = Math.floor(Math.random() * jokes.length);
+    const joke = jokes[jokeIndex];
+
+    const badge = t('searchXssBadge') || '🛡️ XSS НЕ ПРОЙДЁТ';
+    const title = t('searchXssTitle') || 'Хорошая попытка, хакер! 😉';
+    const footer = t('searchXssFooter') || '404: Уязвимость не найдена. Наш поиск безопасен, экранирован и готов к нормальным запросам!';
+
+    return (
+      '<div class="search-xss-easter">' +
+        '<div class="search-xss-icon">🥷</div>' +
+        '<div class="search-xss-badge">' + escapeHtml(badge) + '</div>' +
+        '<h3 class="search-xss-title">' + escapeHtml(title) + '</h3>' +
+        '<p class="search-xss-joke">' + escapeHtml(joke) + '</p>' +
+        '<div class="search-xss-code-box">' +
+          '<code>' + escapeHtml(payload) + '</code>' +
+        '</div>' +
+        '<div class="search-xss-footer">' + escapeHtml(footer) + '</div>' +
+      '</div>'
+    );
+  }
+
   function performSearch(query) {
     overlayResults.innerHTML = '';
     const trimmed = query.trim();
     if (!trimmed) {
       overlayMeta.textContent = '';
+      return;
+    }
+
+    if (isXssPayload(trimmed)) {
+      overlayMeta.textContent = '🛡️ XSS blocked';
+      overlayResults.innerHTML = renderXssEaster(trimmed);
       return;
     }
 

@@ -20,6 +20,15 @@
     "searchLabel": "Search",
     "searchResults": "Results found: ",
     "searchNoResults": "Nothing found for:",
+    "searchXssBadge": "🛡️ XSS BLOCKED",
+    "searchXssTitle": "Nice try, hacker! 😉",
+    "searchXssJokes": [
+      "alert(1) didn't fire? Don't worry, have a cookie 🍪 — because you won't get ours anyway!",
+      "Nice try, hacker! 🥷 Our sanitizers send their warmest regards to your alert() 🛡️",
+      "Hacker detected! 🥷 Threat level: 1 alert out of 10. Why not build an IoT project on ESP32 instead? 😉",
+      "Oops, looks like you dropped an exploit! Don't worry, we safely neutralized it for you 😎"
+    ],
+    "searchXssFooter": "404: Vulnerability not found. Our search is sanitized, safe, and ready for real queries!",
     "searchPageText": "Text on this page",
     "searchTagPage": "page",
     "searchTagText": "text",

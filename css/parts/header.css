@@ -463,6 +463,94 @@ mark.search-hl {
   font-size: 16px;
 }
 
+/* XSS Easter Egg */
+.search-xss-easter {
+  text-align: center;
+  padding: 36px 20px 28px;
+  animation: searchFadeIn 0.3s ease;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.search-xss-icon {
+  font-size: 56px;
+  margin-bottom: 12px;
+  display: inline-block;
+  animation: xssWiggle 0.6s ease-in-out;
+}
+
+@keyframes xssWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-12deg) scale(1.1); }
+  75% { transform: rotate(12deg) scale(1.1); }
+}
+
+.search-xss-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.search-xss-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 10px;
+}
+
+body.dark .search-xss-title {
+  color: #f9fafb;
+}
+
+.search-xss-joke {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0 0 16px;
+}
+
+body.dark .search-xss-joke {
+  color: #9ca3af;
+}
+
+.search-xss-code-box {
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px dashed rgba(239, 68, 68, 0.35);
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 0 auto 16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  color: #ef4444;
+  word-break: break-all;
+}
+
+body.dark .search-xss-code-box {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+}
+
+.search-xss-footer {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+body.dark .search-xss-footer {
+  color: #9ca3af;
+}
+
 @keyframes searchFadeIn {
   from {
     opacity: 0;

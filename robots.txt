@@ -2,4 +2,8 @@
 User-agent: *
 Allow: /
 
+# Block technical Cloudflare endpoints and raw binary downloads
+Disallow: /cdn-cgi/
+Disallow: /downloads/*.apk$
+
 Sitemap: https://cyblight.org/sitemap.xml

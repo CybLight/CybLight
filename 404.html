@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — Страница не найдена | CybLight</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #050814;
+        color: #ffffff;
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .error-card {
+        background: #0b1020;
+        border: 1px solid #1b243c;
+        border-radius: 12px;
+        padding: 48px 32px;
+        max-width: 520px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      }
+      .error-code {
+        font-size: 72px;
+        font-weight: 800;
+        color: #ff7f27;
+        margin: 0 0 12px;
+        letter-spacing: -0.03em;
+        text-shadow: 0 0 24px rgba(255, 127, 39, 0.4);
+      }
+      .error-title {
+        font-size: 22px;
+        font-weight: 700;
+        margin: 0 0 16px;
+        color: #f3f4f6;
+      }
+      .error-desc {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #9aa4c6;
+        margin: 0 0 32px;
+      }
+      .error-actions {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 22px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .btn-primary {
+        background: #ff7f27;
+        color: #ffffff;
+      }
+      .btn-primary:hover {
+        background: #e66a15;
+        box-shadow: 0 0 16px rgba(255, 127, 39, 0.5);
+      }
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.08);
+        color: #d1d5db;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.14);
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body class="dark">
+    <div class="error-card">
+      <div class="error-code">404</div>
+      <h1 class="error-title">Страница не найдена</h1>
+      <p class="error-desc">
+        Запрашиваемый адрес не существует или был перемещён. Выберите удобный язык и перейдите на главную страницу платформы CybLight.
+      </p>
+      <div class="error-actions">
+        <a class="btn btn-primary" href="/ru/">Главная (RU)</a>
+        <a class="btn btn-secondary" href="/uk/">Головна (UK)</a>
+        <a class="btn btn-secondary" href="/en/">Home (EN)</a>
+      </div>
+    </div>
+  </body>
+</html>

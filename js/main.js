@@ -243,10 +243,10 @@ window.addEventListener('cyblight-privacy-change', () => {
       url: L + '/downloads/',
     },
     {
-      title: 'Пожертвовать',
-      desc: 'Поддержать развитие CybLight — донат, помощь проекту',
-      tags: ['донат', 'donate', 'поддержка'],
-      url: L + '/donate/',
+      title: 'Тарифы и подписка',
+      desc: 'Тарифные планы CybLight Premium — безлимитный Smart Home Hub, API',
+      tags: ['тарифы', 'подписка', 'pricing', 'premium', 'донат', 'donate', 'поддержка'],
+      url: L + '/pricing/',
     },
     {
       title: 'Условия использования',

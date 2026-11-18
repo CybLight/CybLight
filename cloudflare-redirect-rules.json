@@ -6,6 +6,24 @@
     "target_url": "https://cyblight.org/ru/"
   },
   {
+    "description": "Legacy /games to /ru/projects/",
+    "expression": "(http.host eq \"cyblight.org\" or http.host eq \"www.cyblight.org\") and (http.request.uri.path eq \"/games\" or http.request.uri.path eq \"/games/\" or http.request.uri.path eq \"/ru/games\" or http.request.uri.path eq \"/ru/games/\" or http.request.uri.path eq \"/uk/games\" or http.request.uri.path eq \"/uk/games/\" or http.request.uri.path eq \"/en/games\" or http.request.uri.path eq \"/en/games/\")",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/projects/"
+  },
+  {
+    "description": "Legacy /donate to /ru/pricing/",
+    "expression": "(http.host eq \"cyblight.org\" or http.host eq \"www.cyblight.org\") and (http.request.uri.path eq \"/donate\" or http.request.uri.path eq \"/donate/\" or http.request.uri.path eq \"/ru/donate\" or http.request.uri.path eq \"/ru/donate/\" or http.request.uri.path eq \"/uk/donate\" or http.request.uri.path eq \"/uk/donate/\" or http.request.uri.path eq \"/en/donate\" or http.request.uri.path eq \"/en/donate/\")",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/pricing/"
+  },
+  {
+    "description": "Old APK v0.4.3 download redirect",
+    "expression": "(http.host eq \"cyblight.org\" or http.host eq \"www.cyblight.org\") and http.request.uri.path eq \"/downloads/cyblight-android-v0.4.3.apk\"",
+    "status_code": 301,
+    "target_url": "https://cyblight.org/ru/downloads/"
+  },
+  {
     "description": "Legacy /contacts to /ru/contacts/",
     "expression": "(http.host eq \"cyblight.org\" or http.host eq \"www.cyblight.org\") and (http.request.uri.path eq \"/contacts\" or http.request.uri.path eq \"/contacts/\")",
     "status_code": 301,

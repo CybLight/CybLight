@@ -1,5 +1,22 @@
 # 301 redirects for crawlers (Cloudflare Pages / Netlify)
 / /ru/ 301
+/games /ru/projects/ 301
+/games/ /ru/projects/ 301
+/donate /ru/pricing/ 301
+/donate/ /ru/pricing/ 301
+/ru/games /ru/projects/ 301
+/ru/games/ /ru/projects/ 301
+/uk/games /uk/projects/ 301
+/uk/games/ /uk/projects/ 301
+/en/games /en/projects/ 301
+/en/games/ /en/projects/ 301
+/ru/donate /ru/pricing/ 301
+/ru/donate/ /ru/pricing/ 301
+/uk/donate /uk/pricing/ 301
+/uk/donate/ /uk/pricing/ 301
+/en/donate /en/pricing/ 301
+/en/donate/ /en/pricing/ 301
+/downloads/cyblight-android-v0.4.3.apk /ru/downloads/ 301
 /contacts /ru/contacts/ 301
 /contacts/ /ru/contacts/ 301
 /projects /ru/projects/ 301

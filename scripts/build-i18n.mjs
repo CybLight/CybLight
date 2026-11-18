@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { PAGE_METADATA } from './seo-metadata.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -112,6 +113,27 @@ function render(template, locale, localeCode, pagePath) {
       const fromResolved = from.replace(/\{\{L\}\}/g, prefix);
       const toResolved = to.replace(/\{\{L\}\}/g, prefix);
       out = applyReplacement(out, fromResolved, toResolved);
+    }
+  }
+
+  const meta = PAGE_METADATA[pagePath]?.[localeCode];
+  if (meta) {
+    if (meta.title) {
+      out = out.replace(/<title>[\s\S]*?<\/title>/i, `<title>${meta.title}</title>`);
+    }
+    if (meta.description) {
+      out = out.replace(/<meta\s+[^>]*name=["']description["'][^>]*>/i, `<meta name="description" content="${meta.description}" />`);
+    }
+    if (meta.keywords) {
+      out = out.replace(/<meta\s+[^>]*name=["']keywords["'][^>]*>/i, `<meta name="keywords" content="${meta.keywords}" />`);
+    }
+    if (meta.ogTitle) {
+      out = out.replace(/<meta\s+[^>]*property=["']og:title["'][^>]*>/i, `<meta property="og:title" content="${meta.ogTitle}" />`);
+      out = out.replace(/<meta\s+[^>]*name=["']twitter:title["'][^>]*>/i, `<meta name="twitter:title" content="${meta.ogTitle}" />`);
+    }
+    if (meta.ogDescription) {
+      out = out.replace(/<meta\s+[^>]*property=["']og:description["'][^>]*>/i, `<meta property="og:description" content="${meta.ogDescription}" />`);
+      out = out.replace(/<meta\s+[^>]*name=["']twitter:description["'][^>]*>/i, `<meta name="twitter:description" content="${meta.ogDescription}" />`);
     }
   }
 
@@ -231,7 +253,27 @@ ${entries.join('\n\n')}
 }
 
 function writeRedirects() {
-  const lines = ['# 301 redirects for crawlers (Cloudflare Pages / Netlify)', '/ /ru/ 301'];
+  const lines = [
+    '# 301 redirects for crawlers (Cloudflare Pages / Netlify)',
+    '/ /ru/ 301',
+    '/games /ru/projects/ 301',
+    '/games/ /ru/projects/ 301',
+    '/donate /ru/pricing/ 301',
+    '/donate/ /ru/pricing/ 301',
+    '/ru/games /ru/projects/ 301',
+    '/ru/games/ /ru/projects/ 301',
+    '/uk/games /uk/projects/ 301',
+    '/uk/games/ /uk/projects/ 301',
+    '/en/games /en/projects/ 301',
+    '/en/games/ /en/projects/ 301',
+    '/ru/donate /ru/pricing/ 301',
+    '/ru/donate/ /ru/pricing/ 301',
+    '/uk/donate /uk/pricing/ 301',
+    '/uk/donate/ /uk/pricing/ 301',
+    '/en/donate /en/pricing/ 301',
+    '/en/donate/ /en/pricing/ 301',
+    '/downloads/cyblight-android-v0.4.3.apk /ru/downloads/ 301',
+  ];
   for (const segment of LEGACY_PATHS) {
     lines.push(`/${segment} /ru/${segment}/ 301`);
     lines.push(`/${segment}/ /ru/${segment}/ 301`);
@@ -253,6 +295,24 @@ function writeCloudflareRedirectRules() {
       expression: `${mainSiteHosts} and http.request.uri.path eq "/"`,
       status_code: 301,
       target_url: `${SITE_ORIGIN}/ru/`,
+    },
+    {
+      description: 'Legacy /games to /ru/projects/',
+      expression: `${mainSiteHosts} and (http.request.uri.path eq "/games" or http.request.uri.path eq "/games/" or http.request.uri.path eq "/ru/games" or http.request.uri.path eq "/ru/games/" or http.request.uri.path eq "/uk/games" or http.request.uri.path eq "/uk/games/" or http.request.uri.path eq "/en/games" or http.request.uri.path eq "/en/games/")`,
+      status_code: 301,
+      target_url: `${SITE_ORIGIN}/ru/projects/`,
+    },
+    {
+      description: 'Legacy /donate to /ru/pricing/',
+      expression: `${mainSiteHosts} and (http.request.uri.path eq "/donate" or http.request.uri.path eq "/donate/" or http.request.uri.path eq "/ru/donate" or http.request.uri.path eq "/ru/donate/" or http.request.uri.path eq "/uk/donate" or http.request.uri.path eq "/uk/donate/" or http.request.uri.path eq "/en/donate" or http.request.uri.path eq "/en/donate/")`,
+      status_code: 301,
+      target_url: `${SITE_ORIGIN}/ru/pricing/`,
+    },
+    {
+      description: 'Old APK v0.4.3 download redirect',
+      expression: `${mainSiteHosts} and http.request.uri.path eq "/downloads/cyblight-android-v0.4.3.apk"`,
+      status_code: 301,
+      target_url: `${SITE_ORIGIN}/ru/downloads/`,
     },
   ];
   for (const segment of LEGACY_PATHS) {

@@ -8,16 +8,15 @@ const ROOT = path.join(__dirname, '..');
 const LOCALES = ['ru', 'uk', 'en'];
 const PAGES = [
   'index.html',
-  'games/index.html',
   'contacts/index.html',
   'projects/index.html',
   'downloads/index.html',
-  'donate/index.html',
   'privacy/index.html',
   'terms/index.html',
   'smarthomehub/index.html',
   'pricing/index.html',
   'refund/index.html',
+  'status/index.html',
 ];
 
 function pageUrl(locale, pagePath, origin) {
